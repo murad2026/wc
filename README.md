@@ -1,6 +1,6 @@
 # WorldConstitution.org — полный итог
 
-> 📌 Ключевые документы: [PRINCIPLES.md](./PRINCIPLES.md) — принципы и тест на здравый смысл · [ROADMAP.md](./ROADMAP.md) — дорожная карта «сначала просто» · [CONSTITUTION.md](./CONSTITUTION.md) — текст Конституции · [USER_FLOW.md](./USER_FLOW.md) — путь пользователя, профили, анонимность и влияние
+> 📌 Ключевые документы: [PRINCIPLES.md](./PRINCIPLES.md) — принципы и тест на здравый смысл · [ROADMAP.md](./ROADMAP.md) — дорожная карта «сначала просто» · [CONSTITUTION.md](./CONSTITUTION.md) — текст Конституции · [USER_FLOW.md](./USER_FLOW.md) — путь пользователя, профили, анонимность и влияние · [ACTIVITY.md](./ACTIVITY.md) — активность, голосования, модерация · [DIAGRAMS.md](./DIAGRAMS.md) — визуальные схемы
 
 ## СУТЬ ПРОЕКТА
 
