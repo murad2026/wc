@@ -1,6 +1,9 @@
 # WorldConstitution.org — полный итог
 
-> 📌 Ключевые документы: [PRINCIPLES.md](./PRINCIPLES.md) — принципы и тест на здравый смысл · [ROADMAP.md](./ROADMAP.md) — дорожная карта «сначала просто» · [CONSTITUTION.md](./CONSTITUTION.md) — текст Конституции · [USER_FLOW.md](./USER_FLOW.md) — путь пользователя, профили, анонимность и влияние · [ACTIVITY.md](./ACTIVITY.md) — активность, голосования, модерация · [DIAGRAMS.md](./DIAGRAMS.md) — визуальные схемы
+> # Честность сильнее власти.
+> *Открытость рождает доверие. Доверие строит будущее. Инструмент — уже здесь.*
+
+> 📌 Ключевые документы: [MISSION.md](./MISSION.md) — миссия и манифест · [PRINCIPLES.md](./PRINCIPLES.md) — принципы и тест на здравый смысл · [ROADMAP.md](./ROADMAP.md) — дорожная карта «сначала просто» · [CONSTITUTION.md](./CONSTITUTION.md) — текст Конституции · [USER_FLOW.md](./USER_FLOW.md) — путь пользователя, профили, анонимность и влияние · [ACTIVITY.md](./ACTIVITY.md) — активность, голосования, модерация · [DIAGRAMS.md](./DIAGRAMS.md) — визуальные схемы
 
 ## СУТЬ ПРОЕКТА
 
