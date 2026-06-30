@@ -3,7 +3,7 @@
 > # Честность сильнее власти.
 > *Открытость рождает доверие. Доверие строит будущее. Инструмент — уже здесь.*
 
-> 📌 Ключевые документы: [MISSION.md](./MISSION.md) — миссия и манифест · [ARCHITECTURE.md](./ARCHITECTURE.md) — два столпа: независимость и подлинность · [PRINCIPLES.md](./PRINCIPLES.md) — принципы и тест на здравый смысл · [ROADMAP.md](./ROADMAP.md) — дорожная карта «сначала просто» · [CONSTITUTION.md](./CONSTITUTION.md) — текст Конституции · [USER_FLOW.md](./USER_FLOW.md) — путь пользователя, профили, анонимность и влияние · [ACTIVITY.md](./ACTIVITY.md) — активность, голосования, модерация · [FINANCE.md](./FINANCE.md) — финансы: прозрачно и по назначению · [SCORING.md](./SCORING.md) — оценка участников и заработок · [DEEDS.md](./DEEDS.md) — как определяется «дело» · [DIAGRAMS.md](./DIAGRAMS.md) — визуальные схемы
+> 📌 Ключевые документы: [MISSION.md](./MISSION.md) — миссия и манифест · [ARCHITECTURE.md](./ARCHITECTURE.md) — два столпа: независимость и подлинность · [PRINCIPLES.md](./PRINCIPLES.md) — принципы и тест на здравый смысл · [ROADMAP.md](./ROADMAP.md) — дорожная карта «сначала просто» · [CONSTITUTION.md](./CONSTITUTION.md) — текст Конституции · [USER_FLOW.md](./USER_FLOW.md) — путь пользователя, профили, анонимность и влияние · [ACTIVITY.md](./ACTIVITY.md) — активность, голосования, модерация · [FINANCE.md](./FINANCE.md) — финансы: прозрачно и по назначению · [SCORING.md](./SCORING.md) — оценка участников и заработок · [DEEDS.md](./DEEDS.md) — как определяется «дело» · [OPEN_QUESTIONS.md](./OPEN_QUESTIONS.md) — слабые места (честный список) · [MITIGATIONS.md](./MITIGATIONS.md) — решения + бесплатные инструменты · [DIAGRAMS.md](./DIAGRAMS.md) — визуальные схемы
 
 ## СУТЬ ПРОЕКТА
 
