@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вопрос дня — превью · WorldConstitution</title>
+<meta name="description" content="Как будет выглядеть голосование «Вопрос дня». Превью Этапа 2.">
+<style>
+  :root{
+    --indigo:#1e2a5a; --indigo-deep:#141b3d;
+    --amber:#d98e04; --amber-hover:#b97800; --amber-soft:#fff3dc;
+    --green:#2e8b57; --paper:#fbfaf7; --card:#ffffff; --line:#e8e5dd; --muted:#6b7085;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --indigo:#dfe4f5; --indigo-deep:#f0f2fa;
+      --amber:#f0a71c; --amber-hover:#ffbe3d; --amber-soft:#2a2410;
+      --green:#4cbf85; --paper:#12162a; --card:#1a2038; --line:#2a3152; --muted:#8d93ab;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+       background:var(--paper);color:var(--indigo);line-height:1.6}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+
+  nav{border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:760px;margin:0 auto}
+  .logo{font-weight:800;font-size:16px;color:var(--indigo);text-decoration:none}
+  .logo span{color:var(--amber)}
+  .back{font-size:14px;color:var(--amber);text-decoration:none;font-weight:600}
+
+  .preview-banner{background:var(--amber-soft);border-bottom:1px solid var(--line);text-align:center;
+     padding:11px 16px;font-size:13.5px;color:var(--indigo-deep)}
+  .preview-banner b{letter-spacing:.06em;text-transform:uppercase;font-size:12px;color:var(--amber)}
+
+  .qwrap{padding:44px 0 60px}
+  .meta{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);
+     text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
+  .meta .dot{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block}
+  h1{font-size:clamp(24px,4.5vw,36px);line-height:1.15;font-weight:900;color:var(--indigo-deep);margin-bottom:8px}
+  .qsub{color:var(--muted);font-size:15px;margin-bottom:30px}
+
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+  .opt{position:relative;border:2px solid var(--line);border-radius:14px;padding:22px 20px;cursor:pointer;
+     background:var(--card);overflow:hidden;transition:border-color .15s, transform .1s;text-align:center}
+  .opt:hover{border-color:var(--amber)}
+  .opt:active{transform:scale(.98)}
+  .opt.picked{border-color:var(--amber)}
+  .opt .fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--amber-soft);
+     transition:width 1s cubic-bezier(.2,.7,.2,1);z-index:0}
+  .opt.no .fill{background:color-mix(in srgb, var(--muted) 18%, transparent)}
+  .opt .lbl,.opt .pct{position:relative;z-index:1}
+  .opt .lbl{font-size:20px;font-weight:800;color:var(--indigo-deep)}
+  .opt .pct{display:block;margin-top:6px;font-size:15px;font-weight:700;color:var(--muted);opacity:0;transition:opacity .4s}
+  .revealed .opt .pct{opacity:1}
+  .youvoted{display:none;text-align:center;font-size:14px;color:var(--green);font-weight:700;margin:6px 0 4px}
+  .revealed .youvoted{display:block}
+  .total{text-align:center;font-size:13px;color:var(--muted);margin-top:4px}
+
+  .oneperson{text-align:center;font-size:13px;color:var(--muted);margin:22px 0 34px}
+  .oneperson b{color:var(--indigo-deep)}
+
+  h2{font-size:16px;text-transform:uppercase;letter-spacing:.08em;color:var(--indigo-deep);
+     margin:34px 0 16px;font-weight:900}
+  .map{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+  .row{display:grid;grid-template-columns:130px 1fr 44px;align-items:center;gap:12px;font-size:14px}
+  .row .bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+  .row .bar i{display:block;height:100%;background:var(--amber);width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+  .row .v{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+  .demo-tag{font-size:12px;color:var(--muted);font-style:italic;margin-top:6px}
+
+  .delib{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-top:14px}
+  .delib .c{padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+  .delib .c:last-child{border:none;padding-bottom:0}
+  .delib .who{font-weight:700;font-size:13px;color:var(--muted);margin-bottom:3px}
+  .delib .who .badge{color:var(--green)}
+
+  .how{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);
+     border-radius:12px;padding:22px;margin-top:34px;font-size:14.5px}
+  .how b{color:var(--indigo-deep)}
+  .how ol{margin:12px 0 0 18px}
+  .how li{margin-bottom:6px}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;font-size:13px;color:var(--muted)}
+  footer a{color:var(--amber);text-decoration:none;font-weight:600}
+  @media(max-width:520px){.opts{grid-template-columns:1fr}.row{grid-template-columns:96px 1fr 40px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">◆ World<span>Constitution</span></a>
+    <a class="back" href="index.html">← На главную</a>
+  </div>
+</nav>
+
+<div class="preview-banner">
+  <b>Превью · Этап 2</b> &nbsp;— так будет выглядеть голосование. Пока это макет: голосование включится после верификации.
+</div>
+
+<section class="qwrap wrap">
+  <div class="meta"><span class="dot"></span> Вопрос дня · осталось 14:32:07</div>
+  <h1>Должны ли алгоритмы соцсетей быть открыты для независимого аудита?</h1>
+  <p class="qsub">Глобальный вопрос · один верифицированный человек = один голос</p>
+
+  <div class="opts" id="opts">
+    <div class="opt yes" data-pct="68" onclick="vote(this)">
+      <div class="fill"></div>
+      <span class="lbl">Да</span>
+      <span class="pct">68%</span>
+    </div>
+    <div class="opt no" data-pct="32" onclick="vote(this)">
+      <div class="fill"></div>
+      <span class="lbl">Нет</span>
+      <span class="pct">32%</span>
+    </div>
+  </div>
+  <div class="youvoted" id="youvoted">✓ Твой голос учтён</div>
+  <div class="total" id="total">Нажми вариант, чтобы увидеть результат (демо)</div>
+
+  <p class="oneperson"><b>Голос защищён:</b> нельзя доказать третьему, как ты проголосовал (защита от подкупа). Можно переголосовать — засчитается последний.</p>
+
+  <h2>Как голосуют страны</h2>
+  <div class="map" id="map">
+    <div class="row"><span>🇪🇪 Эстония</span><span class="bar"><i data-w="81"></i></span><span class="v">81%</span></div>
+    <div class="row"><span>🇬🇪 Грузия</span><span class="bar"><i data-w="74"></i></span><span class="v">74%</span></div>
+    <div class="row"><span>🇧🇷 Бразилия</span><span class="bar"><i data-w="66"></i></span><span class="v">66%</span></div>
+    <div class="row"><span>🇮🇳 Индия</span><span class="bar"><i data-w="59"></i></span><span class="v">59%</span></div>
+    <div class="row"><span>🇺🇸 США</span><span class="bar"><i data-w="63"></i></span><span class="v">63%</span></div>
+  </div>
+  <div class="demo-tag">Демо-данные для превью. В боевой версии — интерактивная карта мира в реальном времени.</div>
+
+  <h2>Обсуждение</h2>
+  <div class="delib">
+    <div class="c"><div class="who">Мария 🇬🇪 · <span class="badge">верифицирована</span> · доверие 720</div>Открытость алгоритмов — единственный способ проверить, не манипулируют ли лентой. Аудит не значит раскрытие персональных данных.</div>
+    <div class="c"><div class="who">Аноним · <span class="badge">верифицирован</span></div>Важно, кто именно проводит аудит. Нужен независимый орган, иначе аудит станет формальностью.</div>
+    <div class="c"><div class="who">Samir 🇦🇪 · <span class="badge">верифицирован</span> · гильдия инженеров</div>Технически реализуемо: публикуется логика ранжирования, не приватные данные. Уже есть рабочие подходы.</div>
+  </div>
+  <div class="demo-tag">Вес аргумента зависит от доверия автора — но на голос это не влияет: в голосовании 1 человек = 1 голос.</div>
+
+  <div class="how">
+    <b>Кто придумывает вопросы и кто модерирует?</b>
+    <ol>
+      <li><b>Предлагают — сами участники</b> (любой верифицированный), а не модераторы сверху.</li>
+      <li><b>ИИ-фильтр</b> убирает спам, дубли, ненейтральные формулировки и накрутки.</li>
+      <li><b>Сообщество</b> поднимает важное (вес по доверию).</li>
+      <li><b>Стюарды</b> (избранные, сменяемые, публичные) проверяют только спорное. ИИ никогда не выносит финал над человеком.</li>
+    </ol>
+    Стюардов модерируют взаимно: прозрачность, ротация, отзыв, апелляция жребием, репутация в залоге. Финальной несменяемой власти нет ни у кого.
+  </div>
+</section>
+
+<footer class="wrap">
+  Превью Этапа 2 · <a href="index.html">Подписать Конституцию →</a> · <a href="https://github.com/murad2026/wc" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+<script>
+function vote(el){
+  const opts = document.getElementById('opts');
+  opts.classList.add('revealed');
+  document.querySelectorAll('.opt').forEach(o=>{
+    o.classList.remove('picked');
+    o.querySelector('.fill').style.width = o.dataset.pct + '%';
+  });
+  el.classList.add('picked');
+  document.getElementById('youvoted').style.display = 'block';
+  document.getElementById('total').textContent = 'Всего проголосовало: 12 847 человек (демо)';
+  // анимируем карту
+  document.querySelectorAll('#map i').forEach(i=> i.style.width = i.dataset.w + '%');
+}
+</script>
+</body>
+</html>

@@ -67,7 +67,11 @@
   .step .num{width:44px;height:44px;border-radius:50%;background:var(--amber-soft);color:var(--amber);
      font-weight:900;font-size:19px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
   .step b{display:block;margin-bottom:6px}
-  .step span{font-size:14px;color:var(--muted)}
+  .step span{display:block;font-size:14px;color:var(--muted)}
+  .step .soon{display:inline-block;margin-top:10px;font-size:11px;font-weight:800;letter-spacing:.1em;
+     text-transform:uppercase;color:var(--amber);background:var(--amber-soft);border-radius:99px;padding:3px 11px}
+  .how-note{margin-top:30px;font-size:14px}
+  .how-note a{color:var(--amber);text-decoration:none;font-weight:700}
 
   .const{padding:72px 0;border-top:1px solid var(--line)}
   .preamble{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);
@@ -157,10 +161,11 @@
 <section class="how wrap">
   <h2>Как это работает</h2>
   <div class="steps">
-    <div class="step"><div class="num">1</div><b>Подпиши</b><span>Имя или псевдоним — без крипты и кошельков</span></div>
-    <div class="step"><div class="num">2</div><b>Верифицируйся</b><span>Один клик — значок «реальный человек» (Этап 1)</span></div>
-    <div class="step"><div class="num">3</div><b>Голосуй и участвуй</b><span>1 человек = 1 голос. Анонимно или открыто (Этап 2)</span></div>
+    <div class="step"><div class="num">1</div><b>Подпиши</b><span>Имя или псевдоним — без крипты и кошельков</span><span class="soon" style="background:none;color:#2e8b57;padding-left:0">✓ Работает сейчас</span></div>
+    <div class="step"><div class="num">2</div><b>Верифицируйся</b><span>Один клик — значок «реальный человек»</span><span class="soon">Скоро · Этап 1</span></div>
+    <div class="step"><div class="num">3</div><b>Голосуй и участвуй</b><span>1 человек = 1 голос. Анонимно или открыто</span><span class="soon">Скоро · Этап 2</span></div>
   </div>
+  <p class="how-note">Голосование появится после верификации — иначе один человек накрутит тысячу голосов. <a href="vote.html">Посмотреть, как будет выглядеть «Вопрос дня» →</a></p>
 </section>
 
 <section class="const wrap" id="constitution">
