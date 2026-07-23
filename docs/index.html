@@ -25,7 +25,6 @@
 
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 
-  /* NAV */
   nav{position:sticky;top:0;background:color-mix(in srgb, var(--paper) 88%, transparent);
       backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:50}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1080px;margin:0 auto}
@@ -42,7 +41,6 @@
   .btn.big{font-size:18px;padding:16px 36px;border-radius:12px}
   .btn[disabled]{background:#3f9b5f;cursor:default}
 
-  /* HERO */
   header{padding:96px 0 72px;text-align:center}
   .demo-note{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
     color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:4px 14px;margin-bottom:36px}
@@ -54,7 +52,6 @@
   .counter b{font-size:clamp(22px,3.4vw,30px);font-variant-numeric:tabular-nums;letter-spacing:.01em}
   .counter .up{color:#2e8b57;font-size:14px;display:block;margin-top:4px}
 
-  /* BENEFITS */
   .benefits{padding:64px 0;border-top:1px solid var(--line)}
   .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px}
@@ -62,7 +59,6 @@
   .card h3{font-size:18px;margin:10px 0 8px;color:var(--indigo-deep)}
   .card p{font-size:14.5px;color:var(--muted)}
 
-  /* HOW */
   .how{padding:56px 0;border-top:1px solid var(--line);text-align:center}
   .how h2, .const h2, .wall h2{font-size:clamp(24px,4vw,36px);font-weight:900;text-transform:uppercase;
      letter-spacing:.02em;color:var(--indigo-deep);margin-bottom:32px}
@@ -73,7 +69,6 @@
   .step b{display:block;margin-bottom:6px}
   .step span{font-size:14px;color:var(--muted)}
 
-  /* CONSTITUTION */
   .const{padding:72px 0;border-top:1px solid var(--line)}
   .preamble{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);
      border-radius:14px;padding:26px 28px;margin-bottom:36px;font-size:16.5px}
@@ -92,21 +87,19 @@
   @media(max-width:600px){.art-body{padding-left:20px}}
   .const-cta{text-align:center;margin-top:40px}
 
-  /* WALL */
   .wall{padding:64px 0;border-top:1px solid var(--line);text-align:center}
   .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:900px;margin:0 auto}
   .chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:7px 16px;font-size:14px}
   .chip.you{border-color:var(--amber);background:var(--amber-soft);font-weight:700}
+  .chip.empty{border-style:dashed;color:var(--muted)}
   .wall-note{margin-top:22px;font-size:13px;color:var(--muted)}
 
-  /* FOOTER */
   footer{border-top:1px solid var(--line);padding:56px 0 64px;text-align:center}
   .manifesto{max-width:560px;margin:0 auto;font-size:16px;line-height:2;color:var(--indigo)}
   .manifesto b{color:var(--indigo-deep)}
   .foot-code{margin-top:28px;font-size:14px;color:var(--muted)}
   .foot-code a{color:var(--amber);text-decoration:none;font-weight:600}
 
-  /* MODAL */
   .modal-bg{position:fixed;inset:0;background:rgba(10,14,35,.55);display:none;align-items:center;
      justify-content:center;z-index:100;padding:20px}
   .modal-bg.open{display:flex}
@@ -123,6 +116,8 @@
   .signed-msg{display:none;text-align:center;padding:12px 0}
   .signed-msg .check{font-size:52px}
   .signed-msg h3{margin:10px 0 6px}
+  .err{display:none;color:#c0392b;font-size:13px;margin-top:10px}
+  .hp{position:absolute;left:-9999px;opacity:0}
 </style>
 </head>
 <body>
@@ -136,13 +131,13 @@
 </nav>
 
 <header class="wrap">
-  <div class="demo-note">Прототип Этапа 0 · демо-режим</div>
+  <div class="demo-note" id="mode-badge">Этап 0</div>
   <h1>Честность<br>сильнее власти</h1>
   <p class="credo">Открытость рождает доверие. Доверие строит будущее.<br>Инструмент — уже здесь.</p>
   <div class="hero-cta"><button class="btn big js-sign">Подписать Конституцию</button></div>
   <div class="counter">
-    <b id="counter">12 847</b> человек подписали
-    <span class="up" id="counter-up">▲ +134 за последний час</span>
+    <b id="counter">—</b> <span id="counter-label">человек подписали</span>
+    <span class="up">Первые 100 в каждой стране — основатели страны навсегда</span>
   </div>
 </header>
 
@@ -162,9 +157,9 @@
 <section class="how wrap">
   <h2>Как это работает</h2>
   <div class="steps">
-    <div class="step"><div class="num">1</div><b>Подпиши</b><span>Email или соцсеть — без крипты и кошельков</span></div>
-    <div class="step"><div class="num">2</div><b>Верифицируйся</b><span>Один клик — значок «реальный человек»</span></div>
-    <div class="step"><div class="num">3</div><b>Голосуй и участвуй</b><span>1 человек = 1 голос. Анонимно или открыто</span></div>
+    <div class="step"><div class="num">1</div><b>Подпиши</b><span>Имя или псевдоним — без крипты и кошельков</span></div>
+    <div class="step"><div class="num">2</div><b>Верифицируйся</b><span>Один клик — значок «реальный человек» (Этап 1)</span></div>
+    <div class="step"><div class="num">3</div><b>Голосуй и участвуй</b><span>1 человек = 1 голос. Анонимно или открыто (Этап 2)</span></div>
   </div>
 </section>
 
@@ -184,7 +179,7 @@
 
 <section class="wall wrap">
   <h2>Стена подписантов</h2>
-  <div class="chips" id="wall"></div>
+  <div class="chips" id="wall"><span class="chip empty">Стена пока пуста — стань первым</span></div>
   <p class="wall-note">Первые 100 подписантов в каждой стране навсегда получают статус «основатель страны».</p>
 </section>
 
@@ -196,26 +191,32 @@
     Голос каждого имеет вес.<br>
     Так строится будущее. Иначе — не строится.
   </div>
-  <div class="foot-code">Не декларация — работающий код · <a href="https://github.com/murad2026/wc" target="_blank">GitHub</a></div>
+  <div class="foot-code">Не декларация — работающий код · <a href="https://github.com/murad2026/wc" target="_blank" rel="noopener">GitHub</a></div>
 </footer>
 
 <div class="modal-bg" id="modal">
   <div class="modal">
     <div id="sign-form">
       <h3>Подписать Конституцию</h3>
-      <p class="sub">В демо-режиме подпись сохраняется в твоём браузере. В боевой версии — вход через email / Google / Telegram / Apple / X.</p>
+      <p class="sub" id="modal-sub">Публично сохраняются только имя/псевдоним и страна. Email не нужен. Верификация личности — на Этапе 1, по желанию.</p>
       <label>Имя или псевдоним</label>
       <input type="text" id="sig-name" maxlength="40" placeholder="Как тебя записать на стене">
+      <input type="text" id="sig-hp" class="hp" tabindex="-1" autocomplete="off">
       <label>Страна</label>
       <select id="sig-country">
         <option value="🌍">🌍 Не указывать</option><option value="🇬🇪">🇬🇪 Грузия</option>
         <option value="🇪🇪">🇪🇪 Эстония</option><option value="🇺🇾">🇺🇾 Уругвай</option>
         <option value="🇦🇪">🇦🇪 ОАЭ</option><option value="🇷🇼">🇷🇼 Руанда</option>
         <option value="🇺🇦">🇺🇦 Украина</option><option value="🇰🇿">🇰🇿 Казахстан</option>
-        <option value="🇺🇸">🇺🇸 США</option><option value="🇩🇪">🇩🇪 Германия</option>
+        <option value="🇺🇿">🇺🇿 Узбекистан</option><option value="🇦🇿">🇦🇿 Азербайджан</option>
+        <option value="🇦🇲">🇦🇲 Армения</option><option value="🇹🇷">🇹🇷 Турция</option>
+        <option value="🇺🇸">🇺🇸 США</option><option value="🇬🇧">🇬🇧 Великобритания</option>
+        <option value="🇩🇪">🇩🇪 Германия</option><option value="🇫🇷">🇫🇷 Франция</option>
         <option value="🇧🇷">🇧🇷 Бразилия</option><option value="🇮🇳">🇮🇳 Индия</option>
+        <option value="🇯🇵">🇯🇵 Япония</option><option value="🇰🇷">🇰🇷 Южная Корея</option>
       </select>
       <label class="anon" style="font-weight:400"><input type="checkbox" id="sig-anon"> Подписать анонимно (на стене — «Аноним», голос равен любому другому)</label>
+      <div class="err" id="sig-err">Не получилось сохранить подпись. Попробуй ещё раз.</div>
       <div class="actions">
         <button class="btn" id="sig-submit" style="flex:1">Подписываю</button>
         <button class="cancel js-close">Отмена</button>
@@ -231,6 +232,17 @@
 </div>
 
 <script>
+/* =====================================================================
+   КОНФИГ. Вставь сюда данные своего проекта Supabase (см. DEPLOY.md).
+   Пока поля пустые — страница работает в честном демо-режиме
+   (подписи сохраняются только в этом браузере).
+   ===================================================================== */
+const SB = {
+  url:  "",   // например: "https://abcdefgh.supabase.co"
+  anon: ""    // anon public key из Settings → API
+};
+const LIVE = !!(SB.url && SB.anon);
+
 /* ---------- Конституция: 19 статей ---------- */
 const ARTICLES = [
  ["0","Неотъемлемые права","не изменяема",
@@ -273,58 +285,104 @@ const ARTICLES = [
   "<p><b>Принцип.</b> Новая система не свергает старую силой и не принуждает — она побеждает тем, что внутри лучше.</p><p><b>Как работает.</b> Можно оставаться в старой системе и участвовать в новой. Амнистия перехода: репутационное прощение в обмен на полное раскрытие правды и прекращение вреда; окно сужается — кто раньше, тому больше.</p><p><b>Границы.</b> Это не юридический иммунитет. Тягчайшие преступления амнистии не подлежат. Самосуда нет.</p>"]
 ];
 
-const box = document.getElementById('articles');
-box.innerHTML = ARTICLES.map(a =>
+document.getElementById('articles').innerHTML = ARTICLES.map(a =>
   `<details><summary><span class="art-num">${a[0]}</span> ${a[1]}${a[2]?`<span class="lock">🔒 ${a[2]}</span>`:''}</summary><div class="art-body">${a[3]}</div></details>`
 ).join('');
 
-/* ---------- Счётчик (демо: живая имитация) ---------- */
-let count = 12847 + (JSON.parse(localStorage.getItem('wc_signers')||'[]').length);
-const el = document.getElementById('counter');
+/* ---------- Помощники ---------- */
+const $ = id => document.getElementById(id);
 const fmt = n => n.toLocaleString('ru-RU');
-el.textContent = fmt(count);
-setInterval(()=>{ if(Math.random()<.45){ count += Math.floor(Math.random()*3)+1; el.textContent = fmt(count);} }, 2600);
+const esc = s => { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; };
+const sbHeaders = { 'apikey': SB.anon, 'Authorization': 'Bearer '+SB.anon };
 
-/* ---------- Стена ---------- */
-const SEED = [["Мария","🇬🇪"],["Samir","🇦🇪"],["Аноним","🌍"],["João","🇧🇷"],["Kadri","🇪🇪"],
- ["Олег","🇺🇦"],["Aisha","🇷🇼"],["Lucía","🇺🇾"],["Аноним","🌍"],["Priya","🇮🇳"],
- ["Hans","🇩🇪"],["Айгерим","🇰🇿"],["Emma","🇺🇸"],["Аноним","🌍"],["Nino","🇬🇪"]];
-function renderWall(){
-  const mine = JSON.parse(localStorage.getItem('wc_signers')||'[]');
-  document.getElementById('wall').innerHTML =
-    mine.map(s=>`<span class="chip you">${s.flag} ${esc(s.name)} · ты</span>`).join('') +
-    SEED.map(s=>`<span class="chip">${s[1]} ${s[0]}</span>`).join('') +
-    `<span class="chip">…и ещё ${fmt(count-SEED.length)}</span>`;
+$('mode-badge').textContent = LIVE ? 'Этап 0 · подписи настоящие' : 'Прототип Этапа 0 · демо-режим (подписи хранятся в этом браузере)';
+if(!LIVE) $('modal-sub').textContent = 'Демо-режим: подпись сохранится только в этом браузере. В боевой версии — публичная стена.';
+
+/* ---------- Счётчик и стена: без имитации, только правда ---------- */
+async function loadCount(){
+  if(LIVE){
+    try{
+      const r = await fetch(`${SB.url}/rest/v1/signatures?select=id`,
+        { method:'HEAD', headers:{ ...sbHeaders, 'Prefer':'count=exact', 'Range':'0-0' } });
+      const cr = r.headers.get('content-range');
+      const n = cr ? parseInt(cr.split('/')[1],10) : 0;
+      $('counter').textContent = fmt(isNaN(n)?0:n);
+    }catch(e){ $('counter').textContent = '—'; }
+  }else{
+    const mine = JSON.parse(localStorage.getItem('wc_signers')||'[]');
+    $('counter').textContent = fmt(mine.length);
+  }
 }
-function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
-renderWall();
+async function loadWall(){
+  let rows = [];
+  if(LIVE){
+    try{
+      rows = await (await fetch(`${SB.url}/rest/v1/signatures?select=name,country,is_anon&order=id.desc&limit=40`,
+        { headers: sbHeaders })).json();
+      if(!Array.isArray(rows)) rows = [];
+    }catch(e){ rows = []; }
+  }else{
+    rows = JSON.parse(localStorage.getItem('wc_signers')||'[]');
+  }
+  const mineName = localStorage.getItem('wc_myname');
+  $('wall').innerHTML = rows.length
+    ? rows.map(r=>{
+        const nm = r.is_anon ? 'Аноним' : (r.name||'Аноним');
+        const you = mineName && nm===mineName;
+        return `<span class="chip${you?' you':''}">${r.country||'🌍'} ${esc(nm)}${you?' · ты':''}</span>`;
+      }).join('')
+    : '<span class="chip empty">Стена пока пуста — стань первым</span>';
+}
+loadCount(); loadWall();
+if(LIVE) setInterval(loadCount, 30000);
 
 /* ---------- Модалка подписи ---------- */
-const modal = document.getElementById('modal');
+const modal = $('modal');
 document.querySelectorAll('.js-sign').forEach(b=>b.addEventListener('click',()=>{
-  document.getElementById('sign-form').style.display = localStorage.getItem('wc_signed')?'none':'block';
-  document.getElementById('signed-msg').style.display = localStorage.getItem('wc_signed')?'block':'none';
+  const signed = !!localStorage.getItem('wc_signed');
+  $('sign-form').style.display = signed?'none':'block';
+  $('signed-msg').style.display = signed?'block':'none';
   modal.classList.add('open');
 }));
 document.querySelectorAll('.js-close').forEach(b=>b.addEventListener('click',()=>modal.classList.remove('open')));
 modal.addEventListener('click',e=>{ if(e.target===modal) modal.classList.remove('open'); });
 
-document.getElementById('sig-submit').addEventListener('click',()=>{
-  const anon = document.getElementById('sig-anon').checked;
-  let name = document.getElementById('sig-name').value.trim() || 'Аноним';
+$('sig-submit').addEventListener('click', async ()=>{
+  if($('sig-hp').value) return;                       /* honeypot: боты заполняют скрытое поле */
+  const anon = $('sig-anon').checked;
+  let name = $('sig-name').value.trim() || 'Аноним';
   if(anon) name = 'Аноним';
-  const flag = anon ? '🌍' : document.getElementById('sig-country').value;
-  const mine = JSON.parse(localStorage.getItem('wc_signers')||'[]');
-  mine.unshift({name,flag});
-  localStorage.setItem('wc_signers',JSON.stringify(mine));
+  const country = anon ? '🌍' : $('sig-country').value;
+  $('sig-err').style.display='none';
+  $('sig-submit').disabled = true; $('sig-submit').textContent = '…';
+
+  let ok = true;
+  if(LIVE){
+    try{
+      const r = await fetch(`${SB.url}/rest/v1/signatures`,{
+        method:'POST',
+        headers:{ ...sbHeaders, 'Content-Type':'application/json', 'Prefer':'return=minimal' },
+        body: JSON.stringify({ name, country, is_anon: anon })
+      });
+      ok = r.ok;
+    }catch(e){ ok = false; }
+  }else{
+    const mine = JSON.parse(localStorage.getItem('wc_signers')||'[]');
+    mine.unshift({name, country, is_anon:anon});
+    localStorage.setItem('wc_signers', JSON.stringify(mine));
+  }
+
+  $('sig-submit').disabled = false; $('sig-submit').textContent = 'Подписываю';
+  if(!ok){ $('sig-err').style.display='block'; return; }
+
   localStorage.setItem('wc_signed','1');
-  count++; el.textContent = fmt(count); renderWall();
+  localStorage.setItem('wc_myname', name);
+  await loadCount(); await loadWall();
   document.querySelectorAll('.js-sign').forEach(b=>{ b.textContent='✓ Ты подписал'; b.setAttribute('disabled',''); });
-  document.getElementById('sign-form').style.display='none';
-  document.getElementById('signed-msg').style.display='block';
+  $('sign-form').style.display='none';
+  $('signed-msg').style.display='block';
 });
 
-/* уже подписал ранее */
 if(localStorage.getItem('wc_signed')){
   document.querySelectorAll('.js-sign').forEach(b=>{ b.textContent='✓ Ты подписал'; b.setAttribute('disabled',''); });
 }
