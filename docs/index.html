@@ -322,18 +322,18 @@ async function loadWall(){
   let rows = [];
   if(LIVE){
     try{
-      rows = await (await fetch(`${SB.url}/rest/v1/signatures?select=name,country,is_anon&order=id.desc&limit=40`,
+      rows = await (await fetch(`${SB.url}/rest/v1/signatures?select=id,name,country,is_anon&order=id.desc&limit=40`,
         { headers: sbHeaders })).json();
       if(!Array.isArray(rows)) rows = [];
     }catch(e){ rows = []; }
   }else{
     rows = JSON.parse(localStorage.getItem('wc_signers')||'[]');
   }
-  const mineName = localStorage.getItem('wc_myname');
+  const myids = new Set(JSON.parse(localStorage.getItem('wc_myids')||'[]'));
   $('wall').innerHTML = rows.length
     ? rows.map(r=>{
         const nm = r.is_anon ? 'Аноним' : (r.name||'Аноним');
-        const you = mineName && nm===mineName;
+        const you = r.id!=null && myids.has(r.id);
         return `<span class="chip${you?' you':''}">${r.country||'🌍'} ${esc(nm)}${you?' · ты':''}</span>`;
       }).join('')
     : '<span class="chip empty">Стена пока пуста — стань первым</span>';
@@ -361,19 +361,21 @@ $('sig-submit').addEventListener('click', async ()=>{
   $('sig-err').style.display='none';
   $('sig-submit').disabled = true; $('sig-submit').textContent = '…';
 
-  let ok = true;
+  let ok = true, newId = null;
   if(LIVE){
     try{
       const r = await fetch(`${SB.url}/rest/v1/signatures`,{
         method:'POST',
-        headers:{ ...sbHeaders, 'Content-Type':'application/json', 'Prefer':'return=minimal' },
+        headers:{ ...sbHeaders, 'Content-Type':'application/json', 'Prefer':'return=representation' },
         body: JSON.stringify({ name, country, is_anon: anon })
       });
       ok = r.ok;
+      if(ok){ const d = await r.json(); const row = Array.isArray(d)?d[0]:d; if(row && row.id!=null) newId = row.id; }
     }catch(e){ ok = false; }
   }else{
     const mine = JSON.parse(localStorage.getItem('wc_signers')||'[]');
-    mine.unshift({name, country, is_anon:anon});
+    newId = 'local-'+mine.length;
+    mine.unshift({id:newId, name, country, is_anon:anon});
     localStorage.setItem('wc_signers', JSON.stringify(mine));
   }
 
@@ -381,7 +383,11 @@ $('sig-submit').addEventListener('click', async ()=>{
   if(!ok){ $('sig-err').style.display='block'; return; }
 
   localStorage.setItem('wc_signed','1');
-  localStorage.setItem('wc_myname', name);
+  if(newId!=null){
+    const myids = JSON.parse(localStorage.getItem('wc_myids')||'[]');
+    myids.push(newId);
+    localStorage.setItem('wc_myids', JSON.stringify(myids));
+  }
   await loadCount(); await loadWall();
   document.querySelectorAll('.js-sign').forEach(b=>{ b.textContent='✓ Ты подписал'; b.setAttribute('disabled',''); });
   $('sign-form').style.display='none';
