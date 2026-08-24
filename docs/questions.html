@@ -185,14 +185,15 @@ $('q-submit').addEventListener('click', async ()=>{
 
   $('q-submit').disabled = true; $('q-submit').textContent = 'Отправляю…';
   try{
+    /* return=minimal: новая строка имеет status='pending', а политика чтения
+       пропускает только approved/published — representation здесь падает */
     const r = await fetch(`${SB.url}/rest/v1/questions`, {
       method:'POST',
-      headers:{ ...H, 'Content-Type':'application/json', 'Prefer':'return=representation' },
+      headers:{ ...H, 'Content-Type':'application/json', 'Prefer':'return=minimal' },
       body: JSON.stringify({ text, author, country })
     });
     if(!r.ok) throw new Error(await r.text());
-    const d = await r.json(); const row = Array.isArray(d)?d[0]:d;
-    const mine = myQ(); mine.push({ id: row && row.id, text });
+    const mine = myQ(); mine.push({ text, at: new Date().toISOString() });
     localStorage.setItem('wc_myq', JSON.stringify(mine));
     paintKudos();
     $('q-text').value=''; $('q-len').textContent='0';
