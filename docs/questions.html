@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вопросы человечеству · WorldConstitution</title>
+<meta name="description" content="Предложи вопрос, по которому должно высказаться человечество. Лучшие становятся глобальным голосованием.">
+<style>
+  :root{
+    --indigo:#1e2a5a; --indigo-deep:#141b3d;
+    --amber:#d98e04; --amber-hover:#b97800; --amber-soft:#fff3dc;
+    --green:#2e8b57; --paper:#fbfaf7; --card:#ffffff; --line:#e8e5dd; --muted:#6b7085;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --indigo:#dfe4f5; --indigo-deep:#f0f2fa;
+      --amber:#f0a71c; --amber-hover:#ffbe3d; --amber-soft:#2a2410;
+      --green:#4cbf85; --paper:#12162a; --card:#1a2038; --line:#2a3152; --muted:#8d93ab;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+       background:var(--paper);color:var(--indigo);line-height:1.6}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  nav{border-bottom:1px solid var(--line);position:sticky;top:0;
+      background:color-mix(in srgb, var(--paper) 88%, transparent);backdrop-filter:blur(10px);z-index:20}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:780px;margin:0 auto}
+  .logo{font-weight:800;font-size:16px;color:var(--indigo);text-decoration:none}
+  .logo span{color:var(--amber)}
+  .back{font-size:14px;color:var(--amber);text-decoration:none;font-weight:600}
+
+  header{padding:52px 0 34px;text-align:center}
+  h1{font-size:clamp(26px,5vw,42px);font-weight:900;text-transform:uppercase;letter-spacing:.01em;
+     color:var(--indigo-deep);line-height:1.1}
+  .sub{margin:16px auto 0;max-width:560px;color:var(--muted);font-size:16px}
+
+  .kudos{display:flex;justify-content:center;gap:22px;margin-top:26px;flex-wrap:wrap}
+  .kbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 24px;text-align:center;min-width:130px}
+  .kbox b{display:block;font-size:24px;font-variant-numeric:tabular-nums;color:var(--indigo-deep)}
+  .kbox span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+  .propose{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;margin:16px 0 42px}
+  .propose h2{font-size:19px;color:var(--indigo-deep);margin-bottom:6px}
+  .propose p.hint{font-size:14px;color:var(--muted);margin-bottom:16px}
+  label{display:block;font-size:13px;font-weight:700;margin:14px 0 6px;letter-spacing:.04em}
+  textarea,input[type=text],select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;
+     font-size:15px;background:var(--paper);color:var(--indigo);font-family:inherit}
+  textarea{min-height:88px;resize:vertical}
+  .counter-chars{font-size:12px;color:var(--muted);text-align:right;margin-top:4px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:560px){.row2{grid-template-columns:1fr}}
+  .btn{background:var(--amber);color:#fff;border:none;cursor:pointer;font-weight:700;font-size:16px;
+       padding:13px 26px;border-radius:11px;transition:background .15s, transform .1s;font-family:inherit}
+  .btn:hover{background:var(--amber-hover)}
+  .btn:active{transform:scale(.98)}
+  .btn[disabled]{opacity:.6;cursor:default}
+  .msg{display:none;margin-top:14px;padding:13px 16px;border-radius:10px;font-size:14.5px}
+  .msg.ok{display:block;background:var(--amber-soft);border:1px solid var(--amber);color:var(--indigo-deep)}
+  .msg.err{display:block;background:#fdecea;border:1px solid #e0b4ae;color:#a03027}
+  @media (prefers-color-scheme: dark){.msg.err{background:#3a1f1c;border-color:#7a3b33;color:#f0b5ac}}
+  .hp{position:absolute;left:-9999px;opacity:0}
+
+  h2.sect{font-size:16px;text-transform:uppercase;letter-spacing:.08em;color:var(--indigo-deep);
+     margin:0 0 16px;font-weight:900}
+  .q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:12px;
+     display:flex;gap:16px;align-items:flex-start}
+  .q .body{flex:1}
+  .q .text{font-size:16px;font-weight:600;color:var(--indigo-deep);margin-bottom:6px}
+  .q .who{font-size:13px;color:var(--muted)}
+  .q .pub{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+     color:var(--green);border:1px solid var(--green);border-radius:99px;padding:2px 9px;margin-left:8px}
+  .sup{flex-shrink:0;text-align:center;border:2px solid var(--line);border-radius:12px;padding:8px 14px;
+     cursor:pointer;background:none;font-family:inherit;transition:border-color .15s,transform .1s}
+  .sup:hover{border-color:var(--amber)}
+  .sup:active{transform:scale(.95)}
+  .sup.done{border-color:var(--amber);background:var(--amber-soft);cursor:default}
+  .sup b{display:block;font-size:17px;font-variant-numeric:tabular-nums;color:var(--indigo-deep)}
+  .sup span{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .empty{border:1px dashed var(--line);border-radius:14px;padding:28px;text-align:center;color:var(--muted);font-size:15px}
+
+  .ledger{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);
+     border-radius:12px;padding:20px;margin:40px 0 30px;font-size:14.5px;color:var(--muted)}
+  .ledger b{color:var(--indigo-deep)}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;font-size:13px;color:var(--muted);margin-top:20px}
+  footer a{color:var(--amber);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">◆ World<span>Constitution</span></a>
+    <a class="back" href="index.html">← На главную</a>
+  </div>
+</nav>
+
+<header class="wrap">
+  <h1>Вопросы человечеству</h1>
+  <p class="sub">Повестку задают люди, а не редакция. Предложи вопрос, по которому должно высказаться человечество — лучшие станут глобальным голосованием.</p>
+  <div class="kudos">
+    <div class="kbox"><b id="k-q">0</b><span>твоих вопросов</span></div>
+    <div class="kbox"><b id="k-s">0</b><span>поддержано тобой</span></div>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="propose">
+    <h2>Предложить вопрос</h2>
+    <p class="hint">Формулируй нейтрально, чтобы можно было ответить «да» или «нет». Вопрос проходит проверку и появляется в списке.</p>
+
+    <label>Вопрос</label>
+    <textarea id="q-text" maxlength="200" placeholder="Например: Должны ли алгоритмы соцсетей быть открыты для независимого аудита?"></textarea>
+    <div class="counter-chars"><span id="q-len">0</span>/200</div>
+    <input type="text" id="q-hp" class="hp" tabindex="-1" autocomplete="off">
+
+    <div class="row2">
+      <div>
+        <label>Имя или псевдоним</label>
+        <input type="text" id="q-author" maxlength="40" placeholder="Аноним">
+      </div>
+      <div>
+        <label>Страна</label>
+        <select id="q-country">
+          <option value="🌍">🌍 Не указывать</option><option value="🇬🇪">🇬🇪 Грузия</option>
+          <option value="🇪🇪">🇪🇪 Эстония</option><option value="🇺🇾">🇺🇾 Уругвай</option>
+          <option value="🇦🇪">🇦🇪 ОАЭ</option><option value="🇷🇼">🇷🇼 Руанда</option>
+          <option value="🇺🇦">🇺🇦 Украина</option><option value="🇰🇿">🇰🇿 Казахстан</option>
+          <option value="🇺🇿">🇺🇿 Узбекистан</option><option value="🇦🇿">🇦🇿 Азербайджан</option>
+          <option value="🇦🇲">🇦🇲 Армения</option><option value="🇹🇷">🇹🇷 Турция</option>
+          <option value="🇺🇸">🇺🇸 США</option><option value="🇬🇧">🇬🇧 Великобритания</option>
+          <option value="🇩🇪">🇩🇪 Германия</option><option value="🇫🇷">🇫🇷 Франция</option>
+          <option value="🇧🇷">🇧🇷 Бразилия</option><option value="🇮🇳">🇮🇳 Индия</option>
+          <option value="🇯🇵">🇯🇵 Япония</option><option value="🇰🇷">🇰🇷 Южная Корея</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="margin-top:20px"><button class="btn" id="q-submit">Отправить вопрос</button></div>
+    <div class="msg" id="q-msg"></div>
+  </div>
+
+  <h2 class="sect">Предложено сообществом</h2>
+  <div id="list"><div class="empty">Загружаю…</div></div>
+
+  <div class="ledger">
+    <b>Реестр вклада.</b> Каждый предложенный и поддержанный вопрос записывается в открытый реестр вклада.
+    Вклад может быть учтён в будущих ретроактивных раундах — правила определяются позже и сообществом;
+    никаких гарантий, обещаний дохода или курса не даётся. Полноценный персональный учёт появится вместе
+    с верификацией (Этап 1) — сейчас счётчики хранятся в твоём браузере.
+  </div>
+</section>
+
+<footer class="wrap">
+  <a href="index.html">Подписать Конституцию</a> · <a href="vote.html">Как выглядит голосование</a> ·
+  <a href="https://github.com/murad2026/wc" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+<script>
+const SB = {
+  url:  "https://nhkwgulokiwqwfrynmkx.supabase.co",
+  anon: "sb_publishable_XFFU01VfekhRJffwEEgbwA_eOvmOXr0"
+};
+const H = { 'apikey': SB.anon, 'Authorization': 'Bearer '+SB.anon };
+const $ = id => document.getElementById(id);
+const esc = s => { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; };
+
+/* кидос — локальные счётчики вклада */
+const myQ = () => JSON.parse(localStorage.getItem('wc_myq')||'[]');
+const myS = () => JSON.parse(localStorage.getItem('wc_mys')||'[]');
+function paintKudos(){ $('k-q').textContent = myQ().length; $('k-s').textContent = myS().length; }
+paintKudos();
+
+$('q-text').addEventListener('input', e => $('q-len').textContent = e.target.value.length);
+
+function showMsg(kind, text){ const m=$('q-msg'); m.className='msg '+kind; m.textContent=text; }
+
+$('q-submit').addEventListener('click', async ()=>{
+  if($('q-hp').value) return;
+  const text = $('q-text').value.trim();
+  if(text.length < 10){ showMsg('err','Вопрос слишком короткий — минимум 10 символов.'); return; }
+  const author = $('q-author').value.trim() || 'Аноним';
+  const country = $('q-country').value;
+
+  $('q-submit').disabled = true; $('q-submit').textContent = 'Отправляю…';
+  try{
+    const r = await fetch(`${SB.url}/rest/v1/questions`, {
+      method:'POST',
+      headers:{ ...H, 'Content-Type':'application/json', 'Prefer':'return=representation' },
+      body: JSON.stringify({ text, author, country })
+    });
+    if(!r.ok) throw new Error(await r.text());
+    const d = await r.json(); const row = Array.isArray(d)?d[0]:d;
+    const mine = myQ(); mine.push({ id: row && row.id, text });
+    localStorage.setItem('wc_myq', JSON.stringify(mine));
+    paintKudos();
+    $('q-text').value=''; $('q-len').textContent='0';
+    showMsg('ok','Вопрос отправлен и записан в реестр вклада. После проверки он появится в списке ниже.');
+  }catch(e){
+    showMsg('err','Не получилось отправить. Попробуй ещё раз.');
+  }
+  $('q-submit').disabled = false; $('q-submit').textContent = 'Отправить вопрос';
+});
+
+async function load(){
+  try{
+    const [qs, sup] = await Promise.all([
+      fetch(`${SB.url}/rest/v1/questions?select=id,text,author,country,status&order=id.desc&limit=50`, {headers:H}).then(r=>r.json()),
+      fetch(`${SB.url}/rest/v1/question_supports?select=question_id&limit=5000`, {headers:H}).then(r=>r.json())
+    ]);
+    if(!Array.isArray(qs)) throw new Error('bad');
+    const counts = {};
+    (Array.isArray(sup)?sup:[]).forEach(s => counts[s.question_id] = (counts[s.question_id]||0)+1);
+    qs.sort((a,b)=>(counts[b.id]||0)-(counts[a.id]||0));
+
+    const supported = new Set(myS());
+    $('list').innerHTML = qs.length ? qs.map(q=>`
+      <div class="q">
+        <div class="body">
+          <div class="text">${esc(q.text)}${q.status==='published'?'<span class="pub">Вопрос дня</span>':''}</div>
+          <div class="who">${q.country||'🌍'} ${esc(q.author||'Аноним')}</div>
+        </div>
+        <button class="sup${supported.has(q.id)?' done':''}" data-id="${q.id}" ${supported.has(q.id)?'disabled':''}>
+          <b>${counts[q.id]||0}</b><span>${supported.has(q.id)?'поддержан':'поддержать'}</span>
+        </button>
+      </div>`).join('')
+      : '<div class="empty">Пока ни одного вопроса — предложи первый.</div>';
+
+    document.querySelectorAll('.sup:not(.done)').forEach(b => b.addEventListener('click', () => support(b)));
+  }catch(e){
+    $('list').innerHTML = '<div class="empty">Не удалось загрузить список. Обнови страницу.</div>';
+  }
+}
+
+async function support(btn){
+  const id = Number(btn.dataset.id);
+  btn.disabled = true;
+  try{
+    const r = await fetch(`${SB.url}/rest/v1/question_supports`, {
+      method:'POST',
+      headers:{ ...H, 'Content-Type':'application/json', 'Prefer':'return=minimal' },
+      body: JSON.stringify({ question_id: id })
+    });
+    if(!r.ok) throw new Error();
+    const s = myS(); s.push(id); localStorage.setItem('wc_mys', JSON.stringify(s));
+    paintKudos(); load();
+  }catch(e){ btn.disabled = false; }
+}
+
+load();
+</script>
+</body>
+</html>
