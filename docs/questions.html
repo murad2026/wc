@@ -108,7 +108,7 @@
 <section class="wrap">
   <div class="propose">
     <h2>Предложить вопрос</h2>
-    <p class="hint">Формулируй нейтрально, чтобы можно было ответить «да» или «нет». Вопрос проходит проверку и появляется в списке.</p>
+    <p class="hint">Формулируй нейтрально, чтобы можно было ответить «да» или «нет». Вопрос проходит проверку и появляется в списке. <span style="opacity:.5">v2</span></p>
 
     <label>Вопрос</label>
     <textarea id="q-text" maxlength="200" placeholder="Например: Должны ли алгоритмы соцсетей быть открыты для независимого аудита?"></textarea>
@@ -192,14 +192,15 @@ $('q-submit').addEventListener('click', async ()=>{
       headers:{ ...H, 'Content-Type':'application/json', 'Prefer':'return=minimal' },
       body: JSON.stringify({ text, author, country })
     });
-    if(!r.ok) throw new Error(await r.text());
+    if(!r.ok){ throw new Error('HTTP '+r.status+' — '+(await r.text()).slice(0,240)); }
     const mine = myQ(); mine.push({ text, at: new Date().toISOString() });
     localStorage.setItem('wc_myq', JSON.stringify(mine));
     paintKudos();
     $('q-text').value=''; $('q-len').textContent='0';
     showMsg('ok','Вопрос отправлен и записан в реестр вклада. После проверки он появится в списке ниже.');
   }catch(e){
-    showMsg('err','Не получилось отправить. Попробуй ещё раз.');
+    console.error('WC submit error:', e);
+    showMsg('err','Не получилось отправить. Детали: '+(e && e.message ? e.message : e));
   }
   $('q-submit').disabled = false; $('q-submit').textContent = 'Отправить вопрос';
 });
