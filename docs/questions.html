@@ -93,6 +93,7 @@
   <div class="nav-inner">
     <a class="logo" href="index.html">◆ World<span>Constitution</span></a>
     <div class="nav-right">
+      <a class="back" href="karma.html" id="nav-k"></a>
       <select id="lang" aria-label="Language"></select>
       <a class="back" href="index.html" id="back"></a>
     </div>
@@ -179,6 +180,7 @@ function render(){
   const q = T.q;
   document.title = q.title + ' · WorldConstitution';
   $('back').textContent = T.back;
+  $('nav-k').textContent = T.nav.karma;
   $('title').textContent = q.title;
   $('sub').textContent = q.sub;
   $('k-q-l').textContent = q.kq;

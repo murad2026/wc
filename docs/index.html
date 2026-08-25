@@ -149,6 +149,7 @@
     <a class="logo" href="#">◆ World<span>Constitution</span></a>
     <div class="nav-right">
       <a href="questions.html" class="nav-link" id="nav-q">Вопросы</a>
+      <a href="karma.html" class="nav-link" id="nav-k">Карма</a>
       <select id="lang" aria-label="Language"></select>
       <button class="btn small js-sign" id="nav-sign">Подписать</button>
     </div>
@@ -212,6 +213,7 @@
       <label id="m-country-l"></label>
       <select id="sig-country"></select>
       <label class="anon"><input type="checkbox" id="sig-anon"> <span id="m-anon"></span></label>
+      <p class="sub" style="font-size:12.5px;margin:-8px 0 0" id="m-anon-hint"></p>
       <div class="err" id="sig-err"></div>
       <div class="actions">
         <button class="btn" id="sig-submit" style="flex:1"></button>
@@ -224,7 +226,8 @@
       <div class="karma" id="karma-box"></div>
       <p class="sub" id="s-sub"></p>
       <a class="btn" href="questions.html" id="s-cta" style="display:inline-block;text-decoration:none"></a>
-      <div style="margin-top:14px"><button class="cancel js-close" id="s-later"></button></div>
+      <div style="margin-top:12px"><a href="karma.html" style="color:var(--amber);font-size:14px;font-weight:600;text-decoration:none" id="s-karma"></a></div>
+      <div style="margin-top:12px"><button class="cancel js-close" id="s-later"></button></div>
     </div>
   </div>
 </div>
@@ -318,6 +321,8 @@ function render(){
   $('sig-name').placeholder = T.modal.namePh;
   $('m-country-l').textContent = T.modal.country;
   $('m-anon').textContent = T.modal.anon;
+  $('m-anon-hint').textContent = T.modal.anonHint;
+  $('nav-k').textContent = T.nav.karma;
   $('sig-submit').textContent = T.modal.submit;
   $('m-cancel').textContent = T.modal.cancel;
   $('sig-err').textContent = T.modal.err;
@@ -326,6 +331,7 @@ function render(){
   $('s-sub').textContent = T.signed.sub;
   $('s-cta').textContent = T.signed.cta;
   $('s-later').textContent = T.signed.later;
+  $('s-karma').textContent = T.k.title + ' →';
 
   $('sig-country').innerHTML = `<option value="🌍">🌍 ${esc(T.countries.none)}</option>` +
     COUNTRIES.map(c=>`<option value="${c[0]}">${c[0]} ${c[1]}</option>`).join('');
@@ -385,9 +391,9 @@ modal.addEventListener('click',e=>{ if(e.target===modal) modal.classList.remove(
 $('sig-submit').addEventListener('click', async ()=>{
   if($('sig-hp').value) return;
   const anon = $('sig-anon').checked;
-  let name = $('sig-name').value.trim() || 'Anonymous';
-  if(anon) name = 'Anonymous';
-  const country = anon ? '🌍' : $('sig-country').value;
+  /* имя и страна независимы: скрыть имя ≠ отказаться от страны */
+  const name = anon ? 'Anonymous' : ($('sig-name').value.trim() || 'Anonymous');
+  const country = $('sig-country').value;
   $('sig-err').style.display='none';
   $('sig-submit').disabled = true;
 
@@ -412,8 +418,8 @@ $('sig-submit').addEventListener('click', async ()=>{
       if(!isNaN(total)) localStorage.setItem('wc_signum', String(total));
     }catch(e){}
 
-    /* статус основателя страны */
-    if(!anon && country!=='🌍'){
+    /* статус основателя страны — доступен и анонимам, если указана страна */
+    if(country!=='🌍'){
       try{
         const cc = await fetch(`${SB.url}/rest/v1/signatures?select=id&country=eq.${encodeURIComponent(country)}`,
           { method:'HEAD', headers:{ ...H, 'Prefer':'count=exact', 'Range':'0-0' } });

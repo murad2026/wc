@@ -1,7 +1,7 @@
 {
   "name": "Español",
   "dir": "ltr",
-  "nav": { "questions": "Preguntas", "how": "Cómo funciona", "sign": "Firmar" },
+  "nav": { "questions": "Preguntas", "how": "Cómo funciona", "sign": "Firmar", "karma": "Karma" },
   "slogan": "Confianza · Libertad · Voz · Participación",
   "hero": {
     "badge": "Etapa 0",
@@ -82,7 +82,8 @@
     "name": "Nombre o seudónimo",
     "namePh": "Cómo aparecerás en el muro",
     "country": "País",
-    "anon": "Firmar de forma anónima (aparece «Anónimo»; el voto pesa igual que cualquier otro)",
+    "anon": "Ocultar mi nombre (tu voto y tu karma siguen contando igual que los demás)",
+    "anonHint": "Tu país se guarda por separado: sigues sumando para tu país. Si prefieres no compartir ni eso, elige «Prefiero no decirlo». En países con pocos firmantes, el país puede estrechar indirectamente el círculo.",
     "submit": "Firmo",
     "cancel": "Cancelar",
     "err": "No se pudo guardar la firma. Inténtalo de nuevo."
@@ -97,6 +98,43 @@
   },
   "countries": { "none": "Prefiero no decirlo" },
   "back": "← Inicio",
+  "k": {
+    "title": "Karma",
+    "sub": "El karma es el registro abierto de lo que has hecho por la causa común. No se puede comprar, transferir ni regalar: solo se gana con hechos.",
+    "buildT": "Cómo construirlo",
+    "build": [
+      { "t": "Firmar la Constitución", "d": "La contribución básica: declaras que compartes estos principios. Te da un número de firma que es tuyo para siempre." },
+      { "t": "Proponer una pregunta", "d": "Fijas la agenda de la humanidad. El karma crece más cuando la pregunta gana apoyo: importa el resultado, no el simple envío." },
+      { "t": "Apoyar preguntas de otros", "d": "Ayudas a destacar lo importante dentro del flujo común." },
+      { "t": "Traer personas reales", "d": "La red crece a través de ti. Cuentan quienes participan de verdad, no los registros vacíos." },
+      { "t": "Mostrarte públicamente", "d": "Un perfil público otorga una prima: respondes con tu nombre por tus palabras. El anonimato nunca se penaliza; simplemente no recibe esa prima." },
+      { "t": "Verificar a otros (más adelante)", "d": "Los profesionales verifican a profesionales dentro de los gremios. La contribución de mayor peso y la mayor responsabilidad." }
+    ],
+    "checkT": "Cómo se verifica el karma",
+    "check": [
+      { "t": "Automáticamente", "d": "Un bot comprueba lo que una máquina puede comprobar: firmas, apoyos, un enlace a tu trabajo, un commit, una publicación, la cadena de referidos. Al instante y sin colas." },
+      { "t": "Por la comunidad", "d": "Lo que el bot no puede confirmar lo confirman otros participantes, poniendo en juego su propio karma: confirmar una mentira cuesta el tuyo." },
+      { "t": "Por personas", "d": "Lo significativo, lo disputado y lo cualitativo lo deciden personas, como en Wikipedia, pero con rotación, revocación y apelación por sorteo. La IA nunca dicta un veredicto final sobre una persona." }
+    ],
+    "moneyT": "Cómo se relaciona el karma con el dinero",
+    "money": [
+      "Hoy el karma no paga nada, y es algo deliberado. Pagar por clics atrae mercenarios y bots, no personas.",
+      "El karma se inscribe en un registro abierto de contribuciones. Cuando el protocolo empiece a generar ingresos (verificación de personas para servicios, confirmaciones profesionales), se prevé distribuir parte de ellos de forma <b>retroactiva</b>, según la contribución acumulada antes.",
+      "La lógica es simple: quienes hicieron el trabajo cuando no se pagaba nada están primeros en la fila cuando aparece el dinero.",
+      "Lo que ya genera ingresos directos: si un servicio externo solicita la confirmación de tu estatus, la mitad del pago es para ti. Solo con tu consentimiento, para cada solicitud por separado."
+    ],
+    "warnT": "Con honestidad y sin promesas",
+    "warn": "Las reglas de cualquier distribución futura las fijará la comunidad, no nosotros. No se dan garantías ni promesas de ingresos, precio o plazos, y el karma no es un instrumento financiero. Si alguien te promete ingresos por participar, no somos nosotros.",
+    "cantT": "Lo que no se puede hacer con el karma",
+    "cant": [
+      "Comprarlo, ni con dinero ni con tokens",
+      "Transferirlo o regalarlo a otra persona",
+      "Obtenerlo con actividad vacía: cuenta el resultado verificado",
+      "Quitarlo de forma arbitraria: solo mediante un procedimiento transparente con derecho de apelación"
+    ],
+    "ctaSign": "Firmar la Constitución",
+    "ctaQ": "Proponer una pregunta"
+  },
   "q": {
     "title": "Preguntas a la humanidad",
     "sub": "La agenda la fijan las personas, no una redacción. Propón una pregunta que la humanidad deba responder: las mejores se convertirán en votaciones globales.",

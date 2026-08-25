@@ -1,7 +1,7 @@
 {
   "name": "English",
   "dir": "ltr",
-  "nav": { "questions": "Questions", "how": "How it works", "sign": "Sign" },
+  "nav": { "questions": "Questions", "how": "How it works", "sign": "Sign", "karma": "Karma" },
   "slogan": "Trust · Freedom · Voice · Participation",
   "hero": {
     "badge": "Stage 0",
@@ -82,7 +82,8 @@
     "name": "Name or pseudonym",
     "namePh": "How to list you on the wall",
     "country": "Country",
-    "anon": "Sign anonymously (shown as “Anonymous”; the vote weighs the same as any other)",
+    "anon": "Hide my name (your vote and karma still count the same as anyone's)",
+    "anonHint": "Your country is kept separately — you still count towards your country. If you prefer not to share even that, choose “Prefer not to say”. In countries with few signatories, the country may indirectly narrow the circle.",
     "submit": "I sign",
     "cancel": "Cancel",
     "err": "Could not save the signature. Please try again."
@@ -97,6 +98,43 @@
   },
   "countries": { "none": "Prefer not to say" },
   "back": "← Home",
+  "k": {
+    "title": "Karma",
+    "sub": "Karma is an open record of what you have done for the common cause. It cannot be bought, transferred or gifted — only earned through deeds.",
+    "buildT": "How to build it",
+    "build": [
+      { "t": "Sign the Constitution", "d": "The basic contribution: you declare that you share these principles. It gives you a signature number that is yours forever." },
+      { "t": "Propose a question", "d": "You set the agenda for humanity. Karma grows more when a question gains support — the result matters, not the act of submitting." },
+      { "t": "Support others' questions", "d": "You help surface what matters from the common stream." },
+      { "t": "Bring real people in", "d": "The network grows through you. Those who actually take part are counted, not empty sign-ups." },
+      { "t": "Reveal yourself", "d": "A public profile earns a premium: you stand behind your words with your name. Anonymity is never penalised — it simply carries no premium." },
+      { "t": "Verify others (later)", "d": "Professionals verify professionals within guilds. The weightiest contribution — and the greatest responsibility." }
+    ],
+    "checkT": "How karma is verified",
+    "check": [
+      { "t": "Automatically", "d": "A bot checks what a machine can check: signatures, support, a link to your work, a commit, a publication, a referral chain. Instantly, without queues." },
+      { "t": "By the community", "d": "What a bot cannot confirm is confirmed by other participants, who stake their own karma: confirm a lie and you lose yours." },
+      { "t": "By people", "d": "Significant, disputed and qualitative matters are decided by humans — as on Wikipedia, but with rotation, recall and appeal by lot. AI never issues a final verdict about a person." }
+    ],
+    "moneyT": "How karma relates to money",
+    "money": [
+      "Today karma pays nothing — and that is deliberate. Paying for clicks attracts mercenaries and bots, not people.",
+      "Karma is recorded in an open contribution ledger. When the protocol starts earning (verifying people for services, professional confirmations), part of the revenue is intended to be distributed <b>retroactively</b> — according to contributions made earlier.",
+      "The logic is simple: those who did the work when nothing was paid stand first in line once money appears.",
+      "What already earns directly: if an external service requests confirmation of your status, half of the fee goes to you. Only with your consent, for each request separately."
+    ],
+    "warnT": "Honestly, and without promises",
+    "warn": "The rules of any future distribution will be set by the community, not by us. No guarantees, no promises of income, price or timing are given, and karma is not a financial instrument. If someone promises you income for participating — that is not us.",
+    "cantT": "What cannot be done with karma",
+    "cant": [
+      "Buy it — neither with money nor with tokens",
+      "Transfer or gift it to another person",
+      "Earn it through empty activity: a verified result is what counts",
+      "Take it away arbitrarily — only through a transparent procedure with the right of appeal"
+    ],
+    "ctaSign": "Sign the Constitution",
+    "ctaQ": "Propose a question"
+  },
   "q": {
     "title": "Questions to humanity",
     "sub": "The agenda is set by people, not by an editorial board. Propose a question humanity should answer — the strongest become global votes.",
