@@ -1,0 +1,99 @@
+{
+  "name": "Español",
+  "dir": "ltr",
+  "nav": { "questions": "Preguntas", "how": "Cómo funciona", "sign": "Firmar" },
+  "slogan": "Confianza · Libertad · Voz · Participación",
+  "hero": {
+    "badge": "Etapa 0",
+    "title": "La honestidad<br>es más fuerte que el poder",
+    "credo": "La apertura genera confianza. La confianza construye el futuro.<br>Las herramientas ya están aquí.",
+    "cta": "Firmar la Constitución",
+    "signed": "personas han firmado",
+    "founders": "Los primeros 100 de cada país serán sus fundadores para siempre"
+  },
+  "benefits": [
+    { "tag": "Confianza", "h": "Un pasaporte en lugar de cien comprobaciones", "p": "Demuestra una vez que eres una persona real y muéstralo donde quieras." },
+    { "tag": "Libertad", "h": "Tu reputación te pertenece", "p": "No se puede comprar, transferir ni quitar — ni por un Estado ni por una plataforma." },
+    { "tag": "Voz", "h": "Tu voz es visible y cuenta", "p": "Peso real en las preguntas globales, no un comentario que se hundió." },
+    { "tag": "Participación", "h": "Tu firma bajo la Constitución de la humanidad", "p": "Un acto visible e histórico: tu nombre en la lista común." }
+  ],
+  "how": {
+    "title": "Cómo funciona",
+    "steps": [
+      { "t": "Firma", "d": "Nombre o seudónimo, sin cripto ni monederos", "b": "✓ Ya funciona" },
+      { "t": "Verifícate", "d": "Un clic: la insignia de «persona real»", "b": "Pronto · Etapa 1" },
+      { "t": "Vota y participa", "d": "1 persona = 1 voto. Anónimo o público", "b": "Pronto · Etapa 2" }
+    ],
+    "note": "La votación llega después de la verificación: de lo contrario una sola persona fabricaría mil votos.",
+    "link": "Ver cómo será la «Pregunta del día» →",
+    "full": "En detalle: cómo funciona todo →"
+  },
+  "qcall": {
+    "tag": "Ya funciona",
+    "title": "Preguntas a la humanidad",
+    "desc": "La agenda la fijan las personas, no una redacción. Propón una pregunta que la humanidad deba responder y apoya las de los demás. Las mejores se convertirán en votaciones globales.",
+    "cta": "Proponer una pregunta →"
+  },
+  "const": {
+    "title": "La Constitución Mundial",
+    "p1": "Nosotros, los pueblos de la Tierra, reconocemos que las instituciones existentes no logran proteger al ser humano ni a las generaciones futuras. Por primera vez en la historia, la tecnología permite corregirlo: demostrar que una persona es real y única sin revelar su identidad; dar a cada uno un voto imposible de falsificar; y una reputación que no se puede comprar ni arrebatar.",
+    "p2": "Este documento es un contrato social vivo: una carta voluntaria que aspira a la universalidad. No es una declaración de intenciones, sino código que funciona. No derrocamos el viejo mundo por la fuerza: colocamos sobre él una capa de luz y confianza y vencemos porque dentro se vive mejor.",
+    "immutable": "no enmendable",
+    "cta": "Firmo"
+  },
+  "articles": [
+    { "n": "0", "t": "Derechos inalienables", "lock": true, "b": "La dignidad, la vida, la libertad y la seguridad de cada persona son inalienables. Los derechos de las generaciones futuras se protegen igual que los presentes. Este artículo no puede ser derogado por ninguna mayoría: está por encima de cualquier votación." },
+    { "n": "1", "t": "Protección colectiva", "b": "La agresión contra uno es una amenaza para todos. La agresión se establece mediante verificación transparente en 48 horas, no tras años de debate. No es un derecho a la justicia por mano propia: el sistema presiona con luz, no sustituye por la fuerza a los órganos legales." },
+    { "n": "2", "t": "Elecciones libres", "b": "La falsificación se vuelve técnicamente imposible: cada voto es verificable y el secreto se preserva. Nadie puede demostrar a un tercero cómo votó, lo que elimina la compra de votos. Se permite volver a votar: un voto emitido bajo presión puede cambiarse en secreto." },
+    { "n": "3", "t": "Transparencia del poder", "b": "Cuanto más alto el cargo, más transparentes deben ser las finanzas y decisiones de quien lo ocupa. La luz apunta hacia arriba, al poder, no hacia abajo, a la persona. Un ciudadano común revela solo aquello a lo que consiente." },
+    { "n": "4", "t": "Protección contra la captura", "b": "Nadie puede controlar a la vez los tribunales, los medios y las elecciones. Quien formula las preguntas, quien juzga las disputas y quien cuenta los votos son funciones distintas y revocables. Lo mismo rige dentro de la plataforma: sin moderadores inamovibles ni dueño único del tesoro." },
+    { "n": "5", "t": "Estatus histórico", "b": "El líder que entrega el poder de forma voluntaria y pacífica recibe reconocimiento y protección en lugar de persecución. Aferrarse al poder por la fuerza acarrea una sanción ética. Es reconocimiento, no inmunidad jurídica: los crímenes más graves quedan excluidos." },
+    { "n": "6", "t": "Un nuevo orden internacional", "b": "Las decisiones se toman sin que nadie tenga derecho de veto. El bicameralismo — acuerdo de personas y de comunidades — protege a los pequeños de los grandes. Lo local se decide localmente; solo lo verdaderamente global se decide globalmente." },
+    { "n": "7", "t": "Derecho a la información", "b": "Toda persona tiene derecho a saber cómo funcionan los algoritmos que moldean su vida: las reglas de clasificación y evaluación son públicas. Se prohíbe el control estatal de los medios. La apertura algorítmica nunca implica exponer la vida privada." },
+    { "n": "8", "t": "La tierra y el agua", "b": "Los fundamentos naturales de la vida son patrimonio común de la humanidad y de las generaciones futuras. Su acceso es un derecho; su gestión, objeto de control colectivo transparente. La apropiación en perjuicio de todos es inadmisible." },
+    { "n": "9", "t": "Sistema de reputación", "b": "La confianza pertenece a la persona: no puede comprarse, venderse ni transferirse. Se construye con hechos verificables y se evalúa con reglas transparentes, no por decisión de un superior. El dinero no se convierte en influencia." },
+    { "n": "10", "t": "La plataforma como modelo vivo", "b": "La propia plataforma es un modelo operativo de esta Constitución. Cada principio tiene una encarnación técnica: si una regla no funciona en el código, no funciona en absoluto. La complejidad se añade solo cuando se ha ganado." },
+    { "n": "11", "t": "Procedimiento de enmienda", "b": "El cambio es posible, pero ni rápido ni secreto: 80 % de acuerdo, participación ciudadana obligatoria y al menos seis meses de deliberación. Cualquier participante puede proponer una enmienda. El artículo 0 no es enmendable." },
+    { "n": "12", "t": "Infracciones y sanciones", "b": "Las infracciones se registran de forma transparente; la sanción es proporcionada y previsible. La sanción ética solo deriva de hechos verificables confirmados por varias fuentes independientes, con derecho de apelación. Las sanciones y acusaciones de la CPI permanecen visibles en cualquier modo de privacidad." },
+    { "n": "13", "t": "Pasaporte digital y libertad de movimiento", "b": "Un pasaporte de confianza único se reconoce más allá de las fronteras; moverse es un derecho, no un privilegio. La divulgación es por consentimiento y mínima: se demuestra «verificado», no todo el expediente. No existe un registro enumerable de personas." },
+    { "n": "14", "t": "Patrimonio del conocimiento y autoría", "b": "El conocimiento es patrimonio común, pero la autoría se respeta y protege. El creador recibe reconocimiento y regalías; la humanidad, acceso. La protección de la autoría nunca se convierte en monopolio perpetuo sobre el conocimiento." },
+    { "n": "15", "t": "Transparencia en el uso de datos", "b": "Cada consulta sobre tus datos es visible para ti: quién, cuándo y para qué. La divulgación ocurre solo con tu consentimiento criptográfico. No hay puerta trasera ni para los Estados ni para el operador: es imposible construir un puntaje social oculto." },
+    { "n": "16", "t": "El planeta vivo", "b": "Los animales, las plantas y los ecosistemas no son propiedad, sino participantes vivos del planeta. Somos guardianes, no dueños. Destruir lo vivo por una ganancia inmediata es una violación." },
+    { "n": "17", "t": "Desafíos comunes de la humanidad", "b": "El clima, las pandemias y las tecnologías sin control conciernen a todos y no conocen fronteras. La respuesta es colectiva, transparente y basada en hechos verificables. Una amenaza común jamás puede servir de pretexto para suspender derechos." },
+    { "n": "18", "t": "Transición y amnistía", "b": "El nuevo sistema no derroca al viejo por la fuerza ni obliga a nadie: vence porque dentro se vive mejor. Amnistía de transición: perdón reputacional a cambio de la revelación completa de la verdad y el cese del daño, con una ventana que se estrecha con el tiempo. No es inmunidad jurídica; los crímenes más graves quedan excluidos." },
+    { "n": "19", "t": "La voz de las generaciones futuras", "b": "Quienes aún no han nacido tienen un representante: un cargo electo con el mandato de evaluar las decisiones por sus consecuencias a largo plazo. Puede exigir esa evaluación sobre cualquier asunto y su dictamen es público. Los derechos de las generaciones futuras dejan de ser declaración y adquieren portador." }
+  ],
+  "wall": {
+    "title": "Muro de firmantes",
+    "empty": "El muro está vacío: sé el primero",
+    "note": "Los primeros 100 firmantes de cada país reciben para siempre el estatus de «fundador del país»."
+  },
+  "manifesto": [
+    "La honestidad es más fuerte que el poder.",
+    "La apertura genera confianza.",
+    "La reputación pertenece a la persona.",
+    "Cada voz tiene peso.",
+    "Así se construye el futuro. De otro modo, no se construye."
+  ],
+  "footer": { "code": "No una declaración: código que funciona" },
+  "modal": {
+    "title": "Firmar la Constitución",
+    "sub": "Solo se guardan públicamente un nombre o seudónimo y un país. No se requiere correo. La verificación de identidad llegará en la Etapa 1, de forma opcional.",
+    "name": "Nombre o seudónimo",
+    "namePh": "Cómo aparecerás en el muro",
+    "country": "País",
+    "anon": "Firmar de forma anónima (aparece «Anónimo»; el voto pesa igual que cualquier otro)",
+    "submit": "Firmo",
+    "cancel": "Cancelar",
+    "err": "No se pudo guardar la firma. Inténtalo de nuevo."
+  },
+  "signed": {
+    "title": "Tu firma ha sido registrada",
+    "sub": "Formas parte del contrato común. Da el siguiente paso: propón una pregunta que la humanidad deba responder. La agenda la fijan las personas.",
+    "cta": "Proponer tu pregunta →",
+    "later": "Más tarde",
+    "number": "Tu número de firma",
+    "founder": "Fundador del país"
+  },
+  "countries": { "none": "Prefiero no decirlo" }
+}

@@ -7,83 +7,90 @@
 <meta name="description" content="Первая глобальная инфраструктура доверия. Подпиши Всемирную Конституцию.">
 <style>
   :root{
-    --indigo:#1e2a5a; --indigo-deep:#141b3d; --indigo-soft:#3a4a8c;
+    --indigo:#1e2a5a; --indigo-deep:#141b3d;
     --amber:#d98e04; --amber-hover:#b97800; --amber-soft:#fff3dc;
-    --paper:#fbfaf7; --card:#ffffff; --line:#e8e5dd; --muted:#6b7085;
+    --green:#2e8b57; --paper:#fbfaf7; --card:#ffffff; --line:#e8e5dd; --muted:#6b7085;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --indigo:#dfe4f5; --indigo-deep:#f0f2fa; --indigo-soft:#a8b4e0;
+      --indigo:#dfe4f5; --indigo-deep:#f0f2fa;
       --amber:#f0a71c; --amber-hover:#ffbe3d; --amber-soft:#2a2410;
-      --paper:#12162a; --card:#1a2038; --line:#2a3152; --muted:#8d93ab;
+      --green:#4cbf85; --paper:#12162a; --card:#1a2038; --line:#2a3152; --muted:#8d93ab;
     }
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
        background:var(--paper);color:var(--indigo);line-height:1.6}
+  [dir="rtl"] body{font-family:-apple-system,"Segoe UI","Noto Naskh Arabic",Tahoma,Arial,sans-serif}
 
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 
-  nav{position:sticky;top:0;background:color-mix(in srgb, var(--paper) 88%, transparent);
+  nav{position:sticky;top:0;background:color-mix(in srgb, var(--paper) 90%, transparent);
       backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:50}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1080px;margin:0 auto}
-  .logo{font-weight:800;letter-spacing:.02em;font-size:17px;color:var(--indigo);text-decoration:none}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;
+     padding:12px 24px;max-width:1080px;margin:0 auto;flex-wrap:wrap}
+  .logo{font-weight:800;letter-spacing:.02em;font-size:17px;color:var(--indigo);text-decoration:none;white-space:nowrap}
   .logo span{color:var(--amber)}
-  .nav-slogan{font-size:13px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;display:none}
-  @media(min-width:760px){.nav-slogan{display:block}}
+  .nav-right{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .nav-link{font-size:15px;font-weight:700;color:var(--indigo);text-decoration:none;white-space:nowrap}
+  .nav-link:hover{color:var(--amber)}
+  #lang{border:1px solid var(--line);background:var(--card);color:var(--indigo);border-radius:9px;
+     padding:7px 10px;font-size:14px;font-family:inherit;cursor:pointer}
+
   .btn{display:inline-block;background:var(--amber);color:#fff;border:none;cursor:pointer;
        font-weight:700;font-size:15px;padding:11px 22px;border-radius:10px;text-decoration:none;
-       transition:background .15s, transform .1s}
+       transition:background .15s, transform .1s;font-family:inherit}
   .btn:hover{background:var(--amber-hover)}
   .btn:active{transform:scale(.97)}
   .btn.small{padding:8px 16px;font-size:14px}
   .btn.big{font-size:18px;padding:16px 36px;border-radius:12px}
-  .btn[disabled]{background:#3f9b5f;cursor:default}
+  .btn[disabled]{background:var(--green);cursor:default}
 
-  header{padding:96px 0 72px;text-align:center}
-  .demo-note{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:4px 14px;margin-bottom:36px}
-  h1{font-size:clamp(38px,7vw,76px);line-height:1.04;font-weight:900;letter-spacing:-.01em;
+  header{padding:88px 0 68px;text-align:center}
+  .badge{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:4px 14px;margin-bottom:32px}
+  h1{font-size:clamp(36px,6.6vw,72px);line-height:1.05;font-weight:900;letter-spacing:-.01em;
      text-transform:uppercase;color:var(--indigo-deep)}
-  .credo{margin:26px auto 0;max-width:620px;font-size:clamp(16px,2.4vw,20px);color:var(--muted)}
-  .hero-cta{margin-top:40px}
-  .counter{margin-top:34px;font-size:16px;color:var(--indigo)}
-  .counter b{font-size:clamp(22px,3.4vw,30px);font-variant-numeric:tabular-nums;letter-spacing:.01em}
-  .counter .up{color:#2e8b57;font-size:14px;display:block;margin-top:4px}
+  .credo{margin:24px auto 0;max-width:620px;font-size:clamp(16px,2.4vw,20px);color:var(--muted)}
+  .hero-cta{margin-top:38px}
+  .counter{margin-top:32px;font-size:16px}
+  .counter b{font-size:clamp(22px,3.4vw,30px);font-variant-numeric:tabular-nums}
+  .counter .up{color:var(--green);font-size:14px;display:block;margin-top:4px}
 
-  .benefits{padding:64px 0;border-top:1px solid var(--line)}
+  section{border-top:1px solid var(--line)}
+  .benefits{padding:60px 0}
   .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px}
   .card .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);font-weight:800}
   .card h3{font-size:18px;margin:10px 0 8px;color:var(--indigo-deep)}
   .card p{font-size:14.5px;color:var(--muted)}
 
-  .how{padding:56px 0;border-top:1px solid var(--line);text-align:center}
-  .how h2, .const h2, .wall h2{font-size:clamp(24px,4vw,36px);font-weight:900;text-transform:uppercase;
-     letter-spacing:.02em;color:var(--indigo-deep);margin-bottom:32px}
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:820px;margin:0 auto}
-  .step{padding:20px}
+  .how{padding:56px 0;text-align:center}
+  h2.sec{font-size:clamp(24px,4vw,36px);font-weight:900;text-transform:uppercase;
+     letter-spacing:.02em;color:var(--indigo-deep);margin-bottom:30px}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;max-width:840px;margin:0 auto}
+  .step{padding:18px}
   .step .num{width:44px;height:44px;border-radius:50%;background:var(--amber-soft);color:var(--amber);
      font-weight:900;font-size:19px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
   .step b{display:block;margin-bottom:6px}
-  .step span{display:block;font-size:14px;color:var(--muted)}
+  .step .d{display:block;font-size:14px;color:var(--muted)}
   .step .soon{display:inline-block;margin-top:10px;font-size:11px;font-weight:800;letter-spacing:.1em;
      text-transform:uppercase;color:var(--amber);background:var(--amber-soft);border-radius:99px;padding:3px 11px}
-  .how-note{margin-top:30px;font-size:14px}
+  .step .soon.live{background:none;color:var(--green);padding-left:0}
+  .how-note{margin-top:28px;font-size:14px;color:var(--muted)}
   .how-note a{color:var(--amber);text-decoration:none;font-weight:700}
-  .nav-link{font-size:15px;font-weight:700;color:var(--indigo);text-decoration:none;white-space:nowrap}
-  .nav-link:hover{color:var(--amber)}
-  .qcall{padding:56px 0;border-top:1px solid var(--line)}
-  .qcall-box{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--amber);
+
+  .qcall{padding:56px 0}
+  .qcall-box{background:var(--card);border:1px solid var(--line);border-inline-start:5px solid var(--amber);
      border-radius:18px;padding:34px 32px;text-align:center}
   .qcall-box .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);font-weight:800}
   .qcall-box h2{font-size:clamp(22px,3.6vw,32px);font-weight:900;color:var(--indigo-deep);margin:10px 0 12px;line-height:1.15}
   .qcall-box p{max-width:560px;margin:0 auto 24px;color:var(--muted);font-size:15.5px}
 
-  .const{padding:72px 0;border-top:1px solid var(--line)}
-  .preamble{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);
-     border-radius:14px;padding:26px 28px;margin-bottom:36px;font-size:16.5px}
+  .const{padding:68px 0}
+  .preamble{background:var(--card);border:1px solid var(--line);border-inline-start:4px solid var(--amber);
+     border-radius:14px;padding:26px 28px;margin-bottom:34px;font-size:16.5px}
   .preamble p+p{margin-top:12px}
   details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
   summary{cursor:pointer;padding:16px 20px;font-weight:700;font-size:16px;list-style:none;
@@ -91,43 +98,46 @@
   summary::-webkit-details-marker{display:none}
   summary .art-num{flex-shrink:0;min-width:38px;height:38px;padding:0 6px;border-radius:10px;background:var(--amber-soft);
      color:var(--amber);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:15px}
-  summary .lock{margin-left:auto;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.06em;white-space:nowrap}
+  summary .lock{margin-inline-start:auto;font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap}
   summary:hover{background:color-mix(in srgb, var(--amber-soft) 40%, transparent)}
-  .art-body{padding:4px 20px 20px 72px;font-size:15px;color:var(--indigo)}
-  .art-body p{margin-bottom:10px}
-  .art-body b{color:var(--indigo-deep)}
-  @media(max-width:600px){.art-body{padding-left:20px}}
-  .const-cta{text-align:center;margin-top:40px}
+  .art-body{padding:4px 20px 20px 72px;font-size:15px}
+  [dir="rtl"] .art-body{padding:4px 72px 20px 20px}
+  @media(max-width:600px){.art-body,[dir="rtl"] .art-body{padding-inline:20px}}
+  .const-cta{text-align:center;margin-top:36px}
 
-  .wall{padding:64px 0;border-top:1px solid var(--line);text-align:center}
+  .wall{padding:60px 0;text-align:center}
   .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:900px;margin:0 auto}
   .chip{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:7px 16px;font-size:14px}
   .chip.you{border-color:var(--amber);background:var(--amber-soft);font-weight:700}
   .chip.empty{border-style:dashed;color:var(--muted)}
-  .wall-note{margin-top:22px;font-size:13px;color:var(--muted)}
+  .wall-note{margin-top:20px;font-size:13px;color:var(--muted)}
 
-  footer{border-top:1px solid var(--line);padding:56px 0 64px;text-align:center}
-  .manifesto{max-width:560px;margin:0 auto;font-size:16px;line-height:2;color:var(--indigo)}
+  footer{border-top:1px solid var(--line);padding:52px 0 60px;text-align:center}
+  .manifesto{max-width:560px;margin:0 auto;font-size:16px;line-height:2}
   .manifesto b{color:var(--indigo-deep)}
-  .foot-code{margin-top:28px;font-size:14px;color:var(--muted)}
+  .foot-code{margin-top:26px;font-size:14px;color:var(--muted)}
   .foot-code a{color:var(--amber);text-decoration:none;font-weight:600}
 
   .modal-bg{position:fixed;inset:0;background:rgba(10,14,35,.55);display:none;align-items:center;
      justify-content:center;z-index:100;padding:20px}
   .modal-bg.open{display:flex}
-  .modal{background:var(--card);border-radius:18px;max-width:440px;width:100%;padding:32px}
+  .modal{background:var(--card);border-radius:18px;max-width:440px;width:100%;padding:32px;max-height:90vh;overflow:auto}
   .modal h3{font-size:22px;color:var(--indigo-deep);margin-bottom:6px}
-  .modal .sub{font-size:14px;color:var(--muted);margin-bottom:22px}
-  .modal label{display:block;font-size:13px;font-weight:700;margin:14px 0 6px;letter-spacing:.04em}
+  .modal .sub{font-size:14px;color:var(--muted);margin-bottom:20px}
+  .modal label{display:block;font-size:13px;font-weight:700;margin:14px 0 6px}
   .modal input[type=text], .modal select{width:100%;padding:12px 14px;border:1px solid var(--line);
-     border-radius:10px;font-size:15px;background:var(--paper);color:var(--indigo)}
-  .modal .anon{display:flex;align-items:center;gap:10px;margin:18px 0;font-size:14px;color:var(--muted)}
+     border-radius:10px;font-size:15px;background:var(--paper);color:var(--indigo);font-family:inherit}
+  .modal .anon{display:flex;align-items:flex-start;gap:10px;margin:18px 0;font-size:14px;color:var(--muted);font-weight:400}
   .modal .actions{display:flex;gap:12px;margin-top:22px}
   .modal .cancel{background:none;border:1px solid var(--line);color:var(--muted);border-radius:10px;
-     padding:11px 20px;font-size:15px;cursor:pointer}
-  .signed-msg{display:none;text-align:center;padding:12px 0}
-  .signed-msg .check{font-size:52px}
-  .signed-msg h3{margin:10px 0 6px}
+     padding:11px 20px;font-size:15px;cursor:pointer;font-family:inherit}
+  .signed-msg{display:none;text-align:center;padding:8px 0}
+  .signed-msg .check{font-size:50px}
+  .signed-msg h3{margin:8px 0 6px}
+  .karma{display:flex;gap:12px;justify-content:center;margin:18px 0 6px;flex-wrap:wrap}
+  .kbox{background:var(--amber-soft);border:1px solid var(--amber);border-radius:12px;padding:10px 18px;min-width:120px}
+  .kbox b{display:block;font-size:20px;color:var(--indigo-deep);font-variant-numeric:tabular-nums}
+  .kbox span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
   .err{display:none;color:#c0392b;font-size:13px;margin-top:10px}
   .hp{position:absolute;left:-9999px;opacity:0}
 </style>
@@ -137,232 +147,231 @@
 <nav>
   <div class="nav-inner">
     <a class="logo" href="#">◆ World<span>Constitution</span></a>
-    <div class="nav-slogan">Доверие · Свобода · Голос · Участие</div>
-    <div style="display:flex;align-items:center;gap:16px">
-      <a href="questions.html" class="nav-link">Вопросы</a>
-      <button class="btn small js-sign">Подписать</button>
+    <div class="nav-right">
+      <a href="questions.html" class="nav-link" id="nav-q">Вопросы</a>
+      <select id="lang" aria-label="Language"></select>
+      <button class="btn small js-sign" id="nav-sign">Подписать</button>
     </div>
   </div>
 </nav>
 
 <header class="wrap">
-  <div class="demo-note" id="mode-badge">Этап 0</div>
-  <h1>Честность<br>сильнее власти</h1>
-  <p class="credo">Открытость рождает доверие. Доверие строит будущее.<br>Инструмент — уже здесь.</p>
-  <div class="hero-cta"><button class="btn big js-sign">Подписать Конституцию</button></div>
+  <div class="badge" id="badge"></div>
+  <h1 id="h1"></h1>
+  <p class="credo" id="credo"></p>
+  <div class="hero-cta"><button class="btn big js-sign" id="hero-cta"></button></div>
   <div class="counter">
-    <b id="counter">—</b> <span id="counter-label">человек подписали</span>
-    <span class="up">Первые 100 в каждой стране — основатели страны навсегда</span>
+    <b id="counter">—</b> <span id="counter-label"></span>
+    <span class="up" id="founders-note"></span>
   </div>
 </header>
 
-<section class="benefits wrap">
-  <div class="grid4">
-    <div class="card"><div class="tag">Доверие</div><h3>Один паспорт — вместо сотни проверок</h3>
-      <p>Подтверждаешь, что ты реальный человек, один раз — и показываешь это где угодно.</p></div>
-    <div class="card"><div class="tag">Свобода</div><h3>Твоя репутация принадлежит тебе</h3>
-      <p>Её нельзя купить, передать или отнять — ни государство, ни платформа.</p></div>
-    <div class="card"><div class="tag">Голос</div><h3>Твой голос виден и считается</h3>
-      <p>Реальный вес в глобальных вопросах, а не комментарий, который утонул.</p></div>
-    <div class="card"><div class="tag">Участие</div><h3>Подпись под Конституцией человечества</h3>
-      <p>Видимое, историческое действие — твоё имя в общем списке.</p></div>
-  </div>
-</section>
+<section class="benefits wrap"><div class="grid4" id="benefits"></div></section>
 
 <section class="how wrap">
-  <h2>Как это работает</h2>
-  <div class="steps">
-    <div class="step"><div class="num">1</div><b>Подпиши</b><span>Имя или псевдоним — без крипты и кошельков</span><span class="soon" style="background:none;color:#2e8b57;padding-left:0">✓ Работает сейчас</span></div>
-    <div class="step"><div class="num">2</div><b>Верифицируйся</b><span>Один клик — значок «реальный человек»</span><span class="soon">Скоро · Этап 1</span></div>
-    <div class="step"><div class="num">3</div><b>Голосуй и участвуй</b><span>1 человек = 1 голос. Анонимно или открыто</span><span class="soon">Скоро · Этап 2</span></div>
-  </div>
-  <p class="how-note">Голосование появится после верификации — иначе один человек накрутит тысячу голосов. <a href="vote.html">Посмотреть, как будет выглядеть «Вопрос дня» →</a></p>
+  <h2 class="sec" id="how-title"></h2>
+  <div class="steps" id="steps"></div>
+  <p class="how-note"><span id="how-note"></span> <a href="vote.html" id="how-link"></a></p>
 </section>
 
 <section class="qcall wrap">
   <div class="qcall-box">
-    <div class="tag">Работает сейчас</div>
-    <h2>Вопросы человечеству</h2>
-    <p>Повестку задают люди, а не редакция. Предложи вопрос, по которому должно высказаться человечество, и поддержи чужие. Лучшие станут глобальным голосованием.</p>
-    <a class="btn big" href="questions.html" style="text-decoration:none">Предложить вопрос →</a>
+    <div class="tag" id="q-tag"></div>
+    <h2 id="q-title"></h2>
+    <p id="q-desc"></p>
+    <a class="btn big" href="questions.html" id="q-cta" style="text-decoration:none"></a>
   </div>
 </section>
 
 <section class="const wrap" id="constitution">
-  <h2>Всемирная Конституция</h2>
-  <div class="preamble">
-    <p><b>Мы, люди Земли,</b> признаём, что существующие институты не справляются с защитой человека и будущих поколений. Технологии впервые в истории позволяют это исправить: подтвердить, что человек реален и уникален, не раскрывая его личность; дать каждому голос, который нельзя подделать; и репутацию, которую нельзя купить или отнять.</p>
-    <p>Этот документ — живой общественный договор: добровольная хартия, стремящаяся к универсальности. Он не декларация о намерениях, а работающий код. Мы не свергаем старый мир силой — мы кладём поверх него слой света и доверия и побеждаем тем, что внутри лучше.</p>
-  </div>
-
+  <h2 class="sec" style="text-align:center" id="const-title"></h2>
+  <div class="preamble"><p id="p1"></p><p id="p2"></p></div>
   <div id="articles"></div>
-
-  <div class="const-cta">
-    <button class="btn big js-sign">Подписываю</button>
-  </div>
+  <div class="const-cta"><button class="btn big js-sign" id="const-cta"></button></div>
 </section>
 
 <section class="wall wrap">
-  <h2>Стена подписантов</h2>
-  <div class="chips" id="wall"><span class="chip empty">Стена пока пуста — стань первым</span></div>
-  <p class="wall-note">Первые 100 подписантов в каждой стране навсегда получают статус «основатель страны».</p>
+  <h2 class="sec" id="wall-title"></h2>
+  <div class="chips" id="wall"></div>
+  <p class="wall-note" id="wall-note"></p>
 </section>
 
 <footer class="wrap">
-  <div class="manifesto">
-    <b>Честность сильнее власти.</b><br>
-    Открытость рождает доверие.<br>
-    Репутация принадлежит человеку.<br>
-    Голос каждого имеет вес.<br>
-    Так строится будущее. Иначе — не строится.
-  </div>
-  <div class="foot-code">Не декларация — работающий код · <a href="https://github.com/murad2026/wc" target="_blank" rel="noopener">GitHub</a></div>
+  <div class="manifesto" id="manifesto"></div>
+  <div class="foot-code"><span id="foot-code"></span> · <a href="https://github.com/murad2026/wc" target="_blank" rel="noopener">GitHub</a></div>
 </footer>
 
 <div class="modal-bg" id="modal">
   <div class="modal">
     <div id="sign-form">
-      <h3>Подписать Конституцию</h3>
-      <p class="sub" id="modal-sub">Публично сохраняются только имя/псевдоним и страна. Email не нужен. Верификация личности — на Этапе 1, по желанию.</p>
-      <label>Имя или псевдоним</label>
-      <input type="text" id="sig-name" maxlength="40" placeholder="Как тебя записать на стене">
+      <h3 id="m-title"></h3>
+      <p class="sub" id="m-sub"></p>
+      <label id="m-name-l"></label>
+      <input type="text" id="sig-name" maxlength="40">
       <input type="text" id="sig-hp" class="hp" tabindex="-1" autocomplete="off">
-      <label>Страна</label>
-      <select id="sig-country">
-        <option value="🌍">🌍 Не указывать</option><option value="🇬🇪">🇬🇪 Грузия</option>
-        <option value="🇪🇪">🇪🇪 Эстония</option><option value="🇺🇾">🇺🇾 Уругвай</option>
-        <option value="🇦🇪">🇦🇪 ОАЭ</option><option value="🇷🇼">🇷🇼 Руанда</option>
-        <option value="🇺🇦">🇺🇦 Украина</option><option value="🇰🇿">🇰🇿 Казахстан</option>
-        <option value="🇺🇿">🇺🇿 Узбекистан</option><option value="🇦🇿">🇦🇿 Азербайджан</option>
-        <option value="🇦🇲">🇦🇲 Армения</option><option value="🇹🇷">🇹🇷 Турция</option>
-        <option value="🇺🇸">🇺🇸 США</option><option value="🇬🇧">🇬🇧 Великобритания</option>
-        <option value="🇩🇪">🇩🇪 Германия</option><option value="🇫🇷">🇫🇷 Франция</option>
-        <option value="🇧🇷">🇧🇷 Бразилия</option><option value="🇮🇳">🇮🇳 Индия</option>
-        <option value="🇯🇵">🇯🇵 Япония</option><option value="🇰🇷">🇰🇷 Южная Корея</option>
-      </select>
-      <label class="anon" style="font-weight:400"><input type="checkbox" id="sig-anon"> Подписать анонимно (на стене — «Аноним», голос равен любому другому)</label>
-      <div class="err" id="sig-err">Не получилось сохранить подпись. Попробуй ещё раз.</div>
+      <label id="m-country-l"></label>
+      <select id="sig-country"></select>
+      <label class="anon"><input type="checkbox" id="sig-anon"> <span id="m-anon"></span></label>
+      <div class="err" id="sig-err"></div>
       <div class="actions">
-        <button class="btn" id="sig-submit" style="flex:1">Подписываю</button>
-        <button class="cancel js-close">Отмена</button>
+        <button class="btn" id="sig-submit" style="flex:1"></button>
+        <button class="cancel js-close" id="m-cancel"></button>
       </div>
     </div>
     <div class="signed-msg" id="signed-msg">
       <div class="check">✍️</div>
-      <h3>Твоя подпись принята</h3>
-      <p class="sub">Ты — часть общего договора. Теперь сделай следующий шаг: предложи вопрос, по которому должно высказаться человечество. Повестку задают люди, а не редакция.</p>
-      <a class="btn" href="questions.html" style="display:inline-block;text-decoration:none">Предложить свой вопрос →</a>
-      <div style="margin-top:14px"><button class="cancel js-close">Позже</button></div>
+      <h3 id="s-title"></h3>
+      <div class="karma" id="karma-box"></div>
+      <p class="sub" id="s-sub"></p>
+      <a class="btn" href="questions.html" id="s-cta" style="display:inline-block;text-decoration:none"></a>
+      <div style="margin-top:14px"><button class="cancel js-close" id="s-later"></button></div>
     </div>
   </div>
 </div>
 
 <script>
-/* =====================================================================
-   КОНФИГ. Вставь сюда данные своего проекта Supabase (см. DEPLOY.md).
-   Пока поля пустые — страница работает в честном демо-режиме
-   (подписи сохраняются только в этом браузере).
-   ===================================================================== */
 const SB = {
   url:  "https://nhkwgulokiwqwfrynmkx.supabase.co",
   anon: "sb_publishable_XFFU01VfekhRJffwEEgbwA_eOvmOXr0"
 };
-const LIVE = !!(SB.url && SB.anon);
+const H = { 'apikey': SB.anon, 'Authorization': 'Bearer '+SB.anon };
+const $ = id => document.getElementById(id);
+const esc = s => { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; };
 
-/* ---------- Конституция: 19 статей ---------- */
-const ARTICLES = [
- ["0","Неотъемлемые права","не изменяема",
-  "<p><b>Принцип.</b> Достоинство, жизнь, свобода и безопасность каждого человека неотъемлемы. Права будущих поколений защищены наравне с нынешними.</p><p><b>Как работает.</b> Статья стоит выше всех остальных и выше механизма поправок: любое решение, противоречащее ей, недействительно автоматически.</p><p><b>Границы.</b> Неизменяема навсегда — ни 80%, ни 100% голосов.</p>"],
- ["1","Коллективная защита","",
-  "<p><b>Принцип.</b> Агрессия против одного — угроза всем.</p><p><b>Как работает.</b> Факт агрессии устанавливается прозрачной верификацией за 48 часов, а не годами обсуждений. Реакция коллективна и предсказуема.</p><p><b>Границы.</b> Защита — не самосуд: система фиксирует и мобилизует давление, но не подменяет законные органы силой.</p>"],
- ["2","Свободные выборы","",
-  "<p><b>Принцип.</b> Фальсификация технически невозможна.</p><p><b>Как работает.</b> Каждый голос проверяем, но тайна сохранена: нельзя доказать третьему, как ты голосовал (защита от подкупа). Разрешено переголосование — голос под давлением можно тайно изменить.</p><p><b>Границы.</b> Один верифицированный человек = один голос; вес анонима равен весу публичного.</p>"],
- ["3","Прозрачность власти","",
-  "<p><b>Принцип.</b> Чем выше должность — тем прозрачнее финансы и решения её носителя.</p><p><b>Как работает.</b> Прозрачность публичных лиц проверяется автоматически и непрерывно.</p><p><b>Границы.</b> Свет направлен вверх, на власть. Обычный человек раскрывает только то, на что дал согласие: чем меньше у тебя власти — тем больше приватности.</p>"],
- ["4","Защита от захвата системы","",
-  "<p><b>Принцип.</b> Никто не может одновременно контролировать суды, медиа и выборы.</p><p><b>Как работает.</b> Разделение зашито в структуру: кто формирует вопросы, кто судит споры и кто считает голоса — разные, сменяемые, подотчётные роли.</p><p><b>Границы.</b> Действует и внутри платформы: нет несменяемых модераторов, нет единоличного владельца казны.</p>"],
- ["5","Исторический статус","",
-  "<p><b>Принцип.</b> Лидер, добровольно и мирно передающий власть, получает признание, а не преследование.</p><p><b>Как работает.</b> Добровольная передача власти и открытость дают исторический статус: защиту, признание, бенефиты. Удержание силой — этический штраф.</p><p><b>Границы.</b> Статус — не юридический иммунитет; тягчайшие преступления под него не подпадают.</p>"],
- ["6","Новый международный порядок","",
-  "<p><b>Принцип.</b> Решения без права вето у кого-либо.</p><p><b>Как работает.</b> Управление сообществом по прозрачным правилам; двухпалатность (согласие и людей, и сообществ) защищает малых от больших; локальное решается локально.</p><p><b>Границы.</b> Глобально — только действительно глобальные вопросы.</p>"],
- ["7","Право на информацию","",
-  "<p><b>Принцип.</b> Каждый вправе знать, как работают алгоритмы, влияющие на его жизнь.</p><p><b>Как работает.</b> Правила ранжирования и оценки публичны и проверяемы. Госконтроль над медиа запрещён; тайная цензура — нарушение.</p><p><b>Границы.</b> Открытость алгоритма ≠ раскрытие персональных данных: открыта логика, а не частная жизнь.</p>"],
- ["8","Земля и вода","",
-  "<p><b>Принцип.</b> Природные основы жизни — общее достояние человечества и будущих поколений.</p><p><b>Как работает.</b> Доступ к жизненно важным основам — право; распоряжение ими — предмет прозрачного коллективного контроля.</p><p><b>Границы.</b> Защищаются основы жизни; хозяйственная деятельность не отменяется — недопустимо присвоение во вред всем.</p>"],
- ["9","Репутационная система","",
-  "<p><b>Принцип.</b> Доверие принадлежит человеку: его нельзя купить, продать или передать.</p><p><b>Как работает.</b> Репутация складывается из проверяемых дел, подтверждённых независимо; оценивается по прозрачным правилам, а не решением начальника.</p><p><b>Границы.</b> Публичность вознаграждается, но её отсутствие не наказывается. Деньги не конвертируются во влияние.</p>"],
- ["10","Платформа как живая модель","",
-  "<p><b>Принцип.</b> Сама платформа — работающая модель этой Конституции.</p><p><b>Как работает.</b> Каждый принцип имеет техническое воплощение. Если правило не работает в коде — оно не работает вообще.</p><p><b>Границы.</b> Сложность добавляется только когда заслужена.</p>"],
- ["11","Механизм поправок","",
-  "<p><b>Принцип.</b> Менять можно, но не быстро и не тайно.</p><p><b>Как работает.</b> Поправка = 80% согласия + обязательное участие граждан + не менее 6 месяцев обсуждения. Предложить может любой верифицированный член.</p><p><b>Границы.</b> Статья 0 поправкам не подлежит.</p>"],
- ["12","Нарушения и наказания","",
-  "<p><b>Принцип.</b> Прозрачно, соразмерно, предсказуемо. Никаких тайных приговоров.</p><p><b>Как работает.</b> Этический штраф — только за узкие проверяемые события (приговор МУС, санкции, доказанное мошенничество) от нескольких независимых источников. Спорное помечается «оспаривается». Апелляция — в случайную панель.</p><p><b>Границы.</b> Штраф, санкции и обвинения МУС видны всегда, в любом режиме приватности.</p>"],
- ["13","Цифровой паспорт и свобода передвижения","",
-  "<p><b>Принцип.</b> Единый паспорт доверия, признаваемый поверх границ. Передвижение — право, а не привилегия.</p><p><b>Как работает.</b> Раскрытие данных — по согласию и минимально: доказывается «верифицирован» или «скор выше X», а не вся карточка.</p><p><b>Границы.</b> Нет перечислимого реестра людей; каждый запрос виден владельцу.</p>"],
- ["14","Достояние знаний и авторство","",
-  "<p><b>Принцип.</b> Знание — общее достояние, авторство уважается и защищается.</p><p><b>Как работает.</b> Авторство фиксируется с проверкой уникальности; создатель получает признание и роялти, человечество — доступ.</p><p><b>Границы.</b> Защита авторства не превращается в вечную монополию на знание.</p>"],
- ["15","Прозрачность использования данных","",
-  "<p><b>Принцип.</b> Каждый запрос к твоим данным виден тебе.</p><p><b>Как работает.</b> Каждое обращение логируется и показывается владельцу; раскрытие — только по криптографическому согласию.</p><p><b>Границы.</b> Нет «чёрного хода» ни для государств, ни для оператора — скрытый социальный рейтинг построить невозможно.</p>"],
- ["16","Живая планета","",
-  "<p><b>Принцип.</b> Животные, растения и экосистемы — не собственность, а живые соучастники планеты. Мы хранители, а не хозяева.</p><p><b>Как работает.</b> Решения, затрагивающие живой мир, оцениваются по воздействию на биосферу и будущие поколения — прозрачно, на проверяемых данных.</p><p><b>Границы.</b> Жестокость и уничтожение живого ради краткой выгоды — нарушение.</p>"],
- ["17","Общие вызовы человечества","",
-  "<p><b>Принцип.</b> Угрозы планетарного масштаба — климат, пандемии, неконтролируемые технологии — касаются всех и не знают границ.</p><p><b>Как работает.</b> Ответ коллективный, прозрачный, на проверяемых фактах. Бездействие перед общей угрозой — тоже решение, за которое есть ответственность.</p><p><b>Границы.</b> Общая угроза — не предлог для отмены прав или тотального контроля.</p>"],
- ["18","Переходный период и амнистия","",
-  "<p><b>Принцип.</b> Новая система не свергает старую силой и не принуждает — она побеждает тем, что внутри лучше.</p><p><b>Как работает.</b> Можно оставаться в старой системе и участвовать в новой. Амнистия перехода: репутационное прощение в обмен на полное раскрытие правды и прекращение вреда; окно сужается — кто раньше, тому больше.</p><p><b>Границы.</b> Это не юридический иммунитет. Тягчайшие преступления амнистии не подлежат. Самосуда нет.</p>"]
+const LANGS = { ru:'Русский', en:'English', fr:'Français', es:'Español', zh:'中文', ar:'العربية' };
+const COUNTRIES = [
+  ['🇬🇪','Georgia'],['🇪🇪','Estonia'],['🇺🇾','Uruguay'],['🇦🇪','UAE'],['🇷🇼','Rwanda'],
+  ['🇺🇦','Ukraine'],['🇰🇿','Kazakhstan'],['🇺🇿','Uzbekistan'],['🇦🇿','Azerbaijan'],['🇦🇲','Armenia'],
+  ['🇹🇷','Türkiye'],['🇺🇸','USA'],['🇬🇧','UK'],['🇩🇪','Germany'],['🇫🇷','France'],['🇪🇸','Spain'],
+  ['🇮🇹','Italy'],['🇵🇱','Poland'],['🇧🇷','Brazil'],['🇲🇽','Mexico'],['🇦🇷','Argentina'],
+  ['🇮🇳','India'],['🇨🇳','China'],['🇯🇵','Japan'],['🇰🇷','South Korea'],['🇮🇩','Indonesia'],
+  ['🇪🇬','Egypt'],['🇸🇦','Saudi Arabia'],['🇳🇬','Nigeria'],['🇰🇪','Kenya'],['🇿🇦','South Africa'],
+  ['🇨🇦','Canada'],['🇦🇺','Australia']
 ];
 
-document.getElementById('articles').innerHTML = ARTICLES.map(a =>
-  `<details><summary><span class="art-num">${a[0]}</span> ${a[1]}${a[2]?`<span class="lock">🔒 ${a[2]}</span>`:''}</summary><div class="art-body">${a[3]}</div></details>`
-).join('');
+let T = null;
 
-/* ---------- Помощники ---------- */
-const $ = id => document.getElementById(id);
-const fmt = n => n.toLocaleString('ru-RU');
-const esc = s => { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; };
-const sbHeaders = { 'apikey': SB.anon, 'Authorization': 'Bearer '+SB.anon };
+function pickLang(){
+  const saved = localStorage.getItem('wc_lang');
+  if(saved && LANGS[saved]) return saved;
+  const n = (navigator.language||'en').slice(0,2).toLowerCase();
+  return LANGS[n] ? n : 'en';
+}
 
-$('mode-badge').textContent = LIVE ? 'Этап 0 · подписи настоящие' : 'Прототип Этапа 0 · демо-режим (подписи хранятся в этом браузере)';
-if(!LIVE) $('modal-sub').textContent = 'Демо-режим: подпись сохранится только в этом браузере. В боевой версии — публичная стена.';
-
-/* ---------- Счётчик и стена: без имитации, только правда ---------- */
-async function loadCount(){
-  if(LIVE){
-    try{
-      const r = await fetch(`${SB.url}/rest/v1/signatures?select=id`,
-        { method:'HEAD', headers:{ ...sbHeaders, 'Prefer':'count=exact', 'Range':'0-0' } });
-      const cr = r.headers.get('content-range');
-      const n = cr ? parseInt(cr.split('/')[1],10) : 0;
-      $('counter').textContent = fmt(isNaN(n)?0:n);
-    }catch(e){ $('counter').textContent = '—'; }
-  }else{
-    const mine = JSON.parse(localStorage.getItem('wc_signers')||'[]');
-    $('counter').textContent = fmt(mine.length);
+async function setLang(code){
+  try{
+    T = await (await fetch(`lang/${code}.json`)).json();
+  }catch(e){
+    if(code!=='en') return setLang('en');
+    return;
   }
+  localStorage.setItem('wc_lang', code);
+  document.documentElement.lang = code;
+  document.documentElement.dir = T.dir || 'ltr';
+  render();
+  loadCount(); loadWall();
+}
+
+function render(){
+  $('nav-q').textContent = T.nav.questions;
+  $('nav-sign').textContent = T.nav.sign;
+  $('badge').textContent = T.hero.badge;
+  $('h1').innerHTML = T.hero.title;
+  $('credo').innerHTML = T.hero.credo;
+  $('hero-cta').textContent = T.hero.cta;
+  $('counter-label').textContent = T.hero.signed;
+  $('founders-note').textContent = T.hero.founders;
+
+  $('benefits').innerHTML = T.benefits.map(b =>
+    `<div class="card"><div class="tag">${esc(b.tag)}</div><h3>${esc(b.h)}</h3><p>${esc(b.p)}</p></div>`).join('');
+
+  $('how-title').textContent = T.how.title;
+  $('steps').innerHTML = T.how.steps.map((s,i) =>
+    `<div class="step"><div class="num">${i+1}</div><b>${esc(s.t)}</b><span class="d">${esc(s.d)}</span>
+     <span class="soon${i===0?' live':''}">${esc(s.b)}</span></div>`).join('');
+  $('how-note').textContent = T.how.note;
+  $('how-link').textContent = T.how.link;
+
+  $('q-tag').textContent = T.qcall.tag;
+  $('q-title').textContent = T.qcall.title;
+  $('q-desc').textContent = T.qcall.desc;
+  $('q-cta').textContent = T.qcall.cta;
+
+  $('const-title').textContent = T.const.title;
+  $('p1').textContent = T.const.p1;
+  $('p2').textContent = T.const.p2;
+  $('const-cta').textContent = T.const.cta;
+  $('articles').innerHTML = T.articles.map(a =>
+    `<details><summary><span class="art-num">${esc(a.n)}</span> ${esc(a.t)}
+      ${a.lock?`<span class="lock">🔒 ${esc(T.const.immutable)}</span>`:''}</summary>
+      <div class="art-body">${esc(a.b)}</div></details>`).join('');
+
+  $('wall-title').textContent = T.wall.title;
+  $('wall-note').textContent = T.wall.note;
+
+  $('manifesto').innerHTML = T.manifesto.map((l,i)=> i===0?`<b>${esc(l)}</b>`:esc(l)).join('<br>');
+  $('foot-code').textContent = T.footer.code;
+
+  $('m-title').textContent = T.modal.title;
+  $('m-sub').textContent = T.modal.sub;
+  $('m-name-l').textContent = T.modal.name;
+  $('sig-name').placeholder = T.modal.namePh;
+  $('m-country-l').textContent = T.modal.country;
+  $('m-anon').textContent = T.modal.anon;
+  $('sig-submit').textContent = T.modal.submit;
+  $('m-cancel').textContent = T.modal.cancel;
+  $('sig-err').textContent = T.modal.err;
+
+  $('s-title').textContent = T.signed.title;
+  $('s-sub').textContent = T.signed.sub;
+  $('s-cta').textContent = T.signed.cta;
+  $('s-later').textContent = T.signed.later;
+
+  $('sig-country').innerHTML = `<option value="🌍">🌍 ${esc(T.countries.none)}</option>` +
+    COUNTRIES.map(c=>`<option value="${c[0]}">${c[0]} ${c[1]}</option>`).join('');
+
+  if(localStorage.getItem('wc_signed')){
+    document.querySelectorAll('.js-sign').forEach(b=>{ b.textContent='✓'; b.setAttribute('disabled',''); });
+  }
+  paintKarma();
+}
+
+/* ---------- счётчик и стена ---------- */
+async function loadCount(){
+  try{
+    const r = await fetch(`${SB.url}/rest/v1/signatures?select=id`,
+      { method:'HEAD', headers:{ ...H, 'Prefer':'count=exact', 'Range':'0-0' } });
+    const cr = r.headers.get('content-range');
+    const n = cr ? parseInt(cr.split('/')[1],10) : 0;
+    $('counter').textContent = (isNaN(n)?0:n).toLocaleString();
+  }catch(e){ $('counter').textContent='—'; }
 }
 async function loadWall(){
   let rows = [];
-  if(LIVE){
-    try{
-      rows = await (await fetch(`${SB.url}/rest/v1/signatures?select=id,name,country,is_anon&order=id.desc&limit=40`,
-        { headers: sbHeaders })).json();
-      if(!Array.isArray(rows)) rows = [];
-    }catch(e){ rows = []; }
-  }else{
-    rows = JSON.parse(localStorage.getItem('wc_signers')||'[]');
-  }
+  try{
+    rows = await (await fetch(`${SB.url}/rest/v1/signatures?select=id,name,country,is_anon&order=id.desc&limit=40`,
+      { headers:H })).json();
+    if(!Array.isArray(rows)) rows = [];
+  }catch(e){}
   const myids = new Set(JSON.parse(localStorage.getItem('wc_myids')||'[]'));
-  $('wall').innerHTML = rows.length
-    ? rows.map(r=>{
-        const nm = r.is_anon ? 'Аноним' : (r.name||'Аноним');
-        const you = r.id!=null && myids.has(r.id);
-        return `<span class="chip${you?' you':''}">${r.country||'🌍'} ${esc(nm)}${you?' · ты':''}</span>`;
-      }).join('')
-    : '<span class="chip empty">Стена пока пуста — стань первым</span>';
+  $('wall').innerHTML = rows.length ? rows.map(r=>{
+      const nm = r.is_anon ? '•••' : (r.name||'•••');
+      const you = r.id!=null && myids.has(r.id);
+      return `<span class="chip${you?' you':''}">${r.country||'🌍'} ${esc(nm)}</span>`;
+    }).join('') : `<span class="chip empty">${esc(T?T.wall.empty:'')}</span>`;
 }
-loadCount(); loadWall();
-if(LIVE) setInterval(loadCount, 30000);
 
-/* ---------- Модалка подписи ---------- */
+/* ---------- карма ---------- */
+function paintKarma(){
+  const num = localStorage.getItem('wc_signum');
+  const founder = localStorage.getItem('wc_founder');
+  if(!num || !T) { $('karma-box').innerHTML=''; return; }
+  $('karma-box').innerHTML =
+    `<div class="kbox"><b>#${esc(num)}</b><span>${esc(T.signed.number)}</span></div>` +
+    (founder ? `<div class="kbox"><b>${esc(founder)}</b><span>${esc(T.signed.founder)}</span></div>` : '');
+}
+
+/* ---------- модалка ---------- */
 const modal = $('modal');
 document.querySelectorAll('.js-sign').forEach(b=>b.addEventListener('click',()=>{
   const signed = !!localStorage.getItem('wc_signed');
@@ -374,50 +383,63 @@ document.querySelectorAll('.js-close').forEach(b=>b.addEventListener('click',()=
 modal.addEventListener('click',e=>{ if(e.target===modal) modal.classList.remove('open'); });
 
 $('sig-submit').addEventListener('click', async ()=>{
-  if($('sig-hp').value) return;                       /* honeypot: боты заполняют скрытое поле */
+  if($('sig-hp').value) return;
   const anon = $('sig-anon').checked;
-  let name = $('sig-name').value.trim() || 'Аноним';
-  if(anon) name = 'Аноним';
+  let name = $('sig-name').value.trim() || 'Anonymous';
+  if(anon) name = 'Anonymous';
   const country = anon ? '🌍' : $('sig-country').value;
   $('sig-err').style.display='none';
-  $('sig-submit').disabled = true; $('sig-submit').textContent = '…';
+  $('sig-submit').disabled = true;
 
-  let ok = true, newId = null;
-  if(LIVE){
-    try{
-      const r = await fetch(`${SB.url}/rest/v1/signatures`,{
-        method:'POST',
-        headers:{ ...sbHeaders, 'Content-Type':'application/json', 'Prefer':'return=representation' },
-        body: JSON.stringify({ name, country, is_anon: anon })
-      });
-      ok = r.ok;
-      if(ok){ const d = await r.json(); const row = Array.isArray(d)?d[0]:d; if(row && row.id!=null) newId = row.id; }
-    }catch(e){ ok = false; }
-  }else{
-    const mine = JSON.parse(localStorage.getItem('wc_signers')||'[]');
-    newId = 'local-'+mine.length;
-    mine.unshift({id:newId, name, country, is_anon:anon});
-    localStorage.setItem('wc_signers', JSON.stringify(mine));
-  }
+  try{
+    const r = await fetch(`${SB.url}/rest/v1/signatures`,{
+      method:'POST',
+      headers:{ ...H, 'Content-Type':'application/json', 'Prefer':'return=representation' },
+      body: JSON.stringify({ name, country, is_anon: anon })
+    });
+    if(!r.ok) throw new Error(await r.text());
+    const d = await r.json(); const row = Array.isArray(d)?d[0]:d;
 
-  $('sig-submit').disabled = false; $('sig-submit').textContent = 'Подписываю';
-  if(!ok){ $('sig-err').style.display='block'; return; }
-
-  localStorage.setItem('wc_signed','1');
-  if(newId!=null){
     const myids = JSON.parse(localStorage.getItem('wc_myids')||'[]');
-    myids.push(newId);
-    localStorage.setItem('wc_myids', JSON.stringify(myids));
+    if(row && row.id!=null){ myids.push(row.id); localStorage.setItem('wc_myids', JSON.stringify(myids)); }
+    localStorage.setItem('wc_signed','1');
+
+    /* номер подписи = сколько всего подписей сейчас */
+    try{
+      const c = await fetch(`${SB.url}/rest/v1/signatures?select=id`,
+        { method:'HEAD', headers:{ ...H, 'Prefer':'count=exact', 'Range':'0-0' } });
+      const total = parseInt((c.headers.get('content-range')||'/0').split('/')[1],10);
+      if(!isNaN(total)) localStorage.setItem('wc_signum', String(total));
+    }catch(e){}
+
+    /* статус основателя страны */
+    if(!anon && country!=='🌍'){
+      try{
+        const cc = await fetch(`${SB.url}/rest/v1/signatures?select=id&country=eq.${encodeURIComponent(country)}`,
+          { method:'HEAD', headers:{ ...H, 'Prefer':'count=exact', 'Range':'0-0' } });
+        const inCountry = parseInt((cc.headers.get('content-range')||'/0').split('/')[1],10);
+        if(!isNaN(inCountry) && inCountry <= 100) localStorage.setItem('wc_founder', country);
+      }catch(e){}
+    }
+
+    await loadCount(); await loadWall(); paintKarma();
+    document.querySelectorAll('.js-sign').forEach(b=>{ b.textContent='✓'; b.setAttribute('disabled',''); });
+    $('sign-form').style.display='none';
+    $('signed-msg').style.display='block';
+  }catch(e){
+    console.error('WC sign error:', e);
+    $('sig-err').style.display='block';
   }
-  await loadCount(); await loadWall();
-  document.querySelectorAll('.js-sign').forEach(b=>{ b.textContent='✓ Ты подписал'; b.setAttribute('disabled',''); });
-  $('sign-form').style.display='none';
-  $('signed-msg').style.display='block';
+  $('sig-submit').disabled = false;
 });
 
-if(localStorage.getItem('wc_signed')){
-  document.querySelectorAll('.js-sign').forEach(b=>{ b.textContent='✓ Ты подписал'; b.setAttribute('disabled',''); });
-}
+/* ---------- запуск ---------- */
+const sel = $('lang');
+sel.innerHTML = Object.entries(LANGS).map(([c,n])=>`<option value="${c}">${n}</option>`).join('');
+const initial = pickLang();
+sel.value = initial;
+sel.addEventListener('change', e => setLang(e.target.value));
+setLang(initial);
 </script>
 </body>
 </html>

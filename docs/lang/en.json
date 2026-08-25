@@ -1,0 +1,99 @@
+{
+  "name": "English",
+  "dir": "ltr",
+  "nav": { "questions": "Questions", "how": "How it works", "sign": "Sign" },
+  "slogan": "Trust · Freedom · Voice · Participation",
+  "hero": {
+    "badge": "Stage 0",
+    "title": "Honesty<br>is stronger than power",
+    "credo": "Openness creates trust. Trust builds the future.<br>The tools are already here.",
+    "cta": "Sign the Constitution",
+    "signed": "people have signed",
+    "founders": "The first 100 in every country become founders of that country, forever"
+  },
+  "benefits": [
+    { "tag": "Trust", "h": "One passport instead of a hundred checks", "p": "Prove once that you are a real person — and show it anywhere." },
+    { "tag": "Freedom", "h": "Your reputation belongs to you", "p": "It cannot be bought, transferred or taken away — not by a state, not by a platform." },
+    { "tag": "Voice", "h": "Your voice is visible and counted", "p": "Real weight in global questions, not a comment that drowned." },
+    { "tag": "Participation", "h": "Your signature under humanity's Constitution", "p": "A visible, historic act — your name on the common list." }
+  ],
+  "how": {
+    "title": "How it works",
+    "steps": [
+      { "t": "Sign", "d": "Name or pseudonym — no crypto, no wallets", "b": "✓ Live now" },
+      { "t": "Verify", "d": "One click — the “real human” badge", "b": "Soon · Stage 1" },
+      { "t": "Vote and take part", "d": "1 person = 1 vote. Anonymous or open", "b": "Soon · Stage 2" }
+    ],
+    "note": "Voting comes after verification — otherwise one person would fake a thousand votes.",
+    "link": "See how the Question of the Day will look →",
+    "full": "In detail: how it all works →"
+  },
+  "qcall": {
+    "tag": "Live now",
+    "title": "Questions to humanity",
+    "desc": "The agenda is set by people, not by an editorial board. Propose a question humanity should answer, and support the questions of others. The strongest become global votes.",
+    "cta": "Propose a question →"
+  },
+  "const": {
+    "title": "The World Constitution",
+    "p1": "We, the people of Earth, recognise that existing institutions fail to protect the human being and future generations. For the first time in history, technology allows us to fix this: to prove that a person is real and unique without revealing their identity; to give everyone a vote that cannot be forged; and a reputation that cannot be bought or taken away.",
+    "p2": "This document is a living social contract: a voluntary charter striving for universality. It is not a declaration of intent but working code. We do not overthrow the old world by force — we lay a layer of light and trust on top of it and win because life inside it is better.",
+    "immutable": "unamendable",
+    "cta": "I sign"
+  },
+  "articles": [
+    { "n": "0", "t": "Inalienable rights", "lock": true, "b": "The dignity, life, freedom and safety of every person are inalienable. The rights of future generations are protected equally with those of the present. This article cannot be repealed by any majority — it stands above any vote." },
+    { "n": "1", "t": "Collective protection", "b": "Aggression against one is a threat to all. Aggression is established by transparent verification within 48 hours, not years of debate. This is not a right to vigilante justice: the system creates pressure through light, it does not replace lawful bodies by force." },
+    { "n": "2", "t": "Free elections", "b": "Falsification becomes technically impossible: every vote is verifiable, yet secrecy is preserved. You cannot prove to a third party how you voted — which kills vote-buying. Re-voting is allowed: a vote cast under pressure can be secretly changed." },
+    { "n": "3", "t": "Transparency of power", "b": "The higher the office, the more transparent its holder's finances and decisions must be. The light points upward at power, not downward at the individual. An ordinary person discloses only what they consent to." },
+    { "n": "4", "t": "Protection against capture", "b": "No one may control courts, media and elections at the same time. Those who frame questions, judge disputes and count votes are different, replaceable roles. The same holds inside the platform: no permanent moderators, no sole owner of the treasury." },
+    { "n": "5", "t": "Historic status", "b": "A leader who hands over power voluntarily and peacefully receives recognition and protection rather than persecution. Holding power by force leads to an ethical penalty. This is recognition, not legal immunity: the gravest crimes are excluded." },
+    { "n": "6", "t": "A new international order", "b": "Decisions are made without anyone holding a veto. Bicameralism — agreement of both people and communities — protects the small from the large. Local matters stay local; only the truly global is decided globally." },
+    { "n": "7", "t": "The right to information", "b": "Everyone has the right to know how the algorithms shaping their life work: ranking and scoring rules are public. State control over media is forbidden. Algorithmic openness never means exposing people's private lives." },
+    { "n": "8", "t": "Land and water", "b": "The natural foundations of life are the common heritage of humanity and future generations. Access to them is a right; their stewardship is subject to transparent collective control. Appropriation to the detriment of all is inadmissible." },
+    { "n": "9", "t": "The reputation system", "b": "Trust belongs to the person: it cannot be bought, sold or transferred. It is built from verifiable deeds and assessed by transparent rules, not by a superior's decision. Money does not convert into influence." },
+    { "n": "10", "t": "The platform as a living model", "b": "The platform itself is a working model of this Constitution. Every principle has a technical embodiment: if a rule does not work in code, it does not work at all. Complexity is added only when it has been earned." },
+    { "n": "11", "t": "Amendment procedure", "b": "Change is possible, but neither fast nor secret: 80% agreement, mandatory citizen participation and at least six months of deliberation. Any participant may propose an amendment. Article 0 is not subject to amendment." },
+    { "n": "12", "t": "Violations and penalties", "b": "Violations are recorded transparently; punishment is proportionate and predictable. An ethical penalty follows only from narrow, verifiable events confirmed by several independent sources, with the right of appeal. Sanctions and ICC charges remain visible in any privacy mode." },
+    { "n": "13", "t": "Digital passport and freedom of movement", "b": "A single trust passport is recognised across borders; movement is a right, not a privilege. Disclosure is by consent and minimal: you prove “verified”, not your whole record. No enumerable registry of people exists." },
+    { "n": "14", "t": "Common heritage of knowledge and authorship", "b": "Knowledge is a common heritage, yet authorship is respected and protected. The creator receives recognition and royalties; humanity receives access. Protection of authorship never becomes a permanent monopoly on knowledge." },
+    { "n": "15", "t": "Transparency of data use", "b": "Every request for your data is visible to you: who, when and why. Disclosure happens only with your cryptographic consent. There is no back door for states or for the operator — a hidden social credit score cannot be built." },
+    { "n": "16", "t": "The living planet", "b": "Animals, plants and ecosystems are not property but living participants of this planet. We are stewards, not owners. Destroying the living world for short-term gain is a violation." },
+    { "n": "17", "t": "Common challenges of humanity", "b": "Climate, pandemics and uncontrolled technologies concern everyone and know no borders. The response is collective, transparent and based on verifiable facts. A common threat can never serve as a pretext for suspending rights." },
+    { "n": "18", "t": "Transition and amnesty", "b": "The new system neither overthrows the old by force nor compels anyone — it wins because life inside it is better. Transitional amnesty: reputational forgiveness in exchange for full disclosure of the truth and an end to harm, with a window that narrows over time. This is not legal immunity; the gravest crimes are excluded." },
+    { "n": "19", "t": "The voice of future generations", "b": "Those not yet born have a representative: an elected role mandated to assess decisions by their long-term consequences. They may demand such an assessment on any question, and their opinion is public. The rights of future generations stop being a declaration and gain a bearer." }
+  ],
+  "wall": {
+    "title": "Wall of signatories",
+    "empty": "The wall is empty — be the first",
+    "note": "The first 100 signatories in each country permanently receive the status of “founder of the country”."
+  },
+  "manifesto": [
+    "Honesty is stronger than power.",
+    "Openness creates trust.",
+    "Reputation belongs to the person.",
+    "Every voice carries weight.",
+    "This is how the future is built. Otherwise it is not."
+  ],
+  "footer": { "code": "Not a declaration — working code" },
+  "modal": {
+    "title": "Sign the Constitution",
+    "sub": "Only a name or pseudonym and a country are stored publicly. No email required. Identity verification comes at Stage 1, optionally.",
+    "name": "Name or pseudonym",
+    "namePh": "How to list you on the wall",
+    "country": "Country",
+    "anon": "Sign anonymously (shown as “Anonymous”; the vote weighs the same as any other)",
+    "submit": "I sign",
+    "cancel": "Cancel",
+    "err": "Could not save the signature. Please try again."
+  },
+  "signed": {
+    "title": "Your signature is accepted",
+    "sub": "You are part of the common contract. Now take the next step: propose a question humanity should answer. The agenda is set by people, not by an editorial board.",
+    "cta": "Propose your question →",
+    "later": "Later",
+    "number": "Your signature number",
+    "founder": "Founder of the country"
+  },
+  "countries": { "none": "Prefer not to say" }
+}
