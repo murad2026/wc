@@ -60,6 +60,14 @@
   .layer .proves{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
   .layer .proves b{color:var(--indigo-deep);font-weight:700}
 
+  /* слой-ссылка: та же карточка, но кликабельная целиком */
+  a.layer{display:block;color:inherit;text-decoration:none;transition:border-color .15s, box-shadow .15s, transform .15s}
+  a.layer:hover{border-color:var(--amber);box-shadow:0 6px 20px color-mix(in srgb, var(--amber) 18%, transparent);transform:translateY(-2px)}
+  a.layer .name{text-decoration:underline;text-decoration-color:color-mix(in srgb, var(--amber) 55%, transparent);
+     text-underline-offset:4px;text-decoration-thickness:2px}
+  a.layer .go{display:inline-block;margin-top:12px;font-size:14px;font-weight:800;color:var(--amber)}
+  a.layer:hover .go{color:var(--amber-hover)}
+
   .why p{font-size:16px;margin-bottom:14px}
   .why p:last-child{margin-bottom:0}
 
@@ -147,16 +155,21 @@ function render(){
 
   const cls = ['base','now','later','later'];
   const tagCls = ['live','building','later','later'];
-  $('layers').innerHTML = m.layers.map((l,i)=>`
-    <div class="layer ${cls[i]||'later'}">
+  $('layers').innerHTML = m.layers.map((l,i)=>{
+    const inner = `
       <div class="top">
         <span class="lv">${esc(l.n)}</span>
         <span class="name">${esc(l.name)}</span>
         <span class="tag ${tagCls[i]||'later'}">${esc(l.tag)}</span>
       </div>
       <div class="desc">${esc(l.desc)}</div>
-      <div class="proves">${esc(l.proves)}</div>
-    </div>`).join('');
+      <div class="proves">${esc(l.proves)}</div>`;
+    // слой с url открывается как отдельный проект
+    return l.url
+      ? `<a class="layer ${cls[i]||'later'}" href="${esc(l.url)}" target="_blank" rel="noopener">${inner}
+           <span class="go">${esc(l.open||'→')}</span></a>`
+      : `<div class="layer ${cls[i]||'later'}">${inner}</div>`;
+  }).join('');
 
   $('why-t').textContent = m.whyT;
   $('why').innerHTML = m.why.map(p=>`<p>${esc(p)}</p>`).join('');

@@ -1,16 +1,48 @@
 {
   "name": "Español",
   "dir": "ltr",
-  "nav": { "questions": "Preguntas", "how": "Cómo funciona", "sign": "Firmar", "karma": "Karma", "market": "Mercado" },
+  "nav": {
+    "questions": "Preguntas",
+    "how": "Cómo funciona",
+    "sign": "Firmar",
+    "karma": "Karma",
+    "market": "Mercado"
+  },
   "m": {
     "title": "Mercado",
     "lead": "La honestidad es más fuerte que el poder, pero el mercado es más fuerte que la honestidad. Por eso no vendemos la filosofía: vendemos servicios que la demuestran.",
     "structT": "De qué estamos hechos",
     "layers": [
-      { "n": "Fundación", "name": "WorldConstitution", "tag": "En marcha", "desc": "La carta, una reputación que pertenece a la persona y un protocolo de identidad verificada. El sentido de todo lo demás.", "proves": "Aquí se escriben las reglas que las demás capas ponen a prueba en la práctica." },
-      { "n": "Capa 1", "name": "Verified Talent", "tag": "En construcción", "desc": "Evaluación de candidatos por expertos senior reales: entrevista en vídeo de 15 minutos e informe estructurado en 48 horas.", "proves": "Demuestra que una persona verificada vale dinero: pagan las empresas, no los idealistas." },
-      { "n": "Capa 2", "name": "Verified Wiki", "tag": "Más adelante", "desc": "Hechos y análisis escritos por expertos verificados y revisados por otras personas verificadas.", "proves": "Demuestra que la reputación se gana con hechos y no se compra." },
-      { "n": "Capa 3", "name": "Verified Feed", "tag": "Más adelante", "desc": "Un flujo de observaciones breves solo de personas reales. La protección contra los fakes como servicio.", "proves": "Demuestra que la fiabilidad de las opiniones es un producto por el que se paga." }
+      {
+        "n": "Fundación",
+        "name": "WorldConstitution",
+        "tag": "En marcha",
+        "desc": "La carta, una reputación que pertenece a la persona y un protocolo de identidad verificada. El sentido de todo lo demás.",
+        "proves": "Aquí se escriben las reglas que las demás capas ponen a prueba en la práctica."
+      },
+      {
+        "n": "Capa 1",
+        "name": "Verified Talent",
+        "tag": "En construcción",
+        "desc": "Evaluación de candidatos por expertos senior reales: entrevista en vídeo de 15 minutos e informe estructurado en 48 horas.",
+        "proves": "Demuestra que una persona verificada vale dinero: pagan las empresas, no los idealistas.",
+        "url": "ninja/",
+        "open": "Abrir →"
+      },
+      {
+        "n": "Capa 2",
+        "name": "Verified Wiki",
+        "tag": "Más adelante",
+        "desc": "Hechos y análisis escritos por expertos verificados y revisados por otras personas verificadas.",
+        "proves": "Demuestra que la reputación se gana con hechos y no se compra."
+      },
+      {
+        "n": "Capa 3",
+        "name": "Verified Feed",
+        "tag": "Más adelante",
+        "desc": "Un flujo de observaciones breves solo de personas reales. La protección contra los fakes como servicio.",
+        "proves": "Demuestra que la fiabilidad de las opiniones es un producto por el que se paga."
+      }
     ],
     "whyT": "Por qué en este orden",
     "why": [
@@ -33,17 +65,45 @@
     "founders": "Los primeros 100 de cada país serán sus fundadores para siempre"
   },
   "benefits": [
-    { "tag": "Confianza", "h": "Un pasaporte en lugar de cien comprobaciones", "p": "Demuestra una vez que eres una persona real y muéstralo donde quieras." },
-    { "tag": "Libertad", "h": "Tu reputación te pertenece", "p": "No se puede comprar, transferir ni quitar — ni por un Estado ni por una plataforma." },
-    { "tag": "Voz", "h": "Tu voz es visible y cuenta", "p": "Peso real en las preguntas globales, no un comentario que se hundió." },
-    { "tag": "Participación", "h": "Tu firma bajo la Constitución de la humanidad", "p": "Un acto visible e histórico: tu nombre en la lista común." }
+    {
+      "tag": "Confianza",
+      "h": "Un pasaporte en lugar de cien comprobaciones",
+      "p": "Demuestra una vez que eres una persona real y muéstralo donde quieras."
+    },
+    {
+      "tag": "Libertad",
+      "h": "Tu reputación te pertenece",
+      "p": "No se puede comprar, transferir ni quitar — ni por un Estado ni por una plataforma."
+    },
+    {
+      "tag": "Voz",
+      "h": "Tu voz es visible y cuenta",
+      "p": "Peso real en las preguntas globales, no un comentario que se hundió."
+    },
+    {
+      "tag": "Participación",
+      "h": "Tu firma bajo la Constitución de la humanidad",
+      "p": "Un acto visible e histórico: tu nombre en la lista común."
+    }
   ],
   "how": {
     "title": "Cómo funciona",
     "steps": [
-      { "t": "Firma", "d": "Nombre o seudónimo, sin cripto ni monederos", "b": "✓ Ya funciona" },
-      { "t": "Verifícate", "d": "Un clic: la insignia de «persona real»", "b": "Pronto · Etapa 1" },
-      { "t": "Vota y participa", "d": "1 persona = 1 voto. Anónimo o público", "b": "Pronto · Etapa 2" }
+      {
+        "t": "Firma",
+        "d": "Nombre o seudónimo, sin cripto ni monederos",
+        "b": "✓ Ya funciona"
+      },
+      {
+        "t": "Verifícate",
+        "d": "Un clic: la insignia de «persona real»",
+        "b": "Pronto · Etapa 1"
+      },
+      {
+        "t": "Vota y participa",
+        "d": "1 persona = 1 voto. Anónimo o público",
+        "b": "Pronto · Etapa 2"
+      }
     ],
     "note": "La votación llega después de la verificación: de lo contrario una sola persona fabricaría mil votos.",
     "link": "Ver cómo será la «Pregunta del día» →",
@@ -55,6 +115,13 @@
     "desc": "La agenda la fijan las personas, no una redacción. Propón una pregunta que la humanidad deba responder y apoya las de los demás. Las mejores se convertirán en votaciones globales.",
     "cta": "Proponer una pregunta →"
   },
+  "mhook": {
+    "tag": "En desarrollo",
+    "title": "Verified Talent — la primera capa comercial",
+    "desc": "Evaluación de candidatos por ingenieros senior reales. Así demostramos que una persona verificada vale dinero, y eso es lo que sostiene la base.",
+    "cta": "Abrir Verified Talent →",
+    "alt": "De qué estamos hechos"
+  },
   "const": {
     "title": "La Constitución Mundial",
     "p1": "Nosotros, los pueblos de la Tierra, reconocemos que las instituciones existentes no logran proteger al ser humano ni a las generaciones futuras. Por primera vez en la historia, la tecnología permite corregirlo: demostrar que una persona es real y única sin revelar su identidad; dar a cada uno un voto imposible de falsificar; y una reputación que no se puede comprar ni arrebatar.",
@@ -63,26 +130,107 @@
     "cta": "Firmo"
   },
   "articles": [
-    { "n": "0", "t": "Derechos inalienables", "lock": true, "b": "La dignidad, la vida, la libertad y la seguridad de cada persona son inalienables. Los derechos de las generaciones futuras se protegen igual que los presentes. Este artículo no puede ser derogado por ninguna mayoría: está por encima de cualquier votación." },
-    { "n": "1", "t": "Protección colectiva", "b": "La agresión contra uno es una amenaza para todos. La agresión se establece mediante verificación transparente en 48 horas, no tras años de debate. No es un derecho a la justicia por mano propia: el sistema presiona con luz, no sustituye por la fuerza a los órganos legales." },
-    { "n": "2", "t": "Elecciones libres", "b": "La falsificación se vuelve técnicamente imposible: cada voto es verificable y el secreto se preserva. Nadie puede demostrar a un tercero cómo votó, lo que elimina la compra de votos. Se permite volver a votar: un voto emitido bajo presión puede cambiarse en secreto." },
-    { "n": "3", "t": "Transparencia del poder", "b": "Cuanto más alto el cargo, más transparentes deben ser las finanzas y decisiones de quien lo ocupa. La luz apunta hacia arriba, al poder, no hacia abajo, a la persona. Un ciudadano común revela solo aquello a lo que consiente." },
-    { "n": "4", "t": "Protección contra la captura", "b": "Nadie puede controlar a la vez los tribunales, los medios y las elecciones. Quien formula las preguntas, quien juzga las disputas y quien cuenta los votos son funciones distintas y revocables. Lo mismo rige dentro de la plataforma: sin moderadores inamovibles ni dueño único del tesoro." },
-    { "n": "5", "t": "Estatus histórico", "b": "El líder que entrega el poder de forma voluntaria y pacífica recibe reconocimiento y protección en lugar de persecución. Aferrarse al poder por la fuerza acarrea una sanción ética. Es reconocimiento, no inmunidad jurídica: los crímenes más graves quedan excluidos." },
-    { "n": "6", "t": "Un nuevo orden internacional", "b": "Las decisiones se toman sin que nadie tenga derecho de veto. El bicameralismo — acuerdo de personas y de comunidades — protege a los pequeños de los grandes. Lo local se decide localmente; solo lo verdaderamente global se decide globalmente." },
-    { "n": "7", "t": "Derecho a la información", "b": "Toda persona tiene derecho a saber cómo funcionan los algoritmos que moldean su vida: las reglas de clasificación y evaluación son públicas. Se prohíbe el control estatal de los medios. La apertura algorítmica nunca implica exponer la vida privada." },
-    { "n": "8", "t": "La tierra y el agua", "b": "Los fundamentos naturales de la vida son patrimonio común de la humanidad y de las generaciones futuras. Su acceso es un derecho; su gestión, objeto de control colectivo transparente. La apropiación en perjuicio de todos es inadmisible." },
-    { "n": "9", "t": "Sistema de reputación", "b": "La confianza pertenece a la persona: no puede comprarse, venderse ni transferirse. Se construye con hechos verificables y se evalúa con reglas transparentes, no por decisión de un superior. El dinero no se convierte en influencia." },
-    { "n": "10", "t": "La plataforma como modelo vivo", "b": "La propia plataforma es un modelo operativo de esta Constitución. Cada principio tiene una encarnación técnica: si una regla no funciona en el código, no funciona en absoluto. La complejidad se añade solo cuando se ha ganado." },
-    { "n": "11", "t": "Procedimiento de enmienda", "b": "El cambio es posible, pero ni rápido ni secreto: 80 % de acuerdo, participación ciudadana obligatoria y al menos seis meses de deliberación. Cualquier participante puede proponer una enmienda. El artículo 0 no es enmendable." },
-    { "n": "12", "t": "Infracciones y sanciones", "b": "Las infracciones se registran de forma transparente; la sanción es proporcionada y previsible. La sanción ética solo deriva de hechos verificables confirmados por varias fuentes independientes, con derecho de apelación. Las sanciones y acusaciones de la CPI permanecen visibles en cualquier modo de privacidad." },
-    { "n": "13", "t": "Pasaporte digital y libertad de movimiento", "b": "Un pasaporte de confianza único se reconoce más allá de las fronteras; moverse es un derecho, no un privilegio. La divulgación es por consentimiento y mínima: se demuestra «verificado», no todo el expediente. No existe un registro enumerable de personas." },
-    { "n": "14", "t": "Patrimonio del conocimiento y autoría", "b": "El conocimiento es patrimonio común, pero la autoría se respeta y protege. El creador recibe reconocimiento y regalías; la humanidad, acceso. La protección de la autoría nunca se convierte en monopolio perpetuo sobre el conocimiento." },
-    { "n": "15", "t": "Transparencia en el uso de datos", "b": "Cada consulta sobre tus datos es visible para ti: quién, cuándo y para qué. La divulgación ocurre solo con tu consentimiento criptográfico. No hay puerta trasera ni para los Estados ni para el operador: es imposible construir un puntaje social oculto." },
-    { "n": "16", "t": "El planeta vivo", "b": "Los animales, las plantas y los ecosistemas no son propiedad, sino participantes vivos del planeta. Somos guardianes, no dueños. Destruir lo vivo por una ganancia inmediata es una violación." },
-    { "n": "17", "t": "Desafíos comunes de la humanidad", "b": "El clima, las pandemias y las tecnologías sin control conciernen a todos y no conocen fronteras. La respuesta es colectiva, transparente y basada en hechos verificables. Una amenaza común jamás puede servir de pretexto para suspender derechos." },
-    { "n": "18", "t": "Transición y amnistía", "b": "El nuevo sistema no derroca al viejo por la fuerza ni obliga a nadie: vence porque dentro se vive mejor. Amnistía de transición: perdón reputacional a cambio de la revelación completa de la verdad y el cese del daño, con una ventana que se estrecha con el tiempo. No es inmunidad jurídica; los crímenes más graves quedan excluidos." },
-    { "n": "19", "t": "La voz de las generaciones futuras", "b": "Quienes aún no han nacido tienen un representante: un cargo electo con el mandato de evaluar las decisiones por sus consecuencias a largo plazo. Puede exigir esa evaluación sobre cualquier asunto y su dictamen es público. Los derechos de las generaciones futuras dejan de ser declaración y adquieren portador." }
+    {
+      "n": "0",
+      "t": "Derechos inalienables",
+      "lock": true,
+      "b": "La dignidad, la vida, la libertad y la seguridad de cada persona son inalienables. Los derechos de las generaciones futuras se protegen igual que los presentes. Este artículo no puede ser derogado por ninguna mayoría: está por encima de cualquier votación."
+    },
+    {
+      "n": "1",
+      "t": "Protección colectiva",
+      "b": "La agresión contra uno es una amenaza para todos. La agresión se establece mediante verificación transparente en 48 horas, no tras años de debate. No es un derecho a la justicia por mano propia: el sistema presiona con luz, no sustituye por la fuerza a los órganos legales."
+    },
+    {
+      "n": "2",
+      "t": "Elecciones libres",
+      "b": "La falsificación se vuelve técnicamente imposible: cada voto es verificable y el secreto se preserva. Nadie puede demostrar a un tercero cómo votó, lo que elimina la compra de votos. Se permite volver a votar: un voto emitido bajo presión puede cambiarse en secreto."
+    },
+    {
+      "n": "3",
+      "t": "Transparencia del poder",
+      "b": "Cuanto más alto el cargo, más transparentes deben ser las finanzas y decisiones de quien lo ocupa. La luz apunta hacia arriba, al poder, no hacia abajo, a la persona. Un ciudadano común revela solo aquello a lo que consiente."
+    },
+    {
+      "n": "4",
+      "t": "Protección contra la captura",
+      "b": "Nadie puede controlar a la vez los tribunales, los medios y las elecciones. Quien formula las preguntas, quien juzga las disputas y quien cuenta los votos son funciones distintas y revocables. Lo mismo rige dentro de la plataforma: sin moderadores inamovibles ni dueño único del tesoro."
+    },
+    {
+      "n": "5",
+      "t": "Estatus histórico",
+      "b": "El líder que entrega el poder de forma voluntaria y pacífica recibe reconocimiento y protección en lugar de persecución. Aferrarse al poder por la fuerza acarrea una sanción ética. Es reconocimiento, no inmunidad jurídica: los crímenes más graves quedan excluidos."
+    },
+    {
+      "n": "6",
+      "t": "Un nuevo orden internacional",
+      "b": "Las decisiones se toman sin que nadie tenga derecho de veto. El bicameralismo — acuerdo de personas y de comunidades — protege a los pequeños de los grandes. Lo local se decide localmente; solo lo verdaderamente global se decide globalmente."
+    },
+    {
+      "n": "7",
+      "t": "Derecho a la información",
+      "b": "Toda persona tiene derecho a saber cómo funcionan los algoritmos que moldean su vida: las reglas de clasificación y evaluación son públicas. Se prohíbe el control estatal de los medios. La apertura algorítmica nunca implica exponer la vida privada."
+    },
+    {
+      "n": "8",
+      "t": "La tierra y el agua",
+      "b": "Los fundamentos naturales de la vida son patrimonio común de la humanidad y de las generaciones futuras. Su acceso es un derecho; su gestión, objeto de control colectivo transparente. La apropiación en perjuicio de todos es inadmisible."
+    },
+    {
+      "n": "9",
+      "t": "Sistema de reputación",
+      "b": "La confianza pertenece a la persona: no puede comprarse, venderse ni transferirse. Se construye con hechos verificables y se evalúa con reglas transparentes, no por decisión de un superior. El dinero no se convierte en influencia."
+    },
+    {
+      "n": "10",
+      "t": "La plataforma como modelo vivo",
+      "b": "La propia plataforma es un modelo operativo de esta Constitución. Cada principio tiene una encarnación técnica: si una regla no funciona en el código, no funciona en absoluto. La complejidad se añade solo cuando se ha ganado."
+    },
+    {
+      "n": "11",
+      "t": "Procedimiento de enmienda",
+      "b": "El cambio es posible, pero ni rápido ni secreto: 80 % de acuerdo, participación ciudadana obligatoria y al menos seis meses de deliberación. Cualquier participante puede proponer una enmienda. El artículo 0 no es enmendable."
+    },
+    {
+      "n": "12",
+      "t": "Infracciones y sanciones",
+      "b": "Las infracciones se registran de forma transparente; la sanción es proporcionada y previsible. La sanción ética solo deriva de hechos verificables confirmados por varias fuentes independientes, con derecho de apelación. Las sanciones y acusaciones de la CPI permanecen visibles en cualquier modo de privacidad."
+    },
+    {
+      "n": "13",
+      "t": "Pasaporte digital y libertad de movimiento",
+      "b": "Un pasaporte de confianza único se reconoce más allá de las fronteras; moverse es un derecho, no un privilegio. La divulgación es por consentimiento y mínima: se demuestra «verificado», no todo el expediente. No existe un registro enumerable de personas."
+    },
+    {
+      "n": "14",
+      "t": "Patrimonio del conocimiento y autoría",
+      "b": "El conocimiento es patrimonio común, pero la autoría se respeta y protege. El creador recibe reconocimiento y regalías; la humanidad, acceso. La protección de la autoría nunca se convierte en monopolio perpetuo sobre el conocimiento."
+    },
+    {
+      "n": "15",
+      "t": "Transparencia en el uso de datos",
+      "b": "Cada consulta sobre tus datos es visible para ti: quién, cuándo y para qué. La divulgación ocurre solo con tu consentimiento criptográfico. No hay puerta trasera ni para los Estados ni para el operador: es imposible construir un puntaje social oculto."
+    },
+    {
+      "n": "16",
+      "t": "El planeta vivo",
+      "b": "Los animales, las plantas y los ecosistemas no son propiedad, sino participantes vivos del planeta. Somos guardianes, no dueños. Destruir lo vivo por una ganancia inmediata es una violación."
+    },
+    {
+      "n": "17",
+      "t": "Desafíos comunes de la humanidad",
+      "b": "El clima, las pandemias y las tecnologías sin control conciernen a todos y no conocen fronteras. La respuesta es colectiva, transparente y basada en hechos verificables. Una amenaza común jamás puede servir de pretexto para suspender derechos."
+    },
+    {
+      "n": "18",
+      "t": "Transición y amnistía",
+      "b": "El nuevo sistema no derroca al viejo por la fuerza ni obliga a nadie: vence porque dentro se vive mejor. Amnistía de transición: perdón reputacional a cambio de la revelación completa de la verdad y el cese del daño, con una ventana que se estrecha con el tiempo. No es inmunidad jurídica; los crímenes más graves quedan excluidos."
+    },
+    {
+      "n": "19",
+      "t": "La voz de las generaciones futuras",
+      "b": "Quienes aún no han nacido tienen un representante: un cargo electo con el mandato de evaluar las decisiones por sus consecuencias a largo plazo. Puede exigir esa evaluación sobre cualquier asunto y su dictamen es público. Los derechos de las generaciones futuras dejan de ser declaración y adquieren portador."
+    }
   ],
   "wall": {
     "title": "Muro de firmantes",
@@ -96,7 +244,9 @@
     "Cada voz tiene peso.",
     "Así se construye el futuro. De otro modo, no se construye."
   ],
-  "footer": { "code": "No una declaración: código que funciona" },
+  "footer": {
+    "code": "No una declaración: código que funciona"
+  },
   "modal": {
     "title": "Firmar la Constitución",
     "sub": "Solo se guardan públicamente un nombre o seudónimo y un país. No se requiere correo. La verificación de identidad llegará en la Etapa 1, de forma opcional.",
@@ -117,25 +267,54 @@
     "number": "Tu número de firma",
     "founder": "Fundador del país"
   },
-  "countries": { "none": "Prefiero no decirlo" },
+  "countries": {
+    "none": "Prefiero no decirlo"
+  },
   "back": "← Inicio",
   "k": {
     "title": "Karma",
     "sub": "El karma es el registro abierto de lo que has hecho por la causa común. No se puede comprar, transferir ni regalar: solo se gana con hechos.",
     "buildT": "Cómo construirlo",
     "build": [
-      { "t": "Firmar la Constitución", "d": "La contribución básica: declaras que compartes estos principios. Te da un número de firma que es tuyo para siempre." },
-      { "t": "Proponer una pregunta", "d": "Fijas la agenda de la humanidad. El karma crece más cuando la pregunta gana apoyo: importa el resultado, no el simple envío." },
-      { "t": "Apoyar preguntas de otros", "d": "Ayudas a destacar lo importante dentro del flujo común." },
-      { "t": "Traer personas reales", "d": "La red crece a través de ti. Cuentan quienes participan de verdad, no los registros vacíos." },
-      { "t": "Mostrarte públicamente", "d": "Un perfil público otorga una prima: respondes con tu nombre por tus palabras. El anonimato nunca se penaliza; simplemente no recibe esa prima." },
-      { "t": "Verificar a otros (más adelante)", "d": "Los profesionales verifican a profesionales dentro de los gremios. La contribución de mayor peso y la mayor responsabilidad." }
+      {
+        "t": "Firmar la Constitución",
+        "d": "La contribución básica: declaras que compartes estos principios. Te da un número de firma que es tuyo para siempre."
+      },
+      {
+        "t": "Proponer una pregunta",
+        "d": "Fijas la agenda de la humanidad. El karma crece más cuando la pregunta gana apoyo: importa el resultado, no el simple envío."
+      },
+      {
+        "t": "Apoyar preguntas de otros",
+        "d": "Ayudas a destacar lo importante dentro del flujo común."
+      },
+      {
+        "t": "Traer personas reales",
+        "d": "La red crece a través de ti. Cuentan quienes participan de verdad, no los registros vacíos."
+      },
+      {
+        "t": "Mostrarte públicamente",
+        "d": "Un perfil público otorga una prima: respondes con tu nombre por tus palabras. El anonimato nunca se penaliza; simplemente no recibe esa prima."
+      },
+      {
+        "t": "Verificar a otros (más adelante)",
+        "d": "Los profesionales verifican a profesionales dentro de los gremios. La contribución de mayor peso y la mayor responsabilidad."
+      }
     ],
     "checkT": "Cómo se verifica el karma",
     "check": [
-      { "t": "Automáticamente", "d": "Un bot comprueba lo que una máquina puede comprobar: firmas, apoyos, un enlace a tu trabajo, un commit, una publicación, la cadena de referidos. Al instante y sin colas." },
-      { "t": "Por la comunidad", "d": "Lo que el bot no puede confirmar lo confirman otros participantes, poniendo en juego su propio karma: confirmar una mentira cuesta el tuyo." },
-      { "t": "Por personas", "d": "Lo significativo, lo disputado y lo cualitativo lo deciden personas, como en Wikipedia, pero con rotación, revocación y apelación por sorteo. La IA nunca dicta un veredicto final sobre una persona." }
+      {
+        "t": "Automáticamente",
+        "d": "Un bot comprueba lo que una máquina puede comprobar: firmas, apoyos, un enlace a tu trabajo, un commit, una publicación, la cadena de referidos. Al instante y sin colas."
+      },
+      {
+        "t": "Por la comunidad",
+        "d": "Lo que el bot no puede confirmar lo confirman otros participantes, poniendo en juego su propio karma: confirmar una mentira cuesta el tuyo."
+      },
+      {
+        "t": "Por personas",
+        "d": "Lo significativo, lo disputado y lo cualitativo lo deciden personas, como en Wikipedia, pero con rotación, revocación y apelación por sorteo. La IA nunca dicta un veredicto final sobre una persona."
+      }
     ],
     "moneyT": "Cómo se relaciona el karma con el dinero",
     "money": [
