@@ -96,7 +96,22 @@
   .price ul{list-style:none;text-align:start;margin:28px 0}
   .price li{font-size:15px;padding:9px 0 9px 26px;position:relative;color:var(--muted)}
   .price li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
+  [dir="rtl"] .price li::before{left:auto;right:0}
   .price li b{color:var(--text)}
+  .price .not{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);text-align:start}
+  .price .not li::before{content:"—";color:var(--muted)}
+  .price .not-t{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);
+     font-weight:700;margin-bottom:6px}
+
+  .more{max-width:760px;margin:46px auto 0}
+  .more-t{text-align:center;font-size:13px;text-transform:uppercase;letter-spacing:.1em;
+     color:var(--muted);font-weight:700;margin-bottom:18px}
+  .more-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+  .more-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .more-item h4{font-size:15.5px;font-weight:700;margin-bottom:6px}
+  .more-item .dur{font-size:12.5px;color:var(--accent);font-weight:600;margin-bottom:8px}
+  .more-item p{font-size:14px;color:var(--muted)}
+  .more-note{text-align:center;font-size:14px;color:var(--muted);margin-top:20px}
 
   .faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
   .faq summary{padding:18px 22px;font-weight:600;font-size:16px;cursor:pointer;list-style:none;
@@ -222,16 +237,50 @@
   <p class="sec-sub" style="margin-inline:auto;text-align:center">One price. One candidate. No contracts.</p>
   <div class="price">
     <div class="amt">$199</div>
-    <div class="per">per candidate screened</div>
+    <div class="per">per candidate · Verified Screen</div>
     <ul>
-      <li><b>15-minute live screen</b> by a senior engineer</li>
-      <li><b>Structured report</b> within 48 hours</li>
-      <li>Ratings: technical depth, communication, ownership</li>
-      <li>Clear recommendation: hire / no hire, with reasoning</li>
-      <li>Expert's real identity revealed after payment</li>
-      <li><b>Refund</b> if the screen doesn't happen</li>
+      <li><b>15-minute live video screen</b> run by a former Amazon Bar Raiser</li>
+      <li>Scheduled <b>within 24 hours</b> of payment</li>
+      <li>Probing follow-up questions — depth, not a quiz</li>
+      <li><b>Written report within 48 hours</b> of the call</li>
+      <li>Ratings: technical depth, problem solving, communication, ownership</li>
+      <li>Explicit verdict: <b>hire / no hire</b>, with the reasoning behind it</li>
+      <li>Red flags and what to probe further if you proceed</li>
+      <li>Expert's <b>real name, photo and LinkedIn</b> before the call</li>
+      <li>Full <b>refund</b> if we can't schedule in the window</li>
     </ul>
-    <a class="btn lg" href="#order" style="width:100%;text-align:center">Order a screen</a>
+    <div class="not">
+      <div class="not-t">Not included</div>
+      <ul>
+        <li>Sourcing or recruiting candidates</li>
+        <li>Placement fees if you hire — we charge per screen only</li>
+        <li>Take-home tasks or multi-hour interviews</li>
+        <li>Automated or AI scoring of any kind</li>
+      </ul>
+    </div>
+    <a class="btn lg" href="#order" style="width:100%;text-align:center;margin-top:24px">Order a screen</a>
+  </div>
+
+  <div class="more">
+    <div class="more-t">Also available on request</div>
+    <div class="more-grid">
+      <div class="more-item">
+        <h4>Deep Dive</h4>
+        <div class="dur">45 min + written report</div>
+        <p>System design and code-level assessment for senior and staff roles, where 15 minutes isn't enough.</p>
+      </div>
+      <div class="more-item">
+        <h4>Shadow Session</h4>
+        <div class="dur">60 min + debrief</div>
+        <p>The expert sits in on <em>your</em> interview and assesses both the candidate and how your team interviews.</p>
+      </div>
+      <div class="more-item">
+        <h4>Reference Check</h4>
+        <div class="dur">2 calls + report</div>
+        <p>Structured conversations with former colleagues — what the CV doesn't say.</p>
+      </div>
+    </div>
+    <p class="more-note">Email <a href="mailto:hello@verified.ninja">hello@verified.ninja</a> — priced per case, usually $249–399.</p>
   </div>
 </section>
 
