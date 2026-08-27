@@ -55,6 +55,12 @@
 > Многие крупные компании (включая Apple и Amazon) требуют письменного одобрения любой оплачиваемой деятельности вне компании. Такое одобрение обычно **дают**, если деятельность не конкурирует. Ниже — шаблон, который эксперт отправляет своему HR или менеджеру.
 >
 > ⚠️ Это не юридический документ, а заготовка для разговора. Перед отправкой стоит сверить формулировки с внутренней политикой компании (раздел про outside employment / moonlighting / conflict of interest).
+>
+> **Важно про статус 1099.** Форма независимого подряда снижает риски, но обычно **не выводит из-под политики**: в соглашениях FAANG пишут не «outside employment», а шире — *outside work* / *outside activities* / *any compensated engagement*, и это покрывает разовые услуги наравне с наймом. Поэтому 1099 — сильный аргумент **внутри запроса**, а не замена запроса.
+>
+> Помимо авторских прав в соглашении обычно остаются релевантными: конфиденциальность, конфликт интересов, запрет на переманивание и использование рабочего времени и техники. Письмо ниже закрывает каждый из этих пунктов явно.
+>
+> Если работа человека в Калифорнии — стоит знать про **Labor Code §2870**: он защищает созданное работником в своё время и без ресурсов компании. Это аргумент в его пользу по части изобретений (но не по конфиденциальности).
 
 ---
 
@@ -76,7 +82,11 @@ I'm writing to request written approval for a small amount of paid outside work,
 - I would use **only my own general professional experience**. No proprietary interview material, rubrics, internal documents, or confidential information of [Company] would be used or disclosed.
 - No [Company] intellectual property, data, or brand association is involved. My employer is not named publicly.
 
-**Compensation.** The work is paid per assessment as an independent contractor (1099).
+**Nature of the engagement.** This is independent contractor work (1099), paid per assessment — not employment, not an ongoing retainer, and not a role with any company. I can decline any individual assessment for any reason.
+
+**No intellectual property is created or assigned.** The deliverable is an evaluation of a third party's job candidate — an opinion about that person's demonstrated skill. It produces no invention, no code, no product, and nothing that could fall under [Company]'s invention assignment provisions. All work is done on my own time and my own equipment, with no use of company systems, networks, or resources.
+
+**Shadow sessions are passive.** In one format of this work, I simply observe an interview conducted by the client's own team and afterwards share my assessment. There is no active participation on my part during the session itself.
 
 **Confidentiality.** My identity is not published publicly; I work under a codename and my name is shared only with the individual client company after they engage the service.
 
