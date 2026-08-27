@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verified.Ninja — Stop hiring fake candidates</title>
+<meta name="description" content="Former Amazon Bar Raisers verify your candidates in a 15-minute live screen. $199. Structured report in 48 hours.">
+<meta property="og:title" content="Verified.Ninja — Stop hiring fake candidates">
+<meta property="og:description" content="A real senior engineer screens your candidate live. $199. Report in 48 hours.">
+<style>
+  :root{
+    --bg:#0F1115; --bg2:#151922; --card:#181D28; --line:#242B3A;
+    --text:#E8ECF4; --muted:#8B94A8; --accent:#00E5CC; --accent-dim:#00b8a4;
+    --warn:#FFB020;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+       background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(15,17,21,.85);backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;
+     max-width:960px;margin:0 auto;padding:14px 24px}
+  .logo{font-weight:800;font-size:17px;color:var(--text);letter-spacing:-.01em}
+  .logo b{color:var(--accent)}
+  .nav-links{display:flex;align-items:center;gap:22px}
+  .nav-links a{color:var(--muted);font-size:14.5px;font-weight:500}
+  .nav-links a:hover{color:var(--text)}
+  @media(max-width:640px){.nav-links a:not(.btn){display:none}}
+
+  .btn{display:inline-block;background:var(--accent);color:#04120F;font-weight:700;font-size:15px;
+       padding:12px 24px;border-radius:10px;border:none;cursor:pointer;transition:transform .1s,background .15s;
+       font-family:inherit}
+  .btn:hover{background:var(--accent-dim)}
+  .btn:active{transform:scale(.98)}
+  .btn.sm{padding:9px 18px;font-size:14px}
+  .btn.lg{padding:17px 38px;font-size:17px;border-radius:12px}
+  .btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+  .btn.ghost:hover{background:rgba(0,229,204,.08)}
+
+  header{padding:96px 0 72px;text-align:center}
+  h1{font-size:clamp(38px,6.5vw,64px);font-weight:800;line-height:1.05;letter-spacing:-.02em}
+  h1 .hl{color:var(--accent)}
+  .sub{margin:24px auto 0;max-width:620px;font-size:clamp(17px,2.4vw,20px);color:var(--muted)}
+  .hero-cta{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-meta{margin-top:26px;font-size:14px;color:var(--muted)}
+  .hero-meta b{color:var(--text)}
+
+  section{padding:72px 0;border-top:1px solid var(--line)}
+  h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
+  .sec-sub{color:var(--muted);font-size:16.5px;margin-bottom:38px;max-width:600px}
+
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px}
+  .step .n{width:38px;height:38px;border-radius:10px;background:rgba(0,229,204,.12);color:var(--accent);
+     font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:15px}
+  .step h3{font-size:17px;font-weight:700;margin-bottom:8px}
+  .step p{font-size:14.5px;color:var(--muted)}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:720px){.cols{grid-template-columns:1fr}}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .box h3{font-size:16px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .box ul{list-style:none}
+  .box li{font-size:14.5px;color:var(--muted);padding:7px 0 7px 24px;position:relative}
+  .box li::before{position:absolute;left:0;font-weight:800}
+  .box.bad li::before{content:"✕";color:#FF6B6B}
+  .box.good li::before{content:"✓";color:var(--accent)}
+
+  .expert{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;
+     display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
+  .expert .av{width:76px;height:76px;border-radius:16px;background:linear-gradient(135deg,#1d2735,#0f1620);
+     border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;
+     font-size:26px;flex-shrink:0}
+  .expert .info{flex:1;min-width:240px}
+  .expert .code{font-size:22px;font-weight:800;letter-spacing:.02em;margin-bottom:4px}
+  .expert .role{color:var(--accent);font-size:14px;font-weight:600;margin-bottom:12px}
+  .expert .bio{font-size:15px;color:var(--muted);margin-bottom:14px}
+  .expert .tags{display:flex;gap:8px;flex-wrap:wrap}
+  .tag{font-size:12px;font-weight:600;color:var(--muted);border:1px solid var(--line);
+     border-radius:99px;padding:4px 12px}
+  .note{margin-top:20px;font-size:13.5px;color:var(--muted);border-inline-start:3px solid var(--warn);
+     padding-inline-start:14px}
+
+  .price{background:var(--card);border:1.5px solid var(--accent);border-radius:20px;padding:40px 36px;
+     max-width:520px;margin:0 auto;text-align:center}
+  .price .amt{font-size:56px;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .price .per{color:var(--muted);font-size:15px;margin-top:6px}
+  .price ul{list-style:none;text-align:start;margin:28px 0}
+  .price li{font-size:15px;padding:9px 0 9px 26px;position:relative;color:var(--muted)}
+  .price li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
+  .price li b{color:var(--text)}
+
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+  .faq summary{padding:18px 22px;font-weight:600;font-size:16px;cursor:pointer;list-style:none;
+     display:flex;justify-content:space-between;gap:16px;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--accent);font-size:22px;font-weight:400;flex-shrink:0}
+  .faq details[open] summary::after{content:"−"}
+  .faq .a{padding:0 22px 20px;font-size:15px;color:var(--muted)}
+
+  .final{text-align:center;padding:88px 0}
+  .final h2{margin-bottom:18px}
+  .final p{color:var(--muted);font-size:17px;margin-bottom:32px}
+
+  footer{border-top:1px solid var(--line);padding:38px 0;text-align:center;font-size:14px;color:var(--muted)}
+  footer .wc{margin-top:10px;font-size:13px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <div class="logo">Verified<b>.Ninja</b></div>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#expert">Expert</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn sm" href="#order">Order a screen</a>
+    </div>
+  </div>
+</nav>
+
+<header class="wrap">
+  <h1>Stop hiring<br><span class="hl">fake candidates.</span></h1>
+  <p class="sub">A former Amazon Bar Raiser screens your candidate live for 15 minutes and sends you a structured report within 48 hours.</p>
+  <div class="hero-cta">
+    <a class="btn lg" href="#order">Order a screen — $199</a>
+    <a class="btn lg ghost" href="#how">See how it works</a>
+  </div>
+  <p class="hero-meta"><b>No subscription.</b> Pay per candidate. <b>No AI scoring</b> — a real senior engineer, on a real call.</p>
+</header>
+
+<section id="how" class="wrap">
+  <h2>How it works</h2>
+  <p class="sec-sub">Three steps. No sales calls, no demos, no onboarding.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="n">1</div>
+      <h3>Send the candidate</h3>
+      <p>Pay, then share the candidate's CV and email. Takes two minutes.</p>
+    </div>
+    <div class="step">
+      <div class="n">2</div>
+      <h3>A senior engineer screens them</h3>
+      <p>A 15-minute live video call: real technical depth, not a quiz. Scheduled within 24 hours.</p>
+    </div>
+    <div class="step">
+      <div class="n">3</div>
+      <h3>You get a verdict</h3>
+      <p>A structured report in 48 hours: technical depth, communication, red flags, and a clear hire / no-hire call.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Why a human, not a tool</h2>
+  <p class="sec-sub">AI screening tools grade keywords. Candidates now use AI to answer them. The loop is closed and useless.</p>
+  <div class="cols">
+    <div class="box bad">
+      <h3>Automated screening</h3>
+      <ul>
+        <li>Scores keywords, not thinking</li>
+        <li>Candidates pass it with AI assistance</li>
+        <li>Cannot tell a ghostwritten CV from real experience</li>
+        <li>No one is accountable for the verdict</li>
+      </ul>
+    </div>
+    <div class="box good">
+      <h3>Verified.Ninja</h3>
+      <ul>
+        <li>A senior engineer probes actual depth</li>
+        <li>Follow-up questions expose borrowed answers</li>
+        <li>Identity and experience checked on a live call</li>
+        <li>A named expert stands behind the report</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="expert" class="wrap">
+  <h2>Who does the screening</h2>
+  <p class="sec-sub">Experts work under a codename while employed elsewhere. Their real name, photo and LinkedIn are revealed to you after payment.</p>
+
+  <div class="expert">
+    <div class="av">🥷</div>
+    <div class="info">
+      <div class="code">KAGE-01</div>
+      <div class="role">Lead Bar Raiser</div>
+      <p class="bio">Former Amazon Bar Raiser. Ran hiring loops for senior engineering roles at Fortune-500 scale. Now designs the screening methodology used on this platform.</p>
+      <div class="tags">
+        <span class="tag">Backend & Distributed Systems</span>
+        <span class="tag">System Design</span>
+        <span class="tag">Hiring Bar Calibration</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="note">We currently work with one lead expert, on purpose. Every screen is done by the person who wrote the methodology — not routed to an anonymous marketplace. Capacity is limited to a few screens per week; we add experts only when they clear the same bar.</p>
+</section>
+
+<section id="pricing" class="wrap">
+  <h2 style="text-align:center">Pricing</h2>
+  <p class="sec-sub" style="margin-inline:auto;text-align:center">One price. One candidate. No contracts.</p>
+  <div class="price">
+    <div class="amt">$199</div>
+    <div class="per">per candidate screened</div>
+    <ul>
+      <li><b>15-minute live screen</b> by a senior engineer</li>
+      <li><b>Structured report</b> within 48 hours</li>
+      <li>Ratings: technical depth, communication, ownership</li>
+      <li>Clear recommendation: hire / no hire, with reasoning</li>
+      <li>Expert's real identity revealed after payment</li>
+      <li><b>Refund</b> if the screen doesn't happen</li>
+    </ul>
+    <a class="btn lg" href="#order" style="width:100%;text-align:center">Order a screen</a>
+  </div>
+</section>
+
+<section class="wrap faq">
+  <h2>Questions</h2>
+  <p class="sec-sub">Short answers, no sales talk.</p>
+
+  <details>
+    <summary>Who exactly screens my candidate?</summary>
+    <div class="a">A former Amazon Bar Raiser working under the codename KAGE-01. Codenames protect experts who are currently employed elsewhere. After you pay, you receive their real name, photo and LinkedIn before the call is scheduled.</div>
+  </details>
+  <details>
+    <summary>Why not just use an AI screening tool?</summary>
+    <div class="a">Because candidates use AI too. Automated tools grade the answer, not the person giving it. A live conversation with follow-up questions is currently the only reliable way to tell real experience from a well-written script.</div>
+  </details>
+  <details>
+    <summary>What if the candidate is great and we hire them?</summary>
+    <div class="a">Nothing changes — we charge per screen, not per hire. We are not a recruiting agency and take no placement fee.</div>
+  </details>
+  <details>
+    <summary>How fast is it really?</summary>
+    <div class="a">The call is scheduled within 24 hours of payment; the report arrives within 48 hours of the call. If we cannot schedule within that window, you get a full refund.</div>
+  </details>
+  <details>
+    <summary>What do you do with the candidate's data?</summary>
+    <div class="a">The CV is used only for the screen and is deleted on request. The report goes to you alone. We never publish candidate profiles or sell data.</div>
+  </details>
+  <details>
+    <summary>Who are you?</summary>
+    <div class="a">A small team building infrastructure for verified human reputation. Verified.Ninja is the first commercial service built on it — the underlying project is <a href="https://theworldconstitution.org" target="_blank" rel="noopener">WorldConstitution</a>.</div>
+  </details>
+</section>
+
+<section id="order" class="final wrap">
+  <h2>Screen your next candidate</h2>
+  <p>One candidate. $199. A verdict you can act on in 48 hours.</p>
+  <!-- TODO: replace href with your Stripe Payment Link -->
+  <a class="btn lg" href="STRIPE_PAYMENT_LINK">Order a screen — $199</a>
+  <p class="hero-meta" style="margin-top:22px">Questions first? Email <a href="mailto:hello@verified.ninja">hello@verified.ninja</a></p>
+</section>
+
+<footer>
+  <div class="wrap">
+    © Verified.Ninja — verified human expertise
+    <div class="wc">A project by <a href="https://theworldconstitution.org" target="_blank" rel="noopener">WorldConstitution</a> — infrastructure of trust</div>
+  </div>
+</footer>
+
+</body>
+</html>
