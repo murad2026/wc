@@ -6,7 +6,8 @@
     "how": "Cómo funciona",
     "sign": "Firmar",
     "karma": "Karma",
-    "market": "Mercado"
+    "market": "Mercado",
+    "shield": "Escudo"
   },
   "m": {
     "title": "Mercado",
@@ -54,6 +55,105 @@
     "honest": "Funciona hoy: la firma de la carta y las preguntas a la humanidad. Verified Talent está en desarrollo. Wiki y Feed son planes, no promesas. No hay token, no se planea ninguna venta de tokens y no prometemos ingresos.",
     "cta": "Ver Verified Talent →",
     "ctaNote": "Los productos comerciales viven en dominios separados: allí no hay carta ni ideología, solo el servicio."
+  },
+  "g": {
+    "title": "Escudo",
+    "lead": "Aquí tu perfil no es un formulario, es un escudo. Se arma por piezas, y cada pieza demuestra algo distinto. Ninguna se compra.",
+    "buildT": "Arma tu escudo",
+    "have": "Conseguida",
+    "locked": "Bloqueada",
+    "howL": "Cómo conseguirla:",
+    "givesL": "Qué da:",
+    "capEmpty": "Un escudo vacío. La primera pieza aparece en el momento de firmar.",
+    "capSigned": "Firmado",
+    "capNumber": "tu número de firma",
+    "capFounder": "Fundador de tu país",
+    "parts": [
+      {
+        "id": "core",
+        "name": "Núcleo",
+        "proves": "Firmaste la Constitución: el punto donde empieza todo lo demás.",
+        "how": "Firmar. Medio minuto, sin cuenta ni correo.",
+        "gives": "Un número de firma que queda tuyo para siempre."
+      },
+      {
+        "id": "canton",
+        "name": "Bandera",
+        "proves": "Tu voz cuenta para tu país.",
+        "how": "Elegir el país al firmar. Quien firma en anonimato lo elige igual que los demás: ocultar el nombre no significa renunciar al país.",
+        "gives": "Un voto para tu país y, para los cien primeros, estatus de fundador para siempre."
+      },
+      {
+        "id": "frame",
+        "name": "Marco",
+        "proves": "Eres una persona, no diez cuentas.",
+        "how": "Verificar la identidad. Un anclaje permite firmar; dos anclajes independientes más prueba de vitalidad permiten votar.",
+        "gives": "Peso completo del voto. Sin el marco un voto no cuenta: si no, las cuentas falsas lo deciden todo."
+      },
+      {
+        "id": "chevrons",
+        "name": "Galones",
+        "proves": "Hiciste algo y fue comprobado. Resultado, no actividad.",
+        "how": "Declarar un hecho y someterlo a verificación: un bot comprueba lo verificable por máquina, la comunidad confirma arriesgando su propio karma, un panel humano resuelve lo discutido.",
+        "gives": "Karma. Tres galones para tres niveles de verificación: cuanto más alto el nivel, más viva la franja y más difícil de discutir."
+      },
+      {
+        "id": "visor",
+        "name": "Visera",
+        "proves": "Respondes por tus palabras con tu nombre.",
+        "how": "Revelar el nombre. Es voluntario y solo va en una dirección: lo revelado no se vuelve a ocultar.",
+        "gives": "Una prima de karma por ser público. La visera cerrada no se penaliza: el anonimato cuesta la prima, nunca el voto ni los derechos."
+      },
+      {
+        "id": "seal",
+        "name": "Sello",
+        "proves": "Tu cualificación se apoya en un hecho comprobable, no en una afirmación.",
+        "how": "Verificación del gremio. Lo que se confirma es estrecho: «el título n.º X existe y pertenece a esta persona», no «esta persona es un buen profesional».",
+        "gives": "Voz en el gobierno de tu propio campo. Los médicos deciden sobre medicina, los ingenieros sobre ingeniería."
+      }
+    ],
+    "ruleT": "La regla del escudo",
+    "rule": "Ninguna pieza se compra, se transfiere ni se regala: solo se gana. Un bot puede añadir una pieza; solo una persona o una votación puede quitarla. El error de un robot nunca debe costarle la reputación a alguien.",
+    "karmaT": "Cómo se relaciona el escudo con el karma",
+    "karma": [
+      "El karma es un número. El escudo es su forma. Lo mismo: el sistema lee el número, la gente lee el escudo.",
+      "El karma crece por resultados verificados, no por presencia. Diez comentarios no cambian nada. Un hecho confirmado añade una franja.",
+      "Por eso un escudo no se arma rápido ni en solitario: casi cada pieza exige que otra persona te confirme."
+    ],
+    "pathT": "Qué se abre según se completa",
+    "path": [
+      {
+        "t": "Núcleo",
+        "d": "Firmado. Estás en la lista, tienes un número y tu país te cuenta como suyo."
+      },
+      {
+        "t": "Núcleo + Marco",
+        "d": "Voto. Tu voz en las preguntas a la humanidad pesa lo mismo que cualquier otra."
+      },
+      {
+        "t": "+ Galones",
+        "d": "Peso en un tema. Tus hechos se ven y tu opinión en lo que dominas se cita."
+      },
+      {
+        "t": "+ Sello",
+        "d": "Gobierno. Entras en el círculo que fija las reglas de tu campo."
+      },
+      {
+        "t": "+ Visera",
+        "d": "Tu nombre. Respondes en público: la pieza más cara, porque no tiene vuelta atrás."
+      }
+    ],
+    "tokenT": "Hacia dónde va esto",
+    "token": [
+      "En el protocolo el karma es un registro intransferible: no se vende junto con una cuenta, porque no trata de la cuenta sino de la persona.",
+      "Más adelante habrá al lado una segunda unidad, corriente y líquida, que pagará el funcionamiento de la red y los servicios internos. La separación es lo esencial: lo líquido se compra, el poder no. Con dinero se pueden pagar cuantas operaciones se quiera sin ganar ni un voto más.",
+      "Nada de esto existe todavía, y no lo hará pronto. Nos pusimos dos condiciones: diez clientes que paguen y dos años de trabajo. Un proyecto que emite un token antes de tener producto reúne especuladores y reguladores en lugar de participantes, y hemos visto suficientes como para no repetirlo."
+    ],
+    "tokenNoteT": "Con honestidad",
+    "tokenNote": "No hay token. No se planea ninguna venta de token. No prometemos ingresos, y el escudo es estatus y derechos, no un instrumento financiero.",
+    "cta": "Firmar y empezar el escudo",
+    "ctaSigned": "Releer la Constitución",
+    "ctaNote": "Un escudo se construye durante años y sobrevive al proyecto: pertenece a la persona, no al sitio."
   },
   "slogan": "Confianza · Libertad · Voz · Participación",
   "hero": {

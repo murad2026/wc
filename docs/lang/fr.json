@@ -6,7 +6,8 @@
     "how": "Comment ça marche",
     "sign": "Signer",
     "karma": "Karma",
-    "market": "Marché"
+    "market": "Marché",
+    "shield": "Bouclier"
   },
   "m": {
     "title": "Marché",
@@ -54,6 +55,105 @@
     "honest": "Disponible aujourd'hui : la signature de la charte et les questions à l'humanité. Verified Talent est en développement. Wiki et Feed sont des projets, pas des promesses. Il n'y a pas de jeton, aucune vente de jeton n'est prévue et nous ne promettons aucun revenu.",
     "cta": "Voir Verified Talent →",
     "ctaNote": "Les produits commerciaux vivent sur des domaines distincts : ni charte ni idéologie là-bas, seulement le service."
+  },
+  "g": {
+    "title": "Bouclier",
+    "lead": "Ici, votre profil n'est pas un formulaire mais un bouclier. Il s'assemble par pièces, et chaque pièce prouve quelque chose de différent. Aucune ne s'achète.",
+    "buildT": "Assemblez votre bouclier",
+    "have": "Obtenue",
+    "locked": "Verrouillée",
+    "howL": "Comment l'obtenir :",
+    "givesL": "Ce qu'elle donne :",
+    "capEmpty": "Un bouclier vide. La première pièce apparaît au moment de la signature.",
+    "capSigned": "Signé",
+    "capNumber": "votre numéro de signature",
+    "capFounder": "Fondateur de votre pays",
+    "parts": [
+      {
+        "id": "core",
+        "name": "Cœur",
+        "proves": "Vous avez signé la Constitution — le point de départ de tout le reste.",
+        "how": "Signer. Une demi-minute, sans compte ni adresse e-mail.",
+        "gives": "Un numéro de signature qui reste le vôtre à jamais."
+      },
+      {
+        "id": "canton",
+        "name": "Drapeau",
+        "proves": "Votre voix compte pour votre pays.",
+        "how": "Choisir son pays au moment de signer. Les signataires anonymes le font comme les autres : masquer son nom ne signifie pas renoncer à son pays.",
+        "gives": "Un décompte pour votre pays et, pour les cent premiers, le statut de fondateur à vie."
+      },
+      {
+        "id": "frame",
+        "name": "Cadre",
+        "proves": "Vous êtes une seule personne, pas dix comptes.",
+        "how": "Vérifier son identité. Une ancre permet de signer ; deux ancres indépendantes et une preuve de vivacité permettent de voter.",
+        "gives": "Le plein poids du vote. Sans le cadre, une voix ne compte pas — sinon les faux comptes décident de tout."
+      },
+      {
+        "id": "chevrons",
+        "name": "Chevrons",
+        "proves": "Vous avez fait quelque chose et cela a été vérifié. Un résultat, pas une activité.",
+        "how": "Déclarer une action et la faire vérifier : un bot contrôle ce qui est vérifiable par machine, la foule confirme en engageant son propre karma, un panel humain tranche ce qui est contesté.",
+        "gives": "Du karma. Trois chevrons pour trois niveaux de vérification : plus le niveau est élevé, plus la bande est vive et difficile à contester."
+      },
+      {
+        "id": "visor",
+        "name": "Visière",
+        "proves": "Vous assumez vos propos sous votre nom.",
+        "how": "Révéler son nom. C'est volontaire et sans retour : ce qui est révélé ne se referme pas.",
+        "gives": "Une prime de karma pour la publicité. Une visière fermée n'est pas pénalisée : l'anonymat coûte la prime, jamais le vote ni les droits."
+      },
+      {
+        "id": "seal",
+        "name": "Sceau",
+        "proves": "Votre qualification repose sur un fait vérifiable, pas sur une affirmation.",
+        "how": "Vérification par la guilde. Ce qui est confirmé est étroit — « le diplôme n° X existe et appartient à cette personne » — et non « cette personne est un bon professionnel ».",
+        "gives": "Une voix dans la gouvernance de votre domaine. Les médecins décident de la médecine, les ingénieurs de l'ingénierie."
+      }
+    ],
+    "ruleT": "La règle du bouclier",
+    "rule": "Aucune pièce ne s'achète, ne se transfère ni ne s'offre — elle se mérite. Un bot peut ajouter une pièce ; seul un humain ou un vote peut en retirer une. L'erreur d'un robot ne doit jamais coûter sa réputation à quelqu'un.",
+    "karmaT": "Le lien entre le bouclier et le karma",
+    "karma": [
+      "Le karma est un nombre. Le bouclier en est la forme. La même chose : le système lit le nombre, les gens lisent le bouclier.",
+      "Le karma augmente pour des résultats vérifiés, pas pour une présence. Dix commentaires ne changent rien. Une action confirmée ajoute une bande.",
+      "Un bouclier ne se construit donc ni vite ni seul : presque chaque pièce exige que quelqu'un d'autre vous confirme."
+    ],
+    "pathT": "Ce qui s'ouvre au fur et à mesure",
+    "path": [
+      {
+        "t": "Cœur",
+        "d": "Signé. Vous êtes sur la liste, vous avez un numéro et votre pays vous compte comme sien."
+      },
+      {
+        "t": "Cœur + Cadre",
+        "d": "Une voix. Votre vote sur les questions à l'humanité pèse autant que celui de n'importe qui."
+      },
+      {
+        "t": "+ Chevrons",
+        "d": "Du poids dans un domaine. Vos actions sont visibles et votre avis y est cité."
+      },
+      {
+        "t": "+ Sceau",
+        "d": "Gouvernance. Vous entrez dans le cercle qui fixe les règles de votre domaine."
+      },
+      {
+        "t": "+ Visière",
+        "d": "Votre nom. Vous répondez publiquement — la pièce la plus coûteuse, car elle est irréversible."
+      }
+    ],
+    "tokenT": "Où cela mène ensuite",
+    "token": [
+      "Dans le protocole, le karma est un enregistrement non transférable : il ne se vend pas avec un compte, parce qu'il ne concerne pas le compte mais la personne.",
+      "Plus tard, une seconde unité, ordinaire et liquide, viendra à côté : elle paiera le fonctionnement du réseau et les services internes. La séparation est essentielle : ce qui est liquide s'achète, le pouvoir non. Avec de l'argent on peut payer autant d'opérations qu'on veut sans gagner une seule voix de plus.",
+      "Rien de tout cela n'existe encore, et pas pour bientôt. Nous nous sommes fixé deux conditions : dix clients payants et deux ans de travail. Un projet qui émet un jeton avant d'avoir un produit rassemble des spéculateurs et des régulateurs au lieu de participants — nous en avons assez vu pour ne pas recommencer."
+    ],
+    "tokenNoteT": "Honnêtement",
+    "tokenNote": "Il n'y a pas de jeton. Aucune vente de jeton n'est prévue. Nous ne promettons aucun revenu, et le bouclier est un statut et des droits — pas un instrument financier.",
+    "cta": "Signer et commencer son bouclier",
+    "ctaSigned": "Relire la Constitution",
+    "ctaNote": "Un bouclier se construit sur des années et survit au projet : il appartient à la personne, pas au site."
   },
   "slogan": "Confiance · Liberté · Voix · Participation",
   "hero": {

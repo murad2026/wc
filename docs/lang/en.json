@@ -6,7 +6,8 @@
     "how": "How it works",
     "sign": "Sign",
     "karma": "Karma",
-    "market": "Market"
+    "market": "Market",
+    "shield": "Shield"
   },
   "m": {
     "title": "Market",
@@ -54,6 +55,105 @@
     "honest": "Live today: signing the charter and questions to humanity. Verified Talent is in development. Wiki and Feed are plans, not promises. There is no token, no token sale is planned, and we make no promises of income.",
     "cta": "See Verified Talent →",
     "ctaNote": "Commercial products live on separate domains — no charter, no ideology there, just the service."
+  },
+  "g": {
+    "title": "Shield",
+    "lead": "Your profile here is not a form — it is a shield. It is assembled from parts, and each part proves something different. None of them can be bought.",
+    "buildT": "Build your shield",
+    "have": "Earned",
+    "locked": "Locked",
+    "howL": "How to earn it:",
+    "givesL": "What it gives:",
+    "capEmpty": "An empty shield. The first part appears the moment you sign.",
+    "capSigned": "Signed",
+    "capNumber": "your signature number",
+    "capFounder": "Founder of your country",
+    "parts": [
+      {
+        "id": "core",
+        "name": "Core",
+        "proves": "You signed the Constitution — the point everything else starts from.",
+        "how": "Sign. Half a minute, no account and no email.",
+        "gives": "A signature number that stays yours permanently."
+      },
+      {
+        "id": "canton",
+        "name": "Flag",
+        "proves": "Your voice counts for your country.",
+        "how": "Pick your country when signing. Anonymous signers pick it like everyone else — hiding your name does not mean giving up your country.",
+        "gives": "A count for your country, and for the first hundred there, founder status forever."
+      },
+      {
+        "id": "frame",
+        "name": "Frame",
+        "proves": "You are one person, not ten accounts.",
+        "how": "Verify personhood. One anchor lets you sign; two independent anchors plus a liveness check let you vote.",
+        "gives": "Full voting weight. Without the frame a vote does not count — otherwise fake accounts decide everything."
+      },
+      {
+        "id": "chevrons",
+        "name": "Chevrons",
+        "proves": "You did something and it was checked. Outcome, not activity.",
+        "how": "Claim a deed and let it be verified: a bot checks what is machine-checkable, the crowd confirms by staking their own karma, a human panel handles what is contested.",
+        "gives": "Karma. Three chevrons for three levels of verification — the higher the level, the brighter the stripe and the harder it is to dispute."
+      },
+      {
+        "id": "visor",
+        "name": "Visor",
+        "proves": "You stand behind your words with your name.",
+        "how": "Reveal your name. Voluntary, and it only moves one way — what is revealed cannot be hidden again.",
+        "gives": "A karma premium for being public. A closed visor carries no penalty: anonymity costs you the premium, never your vote or your rights."
+      },
+      {
+        "id": "seal",
+        "name": "Seal",
+        "proves": "Your qualification is backed by a checkable fact, not a claim.",
+        "how": "Guild verification. What gets confirmed is narrow — 'licence No. X exists and belongs to this person' — not 'this person is a good professional'.",
+        "gives": "A say in governing your own field. Doctors decide on medicine, engineers on engineering."
+      }
+    ],
+    "ruleT": "The rule of the shield",
+    "rule": "No part can be bought, transferred or gifted — only earned. A bot may add a part; only a human or a vote may take one away. A robot's mistake must never cost a person their reputation.",
+    "karmaT": "How the shield relates to karma",
+    "karma": [
+      "Karma is a number. The shield is its shape. Same thing — the system reads the number, people read the shield.",
+      "Karma grows for verified outcomes, not for presence. Ten comments change nothing. One confirmed deed adds a stripe.",
+      "So a shield cannot be built quickly, and it cannot be built alone: almost every part requires someone else to confirm you."
+    ],
+    "pathT": "What opens as it comes together",
+    "path": [
+      {
+        "t": "Core",
+        "d": "Signed. You are on the list, you have a number, and your country counts you as its own."
+      },
+      {
+        "t": "Core + Frame",
+        "d": "A vote. Your voice on questions to humanity weighs exactly as much as anyone else's."
+      },
+      {
+        "t": "+ Chevrons",
+        "d": "Weight in a subject. Your deeds are visible and your opinion in a field you know gets cited."
+      },
+      {
+        "t": "+ Seal",
+        "d": "Governance. You join the circle that sets the rules in your own field."
+      },
+      {
+        "t": "+ Visor",
+        "d": "Your name. You answer publicly — the most expensive part of the shield, because it cannot be undone."
+      }
+    ],
+    "tokenT": "Where this leads next",
+    "token": [
+      "In the protocol, karma is a non-transferable record: it cannot be sold along with an account, because it is not about the account — it is about the person.",
+      "Later a second, ordinary and liquid unit will sit next to it, paying for the work of the network and for services inside it. The split is the whole point: the liquid thing can be bought, power cannot. Someone with money can pay for any number of operations and still not gain a single extra vote.",
+      "None of this exists yet, and it will not for a while. We set ourselves two conditions: ten paying customers and two years of work. A project that issues a token before it has a product collects speculators and regulators instead of participants — and we have seen enough of those to not repeat it."
+    ],
+    "tokenNoteT": "Honestly",
+    "tokenNote": "There is no token. No token sale is planned. We make no promises of income, and the shield is status and rights — not a financial instrument.",
+    "cta": "Sign and start your shield",
+    "ctaSigned": "Read the Constitution again",
+    "ctaNote": "A shield takes years to build and outlives the project: it belongs to the person, not to the website."
   },
   "slogan": "Trust · Freedom · Voice · Participation",
   "hero": {

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shield · WorldConstitution</title>
+<meta name="description" content="Your profile is a shield. Every part of it is earned by a different kind of proof, and none of it can be bought.">
+<style>
+  :root{
+    --indigo:#1e2a5a; --indigo-deep:#141b3d;
+    --amber:#d98e04; --amber-hover:#b97800; --amber-soft:#fff3dc;
+    --green:#2e8b57; --paper:#fbfaf7; --card:#ffffff; --line:#e8e5dd; --muted:#6b7085;
+    --steel:#5b6789;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --indigo:#dfe4f5; --indigo-deep:#f0f2fa;
+      --amber:#f0a71c; --amber-hover:#ffbe3d; --amber-soft:#2a2410;
+      --green:#4cbf85; --paper:#12162a; --card:#1a2038; --line:#2a3152; --muted:#8d93ab;
+      --steel:#8f9ac2;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+       background:var(--paper);color:var(--indigo);line-height:1.6}
+  [dir="rtl"] body{font-family:-apple-system,"Segoe UI","Noto Naskh Arabic",Tahoma,Arial,sans-serif}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+
+  nav{border-bottom:1px solid var(--line);position:sticky;top:0;
+      background:color-mix(in srgb, var(--paper) 90%, transparent);backdrop-filter:blur(10px);z-index:20}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;
+     padding:12px 24px;max-width:880px;margin:0 auto;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:16px;color:var(--indigo);text-decoration:none;white-space:nowrap}
+  .logo span{color:var(--amber)}
+  .nav-right{display:flex;align-items:center;gap:12px}
+  .back{font-size:14px;color:var(--amber);text-decoration:none;font-weight:600;white-space:nowrap}
+  #lang{border:1px solid var(--line);background:var(--card);color:var(--indigo);border-radius:9px;
+     padding:6px 9px;font-size:14px;font-family:inherit;cursor:pointer}
+
+  header{padding:56px 0 12px;text-align:center}
+  h1{font-size:clamp(30px,5.5vw,48px);font-weight:900;text-transform:uppercase;color:var(--indigo-deep);line-height:1.05}
+  .lead{margin:20px auto 0;max-width:640px;font-size:clamp(16px,2.3vw,19px);color:var(--indigo);
+     border-inline-start:4px solid var(--amber);padding-inline-start:18px;text-align:start}
+
+  h2{font-size:15px;text-transform:uppercase;letter-spacing:.09em;color:var(--indigo-deep);
+     margin:52px 0 18px;font-weight:900}
+
+  /* щит и панель частей */
+  .build{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:start}
+  @media(max-width:720px){.build{grid-template-columns:1fr}}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;
+     position:sticky;top:72px;text-align:center}
+  @media(max-width:720px){.stage{position:static}}
+  .stage svg{width:100%;max-width:210px;height:auto}
+  .stage .cap{font-size:13px;color:var(--muted);margin-top:12px}
+  .stage .cap b{color:var(--indigo-deep)}
+
+  .part{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+     margin-bottom:10px;cursor:pointer;transition:border-color .15s, box-shadow .15s;width:100%;
+     text-align:start;font-family:inherit;color:inherit;display:block}
+  .part:hover{border-color:var(--amber)}
+  .part.on{border-color:var(--amber);box-shadow:0 4px 16px color-mix(in srgb, var(--amber) 16%, transparent)}
+  .part .ptop{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .part .pname{font-size:17px;font-weight:800;color:var(--indigo-deep)}
+  .part .ptag{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+     border-radius:99px;padding:3px 10px;margin-inline-start:auto;white-space:nowrap;
+     background:color-mix(in srgb, var(--muted) 14%, transparent);color:var(--muted)}
+  .part.have .ptag{background:color-mix(in srgb, var(--green) 16%, transparent);color:var(--green)}
+  .part .row{font-size:14px;color:var(--muted);margin-top:8px}
+  .part .row b{color:var(--indigo-deep);font-weight:700}
+  .part .detail{display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+  .part.on .detail{display:block}
+
+  .note{border:1px dashed var(--line);border-radius:14px;padding:20px 22px;margin-top:18px;
+     font-size:14.5px;color:var(--muted)}
+  .note b{color:var(--indigo-deep);display:block;margin-bottom:6px;font-size:13px;
+     text-transform:uppercase;letter-spacing:.08em}
+
+  .prose p{font-size:16px;margin-bottom:14px}
+  .prose p:last-child{margin-bottom:0}
+
+  .ladder{border-inline-start:3px solid var(--line);padding-inline-start:20px;margin-top:8px}
+  .rung{margin-bottom:18px;position:relative}
+  .rung:last-child{margin-bottom:0}
+  .rung::before{content:"";position:absolute;inset-inline-start:-27px;top:7px;width:11px;height:11px;
+     border-radius:50%;background:var(--amber);border:2px solid var(--paper)}
+  .rung .rt{font-weight:800;color:var(--indigo-deep);font-size:16px}
+  .rung .rd{font-size:14.5px;color:var(--muted)}
+
+  .cta-wrap{text-align:center;margin:48px 0 10px}
+  .btn{background:var(--amber);color:#fff;border:none;cursor:pointer;font-weight:700;font-size:16px;
+       padding:14px 30px;border-radius:11px;text-decoration:none;display:inline-block}
+  .btn:hover{background:var(--amber-hover)}
+  .cta-note{font-size:13px;color:var(--muted);margin-top:14px;max-width:520px;margin-inline:auto}
+
+  footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;font-size:13px;color:var(--muted);margin-top:40px}
+  footer a{color:var(--amber);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">◆ World<span>Constitution</span></a>
+    <div class="nav-right">
+      <select id="lang" aria-label="Language"></select>
+      <a class="back" href="index.html" id="back"></a>
+    </div>
+  </div>
+</nav>
+
+<header class="wrap">
+  <h1 id="title"></h1>
+  <p class="lead" id="lead"></p>
+</header>
+
+<section class="wrap">
+  <h2 id="build-t"></h2>
+  <div class="build">
+
+    <div class="stage">
+      <svg viewBox="0 0 200 240" aria-hidden="true">
+        <!-- корпус -->
+        <path id="s-body" d="M100 10 L186 42 V126 C186 178 148 212 100 230 C52 212 14 178 14 126 V42 Z"
+              fill="color-mix(in srgb, var(--steel) 14%, transparent)"
+              stroke="color-mix(in srgb, var(--steel) 40%, transparent)" stroke-width="2"/>
+        <!-- рамка: подтверждённая личность -->
+        <path id="p-frame" d="M100 10 L186 42 V126 C186 178 148 212 100 230 C52 212 14 178 14 126 V42 Z"
+              fill="none" stroke="var(--indigo-deep)" stroke-width="6" opacity="0"/>
+        <!-- кантон: страна -->
+        <g id="p-canton" opacity="0">
+          <path d="M100 10 L186 42 V64 H100 Z" fill="var(--amber)" opacity=".9"/>
+          <text id="canton-txt" x="143" y="49" text-anchor="middle" font-size="19"
+                font-weight="800" fill="#fff" font-family="inherit">★</text>
+        </g>
+        <!-- полосы: подтверждённые дела -->
+        <g id="p-chevrons" opacity="0">
+          <path d="M40 150 L100 128 L160 150 L100 172 Z" fill="var(--amber)" opacity=".85"/>
+          <path d="M40 172 L100 150 L160 172 L100 194 Z" fill="var(--amber)" opacity=".55"/>
+          <path d="M40 194 L100 172 L160 194 L100 216 Z" fill="var(--amber)" opacity=".3"/>
+        </g>
+        <!-- ядро: подпись -->
+        <g id="p-core" opacity="0">
+          <circle cx="100" cy="103" r="27" fill="var(--card)" stroke="var(--indigo-deep)" stroke-width="3"/>
+          <path d="M100 88 L112 103 L100 118 L88 103 Z" fill="var(--amber)"/>
+        </g>
+        <!-- забрало: публичность -->
+        <g id="p-visor" opacity="0">
+          <rect x="74" y="72" width="52" height="5" rx="2.5" fill="var(--indigo-deep)"/>
+          <rect x="80" y="62" width="40" height="5" rx="2.5" fill="var(--indigo-deep)" opacity=".55"/>
+        </g>
+        <!-- печать: гильдия -->
+        <g id="p-seal" opacity="0">
+          <circle cx="100" cy="205" r="17" fill="var(--card)" stroke="var(--green)" stroke-width="3"/>
+          <path d="M92 205 l6 6 l11 -12" fill="none" stroke="var(--green)" stroke-width="3.4"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg>
+      <div class="cap" id="stage-cap"></div>
+    </div>
+
+    <div id="parts"></div>
+
+  </div>
+
+  <div class="note"><b id="rule-t"></b><span id="rule"></span></div>
+
+  <h2 id="karma-t"></h2>
+  <div class="prose" id="karma"></div>
+
+  <h2 id="path-t"></h2>
+  <div class="ladder" id="path"></div>
+
+  <h2 id="token-t"></h2>
+  <div class="prose" id="token"></div>
+  <div class="note"><b id="token-note-t"></b><span id="token-note"></span></div>
+
+  <div class="cta-wrap">
+    <a class="btn" href="index.html#constitution" id="cta"></a>
+    <p class="cta-note" id="cta-note"></p>
+  </div>
+</section>
+
+<footer class="wrap">
+  <a href="index.html" id="f-home"></a> · <a href="karma.html" id="f-karma"></a> ·
+  <a href="market.html" id="f-market"></a> ·
+  <a href="https://github.com/murad2026/wc" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; };
+const LANGS = { en:'English', fr:'Français', es:'Español', ru:'Русский', zh:'中文', ar:'العربية' };
+let T = null;
+
+/* что уже заработано — читаем то же хранилище, что и главная страница */
+const signed  = !!localStorage.getItem('wc_signed');
+const founder = localStorage.getItem('wc_founder');   // код страны, если в первой сотне
+const signum  = localStorage.getItem('wc_signum');
+const HAVE = { core: signed, canton: signed, frame:false, chevrons:false, visor:false, seal:false };
+
+const SVG = { core:'p-core', frame:'p-frame', canton:'p-canton', chevrons:'p-chevrons', visor:'p-visor', seal:'p-seal' };
+let openId = null;
+
+function paint(){
+  Object.entries(SVG).forEach(([k,id]) => {
+    const lit = HAVE[k] || k === openId;
+    $(id).setAttribute('opacity', lit ? '1' : '0');
+  });
+  if(founder) $('canton-txt').textContent = founder;
+}
+
+function pickLang(){
+  const s = localStorage.getItem('wc_lang');
+  if(s && LANGS[s]) return s;
+  const n = (navigator.language||'en').slice(0,2).toLowerCase();
+  return LANGS[n] ? n : 'en';
+}
+
+async function setLang(code){
+  try{ T = await (await fetch(`lang/${code}.json`)).json(); }
+  catch(e){ if(code!=='en') return setLang('en'); return; }
+  localStorage.setItem('wc_lang', code);
+  document.documentElement.lang = code;
+  document.documentElement.dir = T.dir || 'ltr';
+  render();
+}
+
+function render(){
+  const g = T.g;
+  document.title = g.title + ' · WorldConstitution';
+  $('back').textContent  = T.back;
+  $('title').textContent = g.title;
+  $('lead').textContent  = g.lead;
+  $('build-t').textContent = g.buildT;
+
+  $('parts').innerHTML = g.parts.map(p => `
+    <button class="part${HAVE[p.id]?' have':''}" data-id="${p.id}" type="button">
+      <div class="ptop">
+        <span class="pname">${esc(p.name)}</span>
+        <span class="ptag">${esc(HAVE[p.id] ? g.have : g.locked)}</span>
+      </div>
+      <div class="row">${esc(p.proves)}</div>
+      <div class="detail">
+        <div class="row"><b>${esc(g.howL)}</b> ${esc(p.how)}</div>
+        <div class="row"><b>${esc(g.givesL)}</b> ${esc(p.gives)}</div>
+      </div>
+    </button>`).join('');
+
+  document.querySelectorAll('.part').forEach(el => {
+    el.addEventListener('click', () => {
+      const id = el.dataset.id;
+      openId = (openId === id) ? null : id;
+      document.querySelectorAll('.part').forEach(x => x.classList.toggle('on', x.dataset.id === openId));
+      paint();
+      $('stage-cap').innerHTML = openId
+        ? `<b>${esc(g.parts.find(p=>p.id===openId).name)}</b>`
+        : capText(g);
+    });
+  });
+
+  $('stage-cap').innerHTML = capText(g);
+  $('rule-t').textContent = g.ruleT;
+  $('rule').textContent   = g.rule;
+  $('karma-t').textContent = g.karmaT;
+  $('karma').innerHTML = g.karma.map(p=>`<p>${esc(p)}</p>`).join('');
+  $('path-t').textContent = g.pathT;
+  $('path').innerHTML = g.path.map(r=>`<div class="rung"><div class="rt">${esc(r.t)}</div><div class="rd">${esc(r.d)}</div></div>`).join('');
+  $('token-t').textContent = g.tokenT;
+  $('token').innerHTML = g.token.map(p=>`<p>${esc(p)}</p>`).join('');
+  $('token-note-t').textContent = g.tokenNoteT;
+  $('token-note').textContent   = g.tokenNote;
+  $('cta').textContent = signed ? g.ctaSigned : g.cta;
+  $('cta-note').textContent = g.ctaNote;
+  $('f-home').textContent  = T.back;
+  $('f-karma').textContent = T.k.title;
+  $('f-market').textContent = T.m.title;
+  paint();
+}
+
+function capText(g){
+  if(!signed) return esc(g.capEmpty);
+  if(founder) return `<b>${esc(g.capFounder)}</b>`;
+  return signum ? `<b>#${esc(signum)}</b> ${esc(g.capNumber)}` : `<b>${esc(g.capSigned)}</b>`;
+}
+
+const sel = $('lang');
+sel.innerHTML = Object.entries(LANGS).map(([c,n])=>`<option value="${c}">${n}</option>`).join('');
+const initial = pickLang();
+sel.value = initial;
+sel.addEventListener('change', e => setLang(e.target.value));
+setLang(initial);
+</script>
+</body>
+</html>
