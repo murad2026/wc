@@ -1,7 +1,28 @@
 {
   "name": "Español",
   "dir": "ltr",
-  "nav": { "questions": "Preguntas", "how": "Cómo funciona", "sign": "Firmar", "karma": "Karma" },
+  "nav": { "questions": "Preguntas", "how": "Cómo funciona", "sign": "Firmar", "karma": "Karma", "market": "Mercado" },
+  "m": {
+    "title": "Mercado",
+    "lead": "La honestidad es más fuerte que el poder, pero el mercado es más fuerte que la honestidad. Por eso no vendemos la filosofía: vendemos servicios que la demuestran.",
+    "structT": "De qué estamos hechos",
+    "layers": [
+      { "n": "Fundación", "name": "WorldConstitution", "tag": "En marcha", "desc": "La carta, una reputación que pertenece a la persona y un protocolo de identidad verificada. El sentido de todo lo demás.", "proves": "Aquí se escriben las reglas que las demás capas ponen a prueba en la práctica." },
+      { "n": "Capa 1", "name": "Verified Talent", "tag": "En construcción", "desc": "Evaluación de candidatos por expertos senior reales: entrevista en vídeo de 15 minutos e informe estructurado en 48 horas.", "proves": "Demuestra que una persona verificada vale dinero: pagan las empresas, no los idealistas." },
+      { "n": "Capa 2", "name": "Verified Wiki", "tag": "Más adelante", "desc": "Hechos y análisis escritos por expertos verificados y revisados por otras personas verificadas.", "proves": "Demuestra que la reputación se gana con hechos y no se compra." },
+      { "n": "Capa 3", "name": "Verified Feed", "tag": "Más adelante", "desc": "Un flujo de observaciones breves solo de personas reales. La protección contra los fakes como servicio.", "proves": "Demuestra que la fiabilidad de las opiniones es un producto por el que se paga." }
+    ],
+    "whyT": "Por qué en este orden",
+    "why": [
+      "La mayoría de proyectos así empiezan con una carta y votaciones, y terminan con una web vacía. Nosotros hacemos lo contrario: primero actividad económica real, después las reglas.",
+      "La gobernanza aparece cuando hay algo que repartir, no antes. Cuando los expertos tengan motivos para discutir sobre dinero y acceso, la carta dejará de ser un texto y se volverá necesaria.",
+      "Cada capa comercial se apoya en el mismo núcleo: persona verificada, reputación intransferible, reglas abiertas. Productos distintos, una sola base."
+    ],
+    "honestT": "Con honestidad sobre el estado",
+    "honest": "Funciona hoy: la firma de la carta y las preguntas a la humanidad. Verified Talent está en desarrollo. Wiki y Feed son planes, no promesas. No hay token, no se planea ninguna venta de tokens y no prometemos ingresos.",
+    "cta": "Ver Verified Talent →",
+    "ctaNote": "Los productos comerciales viven en dominios separados: allí no hay carta ni ideología, solo el servicio."
+  },
   "slogan": "Confianza · Libertad · Voz · Participación",
   "hero": {
     "badge": "Etapa 0",

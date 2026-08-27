@@ -1,7 +1,52 @@
 {
   "name": "English",
   "dir": "ltr",
-  "nav": { "questions": "Questions", "how": "How it works", "sign": "Sign", "karma": "Karma" },
+  "nav": { "questions": "Questions", "how": "How it works", "sign": "Sign", "karma": "Karma", "market": "Market" },
+  "m": {
+    "title": "Market",
+    "lead": "Honesty is stronger than power, but the market is stronger than honesty. So we don't sell the philosophy — we sell services that prove it works.",
+    "structT": "What we are made of",
+    "layers": [
+      {
+        "n": "Foundation",
+        "name": "WorldConstitution",
+        "tag": "Live",
+        "desc": "The charter, reputation owned by the person, and a protocol for verified identity. The meaning behind everything else.",
+        "proves": "This is where the rules are written that the other layers test in practice."
+      },
+      {
+        "n": "Layer 1",
+        "name": "Verified Talent",
+        "tag": "Building",
+        "desc": "Candidate screening by real senior experts: a 15-minute video interview and a structured report within 48 hours.",
+        "proves": "Proves that a verified human is worth money — companies pay for the check, not idealists."
+      },
+      {
+        "n": "Layer 2",
+        "name": "Verified Wiki",
+        "tag": "Later",
+        "desc": "Facts and analysis written by verified experts and reviewed by other verified humans.",
+        "proves": "Proves that reputation is earned through work and cannot be bought."
+      },
+      {
+        "n": "Layer 3",
+        "name": "Verified Feed",
+        "tag": "Later",
+        "desc": "A feed of short insights from real people only. Protection against fakes as a service.",
+        "proves": "Proves that trustworthy opinion is a product people pay for."
+      }
+    ],
+    "whyT": "Why this order",
+    "why": [
+      "Most projects like this start with a charter and votes, and end with an empty website. We do the opposite: real economic activity first, rules second.",
+      "Governance appears when there is something to divide — not before. Once experts have reason to argue about money and access, the charter stops being text and becomes necessary.",
+      "Every commercial layer stands on the same core: a verified human, non-transferable reputation, open rules. Different products, one foundation."
+    ],
+    "honestT": "Honest about status",
+    "honest": "Live today: signing the charter and questions to humanity. Verified Talent is in development. Wiki and Feed are plans, not promises. There is no token, no token sale is planned, and we make no promises of income.",
+    "cta": "See Verified Talent →",
+    "ctaNote": "Commercial products live on separate domains — no charter, no ideology there, just the service."
+  },
   "slogan": "Trust · Freedom · Voice · Participation",
   "hero": {
     "badge": "Stage 0",
