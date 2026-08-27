@@ -374,6 +374,41 @@
   "k": {
     "title": "Karma",
     "sub": "Le karma est le registre ouvert de ce que vous avez fait pour la cause commune. Il ne s'achète, ne se transfère ni ne se donne : il se gagne par des actes.",
+    "battT": "La batterie : où vous en êtes",
+    "battLead": "Le karma est un nombre, et un nombre seul ne dit rien. Il est donc représenté par une batterie : cinq cellules, chacune chargée par un type de preuve différent. La charge s'accumule et ne baisse jamais d'elle-même — une cellule ne peut être retirée que par un humain ou un vote, selon une procédure transparente et avec droit d'appel.",
+    "lvl0": "La batterie est vide",
+    "next": "Cellule suivante : {}",
+    "full": "La batterie est pleine",
+    "opensL": "Débloque :",
+    "segs": [
+      {
+        "name": "Signature",
+        "need": "Signer la Constitution. Une demi-minute, sans compte.",
+        "opens": "votre numéro de signature et un décompte pour votre pays"
+      },
+      {
+        "name": "Identité",
+        "need": "Prouver que vous êtes une seule personne : une ancre permet de signer, deux ancres indépendantes et une preuve de vivacité permettent de voter.",
+        "opens": "le plein poids du vote"
+      },
+      {
+        "name": "Action",
+        "need": "Déclarer ce que vous avez fait et le faire vérifier : un bot, la foule qui engage son propre karma, ou un panel humain.",
+        "opens": "du poids dans un domaine — votre avis y est cité"
+      },
+      {
+        "name": "Indépendance",
+        "need": "Vos actions sont confirmées par des personnes de clusters, pays et organisations différents — pas seulement votre entourage.",
+        "opens": "le droit de confirmer les autres"
+      },
+      {
+        "name": "Guilde",
+        "need": "Vérification professionnelle : on confirme un fait étroit et vérifiable, jamais une caution générale.",
+        "opens": "une voix sur les règles de votre domaine"
+      }
+    ],
+    "glowT": "À propos de l'inactivité — important",
+    "glow": "La batterie ne se vide pas parce que vous êtes absent. Sanctionner l'absence écarte ceux qui ont un travail, des enfants ou une mauvaise connexion et ne garde que les plus disponibles — ce n'est pas de l'équité. À côté de la charge existe une lueur : elle indique si vous êtes actif en ce moment, s'éteint d'elle-même et se rallume à chaque action vérifiée. Elle n'a aucun effet sur le karma ni sur les droits — seulement sur les invitations aux panels qui ont besoin de quelqu'un de disponible cette semaine.",
     "buildT": "Comment le construire",
     "build": [
       {

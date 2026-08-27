@@ -48,6 +48,27 @@
   .item b{display:block;color:var(--indigo-deep);font-size:16px;margin-bottom:3px}
   .item span{font-size:14.5px;color:var(--muted)}
 
+  /* батарея кармы */
+  .batt{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 24px;text-align:center}
+  .batt svg{width:100%;max-width:340px;height:auto}
+  .batt .lvl{font-size:19px;font-weight:900;color:var(--indigo-deep);margin-top:14px}
+  .batt .hint{font-size:14px;color:var(--muted);margin-top:4px}
+  .segs{margin-top:16px}
+  .seg{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 18px;margin-bottom:9px;
+     display:flex;gap:14px;align-items:flex-start;text-align:start}
+  .seg.on{border-color:var(--green);background:color-mix(in srgb, var(--green) 6%, var(--card))}
+  .seg .dot{flex-shrink:0;width:26px;height:26px;border-radius:8px;background:color-mix(in srgb, var(--muted) 14%, transparent);
+     color:var(--muted);font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .seg.on .dot{background:color-mix(in srgb, var(--green) 18%, transparent);color:var(--green)}
+  .seg b{display:block;color:var(--indigo-deep);font-size:15.5px;margin-bottom:2px}
+  .seg .need{font-size:14px;color:var(--muted)}
+  .seg .opens{font-size:13.5px;color:var(--muted);margin-top:5px}
+  .seg .opens i{font-style:normal;color:var(--amber);font-weight:700}
+
+  .glow{border:1px dashed var(--line);border-radius:14px;padding:20px 22px;margin-top:14px;font-size:14.5px;color:var(--muted)}
+  .glow b{color:var(--indigo-deep);display:block;margin-bottom:6px;font-size:13px;
+     text-transform:uppercase;letter-spacing:.08em}
+
   .money{background:var(--card);border:1px solid var(--line);border-inline-start:5px solid var(--amber);
      border-radius:14px;padding:24px 26px}
   .money p{margin-bottom:12px;font-size:15.5px}
@@ -92,6 +113,27 @@
 </header>
 
 <section class="wrap">
+  <h2 id="batt-t"></h2>
+  <p class="sub" style="margin:0 0 18px;text-align:start;max-width:none" id="batt-lead"></p>
+
+  <div class="batt">
+    <svg viewBox="0 0 340 130" aria-hidden="true">
+      <rect x="6" y="18" width="300" height="94" rx="16"
+            fill="none" stroke="color-mix(in srgb, var(--muted) 45%, transparent)" stroke-width="4"/>
+      <rect x="310" y="50" width="22" height="30" rx="7"
+            fill="color-mix(in srgb, var(--muted) 45%, transparent)"/>
+      <g id="cells"></g>
+    </svg>
+    <div class="lvl" id="batt-lvl"></div>
+    <div class="hint" id="batt-hint"></div>
+  </div>
+
+  <div class="segs" id="segs"></div>
+
+  <div class="glow"><b id="glow-t"></b><span id="glow"></span></div>
+</section>
+
+<section class="wrap">
   <h2 id="build-t"></h2>
   <div id="build"></div>
 
@@ -112,7 +154,7 @@
 </section>
 
 <footer class="wrap">
-  <a href="index.html" id="f-home"></a> · <a href="https://github.com/murad2026/wc" target="_blank" rel="noopener">GitHub</a>
+  <a href="index.html" id="f-home"></a> · <a href="game.html" id="f-shield"></a> · <a href="https://github.com/murad2026/wc" target="_blank" rel="noopener">GitHub</a>
 </footer>
 
 <script>
@@ -137,6 +179,24 @@ async function setLang(code){
   render();
 }
 
+
+/* Заряд читаем из того же хранилища, что и главная страница.
+   Сегменты 3-5 появятся, когда заработают дела и гильдии. */
+const signed = !!localStorage.getItem('wc_signed');
+const LEVEL  = signed ? 1 : 0;   /* сколько сегментов заполнено */
+
+function battery(g){
+  const N = 5, x0 = 22, w = 50, gap = 8;
+  $('cells').innerHTML = Array.from({length:N}, (_,i) => {
+    const on = i < LEVEL;
+    const fill = on ? (i === N-1 ? 'var(--green)' : 'var(--amber)')
+                    : 'color-mix(in srgb, var(--muted) 12%, transparent)';
+    return `<rect x="${x0 + i*(w+gap)}" y="34" width="${w}" height="62" rx="9" fill="${fill}"/>`;
+  }).join('');
+  $('batt-lvl').textContent  = LEVEL ? g.segs[LEVEL-1].name : g.lvl0;
+  $('batt-hint').textContent = LEVEL < N ? g.next.replace('{}', g.segs[LEVEL].name) : g.full;
+}
+
 function render(){
   const k = T.k;
   document.title = k.title + ' · WorldConstitution';
@@ -144,6 +204,22 @@ function render(){
   $('title').textContent = k.title;
   $('sub').textContent = k.sub;
 
+  const g = T.k;
+  $('batt-t').textContent    = g.battT;
+  $('batt-lead').textContent = g.battLead;
+  battery(g);
+  $('segs').innerHTML = g.segs.map((sg,i)=>`
+    <div class="seg${i < LEVEL ? ' on' : ''}">
+      <div class="dot">${i+1}</div>
+      <div>
+        <b>${esc(sg.name)}</b>
+        <div class="need">${esc(sg.need)}</div>
+        <div class="opens"><i>${esc(g.opensL)}</i> ${esc(sg.opens)}</div>
+      </div>
+    </div>`).join('');
+  $('glow-t').textContent = g.glowT;
+  $('glow').textContent   = g.glow;
+  $('f-shield').textContent = T.g.title;
   $('build-t').textContent = k.buildT;
   $('build').innerHTML = k.build.map((b,i)=>
     `<div class="item"><div class="n">${i+1}</div><div><b>${esc(b.t)}</b><span>${esc(b.d)}</span></div></div>`).join('');

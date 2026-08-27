@@ -374,6 +374,41 @@
   "k": {
     "title": "Karma",
     "sub": "El karma es el registro abierto de lo que has hecho por la causa común. No se puede comprar, transferir ni regalar: solo se gana con hechos.",
+    "battT": "La batería: dónde estás ahora",
+    "battLead": "El karma es un número, y un número solo no dice nada. Por eso se muestra como una batería: cinco celdas, cada una se carga con un tipo distinto de prueba. La carga se acumula y nunca baja sola — una celda solo puede quitarla una persona o una votación, por procedimiento transparente y con derecho a apelación.",
+    "lvl0": "La batería está vacía",
+    "next": "Siguiente celda: {}",
+    "full": "La batería está totalmente cargada",
+    "opensL": "Desbloquea:",
+    "segs": [
+      {
+        "name": "Firma",
+        "need": "Firmar la Constitución. Medio minuto, sin cuenta.",
+        "opens": "tu número de firma y un voto para tu país"
+      },
+      {
+        "name": "Identidad",
+        "need": "Demostrar que eres una persona: un anclaje permite firmar, dos anclajes independientes más prueba de vitalidad permiten votar.",
+        "opens": "peso completo del voto"
+      },
+      {
+        "name": "Hecho",
+        "need": "Declarar lo que hiciste y someterlo a verificación: un bot, la comunidad arriesgando su propio karma, o un panel humano.",
+        "opens": "peso en un tema — tu opinión se cita"
+      },
+      {
+        "name": "Independencia",
+        "need": "Tus hechos los confirman personas de distintos grupos, países y organizaciones, no solo tu círculo.",
+        "opens": "el derecho a confirmar a otros"
+      },
+      {
+        "name": "Gremio",
+        "need": "Verificación profesional: se confirma un hecho estrecho y comprobable, nunca un aval general.",
+        "opens": "voz en las reglas de tu propio campo"
+      }
+    ],
+    "glowT": "Sobre la inactividad — importante",
+    "glow": "La batería no se descarga porque no hayas entrado. Castigar la ausencia expulsa a quien tiene trabajo, hijos o mala conexión y deja solo a los más libres, y eso no es justicia. Aparte de la carga existe un brillo: indica si estás activo ahora, se apaga solo y se enciende con cualquier hecho verificado. No afecta al karma ni a los derechos en absoluto, solo a si te llaman a paneles que necesitan a alguien que responda esta semana.",
     "buildT": "Cómo construirlo",
     "build": [
       {

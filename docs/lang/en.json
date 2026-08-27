@@ -374,6 +374,41 @@
   "k": {
     "title": "Karma",
     "sub": "Karma is an open record of what you have done for the common cause. It cannot be bought, transferred or gifted — only earned through deeds.",
+    "battT": "The battery: where you are now",
+    "battLead": "Karma is a number, and one number tells you nothing. So it is shown as a battery: five cells, each charged by a different kind of proof. Charge accumulates and never drops on its own — a cell can only be removed by a human or a vote, through a transparent procedure and with a right of appeal.",
+    "lvl0": "The battery is empty",
+    "next": "Next cell: {}",
+    "full": "The battery is fully charged",
+    "opensL": "Unlocks:",
+    "segs": [
+      {
+        "name": "Signature",
+        "need": "Sign the Constitution. Half a minute, no account.",
+        "opens": "your signature number and a count for your country"
+      },
+      {
+        "name": "Personhood",
+        "need": "Prove you are one person: one anchor lets you sign, two independent anchors plus a liveness check let you vote.",
+        "opens": "full voting weight"
+      },
+      {
+        "name": "Deed",
+        "need": "Claim what you did and let it be verified: a bot, the crowd staking their own karma, or a human panel.",
+        "opens": "weight in a subject — your opinion gets cited"
+      },
+      {
+        "name": "Independence",
+        "need": "Your deeds are confirmed by people from different clusters, countries and organisations — not only your own circle.",
+        "opens": "the right to confirm others"
+      },
+      {
+        "name": "Guild",
+        "need": "Professional verification: a narrow checkable fact is confirmed, never a general endorsement.",
+        "opens": "a say in the rules of your own field"
+      }
+    ],
+    "glowT": "About inactivity — important",
+    "glow": "The battery does not drain because you were away. Punishing absence pushes out people with jobs, children or bad internet and keeps only the most unencumbered — which is not fairness. Separate from charge there is a glow: it shows whether you are active right now, fades on its own and lights up with any verified deed. It has no effect on karma or rights at all — only on whether you get invited to panels that need someone who will actually respond this week.",
     "buildT": "How to build it",
     "build": [
       {
