@@ -7,7 +7,8 @@
   "pricing": "Pricing",
   "order": "Order",
   "status": "Order status",
-  "about": "About us"
+  "about": "About us",
+  "join": "Work with us"
  },
  "home": {
   "h1": "Technical screening by senior engineers",
@@ -385,5 +386,114 @@
   "honestT": "Why this is on a separate page",
   "honest": "Because it is not your problem. When you buy a screen, what matters is who runs the call, what the report says and when it arrives. Nothing about the parent project appears on an expert's profile or inside your report — that is a rule we hold ourselves to, not a preference.",
   "back": "Back to the service"
+ },
+ "join": {
+  "kicker": "For experts",
+  "h1": "Run screens with us",
+  "lede": "You take only the assessments you want. Fifteen minutes on a call plus ten writing it up, $100 per screen. You work under a codename — your name reaches the client only after they pay.",
+  "barT": "Read this before the form",
+  "bar": [
+   "Every report carries the candidate's own words with timecodes. A report without quotes is rejected and not paid for. This is the job, not a formality.",
+   "We take a transcript of the call, never a recording. You are the one who insists on it; the candidate agrees in writing beforehand.",
+   "Report within 48 hours of the call. Below 80% on time after five orders and you come off solo work.",
+   "The verdict is FIT, NARROW or RISK. “Seems fine” is a failure, not a result.",
+   "No interviewing experience yet? You start on shadow sessions, or pass a two-report exam. Nothing else substitutes."
+  ],
+  "barNote": "If any of that sounds like too much process, this is not the right fit — and it is better to find that out now than after your first order.",
+  "youT": "About you",
+  "name": "Full name",
+  "nameHint": "Not published anywhere. The client sees it only after paying for a screen with you.",
+  "email": "Email",
+  "linkedin": "LinkedIn or a page about you",
+  "optional": "optional",
+  "workT": "Your work",
+  "stack": "What you can assess",
+  "stackPh": "Backend, distributed systems, AWS, iOS…",
+  "years": "Years in the field",
+  "interviewing": "I have interviewed candidates as part of my job",
+  "hired": "I have made or vetoed hiring decisions",
+  "publicT": "Your public card",
+  "disclosure": "How much to show publicly",
+  "disc": {
+   "a": "Codename and stack only, no employer",
+   "b": "Codename, stack and a former employer",
+   "c": "Fully open — my real name on the site"
+  },
+  "role": "One line describing you",
+  "rolePh": "Former Amazon Bar Raiser",
+  "roleHint": "This exact line goes on the site if we accept you. Nothing appears that you have not written yourself.",
+  "bio": "A short paragraph",
+  "bioHint": "Optional. Same rule: your words, published unchanged.",
+  "employer": "Does your employer require approval for outside work?",
+  "employerPh": "Not sure / not needed / I will need to ask HR",
+  "agree": "I have read the bar above and I work to it",
+  "go": "Send the application",
+  "going": "Sending…",
+  "errName": "Please add your name.",
+  "errEmail": "That email address does not look right.",
+  "errStack": "What can you assess?",
+  "errAgree": "The bar is the job. Please read it and tick the box.",
+  "errSave": "We could not send the application. Email hello@verified.ninja instead.",
+  "errNet": "Network problem — the application did not go through. Email hello@verified.ninja instead.",
+  "doneT": "Application sent",
+  "doneS": "We read every one of these ourselves. Expect an answer within a few days.",
+  "next": [
+   "We check your identity and work history. Until that is done, nothing about you is published.",
+   "A short call — fifteen minutes, no assessment of you, just how you work.",
+   "If you have interviewing experience: straight to shadow, then solo. If not: the two-report exam.",
+   "You get an access code and can check your own status any time."
+  ],
+  "checkLink": "Check an application"
+ },
+ "me": {
+  "h1": "Your status",
+  "sub": "Enter the access code we sent you. It looks like EX-K4M2QX.",
+  "ph": "EX-XXXXXX",
+  "go": "Check",
+  "errFormat": "An access code looks like EX-K4M2QX.",
+  "errNone": "No expert with that code. Check the characters — there are six after EX-.",
+  "errNet": "Could not reach the system. Email hello@verified.ninja and we will look it up by hand.",
+  "fields": {
+   "status": "Status",
+   "stack": "Stack",
+   "years": "Years",
+   "interviewing": "Interviewed at work",
+   "hired": "Made hiring decisions",
+   "disclosure": "Public disclosure",
+   "role": "Public line",
+   "ontime": "On-time reports",
+   "avg": "Average hours to report",
+   "since": "Applied"
+  },
+  "yes": "Yes",
+  "no": "No",
+  "na": "Not set",
+  "noData": "No orders yet",
+  "states": {
+   "applied": [
+    "Application received",
+    "We are checking your identity and work history. Nothing about you is published yet."
+   ],
+   "exam": [
+    "Exam",
+    "Two practice reports in the format of the published sample. The verdict has to land where the Bar Raiser landed."
+   ],
+   "shadow": [
+    "Shadow only",
+    "You sit in on interviews and write the assessment. Three consecutive reports that we do not change move you to solo."
+   ],
+   "solo": [
+    "Solo",
+    "You run screens yourself. Keep on-time above 80% and quotes in every report."
+   ],
+   "paused": [
+    "Paused",
+    "On-time dropped below 80%, or you asked us to pause. Nothing is being routed to you."
+   ],
+   "declined": [
+    "Not taken on",
+    "We are not moving forward. This is not permanent — if what you do changes, write to us again."
+   ]
+  }
  }
 }

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your status — Verified.Ninja</title>
+<meta name="description" content="Check your expert status by access code.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="app.css">
+<style>
+  header.top{padding:56px 0 26px}
+  header.top .lede{margin-top:14px;font-size:17px}
+
+  .look{display:flex;gap:10px;flex-wrap:wrap}
+  .look input{flex:1 1 210px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    letter-spacing:.08em;text-transform:uppercase}
+
+  .found{display:none;margin-top:32px}
+  .found.on{display:block}
+
+  .state{background:var(--bg-soft);border-radius:18px;padding:26px}
+  .state .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:15px;color:var(--muted);letter-spacing:.05em}
+  .state .nm{font-size:clamp(24px,4.6vw,32px);font-weight:600;letter-spacing:-.025em;margin-top:6px}
+  .state .ds{font-size:15.5px;color:var(--ink-2);margin-top:10px;line-height:1.5;max-width:44em}
+
+  .steps{display:flex;gap:6px;margin-top:22px;flex-wrap:wrap}
+  .sp{flex:1 1 90px;min-width:0}
+  .sp .ln{height:4px;border-radius:2px;background:var(--line)}
+  .sp.on .ln{background:var(--ink)}
+  .sp .lb{font-size:11.5px;color:var(--muted);margin-top:7px}
+  .sp.on .lb{color:var(--ink);font-weight:500}
+
+  .card2{margin-top:16px;border:1px solid var(--line-soft);border-radius:18px;
+    overflow:hidden;background:var(--card)}
+  .r{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+    padding:13px 22px;border-top:1px solid var(--line-soft)}
+  .r:first-child{border-top:none}
+  .r .k{font-size:15px;color:var(--ink-2)}
+  .r .v{font-size:15px;font-weight:500;text-align:end;font-variant-numeric:tabular-nums}
+  .r .v.dimv{color:var(--muted);font-weight:400}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="index.html">Verified<b>.Ninja</b></a>
+    <div class="nav-links">
+      <a href="expert.html" class="hide-sm" id="n-exp"></a>
+      <select class="lang" id="lang" aria-label="Language"></select>
+      <a class="btn sm" href="join.html" id="n-join"></a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap narrow">
+  <header class="top">
+    <h1 id="h1"></h1>
+    <p class="lede" id="sub"></p>
+  </header>
+
+  <form class="look" id="f">
+    <input id="q" maxlength="9" autocomplete="off" spellcheck="false" aria-label="Access code">
+    <button class="btn" id="go" type="submit"></button>
+  </form>
+
+  <div class="alert" id="err"></div>
+
+  <div class="found" id="found">
+    <div class="state">
+      <div class="code" id="code"></div>
+      <div class="nm" id="state-n"></div>
+      <div class="ds" id="state-d"></div>
+      <div class="steps" id="steps"></div>
+    </div>
+    <div class="card2" id="rows"></div>
+  </div>
+</div>
+
+<footer class="wrap narrow">
+  <div class="row">
+    <span id="f-note"></span>
+    <span><a href="about.html" id="f-about"></a></span>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script>
+const SB = {
+  url:  "https://nhkwgulokiwqwfrynmkx.supabase.co",
+  anon: "sb_publishable_XFFU01VfekhRJffwEEgbwA_eOvmOXr0"
+};
+const $ = id => document.getElementById(id);
+const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+/* Путь допуска. paused и declined в него не входят — это не ступени. */
+const PATH = ['applied','exam','shadow','solo'];
+let T = null;
+
+function problem(msg){
+  $('err').textContent = msg;
+  $('err').classList.add('on');
+  $('found').classList.remove('on');
+}
+
+function row(k, v, dim){
+  return `<div class="r"><span class="k">${esc(k)}</span>
+    <span class="v${dim ? ' dimv' : ''}">${esc(v)}</span></div>`;
+}
+
+function draw(e){
+  $('err').classList.remove('on');
+  const m = T.me, f = m.fields;
+  const st = m.states[e.status] || m.states.applied;
+
+  $('code').textContent   = e.code || '';
+  $('state-n').textContent = st[0];
+  $('state-d').textContent = st[1];
+
+  const at = PATH.indexOf(e.status);
+  $('steps').innerHTML = PATH.map((k,i)=>`
+    <div class="sp${at >= 0 && i <= at ? ' on' : ''}">
+      <div class="ln"></div><div class="lb">${esc(m.states[k][0])}</div>
+    </div>`).join('');
+
+  const yes = m.yes, no = m.no;
+  $('rows').innerHTML = [
+    row(f.stack, e.stack || m.na, !e.stack),
+    row(f.years, e.years == null ? m.na : String(e.years), e.years == null),
+    row(f.interviewing, e.interviewing ? yes : no),
+    row(f.hired, e.hired ? yes : no),
+    row(f.disclosure, (T.join.disc[e.disclosure] || m.na), !e.disclosure),
+    row(f.role, e.public_role || m.na, !e.public_role),
+    row(f.ontime, e.ontime_pct == null ? m.noData : e.ontime_pct + '%', e.ontime_pct == null),
+    row(f.avg,    e.avg_hours  == null ? m.noData : String(e.avg_hours), e.avg_hours == null),
+    row(f.since,  new Date(e.created_at).toLocaleDateString(
+          document.documentElement.lang || undefined,
+          { year:'numeric', month:'long', day:'numeric' }))
+  ].join('');
+
+  $('found').classList.add('on');
+}
+
+async function look(code){
+  const m = T.me;
+  $('found').classList.remove('on');
+  $('go').disabled = true;
+  try{
+    /* Функция в базе отдаёт только безличные поля: имя, почта и LinkedIn
+       не читаются анонимом ни при каком запросе. */
+    const r = await fetch(`${SB.url}/rest/v1/rpc/expert_by_code`, {
+      method:'POST',
+      headers:{ apikey:SB.anon, Authorization:`Bearer ${SB.anon}`,
+                'Content-Type':'application/json' },
+      body: JSON.stringify({ p_code: code })
+    });
+    if(!r.ok) throw new Error(r.status);
+    const rows = await r.json();
+    if(!rows || !rows.length) return problem(m.errNone);
+    draw(rows[0]);
+  }catch(e){
+    problem(m.errNet);
+  }finally{
+    $('go').disabled = false;
+  }
+}
+
+window.render = function(t){
+  T = t;
+  const m = T.me;
+  document.title = m.h1 + ' — Verified.Ninja';
+  $('n-exp').textContent  = T.nav.experts;
+  $('n-join').textContent = T.nav.join;
+  $('h1').textContent   = m.h1;
+  $('sub').textContent  = m.sub;
+  $('q').placeholder    = m.ph;
+  $('go').textContent   = m.go;
+  $('f-note').textContent  = T.footer.note;
+  $('f-about').textContent = T.nav.about;
+
+  const fromUrl = new URLSearchParams(location.search).get('code');
+  if(fromUrl){ $('q').value = fromUrl.toUpperCase(); look(fromUrl.toUpperCase()); }
+};
+
+$('f').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = $('q').value.trim().toUpperCase();
+  if(!/^EX-[A-Z0-9]{6}$/.test(v)) return problem(T.me.errFormat);
+  look(v);
+});
+</script>
+</body>
+</html>

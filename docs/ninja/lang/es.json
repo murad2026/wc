@@ -7,7 +7,8 @@
   "pricing": "Precios",
   "order": "Solicitar",
   "status": "Estado del pedido",
-  "about": "Sobre el proyecto"
+  "about": "Sobre el proyecto",
+  "join": "Trabaja con nosotros"
  },
  "home": {
   "h1": "Evaluación técnica por ingenieros senior",
@@ -385,5 +386,114 @@
   "honestT": "Por qué esto está en una página aparte",
   "honest": "Porque no es asunto tuyo. Cuando compras una evaluación importa quién hace la llamada, qué dice el informe y cuándo llega. Nada del proyecto matriz aparece en el perfil de un experto ni dentro de tu informe: es una regla que nos imponemos, no una preferencia.",
   "back": "Volver al servicio"
+ },
+ "join": {
+  "kicker": "Para expertos",
+  "h1": "Haz evaluaciones con nosotros",
+  "lede": "Aceptas solo los encargos que quieras. Quince minutos de llamada más diez de redacción, 100 $ por evaluación. Trabajas con nombre en clave: tu nombre llega al cliente solo después de que pague.",
+  "barT": "Léelo antes del formulario",
+  "bar": [
+   "Cada informe lleva las palabras del candidato con marcas de tiempo. Un informe sin citas se rechaza y no se paga. Ese es el trabajo, no un trámite.",
+   "De la llamada tomamos una transcripción, nunca una grabación. Tú eres quien insiste en ello; el candidato lo acepta por escrito antes.",
+   "Informe en 48 horas tras la llamada. Por debajo del 80% a tiempo tras cinco encargos, sales del trabajo en solitario.",
+   "El veredicto es FIT, NARROW o RISK. «Parece bien» es un fallo, no un resultado.",
+   "¿Sin experiencia entrevistando? Empiezas en sesiones shadow o apruebas un examen de dos informes. Nada más lo sustituye."
+  ],
+  "barNote": "Si todo esto suena a exceso de proceso, no encaja, y es mejor saberlo ahora que tras el primer encargo.",
+  "youT": "Sobre ti",
+  "name": "Nombre y apellidos",
+  "nameHint": "No se publica en ningún sitio. El cliente lo ve solo tras pagar una evaluación contigo.",
+  "email": "Correo",
+  "linkedin": "LinkedIn o una página sobre ti",
+  "optional": "opcional",
+  "workT": "Tu trabajo",
+  "stack": "Qué puedes evaluar",
+  "stackPh": "Backend, sistemas distribuidos, AWS, iOS…",
+  "years": "Años en la profesión",
+  "interviewing": "He entrevistado candidatos como parte de mi trabajo",
+  "hired": "He decidido contrataciones o he vetado alguna",
+  "publicT": "Tu ficha pública",
+  "disclosure": "Cuánto mostrar públicamente",
+  "disc": {
+   "a": "Solo nombre en clave y stack, sin empleador",
+   "b": "Nombre en clave, stack y un empleador anterior",
+   "c": "Totalmente abierto: mi nombre real en el sitio"
+  },
+  "role": "Una línea sobre ti",
+  "rolePh": "Ex Bar Raiser de Amazon",
+  "roleHint": "Esa línea exacta irá al sitio si te aceptamos. No aparecerá nada que no hayas escrito tú.",
+  "bio": "Un párrafo breve",
+  "bioHint": "Opcional. Misma regla: tus palabras, publicadas sin cambios.",
+  "employer": "¿Tu empleador exige aprobación para trabajo externo?",
+  "employerPh": "No estoy seguro / no hace falta / tendré que preguntar a RR. HH.",
+  "agree": "He leído el listón de arriba y trabajo así",
+  "go": "Enviar la solicitud",
+  "going": "Enviando…",
+  "errName": "Añade tu nombre, por favor.",
+  "errEmail": "Esa dirección de correo no parece correcta.",
+  "errStack": "¿Qué puedes evaluar?",
+  "errAgree": "El listón es el trabajo. Léelo y marca la casilla.",
+  "errSave": "No pudimos enviar la solicitud. Escribe a hello@verified.ninja.",
+  "errNet": "Problema de red: la solicitud no se envió. Escribe a hello@verified.ninja.",
+  "doneT": "Solicitud enviada",
+  "doneS": "Las leemos nosotros mismos, todas. Respuesta en unos días.",
+  "next": [
+   "Comprobamos tu identidad y tu historial laboral. Hasta entonces no se publica nada sobre ti.",
+   "Una llamada corta: quince minutos, no se te evalúa, solo hablamos de cómo trabajas.",
+   "Con experiencia entrevistando: directo a shadow y luego solo. Sin ella: el examen de dos informes.",
+   "Recibes un código de acceso y puedes consultar tu estado cuando quieras."
+  ],
+  "checkLink": "Consultar una solicitud"
+ },
+ "me": {
+  "h1": "Tu estado",
+  "sub": "Introduce el código de acceso que te enviamos. Tiene esta forma: EX-K4M2QX.",
+  "ph": "EX-XXXXXX",
+  "go": "Consultar",
+  "errFormat": "Un código de acceso tiene esta forma: EX-K4M2QX.",
+  "errNone": "No hay ningún experto con ese código. Revisa los caracteres: después de EX- son seis.",
+  "errNet": "No pudimos conectar con el sistema. Escribe a hello@verified.ninja y lo miramos a mano.",
+  "fields": {
+   "status": "Estado",
+   "stack": "Stack",
+   "years": "Años",
+   "interviewing": "Ha entrevistado en su trabajo",
+   "hired": "Ha decidido contrataciones",
+   "disclosure": "Exposición pública",
+   "role": "Línea pública",
+   "ontime": "Informes a tiempo",
+   "avg": "Horas medias hasta el informe",
+   "since": "Solicitud enviada"
+  },
+  "yes": "Sí",
+  "no": "No",
+  "na": "Sin definir",
+  "noData": "Aún sin encargos",
+  "states": {
+   "applied": [
+    "Solicitud recibida",
+    "Estamos comprobando tu identidad y tu historial. Todavía no hay nada público sobre ti."
+   ],
+   "exam": [
+    "Examen",
+    "Dos informes de práctica en el formato del ejemplo publicado. El veredicto debe caer donde cayó el del Bar Raiser."
+   ],
+   "shadow": [
+    "Solo shadow",
+    "Asistes a entrevistas y escribes la evaluación. Tres informes seguidos que no cambiemos te pasan a solitario."
+   ],
+   "solo": [
+    "En solitario",
+    "Haces las evaluaciones tú. Mantén la puntualidad por encima del 80% y citas en cada informe."
+   ],
+   "paused": [
+    "En pausa",
+    "La puntualidad bajó del 80%, o pediste una pausa. No se te asignan encargos."
+   ],
+   "declined": [
+    "No seguimos",
+    "No avanzamos contigo. No es definitivo: si cambia lo que haces, escríbenos de nuevo."
+   ]
+  }
  }
 }

@@ -150,7 +150,7 @@
 <footer class="wrap">
   <div class="row">
     <span id="f-note"></span>
-    <span><a href="about.html" id="f-about"></a></span>
+    <span><a href="about.html" id="f-about"></a> · <a href="join.html" id="f-join"></a></span>
   </div>
 </footer>
 
@@ -222,6 +222,7 @@ window.render = function(T){
   $('final-n').textContent = h.finalNote;
   $('f-note').textContent = T.footer.note;
   if($('f-about')) $('f-about').textContent = T.nav.about;
+  if($('f-join'))  $('f-join').textContent  = T.nav.join;
 };
 </script>
 </body>

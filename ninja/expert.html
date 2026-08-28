@@ -112,10 +112,13 @@
     <a class="btn" href="order.html" id="cta-1"></a>
     <a class="btn ghost" href="report.html" id="cta-2"></a>
   </div>
+  <p style="margin-top:26px;font-size:14.5px;color:var(--muted)">
+    <a class="link" href="join.html" id="cta-join"></a>
+  </p>
 </section>
 
 <footer class="wrap mid">
-  <div class="row"><span id="f-note"></span><span><a href="about.html" id="f-about"></a></span></div>
+  <div class="row"><span id="f-note"></span><span><a href="about.html" id="f-about"></a> · <a href="join.html" id="f-join"></a></span></div>
 </footer>
 
 <script src="i18n.js"></script>
@@ -204,8 +207,10 @@ window.render = function(T){
   $('cta-t').textContent = e.ctaT;
   $('cta-1').textContent = e.cta1;
   $('cta-2').textContent = e.cta2;
+  $('cta-join').textContent = T.nav.join;
   $('f-note').textContent = T.footer.note;
   if($('f-about')) $('f-about').textContent = T.nav.about;
+  if($('f-join'))  $('f-join').textContent  = T.nav.join;
 };
 </script>
 </body>

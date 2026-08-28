@@ -7,7 +7,8 @@
   "pricing": "Tarifs",
   "order": "Commander",
   "status": "Suivi",
-  "about": "Le projet"
+  "about": "Le projet",
+  "join": "Travailler avec nous"
  },
  "home": {
   "h1": "Évaluation technique par des ingénieurs seniors",
@@ -385,5 +386,114 @@
   "honestT": "Pourquoi ceci est sur une page à part",
   "honest": "Parce que ce n'est pas votre affaire. Quand vous achetez une évaluation, ce qui compte est qui mène l'entretien, ce que dit le rapport et quand il arrive. Rien du projet parent n'apparaît sur le profil d'un expert ni dans votre rapport — c'est une règle que nous nous imposons, pas une préférence.",
   "back": "Retour au service"
+ },
+ "join": {
+  "kicker": "Pour les experts",
+  "h1": "Mener des évaluations avec nous",
+  "lede": "Vous ne prenez que les missions que vous voulez. Quinze minutes d'entretien plus dix de rédaction, 100 $ par évaluation. Vous travaillez sous un nom de code : votre nom n'atteint le client qu'après paiement.",
+  "barT": "À lire avant le formulaire",
+  "bar": [
+   "Chaque rapport porte les mots du candidat, horodatés. Un rapport sans citations est rejeté et non rémunéré. C'est cela, le travail, pas une formalité.",
+   "Nous prenons une transcription de l'entretien, jamais un enregistrement. C'est vous qui y tenez ; le candidat l'accepte par écrit au préalable.",
+   "Rapport sous 48 heures après l'entretien. En dessous de 80% dans les délais après cinq missions, vous quittez le travail en solo.",
+   "Le verdict est FIT, NARROW ou RISK. « Ça a l'air correct » est un échec, pas un résultat.",
+   "Pas encore d'expérience d'entretien ? Vous commencez en shadow, ou vous passez un examen de deux rapports. Rien d'autre ne remplace cela."
+  ],
+  "barNote": "Si tout cela sonne comme trop de procédure, ce n'est pas le bon endroit — et mieux vaut s'en rendre compte maintenant qu'après la première mission.",
+  "youT": "À propos de vous",
+  "name": "Nom et prénom",
+  "nameHint": "Publié nulle part. Le client ne le voit qu'après avoir payé une évaluation avec vous.",
+  "email": "Courriel",
+  "linkedin": "LinkedIn ou une page vous concernant",
+  "optional": "facultatif",
+  "workT": "Votre travail",
+  "stack": "Ce que vous pouvez évaluer",
+  "stackPh": "Backend, systèmes distribués, AWS, iOS…",
+  "years": "Années dans le métier",
+  "interviewing": "J'ai mené des entretiens dans le cadre de mon travail",
+  "hired": "J'ai décidé d'embauches ou opposé un veto",
+  "publicT": "Votre fiche publique",
+  "disclosure": "Ce qui est montré publiquement",
+  "disc": {
+   "a": "Nom de code et stack seulement, sans employeur",
+   "b": "Nom de code, stack et un ancien employeur",
+   "c": "Entièrement ouvert — mon vrai nom sur le site"
+  },
+  "role": "Une ligne sur vous",
+  "rolePh": "Ancien Bar Raiser d'Amazon",
+  "roleHint": "C'est exactement cette ligne qui ira sur le site si nous vous retenons. Rien que vous n'ayez écrit vous-même n'y figurera.",
+  "bio": "Un court paragraphe",
+  "bioHint": "Facultatif. Même règle : vos mots, publiés sans retouche.",
+  "employer": "Votre employeur exige-t-il une autorisation pour une activité extérieure ?",
+  "employerPh": "Pas sûr / pas nécessaire / je devrai demander aux RH",
+  "agree": "J'ai lu les exigences ci-dessus et je travaille ainsi",
+  "go": "Envoyer la candidature",
+  "going": "Envoi…",
+  "errName": "Merci d'indiquer votre nom.",
+  "errEmail": "Cette adresse ne semble pas valide.",
+  "errStack": "Que pouvez-vous évaluer ?",
+  "errAgree": "Les exigences, c'est le travail. Lisez-les et cochez la case.",
+  "errSave": "Nous n'avons pas pu envoyer la candidature. Écrivez à hello@verified.ninja.",
+  "errNet": "Problème réseau : la candidature n'est pas partie. Écrivez à hello@verified.ninja.",
+  "doneT": "Candidature envoyée",
+  "doneS": "Nous les lisons nous-mêmes, toutes. Réponse sous quelques jours.",
+  "next": [
+   "Nous vérifions votre identité et votre parcours. D'ici là, rien n'est publié à votre sujet.",
+   "Un court appel — quinze minutes, on ne vous évalue pas, on parle de votre façon de travailler.",
+   "Avec de l'expérience d'entretien : directement en shadow, puis en solo. Sans : l'examen de deux rapports.",
+   "Vous recevez un code d'accès et pouvez consulter votre statut à tout moment."
+  ],
+  "checkLink": "Suivre une candidature"
+ },
+ "me": {
+  "h1": "Votre statut",
+  "sub": "Saisissez le code d'accès que nous vous avons envoyé. Il ressemble à EX-K4M2QX.",
+  "ph": "EX-XXXXXX",
+  "go": "Vérifier",
+  "errFormat": "Un code d'accès ressemble à EX-K4M2QX.",
+  "errNone": "Aucun expert à ce code. Vérifiez les caractères : il y en a six après EX-.",
+  "errNet": "Système injoignable. Écrivez à hello@verified.ninja, nous vérifierons à la main.",
+  "fields": {
+   "status": "Statut",
+   "stack": "Stack",
+   "years": "Années",
+   "interviewing": "A mené des entretiens au travail",
+   "hired": "A décidé d'embauches",
+   "disclosure": "Exposition publique",
+   "role": "Ligne publique",
+   "ontime": "Rapports dans les délais",
+   "avg": "Heures moyennes jusqu'au rapport",
+   "since": "Candidature déposée"
+  },
+  "yes": "Oui",
+  "no": "Non",
+  "na": "Non défini",
+  "noData": "Aucune mission à ce jour",
+  "states": {
+   "applied": [
+    "Candidature reçue",
+    "Nous vérifions votre identité et votre parcours. Rien n'est encore publié à votre sujet."
+   ],
+   "exam": [
+    "Examen",
+    "Deux rapports d'entraînement au format de l'exemple publié. Le verdict doit tomber là où celui du Bar Raiser est tombé."
+   ],
+   "shadow": [
+    "Shadow uniquement",
+    "Vous assistez aux entretiens et rédigez l'évaluation. Trois rapports consécutifs que nous ne modifions pas vous font passer en solo."
+   ],
+   "solo": [
+    "Solo",
+    "Vous menez les évaluations vous-même. Gardez la ponctualité au-dessus de 80% et des citations dans chaque rapport."
+   ],
+   "paused": [
+    "En pause",
+    "La ponctualité est passée sous 80%, ou vous avez demandé une pause. Aucune mission ne vous est adressée."
+   ],
+   "declined": [
+    "Non retenu",
+    "Nous n'allons pas plus loin. Ce n'est pas définitif : si votre situation change, réécrivez-nous."
+   ]
+  }
  }
 }

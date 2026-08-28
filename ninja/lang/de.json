@@ -7,7 +7,8 @@
   "pricing": "Preise",
   "order": "Bestellen",
   "status": "Auftragsstatus",
-  "about": "Über uns"
+  "about": "Über uns",
+  "join": "Mitarbeiten"
  },
  "home": {
   "h1": "Technische Prüfung durch erfahrene Senior-Entwickler",
@@ -385,5 +386,114 @@
   "honestT": "Warum das auf einer eigenen Seite steht",
   "honest": "Weil es nicht Ihr Problem ist. Beim Kauf einer Prüfung zählt, wer das Gespräch führt, was im Bericht steht und wann er kommt. Nichts über das Mutterprojekt erscheint im Profil eines Experten oder in Ihrem Bericht — das ist eine Regel, an die wir uns halten, keine Vorliebe.",
   "back": "Zurück zum Dienst"
+ },
+ "join": {
+  "kicker": "Für Experten",
+  "h1": "Prüfungen mit uns durchführen",
+  "lede": "Sie nehmen nur die Aufträge an, die Sie wollen. Fünfzehn Minuten Gespräch plus zehn fürs Schreiben, 100 $ pro Prüfung. Sie arbeiten unter einem Decknamen — Ihr Name erreicht den Kunden erst nach der Zahlung.",
+  "barT": "Vor dem Formular lesen",
+  "bar": [
+   "Jeder Bericht enthält die eigenen Worte des Kandidaten mit Zeitmarken. Ein Bericht ohne Zitate wird abgelehnt und nicht vergütet. Das ist die Arbeit, keine Formalie.",
+   "Wir nehmen ein Transkript des Gesprächs auf, nie eine Aufzeichnung. Sie bestehen darauf; der Kandidat stimmt vorher schriftlich zu.",
+   "Bericht innerhalb von 48 Stunden. Unter 80% Pünktlichkeit nach fünf Aufträgen verlieren Sie die Solo-Freigabe.",
+   "Das Urteil lautet FIT, NARROW oder RISK. „Wirkt in Ordnung“ ist ein Versagen, kein Ergebnis.",
+   "Noch keine Interview-Erfahrung? Sie beginnen mit Shadow-Sessions oder bestehen eine Prüfung aus zwei Berichten. Nichts anderes ersetzt das."
+  ],
+  "barNote": "Klingt das nach zu viel Prozess, passt es nicht — und das jetzt zu merken ist besser als nach dem ersten Auftrag.",
+  "youT": "Über Sie",
+  "name": "Vor- und Nachname",
+  "nameHint": "Wird nirgends veröffentlicht. Der Kunde sieht ihn erst, wenn er eine Prüfung bei Ihnen bezahlt hat.",
+  "email": "E-Mail",
+  "linkedin": "LinkedIn oder eine Seite über Sie",
+  "optional": "optional",
+  "workT": "Ihre Arbeit",
+  "stack": "Was Sie beurteilen können",
+  "stackPh": "Backend, verteilte Systeme, AWS, iOS…",
+  "years": "Jahre im Fach",
+  "interviewing": "Ich habe beruflich Kandidaten interviewt",
+  "hired": "Ich habe Einstellungen entschieden oder ein Veto eingelegt",
+  "publicT": "Ihre öffentliche Karte",
+  "disclosure": "Wie viel öffentlich zu zeigen ist",
+  "disc": {
+   "a": "Nur Deckname und Stack, ohne Arbeitgeber",
+   "b": "Deckname, Stack und ein früherer Arbeitgeber",
+   "c": "Vollständig offen — mein echter Name auf der Seite"
+  },
+  "role": "Eine Zeile über Sie",
+  "rolePh": "Ehemaliger Amazon Bar Raiser",
+  "roleHint": "Genau diese Zeile erscheint auf der Seite, wenn wir Sie aufnehmen. Nichts, was Sie nicht selbst geschrieben haben.",
+  "bio": "Ein kurzer Absatz",
+  "bioHint": "Optional. Gleiche Regel: Ihre Worte, unverändert veröffentlicht.",
+  "employer": "Verlangt Ihr Arbeitgeber eine Genehmigung für Nebentätigkeiten?",
+  "employerPh": "Unsicher / nicht nötig / ich muss die Personalabteilung fragen",
+  "agree": "Ich habe die Anforderungen gelesen und arbeite danach",
+  "go": "Bewerbung senden",
+  "going": "Wird gesendet…",
+  "errName": "Bitte geben Sie Ihren Namen an.",
+  "errEmail": "Diese E-Mail-Adresse sieht nicht richtig aus.",
+  "errStack": "Was können Sie beurteilen?",
+  "errAgree": "Die Anforderungen sind die Arbeit. Bitte lesen und ankreuzen.",
+  "errSave": "Die Bewerbung konnte nicht gesendet werden. Schreiben Sie an hello@verified.ninja.",
+  "errNet": "Netzwerkproblem — die Bewerbung ging nicht durch. Schreiben Sie an hello@verified.ninja.",
+  "doneT": "Bewerbung gesendet",
+  "doneS": "Wir lesen jede selbst. Antwort in wenigen Tagen.",
+  "next": [
+   "Wir prüfen Identität und beruflichen Werdegang. Bis dahin wird nichts über Sie veröffentlicht.",
+   "Ein kurzes Gespräch — fünfzehn Minuten, keine Bewertung Ihrer Person, nur wie Sie arbeiten.",
+   "Mit Interview-Erfahrung: direkt Shadow, dann Solo. Ohne: die Prüfung aus zwei Berichten.",
+   "Sie erhalten einen Zugangscode und können Ihren Status jederzeit einsehen."
+  ],
+  "checkLink": "Bewerbung prüfen"
+ },
+ "me": {
+  "h1": "Ihr Status",
+  "sub": "Geben Sie den zugesandten Zugangscode ein. Er sieht so aus: EX-K4M2QX.",
+  "ph": "EX-XXXXXX",
+  "go": "Prüfen",
+  "errFormat": "Ein Zugangscode sieht so aus: EX-K4M2QX.",
+  "errNone": "Kein Experte mit diesem Code. Prüfen Sie die Zeichen — nach EX- sind es sechs.",
+  "errNet": "System nicht erreichbar. Schreiben Sie an hello@verified.ninja, wir sehen von Hand nach.",
+  "fields": {
+   "status": "Status",
+   "stack": "Stack",
+   "years": "Jahre",
+   "interviewing": "Hat beruflich interviewt",
+   "hired": "Hat Einstellungen entschieden",
+   "disclosure": "Öffentliche Angabe",
+   "role": "Öffentliche Zeile",
+   "ontime": "Berichte pünktlich",
+   "avg": "Durchschnittliche Stunden bis zum Bericht",
+   "since": "Beworben"
+  },
+  "yes": "Ja",
+  "no": "Nein",
+  "na": "Nicht gesetzt",
+  "noData": "Noch keine Aufträge",
+  "states": {
+   "applied": [
+    "Bewerbung eingegangen",
+    "Wir prüfen Identität und Werdegang. Öffentlich ist über Sie noch nichts zu sehen."
+   ],
+   "exam": [
+    "Prüfung",
+    "Zwei Übungsberichte im Format des veröffentlichten Beispiels. Das Urteil muss dort landen, wo der Bar Raiser landete."
+   ],
+   "shadow": [
+    "Nur Shadow",
+    "Sie sitzen bei Interviews dabei und schreiben die Bewertung. Drei Berichte in Folge ohne Änderung führen zu Solo."
+   ],
+   "solo": [
+    "Solo",
+    "Sie führen Prüfungen selbst durch. Halten Sie die Pünktlichkeit über 80% und Zitate in jedem Bericht."
+   ],
+   "paused": [
+    "Pausiert",
+    "Die Pünktlichkeit fiel unter 80%, oder Sie haben um eine Pause gebeten. Es werden Ihnen keine Aufträge zugeteilt."
+   ],
+   "declined": [
+    "Nicht aufgenommen",
+    "Wir gehen nicht weiter. Das ist nicht endgültig — ändert sich Ihre Situation, schreiben Sie erneut."
+   ]
+  }
  }
 }

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work with us — Verified.Ninja</title>
+<meta name="description" content="Run technical screens with us. $100 per screen, under a codename, only the assignments you want.">
+<link rel="stylesheet" href="app.css">
+<style>
+  header.top{padding:56px 0 26px}
+  header.top .lede{margin-top:16px}
+
+  .bar{border:1px solid var(--line-soft);border-radius:18px;overflow:hidden;margin-top:30px}
+  .bar-t{padding:15px 22px;background:var(--bg-soft);border-bottom:1px solid var(--line-soft);
+    font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .bar ul{list-style:none;padding:6px 22px 14px}
+  .bar li{font-size:15.5px;color:var(--ink-2);line-height:1.5;padding:12px 0 12px 24px;
+    position:relative;border-top:1px solid var(--line-soft)}
+  .bar li:first-child{border-top:none}
+  .bar li::before{content:"→";position:absolute;left:0;color:var(--muted);font-weight:600}
+  .bar-n{padding:15px 22px;background:var(--bg-soft);border-top:1px solid var(--line-soft);
+    font-size:14px;color:var(--muted)}
+
+  form{margin-top:36px}
+  form > * + *{margin-top:24px}
+  .check{display:flex;gap:11px;align-items:flex-start;font-size:15px;line-height:1.45;cursor:pointer}
+  .check input{width:19px;height:19px;flex-shrink:0;margin-top:2px;accent-color:var(--ink)}
+  .checks{display:flex;flex-direction:column;gap:14px}
+  .radios{display:flex;flex-direction:column;gap:10px}
+  .radio{display:flex;gap:11px;align-items:flex-start;font-size:15px;line-height:1.45;cursor:pointer;
+    border:1px solid var(--line-soft);border-radius:12px;padding:14px 16px;transition:border-color .15s}
+  .radio:hover{border-color:var(--line)}
+  .radio input{width:18px;height:18px;flex-shrink:0;margin-top:1px;accent-color:var(--ink)}
+  .radio input:checked ~ span{color:var(--ink)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:520px){.grid2{grid-template-columns:1fr}}
+
+  #done{display:none}
+  #done.on{display:block}
+  .flow{margin-top:28px;list-style:none;counter-reset:f}
+  .flow li{display:flex;gap:15px;padding:15px 0;border-top:1px solid var(--line-soft);
+    font-size:15px;color:var(--muted);line-height:1.45}
+  .flow li:first-child{border-top:none}
+  .flow li::before{counter-increment:f;content:counter(f);flex-shrink:0;width:25px;height:25px;
+    border-radius:50%;background:var(--ink);color:var(--bg);font-size:12.5px;font-weight:600;
+    display:flex;align-items:center;justify-content:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="index.html">Verified<b>.Ninja</b></a>
+    <div class="nav-links">
+      <a href="expert.html" class="hide-sm" id="n-exp"></a>
+      <a href="report.html" class="hide-sm" id="n-rep"></a>
+      <select class="lang" id="lang" aria-label="Language"></select>
+      <a href="me.html" id="n-me"></a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap narrow" id="stage-form">
+  <header class="top">
+    <div class="eyebrow" id="kicker"></div>
+    <h1 id="h1"></h1>
+    <p class="lede" id="lede"></p>
+  </header>
+
+  <div class="bar">
+    <div class="bar-t" id="bar-t"></div>
+    <ul id="bar-list"></ul>
+    <div class="bar-n" id="bar-n"></div>
+  </div>
+
+  <form id="f" novalidate>
+    <fieldset>
+      <legend id="you-t"></legend>
+      <div class="field">
+        <label class="lb" for="nm" id="l-nm"></label>
+        <input type="text" id="nm" autocomplete="name" maxlength="80">
+        <div class="hint" id="h-nm"></div>
+      </div>
+      <div class="field">
+        <label class="lb" for="em" id="l-em"></label>
+        <input type="email" id="em" autocomplete="email" maxlength="120">
+      </div>
+      <div class="field">
+        <label class="lb" for="li" id="l-li"></label>
+        <input type="text" id="li" maxlength="200" placeholder="https://">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend id="work-t"></legend>
+      <div class="field">
+        <label class="lb" for="st" id="l-st"></label>
+        <input type="text" id="st" maxlength="200">
+      </div>
+      <div class="field">
+        <label class="lb" for="yr" id="l-yr"></label>
+        <input type="text" id="yr" inputmode="numeric" maxlength="2" style="max-width:110px">
+      </div>
+      <div class="field">
+        <div class="checks">
+          <label class="check"><input type="checkbox" id="iv"><span id="l-iv"></span></label>
+          <label class="check"><input type="checkbox" id="hr"><span id="l-hr"></span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label class="lb" for="ep" id="l-ep"></label>
+        <input type="text" id="ep" maxlength="400">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend id="pub-t"></legend>
+      <div class="field">
+        <label class="lb" id="l-di"></label>
+        <div class="radios" id="disc"></div>
+      </div>
+      <div class="field">
+        <label class="lb" for="ro" id="l-ro"></label>
+        <input type="text" id="ro" maxlength="120">
+        <div class="hint" id="h-ro"></div>
+      </div>
+      <div class="field">
+        <label class="lb" for="bi" id="l-bi"></label>
+        <textarea id="bi" maxlength="600"></textarea>
+        <div class="hint" id="h-bi"></div>
+      </div>
+    </fieldset>
+
+    <label class="check"><input type="checkbox" id="ag"><span id="l-ag"></span></label>
+
+    <div class="alert" id="err"></div>
+    <button class="btn wide" type="submit" id="go"></button>
+  </form>
+</div>
+
+<div class="wrap narrow" id="done">
+  <header class="top">
+    <h1 id="d-t"></h1>
+    <p class="lede" id="d-s"></p>
+  </header>
+  <ol class="flow" id="flow"></ol>
+</div>
+
+<footer class="wrap narrow">
+  <div class="row">
+    <span id="f-note"></span>
+    <span><a href="about.html" id="f-about"></a></span>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script>
+const SB = {
+  url:  "https://nhkwgulokiwqwfrynmkx.supabase.co",
+  anon: "sb_publishable_XFFU01VfekhRJffwEEgbwA_eOvmOXr0"
+};
+const $ = id => document.getElementById(id);
+const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+let T = null;
+
+function fail(msg){
+  $('err').textContent = msg;
+  $('err').classList.add('on');
+  $('go').disabled = false;
+  $('go').textContent = T.join.go;
+}
+
+window.render = function(t){
+  T = t;
+  const j = T.join;
+  document.title = j.h1 + ' — Verified.Ninja';
+  $('n-exp').textContent = T.nav.experts;
+  $('n-rep').textContent = T.nav.sample;
+  $('n-me').textContent  = j.checkLink;
+
+  $('kicker').textContent = j.kicker;
+  $('h1').textContent   = j.h1;
+  $('lede').textContent = j.lede;
+  $('bar-t').textContent = j.barT;
+  $('bar-list').innerHTML = j.bar.map(x=>`<li>${esc(x)}</li>`).join('');
+  $('bar-n').textContent = j.barNote;
+
+  $('you-t').textContent = j.youT;
+  $('l-nm').textContent  = j.name;
+  $('h-nm').textContent  = j.nameHint;
+  $('l-em').textContent  = j.email;
+  $('l-li').innerHTML    = esc(j.linkedin) + ' <span>— ' + esc(j.optional) + '</span>';
+
+  $('work-t').textContent = j.workT;
+  $('l-st').textContent   = j.stack;
+  $('st').placeholder     = j.stackPh;
+  $('l-yr').innerHTML     = esc(j.years) + ' <span>— ' + esc(j.optional) + '</span>';
+  $('l-iv').textContent   = j.interviewing;
+  $('l-hr').textContent   = j.hired;
+  $('l-ep').innerHTML     = esc(j.employer) + ' <span>— ' + esc(j.optional) + '</span>';
+  $('ep').placeholder     = j.employerPh;
+
+  $('pub-t').textContent = j.publicT;
+  $('l-di').textContent  = j.disclosure;
+  $('disc').innerHTML = ['a','b','c'].map((k,i)=>`
+    <label class="radio"><input type="radio" name="disc" value="${k}"${k==='b'?' checked':''}>
+      <span>${esc(j.disc[k])}</span></label>`).join('');
+  $('l-ro').textContent = j.role;
+  $('ro').placeholder   = j.rolePh;
+  $('h-ro').textContent = j.roleHint;
+  $('l-bi').innerHTML   = esc(j.bio) + ' <span>— ' + esc(j.optional) + '</span>';
+  $('h-bi').textContent = j.bioHint;
+  $('l-ag').textContent = j.agree;
+  $('go').textContent   = j.go;
+
+  $('d-t').textContent = j.doneT;
+  $('d-s').textContent = j.doneS;
+  $('flow').innerHTML  = j.next.map(x=>`<li>${esc(x)}</li>`).join('');
+
+  $('f-note').textContent  = T.footer.note;
+  $('f-about').textContent = T.nav.about;
+};
+
+$('f').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  $('err').classList.remove('on');
+  const j = T.join;
+
+  const full_name = $('nm').value.trim();
+  const email     = $('em').value.trim();
+  const stack     = $('st').value.trim();
+
+  if(full_name.length < 2) return fail(j.errName);
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return fail(j.errEmail);
+  if(stack.length < 2) return fail(j.errStack);
+  if(!$('ag').checked) return fail(j.errAgree);
+
+  $('go').disabled = true;
+  $('go').textContent = j.going;
+
+  const yrRaw = parseInt($('yr').value.trim(), 10);
+  const body = {
+    full_name, email, stack,
+    linkedin:      $('li').value.trim() || null,
+    employer_note: $('ep').value.trim() || null,
+    years:         Number.isFinite(yrRaw) && yrRaw >= 0 && yrRaw <= 60 ? yrRaw : null,
+    interviewing:  $('iv').checked,
+    hired:         $('hr').checked,
+    disclosure:    document.querySelector('input[name=disc]:checked').value,
+    public_role:   $('ro').value.trim() || null,
+    public_bio:    $('bi').value.trim() || null,
+    agreed_rules:  true
+  };
+
+  try{
+    const r = await fetch(`${SB.url}/rest/v1/experts`, {
+      method:'POST',
+      headers:{ apikey:SB.anon, Authorization:`Bearer ${SB.anon}`,
+                'Content-Type':'application/json', Prefer:'return=minimal' },
+      body: JSON.stringify(body)
+    });
+    if(!r.ok) return fail(j.errSave);
+  }catch(e){
+    return fail(j.errNet);
+  }
+
+  $('stage-form').style.display = 'none';
+  $('done').classList.add('on');
+  window.scrollTo(0,0);
+});
+</script>
+</body>
+</html>
