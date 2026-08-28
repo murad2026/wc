@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample assessment — Verified.Ninja</title>
+<meta name="description" content="A complete sample assessment from a 15-minute Verified Screen: rubric, evidence, verdict and limits.">
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --bg:#0F1115; --bg2:#151922; --card:#181D28; --line:#242B3A;
+    --text:#E8ECF4; --muted:#8B94A8; --accent:#00E5CC; --accent-dim:#00b8a4;
+    --warn:#FFB020; --bad:#FF6B6B; --good:#4ADE80;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+       background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none}
+
+  .bar{background:var(--warn);color:#231600;text-align:center;padding:9px 16px;
+       font-size:13.5px;font-weight:700;letter-spacing:.02em}
+  .bar a{color:#231600;text-decoration:underline}
+
+  nav{border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;
+     max-width:760px;margin:0 auto;padding:14px 24px}
+  .logo{font-weight:800;font-size:16px;color:var(--text)}
+  .logo b{color:var(--accent)}
+  .nav-in a{font-size:14px;color:var(--muted)}
+  .nav-in a:hover{color:var(--text)}
+
+  /* шапка отчёта */
+  .head{padding:44px 0 28px;border-bottom:1px solid var(--line)}
+  .kicker{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:800}
+  h1{font-size:clamp(26px,4.4vw,38px);font-weight:800;letter-spacing:-.02em;margin-top:10px;line-height:1.15}
+  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+     background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:26px}
+  .meta div{background:var(--card);padding:13px 15px}
+  .meta .k{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .meta .v{font-size:14.5px;margin-top:4px;font-weight:600}
+
+  section{padding:38px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+     font-weight:800;margin-bottom:18px}
+  h3{font-size:17px;font-weight:700;margin-bottom:6px}
+  p{font-size:15.5px;color:var(--muted)}
+  p+p{margin-top:12px}
+  p b, li b{color:var(--text);font-weight:600}
+
+  /* вердикт */
+  .verdict{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;
+     border-inline-start:5px solid var(--warn)}
+  .verdict .lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:800}
+  .verdict .call{font-size:34px;font-weight:800;letter-spacing:-.02em;color:var(--warn);margin:6px 0 12px}
+  .verdict p{font-size:16px;color:var(--text)}
+
+  /* рубрика */
+  .axis{border-top:1px solid var(--line);padding:20px 0}
+  .axis:first-of-type{border-top:none;padding-top:0}
+  .axis .top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+  .axis .name{font-size:17px;font-weight:700}
+  .dots{display:flex;gap:5px;margin-inline-start:auto}
+  .dot{width:24px;height:7px;border-radius:99px;background:var(--line)}
+  .dot.on{background:var(--accent)}
+  .dot.on.mid{background:var(--warn)}
+  .dot.on.low{background:var(--bad)}
+  .score{font-size:12.5px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+  .quote{border-inline-start:2px solid var(--line);padding-inline-start:14px;margin-top:12px;
+     font-size:14.5px;color:var(--muted);font-style:italic}
+  .quote b{font-style:normal}
+
+  ul{list-style:none;margin-top:10px}
+  li{font-size:15px;color:var(--muted);padding:7px 0 7px 24px;position:relative}
+  li::before{position:absolute;left:0;font-weight:800}
+  ul.flag li::before{content:"!";color:var(--warn)}
+  ul.next li::before{content:"→";color:var(--accent)}
+  ul.plain li::before{content:"—";color:var(--muted)}
+
+  .limits{background:var(--bg2);border:1px dashed var(--line);border-radius:14px;padding:22px 24px}
+  .limits h3{color:var(--text);font-size:15px;margin-bottom:10px}
+
+  .expert{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;
+     display:flex;gap:18px;align-items:flex-start}
+  .expert .av{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,#1d2735,#0f1620);
+     border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+  .expert .code{font-size:17px;font-weight:800}
+  .expert .role{color:var(--accent);font-size:13px;font-weight:600;margin-bottom:8px}
+  .expert p{font-size:14px}
+
+  .foot{padding:34px 0 60px;text-align:center}
+  .btn{display:inline-block;background:var(--accent);color:#04120F;font-weight:700;font-size:16px;
+       padding:15px 32px;border-radius:11px}
+  .btn:hover{background:var(--accent-dim)}
+  .foot p{margin-top:16px;font-size:13.5px}
+
+  @media print{
+    .bar,nav,.foot{display:none}
+    body{background:#fff;color:#111}
+    .card,.verdict,.expert,.limits,.meta div{background:#fff;border-color:#ccc}
+    p,li,.quote{color:#333}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">Sample report — the candidate and the details are invented. Real reports go only to the client who ordered them. <a href="index.html">Back to Verified.Ninja</a></div>
+
+<nav>
+  <div class="nav-in">
+    <span class="logo">Verified<b>.Ninja</b></span>
+    <a href="order.html">Order a screen →</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <div class="head">
+    <div class="kicker">Verified Screen · Assessment</div>
+    <h1>M. Reyes — Senior Backend Engineer</h1>
+    <div class="meta">
+      <div><div class="k">Ordered by</div><div class="v">Northgate Labs</div></div>
+      <div><div class="k">Call length</div><div class="v">15 min, live video</div></div>
+      <div><div class="k">Assessed by</div><div class="v">KAGE-01</div></div>
+      <div><div class="k">Delivered</div><div class="v">31 h after payment</div></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Verdict</h2>
+    <div class="verdict">
+      <div class="lbl">Our call</div>
+      <div class="call">RISK</div>
+      <p>Real operational experience, but not at the level the job description assumes. Hire him to run and extend an existing event pipeline and he will do well. Hire him to design your streaming architecture from scratch and you are betting on something he has not actually done.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we probed</h2>
+    <p>The CV claims: <b>“Led the migration to an event-driven architecture, Kafka, 40M events/day.”</b> That is the largest claim on the page, so the whole 15 minutes went into it. No puzzles, no trivia — one claim, pushed until it either held or stopped holding.</p>
+    <p>Three follow-ups did the work: what broke in production, why Kafka rather than the alternatives, and who made the call.</p>
+  </section>
+
+  <section>
+    <h2>Ratings</h2>
+
+    <div class="axis">
+      <div class="top">
+        <span class="name">Technical depth</span>
+        <span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></span>
+        <span class="score">3 / 4</span>
+      </div>
+      <p>Strong where he actually lived. Described consumer lag during a partition rebalance in detail — the symptom, how they spotted it, the retry storm it caused downstream, and the fix. That is not something you can read up on.</p>
+      <div class="quote">“We had a consumer group that took nine minutes to rebalance and every rebalance replayed about four minutes of traffic. <b>The fix wasn't clever — we just stopped putting slow HTTP calls inside the consumer.</b>”</div>
+    </div>
+
+    <div class="axis">
+      <div class="top">
+        <span class="name">Problem solving</span>
+        <span class="dots"><i class="dot on mid"></i><i class="dot on mid"></i><i class="dot"></i><i class="dot"></i></span>
+        <span class="score">2 / 4</span>
+      </div>
+      <p>Weakest axis. Asked why Kafka rather than SQS or Postgres-backed queues at their volume, he gave the marketing answer — throughput and durability — and could not describe the trade-off in his own terms or say what they gave up. When pushed on what he would do differently, he restated the same architecture.</p>
+      <div class="quote">“Honestly the decision was made before I joined the team. I inherited it.” — <b>volunteered, not extracted.</b> Credit for that.</div>
+    </div>
+
+    <div class="axis">
+      <div class="top">
+        <span class="name">Communication</span>
+        <span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+        <span class="score">4 / 4</span>
+      </div>
+      <p>Explains cleanly, distinguishes what he knows from what he assumes, and says “I don't know” without padding. Would be reliable in an incident review and safe in front of a customer.</p>
+    </div>
+
+    <div class="axis">
+      <div class="top">
+        <span class="name">Ownership</span>
+        <span class="dots"><i class="dot on mid"></i><i class="dot on mid"></i><i class="dot"></i><i class="dot"></i></span>
+        <span class="score">2 / 4</span>
+      </div>
+      <p>The gap between the CV and the conversation sits here. “Led the migration” turned out to mean he owned the consumer side of an already-decided migration and ran it well. The architecture, the vendor call and the rollout plan belonged to a staff engineer who has since left.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Flags</h2>
+    <ul class="flag">
+      <li><b>“Led” is doing heavy lifting on the CV.</b> He did not oversell it in conversation — he corrected it himself within two questions — but the written claim would mislead anyone who did not ask.</li>
+      <li><b>No design experience under constraint.</b> Everything he described was executed inside a decision someone else made.</li>
+      <li><b>Single-employer depth.</b> Four years, one stack, one scale. Not disqualifying, but he has not had to be wrong about a system yet.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>If you proceed</h2>
+    <ul class="next">
+      <li>Give him a design exercise with a real constraint — “this must survive a 6-hour downstream outage, and you cannot add a new datastore.” His reasoning under constraint is the open question, and 15 minutes could not close it.</li>
+      <li>Ask him to name a technical decision he argued against and lost, and what he thinks now. His answer to ownership questions will either hold or repeat.</li>
+      <li>Check the reference on the staff engineer who left, not on his manager. The manager saw delivery; that engineer saw judgement.</li>
+      <li>If the role is “extend and operate”, most of the above is irrelevant and he is a good hire. Re-read the job description before you decide.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="limits">
+      <h3>What this assessment cannot tell you</h3>
+      <ul class="plain">
+        <li>Fifteen minutes tests one claim deeply, not breadth. Everything else on his CV is untested.</li>
+        <li>We do not assess culture fit, motivation, or whether he will stay. We were not in the room for that.</li>
+        <li>We did not see him write code. This is about depth of experience, not typing.</li>
+        <li>A RISK verdict is not a rejection. It means the evidence supports a narrower role than the one advertised.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Assessed by</h2>
+    <div class="expert">
+      <div class="av">🥷</div>
+      <div>
+        <div class="code">KAGE-01</div>
+        <div class="role">Former Amazon Bar Raiser</div>
+        <p>One of the trained interviewers Amazon gives veto power over hires. On a paid assessment the client receives this expert's real name, photo and LinkedIn before the call is scheduled — the codename protects people who are currently employed, not their identity from you.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <a class="btn" href="order.html">Order a screen — $199</a>
+    <p>Reports are written by the expert who ran the call. Nothing is auto-generated.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

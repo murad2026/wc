@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order status — Verified.Ninja</title>
+<meta name="description" content="Track a Verified.Ninja order by its order number.">
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --bg:#0F1115; --bg2:#151922; --card:#181D28; --line:#242B3A;
+    --text:#E8ECF4; --muted:#8B94A8; --accent:#00E5CC; --accent-dim:#00b8a4;
+    --warn:#FFB020; --bad:#FF6B6B; --good:#4ADE80;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+       background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:560px;margin:0 auto;padding:0 24px 72px}
+  a{color:var(--accent);text-decoration:none}
+
+  nav{border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;
+     max-width:560px;margin:0 auto;padding:14px 24px}
+  .logo{font-weight:800;font-size:16px;color:var(--text)}
+  .logo b{color:var(--accent)}
+  .nav-in a{font-size:14px;color:var(--muted)}
+  .nav-in a:hover{color:var(--text)}
+
+  header{padding:44px 0 24px}
+  h1{font-size:clamp(26px,4.4vw,36px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+  .sub{color:var(--muted);font-size:16px;margin-top:12px}
+
+  .look{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+  input{flex:1 1 200px;background:var(--bg2);border:1.5px solid var(--line);border-radius:10px;
+     padding:13px 15px;font-size:16px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+     color:var(--text);letter-spacing:.06em;text-transform:uppercase}
+  input:focus{outline:none;border-color:var(--accent)}
+  .btn{background:var(--accent);color:#04120F;font-weight:700;font-size:15.5px;padding:13px 26px;
+       border:none;border-radius:10px;cursor:pointer;font-family:inherit}
+  .btn:hover{background:var(--accent-dim)}
+  .btn:disabled{opacity:.5;cursor:default}
+
+  .msg{margin-top:18px;font-size:14.5px;display:none}
+  .msg.on{display:block}
+  .msg.bad{color:var(--bad)}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 24px;
+     margin-top:26px;display:none}
+  .card.on{display:block}
+  .card .ref{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:24px;font-weight:800;
+     letter-spacing:.05em;color:var(--accent)}
+  .card .svc{font-size:14.5px;color:var(--muted);margin-top:3px}
+
+  .track{margin-top:26px;list-style:none}
+  .track li{display:flex;gap:14px;padding:0 0 22px;position:relative}
+  .track li:last-child{padding-bottom:0}
+  .track li::after{content:"";position:absolute;inset-inline-start:12px;top:26px;bottom:2px;
+     width:2px;background:var(--line)}
+  .track li:last-child::after{display:none}
+  .track .pip{flex-shrink:0;width:26px;height:26px;border-radius:50%;border:2px solid var(--line);
+     background:var(--bg);z-index:1;display:flex;align-items:center;justify-content:center;
+     font-size:13px;font-weight:800;color:var(--muted)}
+  .track li.done .pip{border-color:var(--good);color:var(--good)}
+  .track li.now .pip{border-color:var(--accent);background:var(--accent);color:#04120F}
+  .track .t{font-size:15.5px;font-weight:600;color:var(--muted)}
+  .track li.done .t,.track li.now .t{color:var(--text)}
+  .track .d{font-size:13.5px;color:var(--muted)}
+  .track li.now .d{color:var(--accent)}
+
+  .foot{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html">Verified<b>.Ninja</b></a>
+    <a href="order.html">Order a screen →</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header>
+    <h1>Order status</h1>
+    <p class="sub">Enter the order number you were given — it looks like VN-K4M2QX.</p>
+  </header>
+
+  <form class="look" id="f">
+    <input id="q" placeholder="VN-XXXXXX" maxlength="9" autocomplete="off" spellcheck="false" aria-label="Order number">
+    <button class="btn" id="go" type="submit">Check</button>
+  </form>
+
+  <div class="msg" id="msg"></div>
+
+  <div class="card" id="card">
+    <div class="ref" id="ref">—</div>
+    <div class="svc" id="svc">—</div>
+
+    <ol class="track" id="track"></ol>
+
+    <div class="foot" id="foot"></div>
+  </div>
+</div>
+
+<script>
+const SB = {
+  url:  "https://nhkwgulokiwqwfrynmkx.supabase.co",
+  anon: "sb_publishable_XFFU01VfekhRJffwEEgbwA_eOvmOXr0"
+};
+const $ = id => document.getElementById(id);
+
+const SVC = { screen: 'Verified Screen · $199', shadow: 'Shadow Session · $299' };
+
+/* Порядок стадий и что они означают для клиента. */
+const FLOW = [
+  ['received',     'Order received',   'We are checking which expert fits the role.'],
+  ['payment_sent', 'Payment link sent','Check your inbox — the expert’s real name is in the same email.'],
+  ['paid',         'Paid',             'Send us the candidate’s CV and email if you haven’t yet.'],
+  ['scheduled',    'Call scheduled',   'The candidate has booked a slot.'],
+  ['call_done',    'Call done',        'The expert is writing the assessment.'],
+  ['delivered',    'Assessment sent',  'It is in your inbox. Reply there with any questions.']
+];
+
+function show(msg, bad){
+  const m = $('msg');
+  m.textContent = msg;
+  m.className = 'msg on' + (bad ? ' bad' : '');
+}
+
+function render(o){
+  $('ref').textContent = o.ref;
+  $('svc').textContent = SVC[o.service] || o.service;
+
+  if(o.stage === 'cancelled'){
+    $('track').innerHTML = '';
+    $('foot').textContent = 'This order was cancelled. If that is a surprise, email hello@verified.ninja.';
+    $('card').classList.add('on');
+    return;
+  }
+
+  const at = FLOW.findIndex(s => s[0] === o.stage);
+  $('track').innerHTML = FLOW.map(([key, title, desc], i) => {
+    const cls = i < at ? 'done' : (i === at ? 'now' : '');
+    const pip = i < at ? '✓' : (i === at ? '' : i + 1);
+    return `<li class="${cls}">
+      <span class="pip">${pip}</span>
+      <span><span class="t">${title}</span>${i === at ? `<span class="d">${desc}</span>` : ''}</span>
+    </li>`;
+  }).join('');
+
+  const placed = new Date(o.created_at);
+  $('foot').textContent = 'Placed ' + placed.toLocaleDateString(undefined,
+    { year:'numeric', month:'long', day:'numeric' }) + '. Questions: hello@verified.ninja';
+  $('card').classList.add('on');
+}
+
+async function look(ref){
+  $('card').classList.remove('on');
+  show('Looking…');
+  $('go').disabled = true;
+  try{
+    /* Запрашиваем только безличные поля — почта клиента анониму не отдаётся
+       ни при каком запросе, это закрыто правами на колонки в базе. */
+    const url = `${SB.url}/rest/v1/orders?ref=eq.${encodeURIComponent(ref)}`
+              + `&select=ref,service,stage,created_at&limit=1`;
+    const r = await fetch(url, { headers: { apikey: SB.anon, Authorization: `Bearer ${SB.anon}` } });
+    if(!r.ok) throw new Error(await r.text());
+    const rows = await r.json();
+    if(!rows.length){
+      show('No order with that number. Check the letters — it is six characters after VN-.', true);
+      return;
+    }
+    $('msg').className = 'msg';
+    render(rows[0]);
+  }catch(e){
+    show('Could not reach the order system. Email hello@verified.ninja and we will look it up by hand.', true);
+  }finally{
+    $('go').disabled = false;
+  }
+}
+
+$('f').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = $('q').value.trim().toUpperCase();
+  if(!/^VN-[A-Z0-9]{6}$/.test(v)){
+    show('An order number looks like VN-K4M2QX.', true);
+    return;
+  }
+  look(v);
+});
+
+/* Номер из ссылки или из прошлого заказа в этом браузере. */
+const fromUrl = new URLSearchParams(location.search).get('ref');
+let seed = fromUrl;
+if(!seed){ try{ seed = localStorage.getItem('vn_ref'); }catch(e){} }
+if(seed){
+  $('q').value = seed;
+  if(fromUrl) look(seed.toUpperCase());
+}
+</script>
+</body>
+</html>
