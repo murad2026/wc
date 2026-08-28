@@ -31,11 +31,11 @@
    },
    {
     "t": "Se hace la evaluación",
-    "d": "Tu candidato reserva hora desde un enlace de calendario. Quince minutos de vídeo, en 24 horas. No se graba nada."
+    "d": "Tu candidato reserva hora desde un enlace de calendario. Quince minutos de vídeo, en 24 horas. Tomamos una transcripción, no una grabación."
    },
    {
     "t": "Recibes el informe",
-    "d": "En 48 horas: valoraciones, evidencias, un veredicto y una nota honesta sobre lo que quince minutos no pueden mostrar."
+    "d": "En 48 horas: valoraciones, citas con marcas de tiempo, un veredicto y una nota honesta sobre lo que quince minutos no pueden mostrar."
    }
   ],
   "priceT": "Dos servicios",
@@ -52,7 +52,7 @@
      "Agendada en menos de 24 horas tras el pago",
      "Informe escrito en las 48 horas siguientes a la llamada",
      "Valoración: profundidad, resolución, comunicación, responsabilidad",
-     "Veredicto explícito: contratar, riesgo o no — con su razonamiento",
+     "Veredicto explícito — FIT, NARROW o RISK — con su razonamiento",
      "Nombre real, foto y LinkedIn del experto antes de la llamada",
      "Reembolso completo si no logramos agendar a tiempo"
     ],
@@ -111,11 +111,7 @@
    },
    {
     "q": "¿Qué pasa con los datos del candidato?",
-    "a": "El CV se usa para la evaluación y se borra si lo pides. El informe llega solo a ti. Las llamadas nunca se graban y no publicamos ni vendemos datos de candidatos."
-   },
-   {
-    "q": "¿Quiénes sois?",
-    "a": "Un equipo pequeño que construye infraestructura de reputación humana verificada. Verified.Ninja es el primer servicio comercial sobre ella; el proyecto de base se llama WorldConstitution."
+    "a": "El CV se usa para la evaluación y se borra si lo pides. El informe llega solo a ti. De la llamada tomamos una transcripción, nunca una grabación, y se borra 30 días después de la entrega. No publicamos ni vendemos datos de candidatos."
    }
   ],
   "finalT": "Solicitar una evaluación",
@@ -126,29 +122,89 @@
  "experts": {
   "kicker": "Las personas",
   "title": "Quién hace la evaluación",
-  "lede": "Cada competencia de abajo indica en qué se apoya y si lo hemos comprobado nosotros. Es el mismo estándar que aplicamos a tus candidatos.",
-  "sheetT": "Boletín de competencias",
-  "sheetCols": "Nivel · Base · Estado",
-  "levels": [
-   "Conoce el tema",
-   "Sólido",
-   "Lidera esta área"
-  ],
-  "verified": "Comprobado",
-  "declared": "Declarado",
-  "disclosure": {
-   "a": "Empresa reservada",
-   "b": "Empresa nombrada",
-   "c": "Totalmente abierto"
+  "lede": "Fichamos por una cosa: si sabe romper o confirmar una sola línea del CV en quince minutos y escribirlo de forma que el fundador cambie la oferta. Lo demás es decoración del avatar.",
+  "cardT": "Ficha",
+  "fields": {
+   "years": "Años en la profesión",
+   "stack": "Stack",
+   "interviewing": "Ha entrevistado en su trabajo",
+   "hired": "Ha decidido contrataciones",
+   "solo": "Autorizado para evaluar solo",
+   "ontime": "Informes a tiempo",
+   "avg": "Horas medias hasta el informe"
   },
-  "sheetNote": "«Declarado» significa que el experto lo afirmó y aún no hemos visto la evidencia. La identidad y el historial laboral se comprueban antes de su primer encargo pagado; hasta entonces cada línea queda marcada así. Preferimos una etiqueta honesta a una marca de verificación que no hemos ganado.",
-  "doesT": "Evalúa",
-  "doesntT": "No hace",
-  "revealT": "Qué recibes tras el pago",
+  "yes": "Sí",
+  "no": "No",
+  "na": "Sin declarar",
+  "noData": "Aún sin pedidos",
+  "shadowOnly": "Solo shadow",
+  "soloYes": "Solo",
+  "soloWhy": {
+   "bar": "Bar Raiser: autorizado para trabajar solo desde el primer pedido.",
+   "shadow": "Sin experiencia acreditada entrevistando. Solo sesiones shadow, hasta que tres informes seguidos salgan sin que cambiemos el veredicto."
+  },
+  "barT": "Qué autoriza a trabajar solo",
+  "barCols": [
+   "Requisito",
+   "Para ir solo",
+   "Si no"
+  ],
+  "bar": [
+   {
+    "r": "Citas y marcas de tiempo en el informe",
+    "s": "Siempre",
+    "e": "Rechazado y sin pago"
+   },
+   {
+    "r": "Experiencia entrevistando o contratando, o examen interno aprobado",
+    "s": "Sí",
+    "e": "Solo sesiones shadow"
+   },
+   {
+    "r": "Informe en 48 horas",
+    "s": "80% o más",
+    "e": "En pausa"
+   },
+   {
+    "r": "El veredicto es FIT, NARROW o RISK",
+    "s": "Siempre",
+    "e": "Rechazado"
+   },
+   {
+    "r": "Una afirmación resuelta en quince minutos",
+    "s": "Siempre",
+    "e": "Rechazado"
+   },
+   {
+    "r": "Vínculo público con cualquier proyecto matriz",
+    "s": "Ninguno",
+    "e": "No se muestra al cliente"
+   }
+  ],
+  "examT": "El examen interno",
+  "exam": "Dos informes de práctica en el formato del ejemplo publicado, sobre candidatos que ya hemos evaluado. El veredicto tiene que caer donde cayó el del Bar Raiser. Aprobarlo sustituye a la experiencia entrevistando; nada más lo sustituye.",
+  "evidenceT": "Evidencia, no opinión",
+  "evidence": [
+   "Cada informe lleva las palabras del propio candidato con marcas de tiempo. Un informe sin citas se rechaza y no se paga.",
+   "De la llamada tomamos una transcripción, no una grabación. Da las mismas citas y las mismas marcas de tiempo, y no se guarda la voz ni la cara de nadie.",
+   "El candidato acepta la transcripción por escrito antes de la llamada. Si se niega, no hacemos la evaluación: no nos conformamos con un informe sin nada detrás.",
+   "La transcripción se borra 30 días después de la entrega. Las citas se quedan en el informe, y el informe es del cliente."
+  ],
+  "rejectT": "Por qué rechazamos a alguien",
+  "reject": [
+   "Excelente ingeniero, cero interrogatorio: nunca aprieta más allá de la primera respuesta",
+   "«Parece bien»: una evasiva disfrazada de evaluación",
+   "El informe llega al quinto día, cuando el candidato ya firmó en otro sitio",
+   "Quiere nuestro distintivo en su propia página: viene por la pertenencia, no por el trabajo"
+  ],
+  "revealT": "Qué recibe el cliente tras el pago",
+  "reveal": "Nombre real, foto y LinkedIn, antes de agendar la llamada. El nombre en clave protege a un experto que hoy está empleado, no lo esconde del cliente.",
+  "ctaT": "Pon a uno de ellos frente a tu candidato",
+  "cta1": "Solicitar una evaluación",
+  "cta2": "Leer un informe de ejemplo",
   "people": [
    {
     "code": "KAGE-01",
-    "level": "b",
     "role": "Ex Bar Raiser de Amazon",
     "tags": [
      "Backend",
@@ -156,62 +212,15 @@
      "Diseño de sistemas",
      "Calibración del listón"
     ],
-    "rows": [
-     {
-      "a": "Calibración del listón de contratación",
-      "n": 3,
-      "v": false,
-      "s": "Bar Raiser en Amazon — entrevistador con derecho de veto"
-     },
-     {
-      "a": "Entrevistas de backend senior",
-      "n": 3,
-      "v": false,
-      "s": "Dirigió procesos de selección a escala Fortune 500"
-     },
-     {
-      "a": "Sistemas distribuidos",
-      "n": 3,
-      "v": false,
-      "s": "Años de trabajo en producción a gran escala"
-     },
-     {
-      "a": "Revisión de diseño de sistemas",
-      "n": 3,
-      "v": false,
-      "s": "Diseñó la metodología de evaluación que usamos"
-     },
-     {
-      "a": "Profundidad en frontend",
-      "n": 1,
-      "v": false,
-      "s": "Solo experiencia adyacente — esos candidatos van a otro"
-     }
-    ],
-    "does": [
-     "Si la experiencia del CV se vivió de verdad",
-     "Cómo razona cuando la pregunta se sale de lo preparado",
-     "Qué hizo él y qué hizo el equipo a su alrededor",
-     "Si sabe explicar su propio trabajo a quien no estuvo allí"
-    ],
-    "doesnt": [
-     "Encaje cultural, motivación o intención de quedarse",
-     "Programar en vivo o velocidad al teclado",
-     "Buscar, captar o colocar candidatos",
-     "Candidatos que estén en el proceso de su propia empresa"
-    ],
-    "reveal": "Su nombre real, foto y LinkedIn te llegan tras el pago y antes de agendar la llamada. El nombre en clave protege a un experto que hoy está empleado; nunca fue para ocultárselo a ti.",
-    "score": {
-     "years": null,
-     "loops": 4,
-     "scale": 5,
-     "authority": 4,
-     "checked": 1
-    }
+    "years": null,
+    "interviewing": true,
+    "hired": true,
+    "solo": "bar",
+    "ontime": null,
+    "avg": null
    },
    {
     "code": "KAGE-02",
-    "level": "b",
     "role": "Nube e infraestructura de TI",
     "tags": [
      "AWS",
@@ -219,124 +228,12 @@
      "Operaciones de TI",
      "Diagnóstico"
     ],
-    "rows": [
-     {
-      "a": "AWS y operación cloud",
-      "n": 3,
-      "v": false,
-      "s": "Cinco años en Amazon, en TI y AWS"
-     },
-     {
-      "a": "Diagnóstico de incidentes",
-      "n": 3,
-      "v": false,
-      "s": "Soporte diario de producción, hoy trabaja en TI"
-     },
-     {
-      "a": "Operaciones y soporte de TI",
-      "n": 3,
-      "v": false,
-      "s": "Los mismos cinco años, lado operativo"
-     },
-     {
-      "a": "Infraestructura como código",
-      "n": 2,
-      "v": false,
-      "s": "Usada en producción, no diseñada desde cero"
-     },
-     {
-      "a": "Arquitectura de aplicaciones",
-      "n": 1,
-      "v": false,
-      "s": "No es su área — se deriva a KAGE-01"
-     }
-    ],
-    "does": [
-     "Qué ha operado de verdad un candidato y no solo leído",
-     "Cómo acota un fallo que nunca ha visto",
-     "Qué hace cuando la solución rápida y la segura no coinciden",
-     "Si sabe explicar un incidente a alguien no técnico"
-    ],
-    "doesnt": [
-     "Arquitectura de aplicaciones y diseño de sistemas",
-     "Candidatos de frontend o móvil",
-     "Verificar certificaciones — prueban estudio, no práctica",
-     "Todo lo que quede fuera de infraestructura y operaciones"
-    ],
-    "reveal": "Su nombre real, foto y LinkedIn te llegan tras el pago y antes de agendar la llamada. El nombre en clave protege a un experto que hoy está empleado; nunca fue para ocultárselo a ti.",
-    "score": {
-     "years": 2,
-     "loops": null,
-     "scale": 5,
-     "authority": null,
-     "checked": 1
-    }
-   }
-  ],
-  "ctaT": "Pon a uno de ellos frente a tu candidato",
-  "cta1": "Solicitar una evaluación",
-  "cta2": "Leer un informe de ejemplo",
-  "scaleT": "El estándar Verified",
-  "scaleLede": "Nuestra propia escala de cinco ejes, aplicada igual a cada experto, para que los perfiles se puedan comparar en vez de solo admirar. Los tramos están abajo: comprueba nuestras cuentas.",
-  "scaleNote": "Es nuestro estándar de casa, no uno del sector. Un eje sin respuesta fiable se queda sin puntuar en lugar de adivinarse; por eso algunos totales son sobre 20 y no sobre 25.",
-  "ofLbl": "de",
-  "axesLbl": "ejes",
-  "unknown": "Sin declarar",
-  "axes": [
-   {
-    "k": "years",
-    "n": "Años en la profesión",
-    "b": [
-     "Menos de 3",
-     "3–5",
-     "6–9",
-     "10–14",
-     "15 o más"
-    ]
-   },
-   {
-    "k": "loops",
-    "n": "Entrevistas realizadas",
-    "b": [
-     "Menos de 25",
-     "25–99",
-     "100–299",
-     "300–999",
-     "1000 o más"
-    ]
-   },
-   {
-    "k": "scale",
-    "n": "Mayor organización de ingeniería",
-    "b": [
-     "Menos de 10 ingenieros",
-     "10–100",
-     "100–1000",
-     "1000–10000",
-     "Escala FAANG"
-    ]
-   },
-   {
-    "k": "authority",
-    "n": "Autoridad en la decisión",
-    "b": [
-     "Participó en entrevistas",
-     "Entrevistador habitual",
-     "Entrevistador formado",
-     "Veto sobre contrataciones",
-     "Diseñó el proceso"
-    ]
-   },
-   {
-    "k": "checked",
-    "n": "Qué hemos comprobado",
-    "b": [
-     "Nada aún",
-     "Identidad",
-     "Identidad y empleador",
-     "Además referencias",
-     "Además fuentes públicas"
-    ]
+    "years": 5,
+    "interviewing": null,
+    "hired": null,
+    "solo": "shadow",
+    "ontime": null,
+    "avg": null
    }
   ]
  },
@@ -373,7 +270,7 @@
    "Ahora — comprobamos qué experto encaja con el puesto y confirmamos hueco.",
    "En unas horas — llega el enlace de pago por correo, con el nombre real del experto.",
    "Tras el pago — envías el CV y el correo del candidato; él reserva su hora.",
-   "En 24 horas — se hace la llamada. No se graba nada.",
+   "En 24 horas — se hace la llamada. Tomamos una transcripción, no una grabación.",
    "En las 48 horas siguientes — el informe escrito llega a tu bandeja."
   ],
   "track": "Consultar este pedido",
@@ -419,7 +316,6 @@
   ]
  },
  "footer": {
-  "note": "Servicio de evaluación independiente. Sin vinculación ni respaldo de Amazon ni de ninguna otra empresa.",
-  "project": "Un proyecto de WorldConstitution"
+  "note": "Servicio de evaluación independiente. Sin vinculación ni respaldo de Amazon ni de ninguna otra empresa."
  }
 }

@@ -31,11 +31,11 @@
    },
    {
     "t": "The screen happens",
-    "d": "Your candidate books a slot from a calendar link. Fifteen minutes of live video, within 24 hours. Nothing is recorded."
+    "d": "Your candidate books a slot from a calendar link. Fifteen minutes of live video, within 24 hours. We take a transcript, not a recording."
    },
    {
     "t": "You get the assessment",
-    "d": "Within 48 hours: ratings, evidence, a verdict, and an honest note on what fifteen minutes cannot tell you."
+    "d": "Within 48 hours: ratings, quotes with timecodes, a verdict, and an honest note on what fifteen minutes cannot tell you."
    }
   ],
   "priceT": "Two services",
@@ -52,7 +52,7 @@
      "Scheduled within 24 hours of payment",
      "Written assessment within 48 hours of the call",
      "Ratings on depth, problem solving, communication, ownership",
-     "An explicit verdict: hire, risk or no — with the reasoning",
+     "An explicit verdict — FIT, NARROW or RISK — with the reasoning",
      "The expert's real name, photo and LinkedIn before the call",
      "Full refund if we cannot schedule in the window"
     ],
@@ -111,11 +111,7 @@
    },
    {
     "q": "What happens to the candidate's data?",
-    "a": "The CV is used for the screen and deleted on request. The assessment goes to you alone. Calls are never recorded and we never publish or sell candidate data."
-   },
-   {
-    "q": "Who are you?",
-    "a": "A small team building infrastructure for verified human reputation. Verified.Ninja is the first commercial service built on it; the underlying project is WorldConstitution."
+    "a": "The CV is used for the screen and deleted on request. The assessment goes to you alone. We take a transcript of the call, never a recording; it is deleted 30 days after delivery. We never publish or sell candidate data."
    }
   ],
   "finalT": "Order a screen",
@@ -126,29 +122,89 @@
  "experts": {
   "kicker": "The people",
   "title": "Who runs the screen",
-  "lede": "Every competency below carries the source it rests on, and whether we have checked that source ourselves. That is the same standard we apply to your candidates.",
-  "sheetT": "Competency sheet",
-  "sheetCols": "Level · Source · Status",
-  "levels": [
-   "Working knowledge",
-   "Strong",
-   "Leads this area"
-  ],
-  "verified": "Verified",
-  "declared": "Declared",
-  "disclosure": {
-   "a": "Company withheld",
-   "b": "Company named",
-   "c": "Fully open"
+  "lede": "We take one thing: can they break or confirm a single line of a CV in fifteen minutes and write it so the founder changes the offer. Everything else is avatar decoration.",
+  "cardT": "Card",
+  "fields": {
+   "years": "Years in the field",
+   "stack": "Stack",
+   "interviewing": "Interviewed at work",
+   "hired": "Made hiring decisions",
+   "solo": "Cleared for solo screens",
+   "ontime": "On-time reports",
+   "avg": "Average hours to report"
   },
-  "sheetNote": "Declared means the expert stated it and we have not yet seen the evidence. Identity and employment history are checked before an expert's first paid assessment — until then every line stays marked as declared. We would rather show you an honest label than a checkmark we did not earn.",
-  "doesT": "Assesses",
-  "doesntT": "Does not do",
-  "revealT": "What you get after payment",
+  "yes": "Yes",
+  "no": "No",
+  "na": "Not stated",
+  "noData": "No orders yet",
+  "shadowOnly": "Shadow only",
+  "soloYes": "Solo",
+  "soloWhy": {
+   "bar": "Bar Raiser — cleared for solo from the first order.",
+   "shadow": "No interviewing experience on record. Shadow sessions only, until three consecutive reports go out without us changing the verdict."
+  },
+  "barT": "What clears an expert for solo work",
+  "barCols": [
+   "Requirement",
+   "To work solo",
+   "Otherwise"
+  ],
+  "bar": [
+   {
+    "r": "Quotes and timecodes in the report",
+    "s": "Always",
+    "e": "Report rejected, not paid for"
+   },
+   {
+    "r": "Interviewing or hiring experience, or a passed internal exam",
+    "s": "Yes",
+    "e": "Shadow sessions only"
+   },
+   {
+    "r": "Report within 48 hours",
+    "s": "80% or better",
+    "e": "Paused"
+   },
+   {
+    "r": "Verdict is FIT, NARROW or RISK",
+    "s": "Always",
+    "e": "Report rejected"
+   },
+   {
+    "r": "One claim resolved in fifteen minutes",
+    "s": "Always",
+    "e": "Report rejected"
+   },
+   {
+    "r": "Public link to any parent project",
+    "s": "None",
+    "e": "Not shown to clients"
+   }
+  ],
+  "examT": "The internal exam",
+  "exam": "Two practice reports in the format of the published sample, on candidates we have already assessed. The verdict has to land where the Bar Raiser landed. Passing it substitutes for interviewing experience; nothing else does.",
+  "evidenceT": "Evidence, not opinion",
+  "evidence": [
+   "Every report carries the candidate's own words with timecodes. A report without quotes is rejected and not paid for.",
+   "We take a transcript of the call, not a recording. It yields the same quotes and the same timecodes, and no one's voice or face is stored anywhere.",
+   "The candidate agrees to the transcript in writing before the call. If they refuse, we do not run the screen — we do not fall back to an assessment with nothing behind it.",
+   "The transcript is deleted 30 days after delivery. The quotes stay in the report, which belongs to the client."
+  ],
+  "rejectT": "What gets someone turned down",
+  "reject": [
+   "Excellent engineer, no interrogation — never pushes past the first answer",
+   "“Seems fine” — a hedge dressed up as an assessment",
+   "The report arrives on day five, when the candidate has already signed elsewhere",
+   "Wants our badge on their own page — here for the affiliation, not the work"
+  ],
+  "revealT": "What the client gets after payment",
+  "reveal": "Real name, photo and LinkedIn, before the call is scheduled. The codename protects an expert who is currently employed; it was never meant to hide them from the client.",
+  "ctaT": "Put one of them in front of your candidate",
+  "cta1": "Order a screen",
+  "cta2": "Read a sample assessment",
   "people": [
    {
     "code": "KAGE-01",
-    "level": "b",
     "role": "Former Amazon Bar Raiser",
     "tags": [
      "Backend",
@@ -156,62 +212,15 @@
      "System design",
      "Hiring bar calibration"
     ],
-    "rows": [
-     {
-      "a": "Hiring bar calibration",
-      "n": 3,
-      "v": false,
-      "s": "Bar Raiser at Amazon — a trained interviewer with veto power over hires"
-     },
-     {
-      "a": "Senior backend interviewing",
-      "n": 3,
-      "v": false,
-      "s": "Ran senior engineering loops at Fortune-500 scale"
-     },
-     {
-      "a": "Distributed systems",
-      "n": 3,
-      "v": false,
-      "s": "Years of production work on large-scale services"
-     },
-     {
-      "a": "System design review",
-      "n": 3,
-      "v": false,
-      "s": "Designed the screening methodology used on this site"
-     },
-     {
-      "a": "Frontend depth",
-      "n": 1,
-      "v": false,
-      "s": "Adjacent experience only — we route these candidates elsewhere"
-     }
-    ],
-    "does": [
-     "Whether the experience on the CV was actually lived",
-     "How a candidate reasons past what they prepared",
-     "What they owned themselves versus what their team did",
-     "Whether they can explain their own work to someone who wasn't there"
-    ],
-    "doesnt": [
-     "Culture fit, motivation, or whether they will stay",
-     "Live coding or typing speed",
-     "Sourcing, recruiting or placing candidates",
-     "Any candidate currently in his employer's hiring process"
-    ],
-    "reveal": "His real name, photo and LinkedIn reach you after payment and before the call is scheduled. The codename protects an expert who is currently employed — it was never meant to hide him from you.",
-    "score": {
-     "years": null,
-     "loops": 4,
-     "scale": 5,
-     "authority": 4,
-     "checked": 1
-    }
+    "years": null,
+    "interviewing": true,
+    "hired": true,
+    "solo": "bar",
+    "ontime": null,
+    "avg": null
    },
    {
     "code": "KAGE-02",
-    "level": "b",
     "role": "Cloud and IT infrastructure",
     "tags": [
      "AWS",
@@ -219,124 +228,12 @@
      "IT operations",
      "Troubleshooting"
     ],
-    "rows": [
-     {
-      "a": "AWS and cloud operations",
-      "n": 3,
-      "v": false,
-      "s": "Five years at Amazon in IT and AWS"
-     },
-     {
-      "a": "Incident troubleshooting",
-      "n": 3,
-      "v": false,
-      "s": "Day-to-day production support, currently working in IT"
-     },
-     {
-      "a": "IT operations and support",
-      "n": 3,
-      "v": false,
-      "s": "Same five years, operations side"
-     },
-     {
-      "a": "Infrastructure as code",
-      "n": 2,
-      "v": false,
-      "s": "Used in production, not designed from scratch"
-     },
-     {
-      "a": "Application architecture",
-      "n": 1,
-      "v": false,
-      "s": "Not his area — routed to KAGE-01"
-     }
-    ],
-    "does": [
-     "What a candidate has actually operated, not read about",
-     "How they narrow down a failure they have never seen",
-     "What they do when the fast fix and the safe fix differ",
-     "Whether they can explain an incident to someone non-technical"
-    ],
-    "doesnt": [
-     "Application architecture and system design",
-     "Frontend or mobile candidates",
-     "Certification checking — that proves study, not practice",
-     "Anything outside infrastructure and operations"
-    ],
-    "reveal": "His real name, photo and LinkedIn reach you after payment and before the call is scheduled. The codename protects an expert who is currently employed — it was never meant to hide him from you.",
-    "score": {
-     "years": 2,
-     "loops": null,
-     "scale": 5,
-     "authority": null,
-     "checked": 1
-    }
-   }
-  ],
-  "ctaT": "Put one of them in front of your candidate",
-  "cta1": "Order a screen",
-  "cta2": "Read a sample assessment",
-  "scaleT": "The Verified Standard",
-  "scaleLede": "Our own five-axis scale, applied to every expert the same way, so profiles can be compared instead of admired. The bands are printed below — check our arithmetic.",
-  "scaleNote": "This is our house standard, not an industry one. An axis we have no answer for is left unscored rather than guessed, which is why some totals are out of 20 and not 25.",
-  "ofLbl": "across",
-  "axesLbl": "axes",
-  "unknown": "Not stated",
-  "axes": [
-   {
-    "k": "years",
-    "n": "Years in the field",
-    "b": [
-     "Under 3",
-     "3–5",
-     "6–9",
-     "10–14",
-     "15 or more"
-    ]
-   },
-   {
-    "k": "loops",
-    "n": "Interviews conducted",
-    "b": [
-     "Under 25",
-     "25–99",
-     "100–299",
-     "300–999",
-     "1000 or more"
-    ]
-   },
-   {
-    "k": "scale",
-    "n": "Largest engineering org worked in",
-    "b": [
-     "Under 10 engineers",
-     "10–100",
-     "100–1000",
-     "1000–10000",
-     "FAANG scale"
-    ]
-   },
-   {
-    "k": "authority",
-    "n": "Authority over hiring decisions",
-    "b": [
-     "Took part in interviews",
-     "Regular interviewer",
-     "Trained interviewer",
-     "Veto over hires",
-     "Designed the process"
-    ]
-   },
-   {
-    "k": "checked",
-    "n": "How much we have verified",
-    "b": [
-     "Nothing yet",
-     "Identity",
-     "Identity and employer",
-     "Plus references",
-     "Plus public record"
-    ]
+    "years": 5,
+    "interviewing": null,
+    "hired": null,
+    "solo": "shadow",
+    "ontime": null,
+    "avg": null
    }
   ]
  },
@@ -373,7 +270,7 @@
    "Now — we check which expert fits the role and confirm a slot.",
    "Within a few hours — a payment link arrives by email, with the expert's real name.",
    "After payment — you send the candidate's CV and email; they book a slot themselves.",
-   "Within 24 hours — the call happens. Nothing is recorded.",
+   "Within 24 hours — the call happens. We take a transcript, not a recording.",
    "Within 48 hours of the call — the written assessment lands in your inbox."
   ],
   "track": "Check this order",
@@ -419,7 +316,6 @@
   ]
  },
  "footer": {
-  "note": "An independent screening service. Not affiliated with or endorsed by Amazon or any other company.",
-  "project": "A project by WorldConstitution"
+  "note": "An independent screening service. Not affiliated with or endorsed by Amazon or any other company."
  }
 }

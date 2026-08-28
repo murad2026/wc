@@ -31,11 +31,11 @@
    },
    {
     "t": "Die Prüfung findet statt",
-    "d": "Ihr Kandidat bucht selbst einen Termin. Fünfzehn Minuten Video, innerhalb von 24 Stunden. Nichts wird aufgezeichnet."
+    "d": "Ihr Kandidat bucht selbst einen Termin. Fünfzehn Minuten Video, innerhalb von 24 Stunden. Wir nehmen ein Transkript auf, keine Aufzeichnung."
    },
    {
     "t": "Sie erhalten das Gutachten",
-    "d": "Innerhalb von 48 Stunden: Bewertungen, Belege, ein Urteil und ein ehrlicher Hinweis darauf, was fünfzehn Minuten nicht zeigen können."
+    "d": "Innerhalb von 48 Stunden: Bewertungen, Zitate mit Zeitmarken, ein Urteil und ein ehrlicher Hinweis darauf, was fünfzehn Minuten nicht zeigen können."
    }
   ],
   "priceT": "Zwei Leistungen",
@@ -111,11 +111,7 @@
    },
    {
     "q": "Was passiert mit den Daten des Kandidaten?",
-    "a": "Der Lebenslauf wird für die Prüfung genutzt und auf Wunsch gelöscht. Das Gutachten geht nur an Sie. Gespräche werden nie aufgezeichnet, Kandidatendaten weder veröffentlicht noch verkauft."
-   },
-   {
-    "q": "Wer seid ihr?",
-    "a": "Ein kleines Team, das Infrastruktur für überprüfte menschliche Reputation baut. Verified.Ninja ist der erste kommerzielle Dienst darauf; das zugrunde liegende Projekt heißt WorldConstitution."
+    "a": "Der Lebenslauf wird für die Prüfung genutzt und auf Wunsch gelöscht. Das Gutachten geht nur an Sie. Wir nehmen ein Transkript des Gesprächs auf, nie eine Aufzeichnung; es wird 30 Tage nach Lieferung gelöscht. Kandidatendaten werden weder veröffentlicht noch verkauft."
    }
   ],
   "finalT": "Prüfung bestellen",
@@ -126,29 +122,89 @@
  "experts": {
   "kicker": "Die Menschen",
   "title": "Wer die Prüfung durchführt",
-  "lede": "Jede Kompetenz unten nennt ihre Grundlage und ob wir diese selbst geprüft haben. Genau denselben Maßstab legen wir an Ihre Kandidaten an.",
-  "sheetT": "Kompetenzbogen",
-  "sheetCols": "Stufe · Grundlage · Status",
-  "levels": [
-   "Kennt das Thema",
-   "Sicher",
-   "Führt diesen Bereich"
-  ],
-  "verified": "Geprüft",
-  "declared": "Angegeben",
-  "disclosure": {
-   "a": "Firma nicht genannt",
-   "b": "Firma genannt",
-   "c": "Vollständig offen"
+  "lede": "Wir nehmen jemanden für eine Sache: Kann er in fünfzehn Minuten eine einzige Zeile des Lebenslaufs kippen oder bestätigen und sie so aufschreiben, dass der Gründer sein Angebot ändert? Alles andere ist Avatar-Dekoration.",
+  "cardT": "Karte",
+  "fields": {
+   "years": "Jahre im Fach",
+   "stack": "Stack",
+   "interviewing": "Hat beruflich interviewt",
+   "hired": "Hat Einstellungen entschieden",
+   "solo": "Freigabe für Solo-Prüfungen",
+   "ontime": "Berichte pünktlich",
+   "avg": "Durchschnittliche Stunden bis zum Bericht"
   },
-  "sheetNote": "„Angegeben“ heißt: Der Experte hat es erklärt, wir haben die Belege noch nicht gesehen. Identität und beruflicher Werdegang werden vor dem ersten bezahlten Auftrag geprüft — bis dahin bleibt jede Zeile so markiert. Ein ehrliches Etikett ist uns lieber als ein Häkchen, das wir nicht verdient haben.",
-  "doesT": "Bewertet",
-  "doesntT": "Macht nicht",
-  "revealT": "Was Sie nach der Zahlung erhalten",
+  "yes": "Ja",
+  "no": "Nein",
+  "na": "Nicht angegeben",
+  "noData": "Noch keine Aufträge",
+  "shadowOnly": "Nur Shadow",
+  "soloYes": "Solo",
+  "soloWhy": {
+   "bar": "Bar Raiser — ab dem ersten Auftrag für Solo freigegeben.",
+   "shadow": "Keine belegte Interview-Erfahrung. Nur Shadow-Sessions, bis drei Berichte in Folge ohne Änderung des Urteils herausgehen."
+  },
+  "barT": "Was für Solo-Arbeit freigibt",
+  "barCols": [
+   "Anforderung",
+   "Für Solo",
+   "Sonst"
+  ],
+  "bar": [
+   {
+    "r": "Zitate und Zeitmarken im Bericht",
+    "s": "Immer",
+    "e": "Abgelehnt, keine Vergütung"
+   },
+   {
+    "r": "Interview- oder Einstellungserfahrung oder bestandene interne Prüfung",
+    "s": "Ja",
+    "e": "Nur Shadow-Sessions"
+   },
+   {
+    "r": "Bericht innerhalb von 48 Stunden",
+    "s": "80% oder besser",
+    "e": "Pausiert"
+   },
+   {
+    "r": "Urteil lautet FIT, NARROW oder RISK",
+    "s": "Immer",
+    "e": "Abgelehnt"
+   },
+   {
+    "r": "Eine Behauptung in fünfzehn Minuten geklärt",
+    "s": "Immer",
+    "e": "Abgelehnt"
+   },
+   {
+    "r": "Öffentliche Verbindung zu einem Mutterprojekt",
+    "s": "Keine",
+    "e": "Kunden nicht gezeigt"
+   }
+  ],
+  "examT": "Die interne Prüfung",
+  "exam": "Zwei Übungsberichte im Format des veröffentlichten Beispiels, zu Kandidaten, die wir bereits bewertet haben. Das Urteil muss dort landen, wo der Bar Raiser gelandet ist. Bestehen ersetzt Interview-Erfahrung; nichts anderes tut das.",
+  "evidenceT": "Belege, keine Meinung",
+  "evidence": [
+   "Jeder Bericht enthält die eigenen Worte des Kandidaten mit Zeitmarken. Ein Bericht ohne Zitate wird abgelehnt und nicht vergütet.",
+   "Wir nehmen ein Transkript des Gesprächs auf, keine Aufzeichnung. Es liefert dieselben Zitate und Zeitmarken, und niemandes Stimme oder Gesicht wird irgendwo gespeichert.",
+   "Der Kandidat stimmt dem Transkript vor dem Gespräch schriftlich zu. Lehnt er ab, führen wir die Prüfung nicht durch — auf eine Bewertung ohne Grundlage weichen wir nicht aus.",
+   "Das Transkript wird 30 Tage nach Lieferung gelöscht. Die Zitate bleiben im Bericht, und der gehört dem Kunden."
+  ],
+  "rejectT": "Wofür wir jemanden ablehnen",
+  "reject": [
+   "Hervorragender Entwickler, kein Verhör — hakt nie über die erste Antwort hinaus nach",
+   "„Wirkt in Ordnung“ — eine Ausflucht im Gewand eines Gutachtens",
+   "Der Bericht kommt am fünften Tag, wenn der Kandidat längst woanders unterschrieben hat",
+   "Will unser Abzeichen auf der eigenen Seite — kommt wegen der Zugehörigkeit, nicht wegen der Arbeit"
+  ],
+  "revealT": "Was der Kunde nach der Zahlung erhält",
+  "reveal": "Echter Name, Foto und LinkedIn, bevor der Termin steht. Der Deckname schützt einen derzeit angestellten Experten und verbirgt ihn nicht vor dem Kunden.",
+  "ctaT": "Setzen Sie einen von beiden vor Ihren Kandidaten",
+  "cta1": "Prüfung bestellen",
+  "cta2": "Beispielgutachten lesen",
   "people": [
    {
     "code": "KAGE-01",
-    "level": "b",
     "role": "Ehemaliger Amazon Bar Raiser",
     "tags": [
      "Backend",
@@ -156,62 +212,15 @@
      "Systementwurf",
      "Kalibrierung der Einstellungslatte"
     ],
-    "rows": [
-     {
-      "a": "Kalibrierung der Einstellungslatte",
-      "n": 3,
-      "v": false,
-      "s": "Bar Raiser bei Amazon — Interviewer mit Vetorecht bei Einstellungen"
-     },
-     {
-      "a": "Senior-Backend-Interviews",
-      "n": 3,
-      "v": false,
-      "s": "Führte Auswahlverfahren für Ingenieure im Fortune-500-Maßstab"
-     },
-     {
-      "a": "Verteilte Systeme",
-      "n": 3,
-      "v": false,
-      "s": "Jahre an Produktivarbeit mit Diensten großen Maßstabs"
-     },
-     {
-      "a": "Prüfung von Systementwürfen",
-      "n": 3,
-      "v": false,
-      "s": "Entwarf die hier verwendete Prüfmethodik"
-     },
-     {
-      "a": "Frontend-Tiefe",
-      "n": 1,
-      "v": false,
-      "s": "Nur angrenzende Erfahrung — solche Kandidaten leiten wir weiter"
-     }
-    ],
-    "does": [
-     "Ob die im Lebenslauf genannte Erfahrung tatsächlich gelebt wurde",
-     "Wie jemand denkt, sobald die Frage über das Vorbereitete hinausgeht",
-     "Was er selbst verantwortet hat und was sein Team tat",
-     "Ob er die eigene Arbeit jemandem erklären kann, der nicht dabei war"
-    ],
-    "doesnt": [
-     "Kulturelle Passung, Motivation oder Verbleibsabsicht",
-     "Live-Programmieren oder Tippgeschwindigkeit",
-     "Suche, Abwerbung oder Vermittlung von Kandidaten",
-     "Kandidaten, die gerade im Verfahren seines Arbeitgebers sind"
-    ],
-    "reveal": "Echter Name, Foto und LinkedIn erreichen Sie nach der Zahlung und bevor der Termin feststeht. Der Deckname schützt einen derzeit angestellten Experten — er sollte ihn nie vor Ihnen verbergen.",
-    "score": {
-     "years": null,
-     "loops": 4,
-     "scale": 5,
-     "authority": 4,
-     "checked": 1
-    }
+    "years": null,
+    "interviewing": true,
+    "hired": true,
+    "solo": "bar",
+    "ontime": null,
+    "avg": null
    },
    {
     "code": "KAGE-02",
-    "level": "b",
     "role": "Cloud und IT-Infrastruktur",
     "tags": [
      "AWS",
@@ -219,124 +228,12 @@
      "IT-Betrieb",
      "Fehlersuche"
     ],
-    "rows": [
-     {
-      "a": "AWS und Cloud-Betrieb",
-      "n": 3,
-      "v": false,
-      "s": "Fünf Jahre bei Amazon in IT und AWS"
-     },
-     {
-      "a": "Störungsanalyse",
-      "n": 3,
-      "v": false,
-      "s": "Täglicher Produktivbetrieb, derzeit in der IT tätig"
-     },
-     {
-      "a": "IT-Betrieb und Support",
-      "n": 3,
-      "v": false,
-      "s": "Dieselben fünf Jahre, Betriebsseite"
-     },
-     {
-      "a": "Infrastructure as Code",
-      "n": 2,
-      "v": false,
-      "s": "Produktiv genutzt, nicht von Grund auf entworfen"
-     },
-     {
-      "a": "Anwendungsarchitektur",
-      "n": 1,
-      "v": false,
-      "s": "Nicht sein Gebiet — geht an KAGE-01"
-     }
-    ],
-    "does": [
-     "Was ein Kandidat wirklich betrieben und nicht nur gelesen hat",
-     "Wie er einen Fehler eingrenzt, den er nie zuvor gesehen hat",
-     "Was er tut, wenn die schnelle und die sichere Lösung auseinandergehen",
-     "Ob er einen Vorfall auch nichttechnisch erklären kann"
-    ],
-    "doesnt": [
-     "Anwendungsarchitektur und Systementwurf",
-     "Frontend- oder Mobile-Kandidaten",
-     "Zertifikatsprüfung — sie belegt Lernen, nicht Praxis",
-     "Alles außerhalb von Infrastruktur und Betrieb"
-    ],
-    "reveal": "Echter Name, Foto und LinkedIn erreichen Sie nach der Zahlung und bevor der Termin feststeht. Der Deckname schützt einen derzeit angestellten Experten — er sollte ihn nie vor Ihnen verbergen.",
-    "score": {
-     "years": 2,
-     "loops": null,
-     "scale": 5,
-     "authority": null,
-     "checked": 1
-    }
-   }
-  ],
-  "ctaT": "Setzen Sie einen von beiden vor Ihren Kandidaten",
-  "cta1": "Prüfung bestellen",
-  "cta2": "Beispielgutachten lesen",
-  "scaleT": "Der Verified-Standard",
-  "scaleLede": "Unsere eigene Skala aus fünf Achsen, bei jedem Experten gleich angewandt, damit Profile vergleichbar werden statt bloß beeindruckend. Die Stufen stehen unten — prüfen Sie unsere Rechnung.",
-  "scaleNote": "Das ist unser Hausstandard, kein Branchenstandard. Eine Achse ohne belastbare Antwort bleibt unbewertet statt geraten — deshalb stehen manche Summen auf 20 statt 25.",
-  "ofLbl": "von",
-  "axesLbl": "Achsen",
-  "unknown": "Nicht angegeben",
-  "axes": [
-   {
-    "k": "years",
-    "n": "Jahre im Fach",
-    "b": [
-     "Unter 3",
-     "3–5",
-     "6–9",
-     "10–14",
-     "15 oder mehr"
-    ]
-   },
-   {
-    "k": "loops",
-    "n": "Geführte Interviews",
-    "b": [
-     "Unter 25",
-     "25–99",
-     "100–299",
-     "300–999",
-     "1000 oder mehr"
-    ]
-   },
-   {
-    "k": "scale",
-    "n": "Größte Entwicklungsorganisation",
-    "b": [
-     "Unter 10 Entwickler",
-     "10–100",
-     "100–1000",
-     "1000–10000",
-     "FAANG-Maßstab"
-    ]
-   },
-   {
-    "k": "authority",
-    "n": "Befugnis bei Einstellungen",
-    "b": [
-     "An Interviews beteiligt",
-     "Regelmäßiger Interviewer",
-     "Geschulter Interviewer",
-     "Vetorecht bei Einstellungen",
-     "Hat den Prozess entworfen"
-    ]
-   },
-   {
-    "k": "checked",
-    "n": "Was wir selbst geprüft haben",
-    "b": [
-     "Noch nichts",
-     "Identität",
-     "Identität und Arbeitgeber",
-     "Zusätzlich Referenzen",
-     "Zusätzlich öffentliche Quellen"
-    ]
+    "years": 5,
+    "interviewing": null,
+    "hired": null,
+    "solo": "shadow",
+    "ontime": null,
+    "avg": null
    }
   ]
  },
@@ -373,7 +270,7 @@
    "Jetzt — wir prüfen, welcher Experte zur Rolle passt, und bestätigen einen Termin.",
    "Innerhalb weniger Stunden — der Zahlungslink kommt per E-Mail, mit dem echten Namen des Experten.",
    "Nach der Zahlung — Sie schicken Lebenslauf und E-Mail des Kandidaten; er bucht selbst einen Termin.",
-   "Innerhalb von 24 Stunden — das Gespräch findet statt. Nichts wird aufgezeichnet.",
+   "Innerhalb von 24 Stunden — das Gespräch findet statt. Wir nehmen ein Transkript auf, keine Aufzeichnung.",
    "Innerhalb von 48 Stunden danach — das schriftliche Gutachten liegt in Ihrem Postfach."
   ],
   "track": "Diesen Auftrag prüfen",
@@ -419,7 +316,6 @@
   ]
  },
  "footer": {
-  "note": "Ein unabhängiger Prüfdienst. Weder mit Amazon noch einem anderen Unternehmen verbunden oder von diesen unterstützt.",
-  "project": "Ein Projekt von WorldConstitution"
+  "note": "Ein unabhängiger Prüfdienst. Weder mit Amazon noch einem anderen Unternehmen verbunden oder von diesen unterstützt."
  }
 }

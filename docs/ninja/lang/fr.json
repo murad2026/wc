@@ -31,11 +31,11 @@
    },
    {
     "t": "L'évaluation a lieu",
-    "d": "Votre candidat réserve lui-même un créneau. Quinze minutes de vidéo, sous 24 heures. Rien n'est enregistré."
+    "d": "Votre candidat réserve lui-même un créneau. Quinze minutes de vidéo, sous 24 heures. Nous prenons une transcription, pas un enregistrement."
    },
    {
     "t": "Vous recevez le rapport",
-    "d": "Sous 48 heures : notations, éléments de preuve, un verdict et une note honnête sur ce que quinze minutes ne peuvent pas montrer."
+    "d": "Sous 48 heures : notations, citations horodatées, un verdict et une note honnête sur ce que quinze minutes ne peuvent pas montrer."
    }
   ],
   "priceT": "Deux prestations",
@@ -52,7 +52,7 @@
      "Programmé sous 24 heures après paiement",
      "Rapport écrit sous 48 heures après l'entretien",
      "Notation : profondeur, résolution, communication, responsabilité",
-     "Verdict explicite : recruter, risque ou non — avec le raisonnement",
+     "Verdict explicite — FIT, NARROW ou RISK — avec le raisonnement",
      "Vrai nom, photo et LinkedIn de l'expert avant l'entretien",
      "Remboursement intégral si nous ne tenons pas le délai"
     ],
@@ -111,11 +111,7 @@
    },
    {
     "q": "Que devient le dossier du candidat ?",
-    "a": "Le CV sert à l'évaluation et est supprimé sur demande. Le rapport ne va qu'à vous. Les entretiens ne sont jamais enregistrés et nous ne publions ni ne vendons de données de candidats."
-   },
-   {
-    "q": "Qui êtes-vous ?",
-    "a": "Une petite équipe qui construit une infrastructure de réputation humaine vérifiée. Verified.Ninja en est le premier service commercial ; le projet sous-jacent s'appelle WorldConstitution."
+    "a": "Le CV sert à l'évaluation et est supprimé sur demande. Le rapport ne va qu'à vous. Nous prenons une transcription de l'entretien, jamais un enregistrement ; elle est supprimée 30 jours après la livraison. Nous ne publions ni ne vendons de données de candidats."
    }
   ],
   "finalT": "Commander une évaluation",
@@ -126,29 +122,89 @@
  "experts": {
   "kicker": "Les personnes",
   "title": "Qui mène l'évaluation",
-  "lede": "Chaque compétence ci-dessous indique ce qui la fonde et si nous l'avons nous-mêmes vérifiée. C'est exactement l'exigence que nous appliquons à vos candidats.",
-  "sheetT": "Relevé de compétences",
-  "sheetCols": "Niveau · Fondement · Statut",
-  "levels": [
-   "Connaît le sujet",
-   "Solide",
-   "Dirige ce domaine"
-  ],
-  "verified": "Vérifié",
-  "declared": "Déclaré",
-  "disclosure": {
-   "a": "Entreprise non citée",
-   "b": "Entreprise citée",
-   "c": "Entièrement ouvert"
+  "lede": "Nous recrutons pour une seule chose : savoir casser ou confirmer une unique ligne du CV en quinze minutes, et l'écrire de façon que le fondateur change son offre. Le reste est de la décoration d'avatar.",
+  "cardT": "Fiche",
+  "fields": {
+   "years": "Années dans le métier",
+   "stack": "Stack",
+   "interviewing": "A mené des entretiens au travail",
+   "hired": "A décidé d'embauches",
+   "solo": "Autorisé en solo",
+   "ontime": "Rapports dans les délais",
+   "avg": "Heures moyennes jusqu'au rapport"
   },
-  "sheetNote": "« Déclaré » signifie que l'expert l'a affirmé et que nous n'avons pas encore vu les preuves. L'identité et le parcours sont vérifiés avant sa première mission payée ; jusque-là chaque ligne reste marquée ainsi. Nous préférons une étiquette honnête à une coche que nous n'avons pas méritée.",
-  "doesT": "Évalue",
-  "doesntT": "Ne fait pas",
-  "revealT": "Ce que vous recevez après paiement",
+  "yes": "Oui",
+  "no": "Non",
+  "na": "Non renseigné",
+  "noData": "Aucune commande à ce jour",
+  "shadowOnly": "Shadow uniquement",
+  "soloYes": "Solo",
+  "soloWhy": {
+   "bar": "Bar Raiser — autorisé en solo dès la première commande.",
+   "shadow": "Expérience d'entretien non établie. Sessions shadow uniquement, jusqu'à trois rapports consécutifs partis sans que nous changions le verdict."
+  },
+  "barT": "Ce qui autorise le travail en solo",
+  "barCols": [
+   "Exigence",
+   "Pour le solo",
+   "Sinon"
+  ],
+  "bar": [
+   {
+    "r": "Citations et horodatages dans le rapport",
+    "s": "Toujours",
+    "e": "Rejeté, non rémunéré"
+   },
+   {
+    "r": "Expérience d'entretien ou d'embauche, ou examen interne réussi",
+    "s": "Oui",
+    "e": "Sessions shadow uniquement"
+   },
+   {
+    "r": "Rapport sous 48 heures",
+    "s": "80% ou mieux",
+    "e": "En pause"
+   },
+   {
+    "r": "Le verdict est FIT, NARROW ou RISK",
+    "s": "Toujours",
+    "e": "Rejeté"
+   },
+   {
+    "r": "Une affirmation tranchée en quinze minutes",
+    "s": "Toujours",
+    "e": "Rejeté"
+   },
+   {
+    "r": "Lien public avec un projet parent",
+    "s": "Aucun",
+    "e": "Non montré au client"
+   }
+  ],
+  "examT": "L'examen interne",
+  "exam": "Deux rapports d'entraînement au format de l'exemple publié, sur des candidats que nous avons déjà évalués. Le verdict doit tomber là où celui du Bar Raiser est tombé. Le réussir remplace l'expérience d'entretien ; rien d'autre ne la remplace.",
+  "evidenceT": "Des preuves, pas un avis",
+  "evidence": [
+   "Chaque rapport porte les mots du candidat lui-même, horodatés. Un rapport sans citations est rejeté et non rémunéré.",
+   "Nous prenons une transcription de l'entretien, pas un enregistrement. Elle donne les mêmes citations et les mêmes horodatages, et aucune voix ni aucun visage n'est conservé.",
+   "Le candidat accepte la transcription par écrit avant l'entretien. S'il refuse, nous ne menons pas l'évaluation : nous ne nous rabattons pas sur un rapport sans rien derrière.",
+   "La transcription est supprimée 30 jours après la livraison. Les citations restent dans le rapport, qui appartient au client."
+  ],
+  "rejectT": "Ce qui fait écarter quelqu'un",
+  "reject": [
+   "Excellent ingénieur, aucun interrogatoire — ne pousse jamais au-delà de la première réponse",
+   "« Ça a l'air correct » — une esquive déguisée en évaluation",
+   "Le rapport arrive au cinquième jour, quand le candidat a signé ailleurs",
+   "Veut notre insigne sur sa propre page — vient pour l'appartenance, pas pour le travail"
+  ],
+  "revealT": "Ce que le client reçoit après paiement",
+  "reveal": "Vrai nom, photo et LinkedIn, avant la prise de rendez-vous. Le nom de code protège un expert aujourd'hui salarié, il ne le cache pas au client.",
+  "ctaT": "Mettez l'un d'eux face à votre candidat",
+  "cta1": "Commander une évaluation",
+  "cta2": "Lire un rapport type",
   "people": [
    {
     "code": "KAGE-01",
-    "level": "b",
     "role": "Ancien Bar Raiser d'Amazon",
     "tags": [
      "Backend",
@@ -156,62 +212,15 @@
      "Conception de systèmes",
      "Calibrage du niveau d'embauche"
     ],
-    "rows": [
-     {
-      "a": "Calibrage du niveau d'embauche",
-      "n": 3,
-      "v": false,
-      "s": "Bar Raiser chez Amazon — intervieweur disposant d'un droit de veto"
-     },
-     {
-      "a": "Entretiens backend senior",
-      "n": 3,
-      "v": false,
-      "s": "A mené des processus d'embauche à l'échelle du Fortune 500"
-     },
-     {
-      "a": "Systèmes distribués",
-      "n": 3,
-      "v": false,
-      "s": "Des années de production sur des services à grande échelle"
-     },
-     {
-      "a": "Revue de conception système",
-      "n": 3,
-      "v": false,
-      "s": "A conçu la méthode d'évaluation utilisée ici"
-     },
-     {
-      "a": "Profondeur frontend",
-      "n": 1,
-      "v": false,
-      "s": "Expérience seulement connexe — ces candidats sont réorientés"
-     }
-    ],
-    "does": [
-     "Si l'expérience inscrite au CV a réellement été vécue",
-     "Comment le candidat raisonne au-delà de ce qu'il a préparé",
-     "Ce qu'il a porté lui-même et ce qu'a fait son équipe",
-     "S'il sait expliquer son travail à quelqu'un qui n'y était pas"
-    ],
-    "doesnt": [
-     "L'adéquation culturelle, la motivation ou l'intention de rester",
-     "Le code en direct ou la vitesse de frappe",
-     "Le sourcing, l'approche ou le placement de candidats",
-     "Tout candidat engagé dans le processus de son propre employeur"
-    ],
-    "reveal": "Son vrai nom, sa photo et son LinkedIn vous parviennent après paiement et avant la prise de rendez-vous. Le nom de code protège un expert aujourd'hui salarié ; il n'a jamais eu pour but de vous le cacher.",
-    "score": {
-     "years": null,
-     "loops": 4,
-     "scale": 5,
-     "authority": 4,
-     "checked": 1
-    }
+    "years": null,
+    "interviewing": true,
+    "hired": true,
+    "solo": "bar",
+    "ontime": null,
+    "avg": null
    },
    {
     "code": "KAGE-02",
-    "level": "b",
     "role": "Cloud et infrastructure informatique",
     "tags": [
      "AWS",
@@ -219,124 +228,12 @@
      "Exploitation IT",
      "Diagnostic"
     ],
-    "rows": [
-     {
-      "a": "AWS et exploitation cloud",
-      "n": 3,
-      "v": false,
-      "s": "Cinq ans chez Amazon, en IT et AWS"
-     },
-     {
-      "a": "Diagnostic d'incidents",
-      "n": 3,
-      "v": false,
-      "s": "Support de production au quotidien, travaille aujourd'hui en IT"
-     },
-     {
-      "a": "Exploitation et support IT",
-      "n": 3,
-      "v": false,
-      "s": "Les mêmes cinq années, côté exploitation"
-     },
-     {
-      "a": "Infrastructure as code",
-      "n": 2,
-      "v": false,
-      "s": "Utilisée en production, non conçue de zéro"
-     },
-     {
-      "a": "Architecture applicative",
-      "n": 1,
-      "v": false,
-      "s": "Hors de son domaine — orienté vers KAGE-01"
-     }
-    ],
-    "does": [
-     "Ce qu'un candidat a réellement exploité, et non lu",
-     "Comment il circonscrit une panne qu'il n'a jamais vue",
-     "Ce qu'il fait quand le correctif rapide et le correctif sûr divergent",
-     "S'il sait expliquer un incident à quelqu'un de non technique"
-    ],
-    "doesnt": [
-     "L'architecture applicative et la conception de systèmes",
-     "Les candidats frontend ou mobile",
-     "La vérification de certifications — elles prouvent l'étude, pas la pratique",
-     "Tout ce qui sort de l'infrastructure et de l'exploitation"
-    ],
-    "reveal": "Son vrai nom, sa photo et son LinkedIn vous parviennent après paiement et avant la prise de rendez-vous. Le nom de code protège un expert aujourd'hui salarié ; il n'a jamais eu pour but de vous le cacher.",
-    "score": {
-     "years": 2,
-     "loops": null,
-     "scale": 5,
-     "authority": null,
-     "checked": 1
-    }
-   }
-  ],
-  "ctaT": "Mettez l'un d'eux face à votre candidat",
-  "cta1": "Commander une évaluation",
-  "cta2": "Lire un rapport type",
-  "scaleT": "Le standard Verified",
-  "scaleLede": "Notre propre échelle à cinq axes, appliquée de la même façon à chaque expert, pour que les profils se comparent au lieu de s'admirer. Les paliers sont indiqués plus bas : vérifiez notre calcul.",
-  "scaleNote": "C'est notre standard maison, pas un standard du secteur. Un axe sans réponse fiable reste non noté plutôt que deviné — d'où certains totaux sur 20 et non sur 25.",
-  "ofLbl": "sur",
-  "axesLbl": "axes",
-  "unknown": "Non renseigné",
-  "axes": [
-   {
-    "k": "years",
-    "n": "Années dans le métier",
-    "b": [
-     "Moins de 3",
-     "3–5",
-     "6–9",
-     "10–14",
-     "15 ou plus"
-    ]
-   },
-   {
-    "k": "loops",
-    "n": "Entretiens menés",
-    "b": [
-     "Moins de 25",
-     "25–99",
-     "100–299",
-     "300–999",
-     "1000 ou plus"
-    ]
-   },
-   {
-    "k": "scale",
-    "n": "Plus grande organisation d'ingénierie",
-    "b": [
-     "Moins de 10 ingénieurs",
-     "10–100",
-     "100–1000",
-     "1000–10000",
-     "Échelle FAANG"
-    ]
-   },
-   {
-    "k": "authority",
-    "n": "Pouvoir sur la décision d'embauche",
-    "b": [
-     "A participé aux entretiens",
-     "Intervieweur régulier",
-     "Intervieweur formé",
-     "Droit de veto sur l'embauche",
-     "A conçu le processus"
-    ]
-   },
-   {
-    "k": "checked",
-    "n": "Ce que nous avons vérifié",
-    "b": [
-     "Rien pour l'instant",
-     "Identité",
-     "Identité et employeur",
-     "Et les références",
-     "Et les sources publiques"
-    ]
+    "years": 5,
+    "interviewing": null,
+    "hired": null,
+    "solo": "shadow",
+    "ontime": null,
+    "avg": null
    }
   ]
  },
@@ -373,7 +270,7 @@
    "Maintenant — nous cherchons l'expert adapté au poste et confirmons un créneau.",
    "Sous quelques heures — le lien de paiement arrive par courriel, avec le vrai nom de l'expert.",
    "Après paiement — vous envoyez le CV et le courriel du candidat ; il réserve lui-même.",
-   "Sous 24 heures — l'entretien a lieu. Rien n'est enregistré.",
+   "Sous 24 heures — l'entretien a lieu. Nous prenons une transcription, pas un enregistrement.",
    "Sous 48 heures après l'entretien — le rapport écrit arrive dans votre boîte."
   ],
   "track": "Suivre cette commande",
@@ -419,7 +316,6 @@
   ]
  },
  "footer": {
-  "note": "Service d'évaluation indépendant. Sans lien avec Amazon ou toute autre entreprise, ni approbation de leur part.",
-  "project": "Un projet de WorldConstitution"
+  "note": "Service d'évaluation indépendant. Sans lien avec Amazon ou toute autre entreprise, ni approbation de leur part."
  }
 }

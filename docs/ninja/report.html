@@ -27,6 +27,33 @@
   section p{font-size:16px;color:var(--ink-2)}
   section p + p{margin-top:12px}
 
+  .summary{background:var(--bg-soft);border-radius:18px;padding:26px;margin-top:10px}
+  .sum-top{display:flex;gap:26px;flex-wrap:wrap;align-items:baseline;
+    padding-bottom:20px;border-bottom:1px solid var(--line)}
+  .sum-top .b{min-width:0}
+  .sum-top .k{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .sum-top .v{font-size:32px;font-weight:600;letter-spacing:-.03em;line-height:1.1;margin-top:4px;
+    font-variant-numeric:tabular-nums}
+  .sum-top .v small{font-size:16px;font-weight:400;color:var(--muted)}
+  .sum-rows{margin-top:4px}
+  .sum-r{display:flex;justify-content:space-between;gap:18px;padding:11px 0;
+    border-bottom:1px solid var(--line-soft);font-size:14.5px}
+  .sum-r:last-child{border-bottom:none}
+  .sum-r .k{color:var(--muted)}
+  .sum-r .v{text-align:end;font-weight:500}
+  .sum-r .v em{font-style:normal;color:var(--muted);font-weight:400}
+
+  .zones{margin-top:16px;border:1px solid var(--line-soft);border-radius:14px;overflow:hidden}
+  .zones .zt{padding:13px 18px;background:var(--bg-soft);border-bottom:1px solid var(--line-soft);
+    font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .zr{display:grid;grid-template-columns:70px 1fr 92px;gap:14px;padding:11px 18px;
+    border-top:1px solid var(--line-soft);font-size:14px;align-items:center}
+  .zr:first-of-type{border-top:none}
+  .zr .n{font-variant-numeric:tabular-nums;color:var(--muted)}
+  .zr .w{text-align:end;font-weight:600;font-size:12.5px;letter-spacing:.03em}
+  .zr.here{background:var(--bg-soft)}
+  .zr.here .n,.zr.here span{color:var(--ink)}
+
   .verdict{background:var(--bg-soft);border-radius:18px;padding:28px 26px}
   .verdict .lbl{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
   .verdict .call{font-size:38px;font-weight:600;letter-spacing:-.03em;margin:8px 0 14px}
@@ -97,18 +124,50 @@
   </div>
 
   <section>
-    <h2>Verdict</h2>
-    <div class="verdict">
-      <div class="lbl">Our call</div>
-      <div class="call">RISK</div>
-      <p>Real operational experience, but not at the level the job description assumes. Hire him to run and extend an existing event pipeline and he will do well. Hire him to design your streaming architecture from scratch and you are betting on something he has not actually done.</p>
+    <h2>Summary</h2>
+    <div class="summary">
+      <div class="sum-top">
+        <div class="b">
+          <div class="k">Verdict</div>
+          <div class="v">NARROW</div>
+        </div>
+        <div class="b">
+          <div class="k">Claim Risk Score</div>
+          <div class="v">40 <small>/ 100</small></div>
+        </div>
+        <div class="b">
+          <div class="k">Confidence</div>
+          <div class="v">M</div>
+        </div>
+      </div>
+      <div class="sum-rows">
+        <div class="sum-r"><span class="k">Extend or operate an existing pipeline</span><span class="v">Yes</span></div>
+        <div class="sum-r"><span class="k">Design streaming from scratch</span><span class="v">No</span></div>
+        <div class="sum-r"><span class="k">Axes</span><span class="v">Depth 3 · Problem 2 · Ownership 2 · Communication 4</span></div>
+      </div>
     </div>
+
+    <div class="zones">
+      <div class="zt">What the score means</div>
+      <div class="zr"><span class="n">0–24</span><span>The claim in the CV does not hold</span><span class="w">RISK</span></div>
+      <div class="zr here"><span class="n">25–49</span><span>It holds, but for a narrower role</span><span class="w">NARROW</span></div>
+      <div class="zr"><span class="n">50–74</span><span>Holds at the level of the role, with gaps</span><span class="w">FIT, with caveats</span></div>
+      <div class="zr"><span class="n">75–100</span><span>The claim is confirmed</span><span class="w">FIT</span></div>
+    </div>
+
+    <p style="margin-top:16px">The score rates <b>one claim from the CV</b>, not the person. It weighs ownership heaviest and communication lightest: overstating “led the migration” costs a candidate far more here than plain English does. Confidence says how much fifteen minutes could establish at all — at <b>L</b> we are not allowed to write FIT or a score above 60.</p>
+  </section>
+
+  <section>
+    <h2>Why NARROW</h2>
+    <p>Real operational experience, but not at the level the job description assumes. Hire him to run and extend an existing event pipeline and he will do well. Hire him to design your streaming architecture from scratch and you are betting on something he has not actually done.</p>
   </section>
 
   <section>
     <h2>What we probed</h2>
     <p>The CV claims: <b>“Led the migration to an event-driven architecture, Kafka, 40M events/day.”</b> That is the largest claim on the page, so the whole 15 minutes went into it. No puzzles, no trivia — one claim, pushed until it either held or stopped holding.</p>
     <p>Three follow-ups did the work: what broke in production, why Kafka rather than the alternatives, and who made the call.</p>
+    <p>Every quote below carries a timecode into the call transcript. A report without quotes is not a report — we reject it and do not pay for it.</p>
   </section>
 
   <section>
@@ -121,17 +180,17 @@
         <span class="score">3 / 4</span>
       </div>
       <p>Strong where he actually lived. Described consumer lag during a partition rebalance in detail — the symptom, how they spotted it, the retry storm it caused downstream, and the fix. That is not something you can read up on.</p>
-      <div class="quote">“We had a consumer group that took nine minutes to rebalance and every rebalance replayed about four minutes of traffic. <b>The fix wasn't clever — we just stopped putting slow HTTP calls inside the consumer.</b>”</div>
+      <div class="quote"><b>07:12</b> — “We had a consumer group that took nine minutes to rebalance and every rebalance replayed about four minutes of traffic. <b>The fix wasn't clever — we just stopped putting slow HTTP calls inside the consumer.</b>”</div>
     </div>
 
     <div class="axis">
       <div class="top">
         <span class="name">Problem solving</span>
-        <span class="dots"><i class="dot on mid"></i><i class="dot on mid"></i><i class="dot"></i><i class="dot"></i></span>
+        <span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot"></i><i class="dot"></i></span>
         <span class="score">2 / 4</span>
       </div>
       <p>Weakest axis. Asked why Kafka rather than SQS or Postgres-backed queues at their volume, he gave the marketing answer — throughput and durability — and could not describe the trade-off in his own terms or say what they gave up. When pushed on what he would do differently, he restated the same architecture.</p>
-      <div class="quote">“Honestly the decision was made before I joined the team. I inherited it.” — <b>volunteered, not extracted.</b> Credit for that.</div>
+      <div class="quote"><b>11:40</b> — “Honestly the decision was made before I joined the team. I inherited it.” — <b>volunteered, not extracted.</b> Credit for that.</div>
     </div>
 
     <div class="axis">
@@ -146,7 +205,7 @@
     <div class="axis">
       <div class="top">
         <span class="name">Ownership</span>
-        <span class="dots"><i class="dot on mid"></i><i class="dot on mid"></i><i class="dot"></i><i class="dot"></i></span>
+        <span class="dots"><i class="dot on"></i><i class="dot on"></i><i class="dot"></i><i class="dot"></i></span>
         <span class="score">2 / 4</span>
       </div>
       <p>The gap between the CV and the conversation sits here. “Led the migration” turned out to mean he owned the consumer side of an already-decided migration and ran it well. The architecture, the vendor call and the rollout plan belonged to a staff engineer who has since left.</p>
@@ -179,7 +238,10 @@
         <li>Fifteen minutes tests one claim deeply, not breadth. Everything else on his CV is untested.</li>
         <li>We do not assess culture fit, motivation, or whether he will stay. We were not in the room for that.</li>
         <li>We did not see him write code. This is about depth of experience, not typing.</li>
-        <li>A RISK verdict is not a rejection. It means the evidence supports a narrower role than the one advertised.</li>
+        <li>We take a transcript of the call, never a recording, and delete it 30 days after delivery. The quotes above stay yours.</li>
+        <li>A NARROW verdict is not a rejection. It means the evidence supports a tighter role than the one advertised.</li>
+        <li>We do not score IQ, culture fit, or whether someone will stay. None of that is measurable here, so none of it is in the number.</li>
+        <li>We publish no market medians until we have twenty assessments in the same stack. Percentiles on a small sample are false precision.</li>
       </ul>
     </div>
   </section>
