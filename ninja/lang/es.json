@@ -1,0 +1,425 @@
+{
+ "dir": "ltr",
+ "nav": {
+  "overview": "Resumen",
+  "experts": "Expertos",
+  "sample": "Ejemplo",
+  "pricing": "Precios",
+  "order": "Solicitar",
+  "status": "Estado del pedido"
+ },
+ "home": {
+  "h1": "Evaluación técnica por ingenieros senior",
+  "sub": "Nos envías un candidato. Un ingeniero senior con experiencia en procesos de selección de escala FAANG hace una llamada en vivo de 15 minutos y escribe lo que encontró — o se sienta en la entrevista que tu equipo ya está haciendo.",
+  "cta1": "Solicitar una evaluación",
+  "cta2": "Leer un informe de ejemplo",
+  "meta": "199 $ por candidato. Sin suscripción, sin contrato, sin comisión si lo contratas.",
+  "whoK": "Quién evalúa",
+  "whoT": "Dos personas, ambas con nombre",
+  "whoS": "Cada evaluación la hace una de ellas, nunca un mercado anónimo. Sus perfiles listan cada competencia y en qué se apoya.",
+  "whoCta": "Ver los perfiles completos",
+  "howT": "Qué pasa después de solicitarlo",
+  "howS": "Cuatro pasos. Sin llamadas de ventas, sin demos, sin implantación.",
+  "steps": [
+   {
+    "t": "Haces el pedido",
+    "d": "Alrededor de un minuto. Recibes un número de pedido al instante y puedes consultar su estado cuando quieras."
+   },
+   {
+    "t": "Confirmamos un experto",
+    "d": "Asignamos la persona adecuada al puesto y comprobamos que tiene hueco. Solo entonces te llega el enlace de pago, con su nombre real."
+   },
+   {
+    "t": "Se hace la evaluación",
+    "d": "Tu candidato reserva hora desde un enlace de calendario. Quince minutos de vídeo, en 24 horas. No se graba nada."
+   },
+   {
+    "t": "Recibes el informe",
+    "d": "En 48 horas: valoraciones, evidencias, un veredicto y una nota honesta sobre lo que quince minutos no pueden mostrar."
+   }
+  ],
+  "priceT": "Dos servicios",
+  "priceS": "Pago por candidato. Sin contrato, sin suscripción, sin comisión de colocación.",
+  "plans": [
+   {
+    "id": "screen",
+    "name": "Verified Screen",
+    "price": "199 $",
+    "per": "por candidato · 15 min + informe escrito",
+    "when": "Cuando tienes un candidato y nadie de tu lado puede juzgar su profundidad técnica.",
+    "f": [
+     "Videollamada en vivo de quince minutos con tu candidato",
+     "Agendada en menos de 24 horas tras el pago",
+     "Informe escrito en las 48 horas siguientes a la llamada",
+     "Valoración: profundidad, resolución, comunicación, responsabilidad",
+     "Veredicto explícito: contratar, riesgo o no — con su razonamiento",
+     "Nombre real, foto y LinkedIn del experto antes de la llamada",
+     "Reembolso completo si no logramos agendar a tiempo"
+    ],
+    "cta": "Solicitar evaluación"
+   },
+   {
+    "id": "shadow",
+    "name": "Shadow Session",
+    "price": "299 $",
+    "per": "por entrevista · 60 min + repaso",
+    "when": "Cuando entrevista tu propio equipo y quieres saber si lo hace bien.",
+    "f": [
+     "Nuestro experto entra en tu entrevista como observador silencioso",
+     "Cámara apagada, sin participar — para el candidato no cambia nada",
+     "Quince minutos de repaso con tu equipo justo después",
+     "Informe escrito del candidato con los mismos criterios",
+     "Informe escrito de tu entrevista: qué se pasó por alto",
+     "Funciona con tu Zoom, Meet o Teams"
+    ],
+    "cta": "Reservar sesión"
+   }
+  ],
+  "moreT": "También bajo petición",
+  "more": [
+   {
+    "t": "Deep Dive",
+    "d": "45 minutos más informe escrito. Diseño de sistemas y código para puestos senior y staff."
+   },
+   {
+    "t": "Revisión de prueba técnica",
+    "d": "El candidato ya envió código. Un experto lo lee y escribe qué demuestra. Sin llamada ni agenda."
+   },
+   {
+    "t": "Auditoría de proveedor",
+    "d": "Una agencia te mandó cinco «seniors». Comprobamos quiénes son de verdad, precio por persona."
+   }
+  ],
+  "moreNote": "Escribe a hello@verified.ninja — precio según el caso, normalmente 99–399 $.",
+  "faqT": "Preguntas",
+  "faq": [
+   {
+    "q": "¿Quién evalúa exactamente a mi candidato?",
+    "a": "Uno de los dos expertos nombrados. Ambos trabajan bajo nombre en clave mientras están empleados en otro sitio; tras el pago recibes su nombre real, foto y LinkedIn, antes de agendar la llamada."
+   },
+   {
+    "q": "¿Por qué no usar una herramienta de IA?",
+    "a": "Porque los candidatos también usan IA. Lo automático puntúa la respuesta, no a quien la da. Una conversación en vivo con repreguntas es hoy la única forma fiable de distinguir experiencia vivida de un texto bien escrito."
+   },
+   {
+    "q": "¿Y si contratamos al candidato?",
+    "a": "No cambia nada. Cobramos por evaluación, no por contratación. No somos una agencia de selección y no cobramos comisión."
+   },
+   {
+    "q": "¿Cuándo se cobra?",
+    "a": "No al hacer el pedido. Primero confirmamos que un experto tiene hueco y luego enviamos el enlace de pago. Si no logramos agendar dentro del plazo, no pagas nada."
+   },
+   {
+    "q": "¿Qué pasa con los datos del candidato?",
+    "a": "El CV se usa para la evaluación y se borra si lo pides. El informe llega solo a ti. Las llamadas nunca se graban y no publicamos ni vendemos datos de candidatos."
+   },
+   {
+    "q": "¿Quiénes sois?",
+    "a": "Un equipo pequeño que construye infraestructura de reputación humana verificada. Verified.Ninja es el primer servicio comercial sobre ella; el proyecto de base se llama WorldConstitution."
+   }
+  ],
+  "finalT": "Solicitar una evaluación",
+  "finalS": "Verified Screen 199 $. Shadow Session 299 $. Informe escrito en 48 horas en ambos casos.",
+  "finalCta": "Hacer el pedido",
+  "finalNote": "¿Primero preguntas? Escribe a hello@verified.ninja"
+ },
+ "experts": {
+  "kicker": "Las personas",
+  "title": "Quién hace la evaluación",
+  "lede": "Cada competencia de abajo indica en qué se apoya y si lo hemos comprobado nosotros. Es el mismo estándar que aplicamos a tus candidatos.",
+  "sheetT": "Boletín de competencias",
+  "sheetCols": "Nivel · Base · Estado",
+  "levels": [
+   "Conoce el tema",
+   "Sólido",
+   "Lidera esta área"
+  ],
+  "verified": "Comprobado",
+  "declared": "Declarado",
+  "disclosure": {
+   "a": "Empresa reservada",
+   "b": "Empresa nombrada",
+   "c": "Totalmente abierto"
+  },
+  "sheetNote": "«Declarado» significa que el experto lo afirmó y aún no hemos visto la evidencia. La identidad y el historial laboral se comprueban antes de su primer encargo pagado; hasta entonces cada línea queda marcada así. Preferimos una etiqueta honesta a una marca de verificación que no hemos ganado.",
+  "doesT": "Evalúa",
+  "doesntT": "No hace",
+  "revealT": "Qué recibes tras el pago",
+  "people": [
+   {
+    "code": "KAGE-01",
+    "level": "b",
+    "role": "Ex Bar Raiser de Amazon",
+    "tags": [
+     "Backend",
+     "Sistemas distribuidos",
+     "Diseño de sistemas",
+     "Calibración del listón"
+    ],
+    "rows": [
+     {
+      "a": "Calibración del listón de contratación",
+      "n": 3,
+      "v": false,
+      "s": "Bar Raiser en Amazon — entrevistador con derecho de veto"
+     },
+     {
+      "a": "Entrevistas de backend senior",
+      "n": 3,
+      "v": false,
+      "s": "Dirigió procesos de selección a escala Fortune 500"
+     },
+     {
+      "a": "Sistemas distribuidos",
+      "n": 3,
+      "v": false,
+      "s": "Años de trabajo en producción a gran escala"
+     },
+     {
+      "a": "Revisión de diseño de sistemas",
+      "n": 3,
+      "v": false,
+      "s": "Diseñó la metodología de evaluación que usamos"
+     },
+     {
+      "a": "Profundidad en frontend",
+      "n": 1,
+      "v": false,
+      "s": "Solo experiencia adyacente — esos candidatos van a otro"
+     }
+    ],
+    "does": [
+     "Si la experiencia del CV se vivió de verdad",
+     "Cómo razona cuando la pregunta se sale de lo preparado",
+     "Qué hizo él y qué hizo el equipo a su alrededor",
+     "Si sabe explicar su propio trabajo a quien no estuvo allí"
+    ],
+    "doesnt": [
+     "Encaje cultural, motivación o intención de quedarse",
+     "Programar en vivo o velocidad al teclado",
+     "Buscar, captar o colocar candidatos",
+     "Candidatos que estén en el proceso de su propia empresa"
+    ],
+    "reveal": "Su nombre real, foto y LinkedIn te llegan tras el pago y antes de agendar la llamada. El nombre en clave protege a un experto que hoy está empleado; nunca fue para ocultárselo a ti.",
+    "score": {
+     "years": null,
+     "loops": 4,
+     "scale": 5,
+     "authority": 4,
+     "checked": 1
+    }
+   },
+   {
+    "code": "KAGE-02",
+    "level": "b",
+    "role": "Nube e infraestructura de TI",
+    "tags": [
+     "AWS",
+     "Infraestructura cloud",
+     "Operaciones de TI",
+     "Diagnóstico"
+    ],
+    "rows": [
+     {
+      "a": "AWS y operación cloud",
+      "n": 3,
+      "v": false,
+      "s": "Cinco años en Amazon, en TI y AWS"
+     },
+     {
+      "a": "Diagnóstico de incidentes",
+      "n": 3,
+      "v": false,
+      "s": "Soporte diario de producción, hoy trabaja en TI"
+     },
+     {
+      "a": "Operaciones y soporte de TI",
+      "n": 3,
+      "v": false,
+      "s": "Los mismos cinco años, lado operativo"
+     },
+     {
+      "a": "Infraestructura como código",
+      "n": 2,
+      "v": false,
+      "s": "Usada en producción, no diseñada desde cero"
+     },
+     {
+      "a": "Arquitectura de aplicaciones",
+      "n": 1,
+      "v": false,
+      "s": "No es su área — se deriva a KAGE-01"
+     }
+    ],
+    "does": [
+     "Qué ha operado de verdad un candidato y no solo leído",
+     "Cómo acota un fallo que nunca ha visto",
+     "Qué hace cuando la solución rápida y la segura no coinciden",
+     "Si sabe explicar un incidente a alguien no técnico"
+    ],
+    "doesnt": [
+     "Arquitectura de aplicaciones y diseño de sistemas",
+     "Candidatos de frontend o móvil",
+     "Verificar certificaciones — prueban estudio, no práctica",
+     "Todo lo que quede fuera de infraestructura y operaciones"
+    ],
+    "reveal": "Su nombre real, foto y LinkedIn te llegan tras el pago y antes de agendar la llamada. El nombre en clave protege a un experto que hoy está empleado; nunca fue para ocultárselo a ti.",
+    "score": {
+     "years": 2,
+     "loops": null,
+     "scale": 5,
+     "authority": null,
+     "checked": 1
+    }
+   }
+  ],
+  "ctaT": "Pon a uno de ellos frente a tu candidato",
+  "cta1": "Solicitar una evaluación",
+  "cta2": "Leer un informe de ejemplo",
+  "scaleT": "El estándar Verified",
+  "scaleLede": "Nuestra propia escala de cinco ejes, aplicada igual a cada experto, para que los perfiles se puedan comparar en vez de solo admirar. Los tramos están abajo: comprueba nuestras cuentas.",
+  "scaleNote": "Es nuestro estándar de casa, no uno del sector. Un eje sin respuesta fiable se queda sin puntuar en lugar de adivinarse; por eso algunos totales son sobre 20 y no sobre 25.",
+  "ofLbl": "de",
+  "axesLbl": "ejes",
+  "unknown": "Sin declarar",
+  "axes": [
+   {
+    "k": "years",
+    "n": "Años en la profesión",
+    "b": [
+     "Menos de 3",
+     "3–5",
+     "6–9",
+     "10–14",
+     "15 o más"
+    ]
+   },
+   {
+    "k": "loops",
+    "n": "Entrevistas realizadas",
+    "b": [
+     "Menos de 25",
+     "25–99",
+     "100–299",
+     "300–999",
+     "1000 o más"
+    ]
+   },
+   {
+    "k": "scale",
+    "n": "Mayor organización de ingeniería",
+    "b": [
+     "Menos de 10 ingenieros",
+     "10–100",
+     "100–1000",
+     "1000–10000",
+     "Escala FAANG"
+    ]
+   },
+   {
+    "k": "authority",
+    "n": "Autoridad en la decisión",
+    "b": [
+     "Participó en entrevistas",
+     "Entrevistador habitual",
+     "Entrevistador formado",
+     "Veto sobre contrataciones",
+     "Diseñó el proceso"
+    ]
+   },
+   {
+    "k": "checked",
+    "n": "Qué hemos comprobado",
+    "b": [
+     "Nada aún",
+     "Identidad",
+     "Identidad y empleador",
+     "Además referencias",
+     "Además fuentes públicas"
+    ]
+   }
+  ]
+ },
+ "order": {
+  "h1": "Solicitar una evaluación",
+  "sub": "Alrededor de un minuto. Recibes el número de pedido al instante y el enlace de pago por correo en cuanto confirmemos que un experto tiene hueco.",
+  "pickT": "Qué necesitas",
+  "youT": "Sobre ti",
+  "name": "Tu nombre",
+  "email": "Correo de trabajo",
+  "emailHint": "Ahí llegan el enlace de pago y el informe.",
+  "company": "Empresa",
+  "optional": "opcional",
+  "roleT": "Sobre el puesto",
+  "role": "Puesto que estás cubriendo",
+  "rolePh": "Senior Backend Engineer",
+  "concern": "¿Qué es lo que no tienes claro?",
+  "concernOpt": "opcional, pero hace el informe más preciso",
+  "concernPh": "El CV dice que lideró una migración a Kafka. No sé si la diseñó o solo participó.",
+  "concernHint": "El experto toma la afirmación más grande del CV y aprieta ahí. Decirnos cuál te preocupa dirige los quince minutos al sitio correcto.",
+  "note": "Todavía no necesitamos al candidato. Su CV y su correo los envías tras el pago; hasta entonces no guardamos nada sobre él.",
+  "go": "Hacer el pedido",
+  "going": "Enviando…",
+  "noCharge": "Ahora no se cobra nada. Sin suscripción. Sin comisión si contratas.",
+  "errName": "Añade tu nombre, por favor.",
+  "errEmail": "Esa dirección de correo no parece correcta.",
+  "errRole": "¿Para qué puesto estás contratando?",
+  "errSave": "No pudimos registrar el pedido. Escribe a hello@verified.ninja y lo tomamos a mano.",
+  "errNet": "Problema de red: el pedido no se envió. Escribe a hello@verified.ninja y lo tomamos a mano.",
+  "doneT": "Pedido registrado",
+  "doneS": "Guarda este número: con él consultas tu pedido.",
+  "refLbl": "Tu número de pedido",
+  "next": [
+   "Ahora — comprobamos qué experto encaja con el puesto y confirmamos hueco.",
+   "En unas horas — llega el enlace de pago por correo, con el nombre real del experto.",
+   "Tras el pago — envías el CV y el correo del candidato; él reserva su hora.",
+   "En 24 horas — se hace la llamada. No se graba nada.",
+   "En las 48 horas siguientes — el informe escrito llega a tu bandeja."
+  ],
+  "track": "Consultar este pedido",
+  "seeSample": "Ver un informe de ejemplo"
+ },
+ "status": {
+  "h1": "Estado del pedido",
+  "sub": "Introduce el número de pedido que te dimos. Tiene esta forma: VN-K4M2QX.",
+  "ph": "VN-XXXXXX",
+  "go": "Consultar",
+  "looking": "Buscando…",
+  "errFormat": "Un número de pedido tiene esta forma: VN-K4M2QX.",
+  "errNone": "No hay ningún pedido con ese número. Revisa los caracteres: después de VN- son seis.",
+  "errNet": "No pudimos conectar con el sistema de pedidos. Escribe a hello@verified.ninja y lo miramos a mano.",
+  "cancelled": "Este pedido fue cancelado. Si te sorprende, escribe a hello@verified.ninja.",
+  "placed": "Registrado",
+  "questions": "Preguntas: hello@verified.ninja",
+  "flow": [
+   {
+    "t": "Pedido recibido",
+    "d": "Estamos viendo qué experto encaja con el puesto."
+   },
+   {
+    "t": "Enlace de pago enviado",
+    "d": "Mira tu correo: el nombre real del experto va en el mismo mensaje."
+   },
+   {
+    "t": "Pagado",
+    "d": "Envíanos el CV y el correo del candidato si aún no lo has hecho."
+   },
+   {
+    "t": "Llamada agendada",
+    "d": "El candidato ya ha reservado hora."
+   },
+   {
+    "t": "Llamada hecha",
+    "d": "El experto está escribiendo el informe."
+   },
+   {
+    "t": "Informe enviado",
+    "d": "Está en tu bandeja. Responde ahí con cualquier duda."
+   }
+  ]
+ },
+ "footer": {
+  "note": "Servicio de evaluación independiente. Sin vinculación ni respaldo de Amazon ni de ninguna otra empresa.",
+  "project": "Un proyecto de WorldConstitution"
+ }
+}

@@ -4,516 +4,228 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verified.Ninja — technical screening by senior engineers</title>
-<meta name="description" content="A senior engineer with FAANG-scale hiring experience runs a 15-minute live call with your candidate and sends a written assessment within 48 hours. $199 per candidate.">
+<meta name="description" content="A senior engineer with FAANG-scale hiring experience runs a 15-minute live screen on your candidate and writes up what they found. $199 per candidate.">
 <meta property="og:title" content="Verified.Ninja — technical screening by senior engineers">
 <meta property="og:description" content="A 15-minute live technical screen run by a senior engineer. $199 per candidate, written assessment in 48 hours.">
+<link rel="stylesheet" href="app.css">
 <style>
-  :root{
-    --bg:#0F1115; --bg2:#151922; --card:#181D28; --line:#242B3A;
-    --text:#E8ECF4; --muted:#8B94A8; --accent:#00E5CC; --accent-dim:#00b8a4;
-    --warn:#FFB020;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-       background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
-  a{color:var(--accent);text-decoration:none}
-
-  nav{position:sticky;top:0;z-index:50;background:rgba(15,17,21,.85);backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--line)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;
-     max-width:960px;margin:0 auto;padding:14px 24px}
-  .logo{font-weight:800;font-size:17px;color:var(--text);letter-spacing:-.01em}
-  .logo b{color:var(--accent)}
-  .nav-links{display:flex;align-items:center;gap:22px}
-  .nav-links a{color:var(--muted);font-size:14.5px;font-weight:500}
-  .nav-links a:hover{color:var(--text)}
-  @media(max-width:640px){.nav-links a:not(.btn){display:none}}
-
-  .btn{display:inline-block;background:var(--accent);color:#04120F;font-weight:700;font-size:15px;
-       padding:12px 24px;border-radius:10px;border:none;cursor:pointer;transition:transform .1s,background .15s;
-       font-family:inherit}
-  .btn:hover{background:var(--accent-dim)}
-  .btn:active{transform:scale(.98)}
-  .btn.sm{padding:9px 18px;font-size:14px}
-  .btn.lg{padding:17px 38px;font-size:17px;border-radius:12px}
-  .btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
-  .btn.ghost:hover{background:rgba(0,229,204,.08)}
-
-  header{padding:96px 0 72px;text-align:center}
-  h1{font-size:clamp(38px,6.5vw,64px);font-weight:800;line-height:1.05;letter-spacing:-.02em}
-  h1 .hl{color:var(--accent)}
-  .sub{margin:24px auto 0;max-width:620px;font-size:clamp(17px,2.4vw,20px);color:var(--muted)}
-  .hero-cta{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  header.hero{padding:100px 0 84px;text-align:center}
+  header.hero .lede{margin:22px auto 0}
+  .hero-btns{display:flex;gap:12px;justify-content:center;margin-top:34px;flex-wrap:wrap}
   .hero-meta{margin-top:26px;font-size:14px;color:var(--muted)}
-  .hero-meta b{color:var(--text)}
 
-  section{padding:72px 0;border-top:1px solid var(--line)}
-  h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
-  .sec-sub{color:var(--muted);font-size:16.5px;margin-bottom:38px;max-width:600px}
+  /* кто проверяет */
+  .who-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+  @media(max-width:680px){.who-cards{grid-template-columns:1fr}}
+  .pc{display:flex;gap:16px;align-items:flex-start;transition:border-color .15s}
+  .pc:hover{border-color:var(--line)}
+  .pc .av{width:52px;height:52px;border-radius:15px;flex-shrink:0;background:var(--bg-soft);
+    border:1px solid var(--line-soft);display:flex;align-items:center;justify-content:center;font-size:23px}
+  .pc .bd{min-width:0}
+  .pc .cd{display:block;font-size:19px;font-weight:600;letter-spacing:-.015em}
+  .pc .rl{display:block;font-size:14px;color:var(--muted);margin-top:1px}
+  .pc .sc{display:flex;align-items:baseline;gap:7px;margin-top:12px}
+  .pc .sc .v{font-size:23px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .pc .sc .l{font-size:12.5px;color:var(--muted)}
+  .who-link{margin-top:22px}
 
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px}
-  .step .n{width:38px;height:38px;border-radius:10px;background:rgba(0,229,204,.12);color:var(--accent);
-     font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:15px}
-  .step h3{font-size:17px;font-weight:700;margin-bottom:8px}
-  .step p{font-size:14.5px;color:var(--muted)}
+  /* шаги */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;
+    background:var(--line-soft);border:1px solid var(--line-soft);border-radius:18px;overflow:hidden}
+  .st{background:var(--card);padding:26px 22px}
+  .st .n{width:27px;height:27px;border-radius:50%;background:var(--ink);color:var(--bg);
+    font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-bottom:15px}
+  .st b{display:block;font-size:16px;font-weight:600;margin-bottom:6px}
+  .st span{font-size:14.5px;color:var(--muted)}
 
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  @media(max-width:720px){.cols{grid-template-columns:1fr}}
-  .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
-  .box h3{font-size:16px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-  .box ul{list-style:none}
-  .box li{font-size:14.5px;color:var(--muted);padding:7px 0 7px 24px;position:relative}
-  .box li::before{position:absolute;left:0;font-weight:800}
-  .box.bad li::before{content:"✕";color:#FF6B6B}
-  .box.good li::before{content:"✓";color:var(--accent)}
+  /* цены */
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:720px){.plans{grid-template-columns:1fr}}
+  .plan{background:var(--card);border:1px solid var(--line-soft);border-radius:20px;padding:30px 26px;
+    display:flex;flex-direction:column}
+  .plan.lead{border-color:var(--ink)}
+  .plan .pn{font-size:19px;font-weight:600;letter-spacing:-.015em}
+  .plan .pp{font-size:44px;font-weight:600;letter-spacing:-.035em;line-height:1.05;margin-top:12px}
+  .plan .pu{font-size:14px;color:var(--muted);margin-top:5px}
+  .plan .pw{font-size:14.5px;color:var(--ink-2);margin-top:18px;padding-top:16px;border-top:1px solid var(--line-soft)}
+  .plan ul{list-style:none;margin-top:16px;flex:1}
+  .plan li{font-size:14.5px;color:var(--muted);padding:7px 0 7px 22px;position:relative;line-height:1.45}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--ink);font-weight:600}
+  .plan .btn{margin-top:22px}
 
-  .experts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-  .expert{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;
-     display:flex;gap:20px;align-items:flex-start}
-  .expert .av{width:60px;height:60px;border-radius:14px;background:linear-gradient(135deg,#1d2735,#0f1620);
-     border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;
-     font-size:22px;flex-shrink:0}
-  .expert .info{flex:1;min-width:0}
-  .expert .code{font-size:19px;font-weight:800;letter-spacing:.02em;margin-bottom:3px}
-  .expert .role{color:var(--accent);font-size:13.5px;font-weight:600;margin-bottom:10px}
-  .expert .bio{font-size:14.5px;color:var(--muted);margin-bottom:12px}
-  .expert .tags{display:flex;gap:7px;flex-wrap:wrap}
-  .tag{font-size:11.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);
-     border-radius:99px;padding:3px 10px}
-  .note{margin-top:20px;font-size:13.5px;color:var(--muted);border-inline-start:3px solid var(--warn);
-     padding-inline-start:14px}
-  .reveal{background:rgba(0,229,204,.06);border:1px solid rgba(0,229,204,.25);border-radius:14px;
-     padding:18px 20px;margin-top:18px;font-size:14.5px}
-  .reveal b{color:var(--accent)}
+  .more{margin-top:34px}
+  .more-t{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:14px}
+  .more-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+  .mi{background:var(--bg-soft);border-radius:14px;padding:19px}
+  .mi b{display:block;font-size:15.5px;font-weight:600;margin-bottom:5px}
+  .mi span{font-size:14px;color:var(--muted)}
+  .more-n{font-size:13.5px;color:var(--muted);margin-top:14px}
 
-  .price{background:var(--card);border:1.5px solid var(--accent);border-radius:20px;padding:40px 36px;
-     max-width:520px;margin:0 auto;text-align:center}
-  .price .amt{font-size:56px;font-weight:800;letter-spacing:-.02em;line-height:1}
-  .price .per{color:var(--muted);font-size:15px;margin-top:6px}
-  .price ul{list-style:none;text-align:start;margin:28px 0}
-  .price li{font-size:15px;padding:9px 0 9px 26px;position:relative;color:var(--muted)}
-  .price li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
-  [dir="rtl"] .price li::before{left:auto;right:0}
-  .price li b{color:var(--text)}
-  .price .not{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);text-align:start}
-  .price .not li::before{content:"—";color:var(--muted)}
-  .price .not-t{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);
-     font-weight:700;margin-bottom:6px}
+  /* вопросы */
+  details{border-bottom:1px solid var(--line-soft)}
+  details:first-of-type{border-top:1px solid var(--line-soft)}
+  summary{cursor:pointer;list-style:none;padding:20px 0;font-size:17px;font-weight:500;
+    display:flex;justify-content:space-between;gap:20px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--muted);font-size:22px;font-weight:300;flex-shrink:0}
+  details[open] summary::after{content:"–"}
+  details .a{padding:0 0 22px;font-size:15.5px;color:var(--muted);max-width:44em}
 
-  .more{max-width:760px;margin:46px auto 0}
-  .more-t{text-align:center;font-size:13px;text-transform:uppercase;letter-spacing:.1em;
-     color:var(--muted);font-weight:700;margin-bottom:18px}
-  .more-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-  .more-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
-  .more-item h4{font-size:15.5px;font-weight:700;margin-bottom:6px}
-  .more-item .dur{font-size:12.5px;color:var(--accent);font-weight:600;margin-bottom:8px}
-  .more-item p{font-size:14px;color:var(--muted)}
-  .more-note{text-align:center;font-size:14px;color:var(--muted);margin-top:20px}
-
-  /* планы услуг */
-  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;align-items:start}
-  .plan{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px 28px}
-  .plan.lead{border:1.5px solid var(--accent)}
-  .plan .pname{font-size:18px;font-weight:800}
-  .plan .amt{font-size:46px;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-top:12px}
-  .plan .per{color:var(--muted);font-size:14.5px;margin-top:4px}
-  .plan .who{font-size:14px;color:var(--muted);margin-top:16px;border-top:1px solid var(--line);padding-top:16px}
-  .plan .who b{color:var(--text)}
-  .plan ul{list-style:none;margin-top:16px}
-  .plan li{font-size:14.5px;padding:8px 0 8px 26px;position:relative;color:var(--muted)}
-  .plan li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
-  [dir="rtl"] .plan li::before{left:auto;right:0}
-  .plan li b{color:var(--text)}
-  .plan .btn{width:100%;text-align:center;margin-top:22px}
-  .detail{display:block;width:100%;margin-top:12px;background:none;border:none;color:var(--accent);
-     font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;padding:6px}
-  .detail:hover{color:var(--accent-dim)}
-  .disclaimer{text-align:center;font-size:12.5px;color:var(--muted);margin-top:22px}
-
-  /* карточка эксперта открывается */
-  .expert{cursor:pointer;transition:border-color .15s}
-  .expert:hover{border-color:var(--accent)}
-  .expert .open-h{font-size:13px;color:var(--accent);font-weight:600;margin-top:12px}
-
-  /* окно с подробностями */
-  .modal{position:fixed;inset:0;background:rgba(6,8,12,.75);backdrop-filter:blur(4px);z-index:100;
-     display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto}
-  .modal.open{display:flex}
-  .sheet{background:var(--bg2);border:1px solid var(--line);border-radius:20px;max-width:660px;width:100%;
-     padding:34px 32px;position:relative}
-  @media(max-width:600px){.sheet{padding:28px 22px}}
-  .sheet .x{position:absolute;top:14px;inset-inline-end:16px;background:none;border:none;color:var(--muted);
-     font-size:28px;line-height:1;cursor:pointer;font-family:inherit}
-  .sheet .x:hover{color:var(--text)}
-  .sheet h3{font-size:clamp(21px,3.4vw,27px);font-weight:800;letter-spacing:-.01em;padding-inline-end:34px}
-  .sheet .lede{color:var(--accent);font-size:14px;font-weight:600;margin-top:5px}
-  .sheet .blk{margin-top:26px}
-  .sheet .blk h4{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
-     font-weight:800;margin-bottom:10px}
-  .sheet .blk p{font-size:15px;color:var(--muted)}
-  .sheet .blk ul{list-style:none}
-  .sheet .blk li{font-size:14.5px;color:var(--muted);padding:6px 0 6px 22px;position:relative}
-  .sheet .blk li::before{content:"—";position:absolute;left:0;color:var(--accent)}
-  [dir="rtl"] .sheet .blk li::before{left:auto;right:0}
-  .sheet .blk li b{color:var(--text)}
-  .sheet .foot{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);display:flex;gap:12px;flex-wrap:wrap}
-
-  .faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
-  .faq summary{padding:18px 22px;font-weight:600;font-size:16px;cursor:pointer;list-style:none;
-     display:flex;justify-content:space-between;gap:16px;align-items:center}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";color:var(--accent);font-size:22px;font-weight:400;flex-shrink:0}
-  .faq details[open] summary::after{content:"−"}
-  .faq .a{padding:0 22px 20px;font-size:15px;color:var(--muted)}
-
-  .final{text-align:center;padding:88px 0}
-  .final h2{margin-bottom:18px}
-  .final p{color:var(--muted);font-size:17px;margin-bottom:32px}
-
-  footer{border-top:1px solid var(--line);padding:38px 0;text-align:center;font-size:14px;color:var(--muted)}
-  footer .wc{margin-top:10px;font-size:13px}
+  .final{text-align:center;padding:92px 0}
+  .final .lede{margin:16px auto 0}
+  .final .btn{margin-top:30px}
+  .final .nt{margin-top:18px;font-size:13.5px;color:var(--muted)}
+  .disc{font-size:12.5px;color:var(--muted);text-align:center;max-width:44em;margin:26px auto 0}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-in">
-    <div class="logo">Verified<b>.Ninja</b></div>
+    <a class="brand" href="index.html">Verified<b>.Ninja</b></a>
     <div class="nav-links">
-      <a href="#expert">Expert</a>
-      <a href="#how">How it works</a>
-      <a href="#pricing">Pricing</a>
-      <a href="report.html">Sample report</a>
-      <a class="btn sm" href="#order">Order a screen</a>
+      <a href="expert.html" class="hide-sm" id="n-exp"></a>
+      <a href="report.html" class="hide-sm" id="n-rep"></a>
+      <a href="#pricing" class="hide-sm" id="n-pri"></a>
+      <select class="lang" id="lang" aria-label="Language"></select>
+      <a class="btn sm" href="order.html" id="n-ord"></a>
     </div>
   </div>
 </nav>
 
-<header class="wrap">
-  <h1>Technical screening<br>by <span class="hl">senior engineers</span></h1>
-  <p class="sub">You send a candidate. A senior engineer with FAANG-scale hiring experience runs a 15-minute live call and sends you a written assessment within 48 hours — or sits in on the interview your team is already running.</p>
-  <div class="hero-cta">
-    <a class="btn lg" href="#order">Order a screen — $199</a>
-    <a class="btn lg ghost" href="#how">See how it works</a>
+<header class="hero wrap">
+  <h1 id="h1"></h1>
+  <p class="lede" id="sub"></p>
+  <div class="hero-btns">
+    <a class="btn" href="order.html" id="cta1"></a>
+    <a class="btn ghost" href="report.html" id="cta2"></a>
   </div>
-  <p class="hero-meta"><b>$199 per candidate</b>, or <b>$299</b> if you want our expert sitting in on your own interview. No subscription, no contract.</p>
+  <p class="hero-meta" id="meta"></p>
 </header>
 
-<section id="expert" class="wrap">
-  <h2>Who does the screening</h2>
-  <p class="sec-sub">Real senior engineers and CTOs from FAANG-scale companies. Most are still employed, so they work under a codename until you pay — then you get their full identity before the call.</p>
-
-  <!-- Только подтверждённые люди. Каждый эксперт сам выбирает уровень раскрытия:
-       A — без компании ("Senior engineer, FAANG-scale backend")
-       B — компания без имени ("Former Amazon Bar Raiser")
-       C — полностью открыт (имя, фото, LinkedIn сразу)
-       Новую карточку добавлять только после письменного согласия человека. -->
-  <div class="experts">
-
-    <div class="expert" data-info="kage-01" tabindex="0" role="button">
-      <div class="av">🥷</div>
-      <div class="info">
-        <div class="code">KAGE-01</div>
-        <div class="role">Former Amazon Bar Raiser</div>
-        <p class="bio">One of the trained interviewers Amazon gives veto power over hires. Ran senior engineering loops at Fortune-500 scale and designed the screening methodology used here.</p>
-        <div class="tags">
-          <span class="tag">Backend</span><span class="tag">Distributed systems</span><span class="tag">System design</span><span class="tag">Hiring bar calibration</span>
-        </div>
-        <div class="open-h">Full profile and how they assess →</div>
-      </div>
-    </div>
-
-    <div class="expert" data-info="kage-02" tabindex="0" role="button">
-      <div class="av">🥷</div>
-      <div class="info">
-        <div class="code">KAGE-02</div>
-        <div class="role">Cloud &amp; IT infrastructure</div>
-        <p class="bio">Five years at Amazon in IT and AWS, currently working in IT. Screens candidates for cloud, infrastructure and IT operations roles — how they run and troubleshoot real systems, not whiteboard puzzles.</p>
-        <div class="tags">
-          <span class="tag">AWS</span><span class="tag">Cloud infrastructure</span><span class="tag">IT operations</span><span class="tag">Troubleshooting</span>
-        </div>
-        <div class="open-h">Full profile and how they assess →</div>
-      </div>
-    </div>
-
+<section class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow" id="who-k"></div>
+    <h2 id="who-t"></h2>
+    <p id="who-s"></p>
   </div>
-
-  <div class="reveal">
-    <b>What you get after payment:</b> the expert's real name, photo and LinkedIn — before the call is scheduled, so you know exactly who is assessing your candidate. Codenames exist to protect people who are currently employed, not to hide who they are from you.
-  </div>
-
-  <p class="note">Every screen is run by one of the named people above — not routed to an anonymous marketplace. Capacity is a few screens per week per expert. We add an expert only after verifying their background ourselves, and only with their written consent to the exact wording on this page.</p>
-</section>
-
-<section id="how" class="wrap">
-  <h2>What happens after you pay</h2>
-  <p class="sec-sub">Three steps, from payment to report. No sales calls, no demos, no onboarding.</p>
-  <div class="steps">
-    <div class="step">
-      <div class="n">1</div>
-      <h3>Send the candidate</h3>
-      <p>Pay, then share the candidate's CV and email. Takes two minutes.</p>
-    </div>
-    <div class="step">
-      <div class="n">2</div>
-      <h3>A senior engineer screens them</h3>
-      <p>A 15-minute live video call: real technical depth, not a quiz. Scheduled within 24 hours.</p>
-    </div>
-    <div class="step">
-      <div class="n">3</div>
-      <h3>You get a verdict</h3>
-      <p>A structured report in 48 hours: technical depth, communication, red flags, and a clear hire / no-hire call. <a href="report.html">See a real one →</a></p>
-    </div>
-  </div>
+  <div class="who-cards" id="who-cards"></div>
+  <p class="who-link"><a class="link" href="expert.html" id="who-cta"></a></p>
 </section>
 
 <section class="wrap">
-  <h2>Compared to automated screening</h2>
-  <p class="sec-sub">AI screening tools grade keywords, and candidates now use AI to produce those keywords.</p>
-  <div class="cols">
-    <div class="box bad">
-      <h3>Automated screening</h3>
-      <ul>
-        <li>Scores keywords, not thinking</li>
-        <li>Candidates pass it with AI assistance</li>
-        <li>Cannot tell a ghostwritten CV from real experience</li>
-        <li>No one is accountable for the verdict</li>
-      </ul>
-    </div>
-    <div class="box good">
-      <h3>Verified.Ninja</h3>
-      <ul>
-        <li>A senior engineer probes actual depth</li>
-        <li>Follow-up questions expose borrowed answers</li>
-        <li>Identity and experience checked on a live call</li>
-        <li>A named expert stands behind the report</li>
-      </ul>
-    </div>
+  <div class="sec-head">
+    <h2 id="how-t"></h2>
+    <p id="how-s"></p>
   </div>
+  <div class="steps" id="steps"></div>
 </section>
 
-
-<section id="pricing" class="wrap">
-  <h2 style="text-align:center">Two services</h2>
-  <p class="sec-sub" style="margin-inline:auto;text-align:center">Pay per candidate. No contract, no subscription, no placement fee if you hire.</p>
-
-  <div class="plans">
-
-    <div class="plan lead">
-      <div class="pname">Verified Screen</div>
-      <div class="amt">$199</div>
-      <div class="per">per candidate · 15 min + written assessment</div>
-      <div class="who"><b>Use it when</b> you have a candidate and no one on your side who can judge their technical depth.</div>
-      <ul>
-        <li><b>15-minute live video call</b> with your candidate, run by our expert</li>
-        <li>Scheduled <b>within 24 hours</b> of payment</li>
-        <li>Probing follow-up questions — depth, not a quiz</li>
-        <li><b>Written assessment within 48 hours</b> of the call</li>
-        <li>Ratings: technical depth, problem solving, communication, ownership</li>
-        <li>Explicit verdict: <b>hire / risk / no</b>, with the reasoning</li>
-        <li>Expert's <b>real name, photo and LinkedIn</b> before the call</li>
-        <li>Full <b>refund</b> if we can't schedule in the window</li>
-      </ul>
-      <a class="btn lg" href="order.html">Order a screen</a>
-      <button class="detail" data-info="screen">What the call and the report look like →</button>
-    </div>
-
-    <div class="plan">
-      <div class="pname">Shadow Session</div>
-      <div class="amt">$299</div>
-      <div class="per">per interview · 60 min + debrief</div>
-      <div class="who"><b>Use it when</b> your own team interviews, and you want to know whether they are interviewing well.</div>
-      <ul>
-        <li>Our expert <b>joins your own interview</b> as a silent observer</li>
-        <li>Camera off, no participation — the candidate's experience is unchanged</li>
-        <li><b>15-minute debrief</b> with your team right after</li>
-        <li>Written assessment of <b>the candidate</b> — same criteria as the screen</li>
-        <li>Written assessment of <b>your interview process</b>: what you missed and what to ask next time</li>
-        <li>Works with your existing Zoom, Meet or Teams call</li>
-        <li>Expert's <b>real name, photo and LinkedIn</b> before the session</li>
-      </ul>
-      <a class="btn lg ghost" href="order.html">Book a session</a>
-      <button class="detail" data-info="shadow">How a shadow session runs →</button>
-    </div>
-
+<section class="wrap" id="pricing">
+  <div class="sec-head">
+    <h2 id="price-t"></h2>
+    <p id="price-s"></p>
   </div>
-
+  <div class="plans" id="plans"></div>
   <div class="more">
-    <div class="more-t">Also available on request</div>
-    <div class="more-grid">
-      <div class="more-item">
-        <h4>Deep Dive</h4>
-        <div class="dur">45 min + written assessment</div>
-        <p>System design and code-level assessment for senior and staff roles, where 15 minutes isn't enough.</p>
-      </div>
-      <div class="more-item">
-        <h4>Reference Check</h4>
-        <div class="dur">2 calls + report</div>
-        <p>Structured conversations with former colleagues — what the CV doesn't say.</p>
-      </div>
-    </div>
-    <p class="more-note">Email <a href="mailto:hello@verified.ninja">hello@verified.ninja</a> — priced per case, usually $249–399.</p>
+    <div class="more-t" id="more-t"></div>
+    <div class="more-g" id="more-g"></div>
+    <p class="more-n" id="more-n"></p>
   </div>
-
-  <p class="disclaimer">"Bar Raiser" is a role at Amazon, mentioned here only to describe an expert's own background. Verified.Ninja is an independent service, not affiliated with or endorsed by Amazon or any other company.</p>
+  <p class="disc" id="disc"></p>
 </section>
 
-<section class="wrap faq">
-  <h2>Questions</h2>
-
-  <details>
-    <summary>Who exactly screens my candidate?</summary>
-    <div class="a">A senior engineer from a FAANG-scale company, working under a codename — see the profile above for their exact background. Codenames protect experts who are currently employed elsewhere. After you pay, you receive their real name, photo and LinkedIn before the call is scheduled.</div>
-  </details>
-  <details>
-    <summary>What is a Bar Raiser?</summary>
-    <div class="a">At Amazon, a Bar Raiser is a specially trained interviewer attached to hiring loops outside their own team, with the authority to veto a hire that would lower the company's standard. It is the role built specifically to stop teams from hiring "good enough" under deadline pressure. That's the standard your candidate is measured against.</div>
-  </details>
-  <details>
-    <summary>What is a Shadow Session?</summary>
-    <div class="a">Your team runs its own interview as usual and our expert joins the same call as a silent observer — camera off, no participation. Afterwards you get a 15-minute debrief plus two written assessments: one on the candidate, one on how your team interviewed. $299. We ask you to tell the candidate an observer will be present.</div>
-  </details>
-  <details>
-    <summary>Why not just use an AI screening tool?</summary>
-    <div class="a">Because candidates use AI too. Automated tools grade the answer, not the person giving it. A live conversation with follow-up questions is currently the only reliable way to tell real experience from a well-written script.</div>
-  </details>
-  <details>
-    <summary>What if the candidate is great and we hire them?</summary>
-    <div class="a">Nothing changes — we charge per screen, not per hire. We are not a recruiting agency and take no placement fee.</div>
-  </details>
-  <details>
-    <summary>How fast is it really?</summary>
-    <div class="a">The call is scheduled within 24 hours of payment; the report arrives within 48 hours of the call. If we cannot schedule within that window, you get a full refund.</div>
-  </details>
-  <details>
-    <summary>What do you do with the candidate's data?</summary>
-    <div class="a">The CV is used only for the screen and is deleted on request. The report goes to you alone. We never publish candidate profiles or sell data.</div>
-  </details>
-  <details>
-    <summary>Who are you?</summary>
-    <div class="a">A small team building infrastructure for verified human reputation. Verified.Ninja is the first commercial service built on it — the underlying project is <a href="https://theworldconstitution.org" target="_blank" rel="noopener">WorldConstitution</a>.</div>
-  </details>
+<section class="wrap mid">
+  <div class="sec-head"><h2 id="faq-t"></h2></div>
+  <div id="faq"></div>
 </section>
 
-<section id="order" class="final wrap">
-  <h2>Order a screen</h2>
-  <p>Verified Screen — $199 per candidate. Shadow Session — $299 per interview. Written assessment within 48 hours either way.</p>
-  <!-- TODO: replace href with your Stripe Payment Link -->
-  <a class="btn lg" href="order.html">Order a screen — $199</a>
-  <p class="hero-meta" style="margin-top:14px"><a href="report.html">Read a sample assessment</a> before you decide.</p>
-  <p class="hero-meta" style="margin-top:10px">Questions first? Email <a href="mailto:hello@verified.ninja">hello@verified.ninja</a></p>
+<section class="final wrap mid">
+  <h2 id="final-t"></h2>
+  <p class="lede" id="final-s"></p>
+  <a class="btn" href="order.html" id="final-cta"></a>
+  <p class="nt" id="final-n"></p>
 </section>
 
-<footer>
-  <div class="wrap">
-    © Verified.Ninja
-    <div class="wc">A project by <a href="https://theworldconstitution.org" target="_blank" rel="noopener">WorldConstitution</a> — infrastructure of trust</div>
+<footer class="wrap">
+  <div class="row">
+    <span id="f-note"></span>
+    <span><a href="https://theworldconstitution.org" target="_blank" rel="noopener" id="f-proj"></a></span>
   </div>
 </footer>
 
-
-<!-- окно подробностей: эксперты и услуги -->
-<div class="modal" id="modal">
-  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
-    <button class="x" id="modal-x" aria-label="Close">&times;</button>
-    <h3 id="sheet-title"></h3>
-    <div class="lede" id="sheet-lede"></div>
-    <div id="sheet-body"></div>
-    <div class="foot"><a class="btn" href="#order" id="sheet-cta">Order a screen — $199</a></div>
-  </div>
-</div>
-
+<script src="i18n.js"></script>
 <script>
-/* Данные карточек. Текст об эксперте публикуется только после его письменного согласия
-   на точную формулировку — см. EXPERT_ONBOARDING.md, раздел 5. */
-const INFO = {
-  'kage-01': {
-    t: 'KAGE-01',
-    l: 'Former Amazon Bar Raiser · identity revealed after payment',
-    cta: 'Order a screen — $199',
-    b: [
-      ['Background', '<p>Former Amazon Bar Raiser — one of the trained interviewers Amazon attaches to hiring loops outside their own team, with authority to veto a hire that would lower the company\'s standard. Ran senior engineering loops at Fortune-500 scale and designed the screening methodology used on this site.</p>'],
-      ['What they assess', '<ul><li><b>Technical depth</b> — whether the experience on the CV was actually lived</li><li><b>Problem solving</b> — how they reason when the question moves past what they prepared</li><li><b>Communication</b> — can they explain their own work to someone who wasn\'t there</li><li><b>Ownership</b> — what they did themselves versus what their team did around them</li></ul>'],
-      ['How they run the call', '<p>No puzzles and no take-home. They pick one real thing from the candidate\'s own experience and go deeper into it until the answers either hold up or stop holding up. Borrowed and AI-assisted answers break down under follow-up questions, which is the entire point of using a live conversation.</p>'],
-      ['Disclosure', '<p>Works under a codename while employed elsewhere. You receive their real name, photo and LinkedIn after payment and before the call is scheduled.</p>'],
-      ['Services they run', '<ul><li>Verified Screen</li><li>Shadow Session</li><li>Deep Dive, on request</li></ul>']
-    ]
-  },
-  'kage-02': {
-    t: 'KAGE-02',
-    l: 'Cloud & IT infrastructure · identity revealed after payment',
-    cta: 'Order a screen — $199',
-    b: [
-      ['Background', '<p>Five years at Amazon in IT and AWS, currently working in IT. Day-to-day experience running, supporting and troubleshooting cloud infrastructure in production — which is what most infrastructure hiring is actually about.</p>'],
-      ['What they assess', '<ul><li><b>Hands-on cloud experience</b> — what they have actually operated, not what they have read about</li><li><b>Troubleshooting</b> — how they narrow down a failure they have never seen before</li><li><b>Operational judgement</b> — what they do when the fix and the safe fix are different</li><li><b>Communication</b> — can they explain an incident to someone non-technical</li></ul>'],
-      ['How they run the call', '<p>Questions come from real situations: something is broken, here is what you can see, what do you check first. Certificates prove study; this proves practice.</p>'],
-      ['Best fit for', '<ul><li>Cloud and AWS engineers</li><li>Infrastructure, DevOps and SRE roles</li><li>IT operations and support engineering</li></ul>'],
-      ['Disclosure', '<p>Works under a codename while employed elsewhere. You receive their real name, photo and LinkedIn after payment and before the call is scheduled.</p>']
-    ]
-  },
-  'screen': {
-    t: 'Verified Screen',
-    l: '$199 per candidate · 15 minutes + written assessment',
-    cta: 'Order a screen — $199',
-    b: [
-      ['Before the call', '<ul><li>You pay and send the candidate\'s CV and email — about two minutes of your time</li><li>We match the candidate to the expert whose field fits the role</li><li>You receive that expert\'s real name, photo and LinkedIn</li><li>The candidate books a slot from a calendar link; the call is scheduled within 24 hours</li></ul>'],
-      ['During the call', '<p>Fifteen minutes of live video. The expert takes one area the candidate claims as their own and goes deeper into it with follow-up questions. There is no test, no puzzle and no take-home task. Nothing is recorded — the expert takes notes.</p>'],
-      ['The assessment you get', '<ul><li>Ratings on technical depth, problem solving, communication and ownership</li><li>An explicit verdict: <b>hire</b>, <b>risk</b> or <b>no</b> — with the reasoning behind it</li><li>Red flags, and what to probe further if you decide to proceed</li><li>Delivered within 48 hours of the call — <a href=\'report.html\'>see a sample</a></li></ul>'],
-      ['What it is not', '<ul><li>Not recruiting or sourcing — we never bring you candidates</li><li>No placement fee if you hire; we charge per screen only</li><li>No automated or AI scoring at any point</li></ul>'],
-      ['Candidate data', '<p>The CV is used only for the screen and is deleted on request. The assessment goes to you alone. Calls are not recorded and candidate profiles are never published or sold.</p>']
-    ]
-  },
-  'shadow': {
-    t: 'Shadow Session',
-    l: '$299 per interview · 60 minutes + debrief',
-    cta: 'Book a session — $299',
-    b: [
-      ['What it is', '<p>Your team runs its own interview exactly as it normally would. Our expert joins the same call as a silent observer — camera off, no questions, no participation. The candidate\'s experience is unchanged.</p>'],
-      ['How it runs', '<ul><li>You send the link to your own Zoom, Meet or Teams call</li><li>The expert joins as a guest and observes</li><li>Straight after the interview: a 15-minute debrief with your team</li><li>Written assessment within 48 hours</li></ul>'],
-      ['You get two assessments', '<ul><li><b>The candidate</b> — same criteria as the Verified Screen: depth, problem solving, communication, ownership, with a verdict</li><li><b>Your interview</b> — what your team missed, which answers should have been pushed on, and what to ask next time</li></ul>'],
-      ['Use it when', '<ul><li>You interview candidates yourself and suspect you are letting people through</li><li>You are training someone on your team to interview</li><li>You want a second opinion without adding a stage to your process</li></ul>'],
-      ['Consent', '<p>Tell the candidate an additional observer will be present — we ask you to. Nothing is recorded.</p>']
-    ]
-  }
+const $ = id => document.getElementById(id);
+const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+
+window.render = function(T){
+  const h = T.home, e = T.experts;
+  $('n-exp').textContent = T.nav.experts;
+  $('n-rep').textContent = T.nav.sample;
+  $('n-pri').textContent = T.nav.pricing;
+  $('n-ord').textContent = T.nav.order;
+
+  $('h1').textContent  = h.h1;
+  $('sub').textContent = h.sub;
+  $('cta1').textContent = h.cta1;
+  $('cta2').textContent = h.cta2;
+  $('meta').textContent = h.meta;
+
+  $('who-k').textContent = h.whoK;
+  $('who-t').textContent = h.whoT;
+  $('who-s').textContent = h.whoS;
+  $('who-cta').textContent = h.whoCta;
+
+  /* Балл берём из того же словаря, что и полный профиль,
+     чтобы карточка на главной не могла разойтись с ним. */
+  $('who-cards').innerHTML = e.people.map(p => {
+    const scored = e.axes.filter(a => p.score[a.k] != null);
+    const sum = scored.reduce((t,a) => t + p.score[a.k], 0);
+    return `<a class="card pc" href="expert.html">
+      <span class="av">🥷</span>
+      <span class="bd">
+        <span class="cd">${esc(p.code)}</span>
+        <span class="rl">${esc(p.role)}</span>
+        <span class="sc"><span class="v">${sum}</span><span class="l">${esc(e.ofLbl)} ${scored.length*5} · ${esc(e.scaleT)}</span></span>
+      </span>
+    </a>`;
+  }).join('');
+
+  $('how-t').textContent = h.howT;
+  $('how-s').textContent = h.howS;
+  $('steps').innerHTML = h.steps.map((s,i)=>`
+    <div class="st"><div class="n">${i+1}</div><b>${esc(s.t)}</b><span>${esc(s.d)}</span></div>`).join('');
+
+  $('price-t').textContent = h.priceT;
+  $('price-s').textContent = h.priceS;
+  $('plans').innerHTML = h.plans.map((p,i)=>`
+    <div class="plan${i===0?' lead':''}">
+      <div class="pn">${esc(p.name)}</div>
+      <div class="pp">${esc(p.price)}</div>
+      <div class="pu">${esc(p.per)}</div>
+      <div class="pw">${esc(p.when)}</div>
+      <ul>${p.f.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+      <a class="btn${i===0?'':' ghost'}" href="order.html?s=${encodeURIComponent(p.id)}">${esc(p.cta)}</a>
+    </div>`).join('');
+
+  $('more-t').textContent = h.moreT;
+  $('more-g').innerHTML = h.more.map(m=>`<div class="mi"><b>${esc(m.t)}</b><span>${esc(m.d)}</span></div>`).join('');
+  $('more-n').textContent = h.moreNote;
+  $('disc').textContent = T.footer.note;
+
+  $('faq-t').textContent = h.faqT;
+  $('faq').innerHTML = h.faq.map(f=>`
+    <details><summary>${esc(f.q)}</summary><div class="a">${esc(f.a)}</div></details>`).join('');
+
+  $('final-t').textContent = h.finalT;
+  $('final-s').textContent = h.finalS;
+  $('final-cta').textContent = h.finalCta;
+  $('final-n').textContent = h.finalNote;
+  $('f-note').textContent = T.footer.note;
+  $('f-proj').textContent = T.footer.project;
 };
-
-(function(){
-  const modal = document.getElementById('modal');
-  const body  = document.getElementById('sheet-body');
-  let lastFocus = null;
-
-  function open(key){
-    const d = INFO[key]; if(!d) return;
-    lastFocus = document.activeElement;
-    document.getElementById('sheet-title').textContent = d.t;
-    document.getElementById('sheet-lede').textContent  = d.l;
-    document.getElementById('sheet-cta').textContent   = d.cta;
-    body.innerHTML = d.b.map(([h,c]) => `<div class="blk"><h4>${h}</h4>${c}</div>`).join('');
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    document.getElementById('modal-x').focus();
-  }
-  function close(){
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-    if(lastFocus) lastFocus.focus();
-  }
-
-  document.querySelectorAll('[data-info]').forEach(el => {
-    el.addEventListener('click', () => open(el.dataset.info));
-    el.addEventListener('keydown', e => {
-      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(el.dataset.info); }
-    });
-  });
-  document.getElementById('modal-x').addEventListener('click', close);
-  document.getElementById('sheet-cta').addEventListener('click', close);
-  modal.addEventListener('click', e => { if(e.target === modal) close(); });
-  document.addEventListener('keydown', e => { if(e.key === 'Escape' && modal.classList.contains('open')) close(); });
-})();
 </script>
-
 </body>
 </html>

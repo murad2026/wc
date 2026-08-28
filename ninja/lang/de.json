@@ -1,0 +1,425 @@
+{
+ "dir": "ltr",
+ "nav": {
+  "overview": "Überblick",
+  "experts": "Experten",
+  "sample": "Beispiel",
+  "pricing": "Preise",
+  "order": "Bestellen",
+  "status": "Auftragsstatus"
+ },
+ "home": {
+  "h1": "Technische Prüfung durch erfahrene Senior-Entwickler",
+  "sub": "Sie schicken uns einen Kandidaten. Ein Senior-Entwickler mit Erfahrung aus FAANG-Auswahlverfahren führt ein 15-minütiges Live-Gespräch und schreibt auf, was dabei herauskam — oder sitzt in dem Interview, das Ihr Team ohnehin führt.",
+  "cta1": "Prüfung bestellen",
+  "cta2": "Beispielgutachten lesen",
+  "meta": "199 $ pro Kandidat. Kein Abo, kein Vertrag, keine Gebühr, wenn Sie einstellen.",
+  "whoK": "Wer prüft",
+  "whoT": "Zwei Personen, beide benannt",
+  "whoS": "Jede Prüfung führt eine von beiden durch — niemals ein anonymer Marktplatz. Ihre Profile listen jede Kompetenz und deren Grundlage auf.",
+  "whoCta": "Vollständige Profile ansehen",
+  "howT": "Was nach der Bestellung passiert",
+  "howS": "Vier Schritte. Keine Verkaufsgespräche, keine Demos, kein Onboarding.",
+  "steps": [
+   {
+    "t": "Sie bestellen",
+    "d": "Etwa eine Minute. Die Auftragsnummer erhalten Sie sofort und können den Status jederzeit prüfen."
+   },
+   {
+    "t": "Wir bestätigen einen Experten",
+    "d": "Wir ordnen die Rolle der richtigen Person zu und prüfen, ob ein Termin frei ist. Erst dann kommt der Zahlungslink — mit dem echten Namen."
+   },
+   {
+    "t": "Die Prüfung findet statt",
+    "d": "Ihr Kandidat bucht selbst einen Termin. Fünfzehn Minuten Video, innerhalb von 24 Stunden. Nichts wird aufgezeichnet."
+   },
+   {
+    "t": "Sie erhalten das Gutachten",
+    "d": "Innerhalb von 48 Stunden: Bewertungen, Belege, ein Urteil und ein ehrlicher Hinweis darauf, was fünfzehn Minuten nicht zeigen können."
+   }
+  ],
+  "priceT": "Zwei Leistungen",
+  "priceS": "Zahlung pro Kandidat. Kein Vertrag, kein Abo, keine Vermittlungsgebühr.",
+  "plans": [
+   {
+    "id": "screen",
+    "name": "Verified Screen",
+    "price": "199 $",
+    "per": "pro Kandidat · 15 Min. + schriftliches Gutachten",
+    "when": "Wenn Sie einen Kandidaten haben und niemanden, der dessen fachliche Tiefe beurteilen kann.",
+    "f": [
+     "Fünfzehnminütiges Live-Videogespräch mit Ihrem Kandidaten",
+     "Termin innerhalb von 24 Stunden nach Zahlung",
+     "Schriftliches Gutachten innerhalb von 48 Stunden nach dem Gespräch",
+     "Bewertung: Tiefe, Problemlösung, Kommunikation, Verantwortung",
+     "Klares Urteil: einstellen, Risiko oder nein — mit Begründung",
+     "Echter Name, Foto und LinkedIn des Experten vor dem Gespräch",
+     "Volle Erstattung, wenn wir den Termin nicht halten können"
+    ],
+    "cta": "Prüfung bestellen"
+   },
+   {
+    "id": "shadow",
+    "name": "Shadow Session",
+    "price": "299 $",
+    "per": "pro Interview · 60 Min. + Nachbesprechung",
+    "when": "Wenn Ihr Team selbst interviewt und Sie wissen wollen, ob es gut interviewt.",
+    "f": [
+     "Unser Experte nimmt still an Ihrem Interview teil",
+     "Kamera aus, keine Beteiligung — für den Kandidaten ändert sich nichts",
+     "Fünfzehn Minuten Nachbesprechung mit Ihrem Team direkt danach",
+     "Schriftliche Bewertung des Kandidaten nach denselben Kriterien",
+     "Schriftliche Bewertung Ihres Interviews: was übersehen wurde",
+     "Funktioniert mit Ihrem Zoom, Meet oder Teams"
+    ],
+    "cta": "Session buchen"
+   }
+  ],
+  "moreT": "Auf Anfrage",
+  "more": [
+   {
+    "t": "Deep Dive",
+    "d": "45 Minuten plus schriftliches Gutachten. Systementwurf und Code-Tiefe für Senior- und Staff-Rollen."
+   },
+   {
+    "t": "Prüfung der Hausaufgabe",
+    "d": "Der Kandidat hat bereits Code geschickt. Ein Experte liest ihn und schreibt auf, was er zeigt. Ohne Termin."
+   },
+   {
+    "t": "Dienstleister-Audit",
+    "d": "Eine Agentur hat Ihnen fünf „Seniors“ geschickt. Wir prüfen, wer das wirklich ist, Preis pro Person."
+   }
+  ],
+  "moreNote": "Schreiben Sie an hello@verified.ninja — Preis je nach Fall, meist 99–399 $.",
+  "faqT": "Fragen",
+  "faq": [
+   {
+    "q": "Wer genau prüft meinen Kandidaten?",
+    "a": "Einer der beiden benannten Experten. Beide arbeiten unter einem Decknamen, solange sie anderswo angestellt sind; nach der Zahlung erhalten Sie echten Namen, Foto und LinkedIn — bevor der Termin steht."
+   },
+   {
+    "q": "Warum kein KI-Screening-Tool?",
+    "a": "Weil Kandidaten ebenfalls KI nutzen. Automatik bewertet die Antwort, nicht den Menschen dahinter. Ein Live-Gespräch mit Nachfragen ist derzeit der einzige verlässliche Weg, gelebte Erfahrung von einem gut geschriebenen Text zu unterscheiden."
+   },
+   {
+    "q": "Und wenn wir den Kandidaten einstellen?",
+    "a": "Ändert nichts. Wir berechnen die Prüfung, nicht die Einstellung. Wir sind keine Personalvermittlung und nehmen keine Provision."
+   },
+   {
+    "q": "Wann wird abgerechnet?",
+    "a": "Nicht bei der Bestellung. Erst prüfen wir, ob ein Experte Zeit hat, dann kommt der Zahlungslink. Bekommen wir keinen Termin im Zeitfenster, zahlen Sie gar nichts."
+   },
+   {
+    "q": "Was passiert mit den Daten des Kandidaten?",
+    "a": "Der Lebenslauf wird für die Prüfung genutzt und auf Wunsch gelöscht. Das Gutachten geht nur an Sie. Gespräche werden nie aufgezeichnet, Kandidatendaten weder veröffentlicht noch verkauft."
+   },
+   {
+    "q": "Wer seid ihr?",
+    "a": "Ein kleines Team, das Infrastruktur für überprüfte menschliche Reputation baut. Verified.Ninja ist der erste kommerzielle Dienst darauf; das zugrunde liegende Projekt heißt WorldConstitution."
+   }
+  ],
+  "finalT": "Prüfung bestellen",
+  "finalS": "Verified Screen 199 $. Shadow Session 299 $. Schriftliches Gutachten in beiden Fällen innerhalb von 48 Stunden.",
+  "finalCta": "Bestellung aufgeben",
+  "finalNote": "Erst Fragen? Schreiben Sie an hello@verified.ninja"
+ },
+ "experts": {
+  "kicker": "Die Menschen",
+  "title": "Wer die Prüfung durchführt",
+  "lede": "Jede Kompetenz unten nennt ihre Grundlage und ob wir diese selbst geprüft haben. Genau denselben Maßstab legen wir an Ihre Kandidaten an.",
+  "sheetT": "Kompetenzbogen",
+  "sheetCols": "Stufe · Grundlage · Status",
+  "levels": [
+   "Kennt das Thema",
+   "Sicher",
+   "Führt diesen Bereich"
+  ],
+  "verified": "Geprüft",
+  "declared": "Angegeben",
+  "disclosure": {
+   "a": "Firma nicht genannt",
+   "b": "Firma genannt",
+   "c": "Vollständig offen"
+  },
+  "sheetNote": "„Angegeben“ heißt: Der Experte hat es erklärt, wir haben die Belege noch nicht gesehen. Identität und beruflicher Werdegang werden vor dem ersten bezahlten Auftrag geprüft — bis dahin bleibt jede Zeile so markiert. Ein ehrliches Etikett ist uns lieber als ein Häkchen, das wir nicht verdient haben.",
+  "doesT": "Bewertet",
+  "doesntT": "Macht nicht",
+  "revealT": "Was Sie nach der Zahlung erhalten",
+  "people": [
+   {
+    "code": "KAGE-01",
+    "level": "b",
+    "role": "Ehemaliger Amazon Bar Raiser",
+    "tags": [
+     "Backend",
+     "Verteilte Systeme",
+     "Systementwurf",
+     "Kalibrierung der Einstellungslatte"
+    ],
+    "rows": [
+     {
+      "a": "Kalibrierung der Einstellungslatte",
+      "n": 3,
+      "v": false,
+      "s": "Bar Raiser bei Amazon — Interviewer mit Vetorecht bei Einstellungen"
+     },
+     {
+      "a": "Senior-Backend-Interviews",
+      "n": 3,
+      "v": false,
+      "s": "Führte Auswahlverfahren für Ingenieure im Fortune-500-Maßstab"
+     },
+     {
+      "a": "Verteilte Systeme",
+      "n": 3,
+      "v": false,
+      "s": "Jahre an Produktivarbeit mit Diensten großen Maßstabs"
+     },
+     {
+      "a": "Prüfung von Systementwürfen",
+      "n": 3,
+      "v": false,
+      "s": "Entwarf die hier verwendete Prüfmethodik"
+     },
+     {
+      "a": "Frontend-Tiefe",
+      "n": 1,
+      "v": false,
+      "s": "Nur angrenzende Erfahrung — solche Kandidaten leiten wir weiter"
+     }
+    ],
+    "does": [
+     "Ob die im Lebenslauf genannte Erfahrung tatsächlich gelebt wurde",
+     "Wie jemand denkt, sobald die Frage über das Vorbereitete hinausgeht",
+     "Was er selbst verantwortet hat und was sein Team tat",
+     "Ob er die eigene Arbeit jemandem erklären kann, der nicht dabei war"
+    ],
+    "doesnt": [
+     "Kulturelle Passung, Motivation oder Verbleibsabsicht",
+     "Live-Programmieren oder Tippgeschwindigkeit",
+     "Suche, Abwerbung oder Vermittlung von Kandidaten",
+     "Kandidaten, die gerade im Verfahren seines Arbeitgebers sind"
+    ],
+    "reveal": "Echter Name, Foto und LinkedIn erreichen Sie nach der Zahlung und bevor der Termin feststeht. Der Deckname schützt einen derzeit angestellten Experten — er sollte ihn nie vor Ihnen verbergen.",
+    "score": {
+     "years": null,
+     "loops": 4,
+     "scale": 5,
+     "authority": 4,
+     "checked": 1
+    }
+   },
+   {
+    "code": "KAGE-02",
+    "level": "b",
+    "role": "Cloud und IT-Infrastruktur",
+    "tags": [
+     "AWS",
+     "Cloud-Infrastruktur",
+     "IT-Betrieb",
+     "Fehlersuche"
+    ],
+    "rows": [
+     {
+      "a": "AWS und Cloud-Betrieb",
+      "n": 3,
+      "v": false,
+      "s": "Fünf Jahre bei Amazon in IT und AWS"
+     },
+     {
+      "a": "Störungsanalyse",
+      "n": 3,
+      "v": false,
+      "s": "Täglicher Produktivbetrieb, derzeit in der IT tätig"
+     },
+     {
+      "a": "IT-Betrieb und Support",
+      "n": 3,
+      "v": false,
+      "s": "Dieselben fünf Jahre, Betriebsseite"
+     },
+     {
+      "a": "Infrastructure as Code",
+      "n": 2,
+      "v": false,
+      "s": "Produktiv genutzt, nicht von Grund auf entworfen"
+     },
+     {
+      "a": "Anwendungsarchitektur",
+      "n": 1,
+      "v": false,
+      "s": "Nicht sein Gebiet — geht an KAGE-01"
+     }
+    ],
+    "does": [
+     "Was ein Kandidat wirklich betrieben und nicht nur gelesen hat",
+     "Wie er einen Fehler eingrenzt, den er nie zuvor gesehen hat",
+     "Was er tut, wenn die schnelle und die sichere Lösung auseinandergehen",
+     "Ob er einen Vorfall auch nichttechnisch erklären kann"
+    ],
+    "doesnt": [
+     "Anwendungsarchitektur und Systementwurf",
+     "Frontend- oder Mobile-Kandidaten",
+     "Zertifikatsprüfung — sie belegt Lernen, nicht Praxis",
+     "Alles außerhalb von Infrastruktur und Betrieb"
+    ],
+    "reveal": "Echter Name, Foto und LinkedIn erreichen Sie nach der Zahlung und bevor der Termin feststeht. Der Deckname schützt einen derzeit angestellten Experten — er sollte ihn nie vor Ihnen verbergen.",
+    "score": {
+     "years": 2,
+     "loops": null,
+     "scale": 5,
+     "authority": null,
+     "checked": 1
+    }
+   }
+  ],
+  "ctaT": "Setzen Sie einen von beiden vor Ihren Kandidaten",
+  "cta1": "Prüfung bestellen",
+  "cta2": "Beispielgutachten lesen",
+  "scaleT": "Der Verified-Standard",
+  "scaleLede": "Unsere eigene Skala aus fünf Achsen, bei jedem Experten gleich angewandt, damit Profile vergleichbar werden statt bloß beeindruckend. Die Stufen stehen unten — prüfen Sie unsere Rechnung.",
+  "scaleNote": "Das ist unser Hausstandard, kein Branchenstandard. Eine Achse ohne belastbare Antwort bleibt unbewertet statt geraten — deshalb stehen manche Summen auf 20 statt 25.",
+  "ofLbl": "von",
+  "axesLbl": "Achsen",
+  "unknown": "Nicht angegeben",
+  "axes": [
+   {
+    "k": "years",
+    "n": "Jahre im Fach",
+    "b": [
+     "Unter 3",
+     "3–5",
+     "6–9",
+     "10–14",
+     "15 oder mehr"
+    ]
+   },
+   {
+    "k": "loops",
+    "n": "Geführte Interviews",
+    "b": [
+     "Unter 25",
+     "25–99",
+     "100–299",
+     "300–999",
+     "1000 oder mehr"
+    ]
+   },
+   {
+    "k": "scale",
+    "n": "Größte Entwicklungsorganisation",
+    "b": [
+     "Unter 10 Entwickler",
+     "10–100",
+     "100–1000",
+     "1000–10000",
+     "FAANG-Maßstab"
+    ]
+   },
+   {
+    "k": "authority",
+    "n": "Befugnis bei Einstellungen",
+    "b": [
+     "An Interviews beteiligt",
+     "Regelmäßiger Interviewer",
+     "Geschulter Interviewer",
+     "Vetorecht bei Einstellungen",
+     "Hat den Prozess entworfen"
+    ]
+   },
+   {
+    "k": "checked",
+    "n": "Was wir selbst geprüft haben",
+    "b": [
+     "Noch nichts",
+     "Identität",
+     "Identität und Arbeitgeber",
+     "Zusätzlich Referenzen",
+     "Zusätzlich öffentliche Quellen"
+    ]
+   }
+  ]
+ },
+ "order": {
+  "h1": "Prüfung bestellen",
+  "sub": "Etwa eine Minute. Die Auftragsnummer erhalten Sie sofort, den Zahlungslink per E-Mail, sobald ein Experte einen Termin bestätigt hat.",
+  "pickT": "Was Sie brauchen",
+  "youT": "Über Sie",
+  "name": "Ihr Name",
+  "email": "Geschäftliche E-Mail",
+  "emailHint": "Zahlungslink und Gutachten gehen an diese Adresse.",
+  "company": "Unternehmen",
+  "optional": "optional",
+  "roleT": "Über die Stelle",
+  "role": "Für welche Rolle stellen Sie ein",
+  "rolePh": "Senior Backend Engineer",
+  "concern": "Was ist Ihnen unklar?",
+  "concernOpt": "optional, macht das Gutachten aber schärfer",
+  "concernPh": "Im Lebenslauf steht, er habe eine Migration zu Kafka geleitet. Ich kann nicht erkennen, ob er sie entworfen oder nur mitgearbeitet hat.",
+  "concernHint": "Der Experte nimmt die größte Behauptung im Lebenslauf und hakt dort nach. Wenn Sie sagen, welche Sie beunruhigt, gehen die fünfzehn Minuten an die richtige Stelle.",
+  "note": "Den Kandidaten brauchen wir noch nicht. Lebenslauf und E-Mail schicken Sie nach der Zahlung — vorher speichern wir nichts über ihn.",
+  "go": "Bestellung aufgeben",
+  "going": "Wird gesendet…",
+  "noCharge": "Jetzt wird nichts abgebucht. Kein Abo. Keine Gebühr bei Einstellung.",
+  "errName": "Bitte geben Sie Ihren Namen an.",
+  "errEmail": "Diese E-Mail-Adresse sieht nicht richtig aus.",
+  "errRole": "Für welche Rolle stellen Sie ein?",
+  "errSave": "Die Bestellung konnte nicht aufgegeben werden. Schreiben Sie an hello@verified.ninja, wir nehmen sie von Hand auf.",
+  "errNet": "Netzwerkproblem — die Bestellung ging nicht durch. Schreiben Sie an hello@verified.ninja, wir nehmen sie von Hand auf.",
+  "doneT": "Bestellung aufgegeben",
+  "doneS": "Bewahren Sie diese Nummer auf — damit prüfen Sie Ihren Auftrag.",
+  "refLbl": "Ihre Auftragsnummer",
+  "next": [
+   "Jetzt — wir prüfen, welcher Experte zur Rolle passt, und bestätigen einen Termin.",
+   "Innerhalb weniger Stunden — der Zahlungslink kommt per E-Mail, mit dem echten Namen des Experten.",
+   "Nach der Zahlung — Sie schicken Lebenslauf und E-Mail des Kandidaten; er bucht selbst einen Termin.",
+   "Innerhalb von 24 Stunden — das Gespräch findet statt. Nichts wird aufgezeichnet.",
+   "Innerhalb von 48 Stunden danach — das schriftliche Gutachten liegt in Ihrem Postfach."
+  ],
+  "track": "Diesen Auftrag prüfen",
+  "seeSample": "Beispielgutachten ansehen"
+ },
+ "status": {
+  "h1": "Auftragsstatus",
+  "sub": "Geben Sie die Auftragsnummer ein. Sie sieht so aus: VN-K4M2QX.",
+  "ph": "VN-XXXXXX",
+  "go": "Prüfen",
+  "looking": "Wird gesucht…",
+  "errFormat": "Eine Auftragsnummer sieht so aus: VN-K4M2QX.",
+  "errNone": "Kein Auftrag mit dieser Nummer. Prüfen Sie die Zeichen — nach VN- sind es sechs.",
+  "errNet": "Das Auftragssystem war nicht erreichbar. Schreiben Sie an hello@verified.ninja, wir sehen von Hand nach.",
+  "cancelled": "Dieser Auftrag wurde storniert. Falls Sie das überrascht, schreiben Sie an hello@verified.ninja.",
+  "placed": "Aufgegeben",
+  "questions": "Fragen: hello@verified.ninja",
+  "flow": [
+   {
+    "t": "Bestellung eingegangen",
+    "d": "Wir prüfen, welcher Experte zur Rolle passt."
+   },
+   {
+    "t": "Zahlungslink gesendet",
+    "d": "Sehen Sie ins Postfach — der echte Name steht in derselben E-Mail."
+   },
+   {
+    "t": "Bezahlt",
+    "d": "Schicken Sie uns Lebenslauf und E-Mail des Kandidaten, falls noch nicht geschehen."
+   },
+   {
+    "t": "Termin steht",
+    "d": "Der Kandidat hat einen Termin gebucht."
+   },
+   {
+    "t": "Gespräch geführt",
+    "d": "Der Experte schreibt das Gutachten."
+   },
+   {
+    "t": "Gutachten gesendet",
+    "d": "Es liegt in Ihrem Postfach. Fragen einfach als Antwort darauf."
+   }
+  ]
+ },
+ "footer": {
+  "note": "Ein unabhängiger Prüfdienst. Weder mit Amazon noch einem anderen Unternehmen verbunden oder von diesen unterstützt.",
+  "project": "Ein Projekt von WorldConstitution"
+ }
+}

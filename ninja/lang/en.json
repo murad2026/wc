@@ -1,0 +1,425 @@
+{
+ "dir": "ltr",
+ "nav": {
+  "overview": "Overview",
+  "experts": "Experts",
+  "sample": "Sample",
+  "pricing": "Pricing",
+  "order": "Order",
+  "status": "Order status"
+ },
+ "home": {
+  "h1": "Technical screening by senior engineers",
+  "sub": "You send a candidate. A senior engineer with FAANG-scale hiring experience runs a 15-minute live call and writes up what they found — or sits in on the interview your team is already running.",
+  "cta1": "Order a screen",
+  "cta2": "Read a sample assessment",
+  "meta": "$199 per candidate. No subscription, no contract, no fee if you hire.",
+  "whoK": "Who does it",
+  "whoT": "Two people, both named",
+  "whoS": "Every screen is run by one of them — never routed to an anonymous marketplace. Their profiles list every competency and where it comes from.",
+  "whoCta": "See the full profiles",
+  "howT": "What happens after you order",
+  "howS": "Four steps. No sales calls, no demos, no onboarding.",
+  "steps": [
+   {
+    "t": "You place the order",
+    "d": "About a minute. You get an order number straight away and can check its status any time."
+   },
+   {
+    "t": "We confirm an expert",
+    "d": "We match the role to the right person and check they have a slot. Only then does a payment link reach you — with their real name."
+   },
+   {
+    "t": "The screen happens",
+    "d": "Your candidate books a slot from a calendar link. Fifteen minutes of live video, within 24 hours. Nothing is recorded."
+   },
+   {
+    "t": "You get the assessment",
+    "d": "Within 48 hours: ratings, evidence, a verdict, and an honest note on what fifteen minutes cannot tell you."
+   }
+  ],
+  "priceT": "Two services",
+  "priceS": "Pay per candidate. No contract, no subscription, no placement fee if you hire.",
+  "plans": [
+   {
+    "id": "screen",
+    "name": "Verified Screen",
+    "price": "$199",
+    "per": "per candidate · 15 min + written assessment",
+    "when": "Use it when you have a candidate and nobody on your side who can judge their technical depth.",
+    "f": [
+     "Fifteen-minute live video call with your candidate",
+     "Scheduled within 24 hours of payment",
+     "Written assessment within 48 hours of the call",
+     "Ratings on depth, problem solving, communication, ownership",
+     "An explicit verdict: hire, risk or no — with the reasoning",
+     "The expert's real name, photo and LinkedIn before the call",
+     "Full refund if we cannot schedule in the window"
+    ],
+    "cta": "Order a screen"
+   },
+   {
+    "id": "shadow",
+    "name": "Shadow Session",
+    "price": "$299",
+    "per": "per interview · 60 min + debrief",
+    "when": "Use it when your own team interviews and you want to know whether they interview well.",
+    "f": [
+     "Our expert joins your own interview as a silent observer",
+     "Camera off, no participation — nothing changes for the candidate",
+     "Fifteen-minute debrief with your team straight after",
+     "Written assessment of the candidate, same criteria",
+     "Written assessment of your interview: what was missed",
+     "Works with your existing Zoom, Meet or Teams call"
+    ],
+    "cta": "Book a session"
+   }
+  ],
+  "moreT": "Also available on request",
+  "more": [
+   {
+    "t": "Deep Dive",
+    "d": "45 minutes plus written assessment. System design and code-level depth for senior and staff roles."
+   },
+   {
+    "t": "Take-home review",
+    "d": "The candidate already sent code. An expert reads it and writes up what it shows. No call, no scheduling."
+   },
+   {
+    "t": "Contractor audit",
+    "d": "An agency sent you five “seniors”. We check who they actually are, priced per person."
+   }
+  ],
+  "moreNote": "Written to hello@verified.ninja — priced per case, usually $99–399.",
+  "faqT": "Questions",
+  "faq": [
+   {
+    "q": "Who exactly screens my candidate?",
+    "a": "One of the two named experts. Both work under a codename while employed elsewhere; after payment you receive their real name, photo and LinkedIn before the call is scheduled."
+   },
+   {
+    "q": "Why not just use an AI screening tool?",
+    "a": "Because candidates use AI too. Automated tools grade the answer, not the person giving it. A live conversation with follow-up questions is currently the only reliable way to tell lived experience from a well-written script."
+   },
+   {
+    "q": "What if we hire the candidate?",
+    "a": "Nothing changes. We charge per screen, not per hire. We are not a recruiting agency and take no placement fee."
+   },
+   {
+    "q": "When are we charged?",
+    "a": "Not at the order. We confirm an expert has a slot first, then send a payment link. If we cannot schedule inside the window, you are not charged at all."
+   },
+   {
+    "q": "What happens to the candidate's data?",
+    "a": "The CV is used for the screen and deleted on request. The assessment goes to you alone. Calls are never recorded and we never publish or sell candidate data."
+   },
+   {
+    "q": "Who are you?",
+    "a": "A small team building infrastructure for verified human reputation. Verified.Ninja is the first commercial service built on it; the underlying project is WorldConstitution."
+   }
+  ],
+  "finalT": "Order a screen",
+  "finalS": "Verified Screen $199. Shadow Session $299. Written assessment within 48 hours either way.",
+  "finalCta": "Place an order",
+  "finalNote": "Questions first? Email hello@verified.ninja"
+ },
+ "experts": {
+  "kicker": "The people",
+  "title": "Who runs the screen",
+  "lede": "Every competency below carries the source it rests on, and whether we have checked that source ourselves. That is the same standard we apply to your candidates.",
+  "sheetT": "Competency sheet",
+  "sheetCols": "Level · Source · Status",
+  "levels": [
+   "Working knowledge",
+   "Strong",
+   "Leads this area"
+  ],
+  "verified": "Verified",
+  "declared": "Declared",
+  "disclosure": {
+   "a": "Company withheld",
+   "b": "Company named",
+   "c": "Fully open"
+  },
+  "sheetNote": "Declared means the expert stated it and we have not yet seen the evidence. Identity and employment history are checked before an expert's first paid assessment — until then every line stays marked as declared. We would rather show you an honest label than a checkmark we did not earn.",
+  "doesT": "Assesses",
+  "doesntT": "Does not do",
+  "revealT": "What you get after payment",
+  "people": [
+   {
+    "code": "KAGE-01",
+    "level": "b",
+    "role": "Former Amazon Bar Raiser",
+    "tags": [
+     "Backend",
+     "Distributed systems",
+     "System design",
+     "Hiring bar calibration"
+    ],
+    "rows": [
+     {
+      "a": "Hiring bar calibration",
+      "n": 3,
+      "v": false,
+      "s": "Bar Raiser at Amazon — a trained interviewer with veto power over hires"
+     },
+     {
+      "a": "Senior backend interviewing",
+      "n": 3,
+      "v": false,
+      "s": "Ran senior engineering loops at Fortune-500 scale"
+     },
+     {
+      "a": "Distributed systems",
+      "n": 3,
+      "v": false,
+      "s": "Years of production work on large-scale services"
+     },
+     {
+      "a": "System design review",
+      "n": 3,
+      "v": false,
+      "s": "Designed the screening methodology used on this site"
+     },
+     {
+      "a": "Frontend depth",
+      "n": 1,
+      "v": false,
+      "s": "Adjacent experience only — we route these candidates elsewhere"
+     }
+    ],
+    "does": [
+     "Whether the experience on the CV was actually lived",
+     "How a candidate reasons past what they prepared",
+     "What they owned themselves versus what their team did",
+     "Whether they can explain their own work to someone who wasn't there"
+    ],
+    "doesnt": [
+     "Culture fit, motivation, or whether they will stay",
+     "Live coding or typing speed",
+     "Sourcing, recruiting or placing candidates",
+     "Any candidate currently in his employer's hiring process"
+    ],
+    "reveal": "His real name, photo and LinkedIn reach you after payment and before the call is scheduled. The codename protects an expert who is currently employed — it was never meant to hide him from you.",
+    "score": {
+     "years": null,
+     "loops": 4,
+     "scale": 5,
+     "authority": 4,
+     "checked": 1
+    }
+   },
+   {
+    "code": "KAGE-02",
+    "level": "b",
+    "role": "Cloud and IT infrastructure",
+    "tags": [
+     "AWS",
+     "Cloud infrastructure",
+     "IT operations",
+     "Troubleshooting"
+    ],
+    "rows": [
+     {
+      "a": "AWS and cloud operations",
+      "n": 3,
+      "v": false,
+      "s": "Five years at Amazon in IT and AWS"
+     },
+     {
+      "a": "Incident troubleshooting",
+      "n": 3,
+      "v": false,
+      "s": "Day-to-day production support, currently working in IT"
+     },
+     {
+      "a": "IT operations and support",
+      "n": 3,
+      "v": false,
+      "s": "Same five years, operations side"
+     },
+     {
+      "a": "Infrastructure as code",
+      "n": 2,
+      "v": false,
+      "s": "Used in production, not designed from scratch"
+     },
+     {
+      "a": "Application architecture",
+      "n": 1,
+      "v": false,
+      "s": "Not his area — routed to KAGE-01"
+     }
+    ],
+    "does": [
+     "What a candidate has actually operated, not read about",
+     "How they narrow down a failure they have never seen",
+     "What they do when the fast fix and the safe fix differ",
+     "Whether they can explain an incident to someone non-technical"
+    ],
+    "doesnt": [
+     "Application architecture and system design",
+     "Frontend or mobile candidates",
+     "Certification checking — that proves study, not practice",
+     "Anything outside infrastructure and operations"
+    ],
+    "reveal": "His real name, photo and LinkedIn reach you after payment and before the call is scheduled. The codename protects an expert who is currently employed — it was never meant to hide him from you.",
+    "score": {
+     "years": 2,
+     "loops": null,
+     "scale": 5,
+     "authority": null,
+     "checked": 1
+    }
+   }
+  ],
+  "ctaT": "Put one of them in front of your candidate",
+  "cta1": "Order a screen",
+  "cta2": "Read a sample assessment",
+  "scaleT": "The Verified Standard",
+  "scaleLede": "Our own five-axis scale, applied to every expert the same way, so profiles can be compared instead of admired. The bands are printed below — check our arithmetic.",
+  "scaleNote": "This is our house standard, not an industry one. An axis we have no answer for is left unscored rather than guessed, which is why some totals are out of 20 and not 25.",
+  "ofLbl": "across",
+  "axesLbl": "axes",
+  "unknown": "Not stated",
+  "axes": [
+   {
+    "k": "years",
+    "n": "Years in the field",
+    "b": [
+     "Under 3",
+     "3–5",
+     "6–9",
+     "10–14",
+     "15 or more"
+    ]
+   },
+   {
+    "k": "loops",
+    "n": "Interviews conducted",
+    "b": [
+     "Under 25",
+     "25–99",
+     "100–299",
+     "300–999",
+     "1000 or more"
+    ]
+   },
+   {
+    "k": "scale",
+    "n": "Largest engineering org worked in",
+    "b": [
+     "Under 10 engineers",
+     "10–100",
+     "100–1000",
+     "1000–10000",
+     "FAANG scale"
+    ]
+   },
+   {
+    "k": "authority",
+    "n": "Authority over hiring decisions",
+    "b": [
+     "Took part in interviews",
+     "Regular interviewer",
+     "Trained interviewer",
+     "Veto over hires",
+     "Designed the process"
+    ]
+   },
+   {
+    "k": "checked",
+    "n": "How much we have verified",
+    "b": [
+     "Nothing yet",
+     "Identity",
+     "Identity and employer",
+     "Plus references",
+     "Plus public record"
+    ]
+   }
+  ]
+ },
+ "order": {
+  "h1": "Order a screen",
+  "sub": "About a minute. You get an order number straight away, and a payment link by email once we have confirmed an expert has a slot.",
+  "pickT": "What you need",
+  "youT": "About you",
+  "name": "Your name",
+  "email": "Work email",
+  "emailHint": "The payment link and the assessment both go here.",
+  "company": "Company",
+  "optional": "optional",
+  "roleT": "About the role",
+  "role": "Role you are hiring for",
+  "rolePh": "Senior Backend Engineer",
+  "concern": "What are you unsure about?",
+  "concernOpt": "optional, but it makes the assessment sharper",
+  "concernPh": "The CV says they led a migration to Kafka. I can't tell whether they designed it or just worked on it.",
+  "concernHint": "The expert takes the largest claim on the CV and pushes on it. Telling us which claim worries you points the fifteen minutes at the right thing.",
+  "note": "We don't need the candidate yet. Send their CV and email after payment — nothing about them is stored until the screen is going ahead.",
+  "go": "Place the order",
+  "going": "Placing…",
+  "noCharge": "No charge now. No subscription. No fee if you hire.",
+  "errName": "Please add your name.",
+  "errEmail": "That email address does not look right.",
+  "errRole": "Which role are you hiring for?",
+  "errSave": "We could not place the order. Email hello@verified.ninja and we will take it by hand.",
+  "errNet": "Network problem — the order did not go through. Email hello@verified.ninja and we will take it by hand.",
+  "doneT": "Order placed",
+  "doneS": "Keep this number — it is how you check your order.",
+  "refLbl": "Your order number",
+  "next": [
+   "Now — we check which expert fits the role and confirm a slot.",
+   "Within a few hours — a payment link arrives by email, with the expert's real name.",
+   "After payment — you send the candidate's CV and email; they book a slot themselves.",
+   "Within 24 hours — the call happens. Nothing is recorded.",
+   "Within 48 hours of the call — the written assessment lands in your inbox."
+  ],
+  "track": "Check this order",
+  "seeSample": "See a sample assessment"
+ },
+ "status": {
+  "h1": "Order status",
+  "sub": "Enter the order number you were given. It looks like VN-K4M2QX.",
+  "ph": "VN-XXXXXX",
+  "go": "Check",
+  "looking": "Looking…",
+  "errFormat": "An order number looks like VN-K4M2QX.",
+  "errNone": "No order with that number. Check the characters — there are six after VN-.",
+  "errNet": "Could not reach the order system. Email hello@verified.ninja and we will look it up by hand.",
+  "cancelled": "This order was cancelled. If that is a surprise, email hello@verified.ninja.",
+  "placed": "Placed",
+  "questions": "Questions: hello@verified.ninja",
+  "flow": [
+   {
+    "t": "Order received",
+    "d": "We are checking which expert fits the role."
+   },
+   {
+    "t": "Payment link sent",
+    "d": "Check your inbox — the expert's real name is in the same email."
+   },
+   {
+    "t": "Paid",
+    "d": "Send us the candidate's CV and email if you haven't yet."
+   },
+   {
+    "t": "Call scheduled",
+    "d": "The candidate has booked a slot."
+   },
+   {
+    "t": "Call done",
+    "d": "The expert is writing the assessment."
+   },
+   {
+    "t": "Assessment sent",
+    "d": "It is in your inbox. Reply there with any questions."
+   }
+  ]
+ },
+ "footer": {
+  "note": "An independent screening service. Not affiliated with or endorsed by Amazon or any other company.",
+  "project": "A project by WorldConstitution"
+ }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The experts — Verified.Ninja</title>
+<meta name="description" content="Who runs the screens: every expert scored on the same five-axis scale, competency by competency, with the source behind each line.">
+<link rel="stylesheet" href="app.css">
+<style>
+  header.top{padding:60px 0 8px}
+  header.top .lede{margin-top:18px}
+
+  .who{margin-top:56px}
+  .who + .who{margin-top:72px;padding-top:72px;border-top:1px solid var(--line-soft)}
+
+  /* шапка карточки */
+  .idhead{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
+  .ava{width:68px;height:68px;border-radius:19px;flex-shrink:0;background:var(--bg-soft);
+    border:1px solid var(--line-soft);display:flex;align-items:center;justify-content:center;font-size:29px}
+  .idhead .meta{flex:1 1 220px;min-width:0}
+  .code{font-size:26px;font-weight:600;letter-spacing:-.02em;display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+  .role{color:var(--muted);font-size:16px;margin-top:2px}
+  .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+  .tag{font-size:12.5px;color:var(--ink-2);background:var(--bg-soft);border-radius:980px;padding:4px 11px}
+
+  /* общий блок: рамка со шляпкой */
+  .block{margin-top:24px;border:1px solid var(--line-soft);border-radius:18px;
+    overflow:hidden;background:var(--card)}
+  .block-top{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;
+    padding:15px 22px;background:var(--bg-soft);border-bottom:1px solid var(--line-soft)}
+  .block-top .t{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .block-top .n{font-size:12px;color:var(--muted)}
+  .block-foot{padding:15px 22px;border-top:1px solid var(--line-soft);background:var(--bg-soft);
+    font-size:13.5px;color:var(--muted)}
+
+  /* шкала */
+  .total{display:flex;align-items:baseline;gap:10px;padding:20px 22px;border-bottom:1px solid var(--line-soft)}
+  .total .big{font-size:40px;font-weight:600;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+  .total .of{font-size:15px;color:var(--muted)}
+
+  .axis{display:grid;grid-template-columns:1fr auto;gap:5px 18px;align-items:center;
+    padding:14px 22px;border-top:1px solid var(--line-soft)}
+  .axis:first-of-type{border-top:none}
+  .axis .an{font-size:15.5px;font-weight:500}
+  .axis .ab{grid-column:1;font-size:13.5px;color:var(--muted)}
+  .axis .ab.none{font-style:italic}
+  .pips{display:flex;gap:4px}
+  .pips i{width:22px;height:6px;border-radius:3px;background:var(--line-soft);
+    border:1px solid var(--line);display:block}
+  .pips i.on{background:var(--ink);border-color:var(--ink)}
+
+  /* легенда шкалы */
+  .bands{padding:4px 22px 18px}
+  .band{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:11px 0;border-top:1px solid var(--line-soft)}
+  .band .bn{font-size:14.5px;font-weight:500}
+  .band .bl{font-size:13.5px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap}
+  .band .bl b{font-weight:400;color:var(--muted)}
+  .band .bl b::before{content:"";display:inline-block;width:15px;height:5px;border-radius:3px;
+    background:var(--line);margin-inline-end:5px;vertical-align:middle}
+  .band .bl b:nth-child(1)::before{opacity:.35}
+  .band .bl b:nth-child(2)::before{opacity:.5}
+  .band .bl b:nth-child(3)::before{opacity:.65}
+  .band .bl b:nth-child(4)::before{opacity:.8}
+  .band .bl b:nth-child(5)::before{background:var(--ink)}
+
+  /* табель компетенций */
+  .line{display:grid;grid-template-columns:1fr 132px 100px;gap:6px 18px;align-items:center;
+    padding:15px 22px;border-top:1px solid var(--line-soft)}
+  .line:first-of-type{border-top:none}
+  .line .area{font-size:15.5px;font-weight:500}
+  .line .src{grid-column:1;font-size:13.5px;color:var(--muted)}
+  @media(max-width:640px){
+    .line{grid-template-columns:1fr auto}
+    .line .lvl{grid-column:2;grid-row:1}
+    .line .st{grid-column:2;grid-row:3;justify-self:end}
+    .line .src{grid-column:1;grid-row:2}
+  }
+  .lvl{display:flex;align-items:center;gap:9px}
+  .bars{display:flex;gap:3px}
+  .bars i{width:12px;height:5px;border-radius:3px;background:var(--line);display:block}
+  .bars i.on{background:var(--ink)}
+  .lvl .w{font-size:12.5px;color:var(--muted);white-space:nowrap}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+  @media(max-width:680px){.cols{grid-template-columns:1fr}}
+  .cols h4{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:12px}
+  .cols ul{list-style:none}
+  .cols li{font-size:15px;color:var(--ink-2);padding:7px 0 7px 20px;position:relative;line-height:1.45}
+  .cols li::before{position:absolute;left:0;color:var(--muted)}
+  .cols .does li::before{content:"→"}
+  .cols .doesnt li::before{content:"—"}
+
+  .reveal{margin-top:16px}
+  .reveal p{font-size:15px;margin-top:8px}
+
+  .cta{padding:66px 0;text-align:center;border-top:1px solid var(--line-soft);margin-top:60px}
+  .cta .btns{display:flex;gap:12px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="index.html">Verified<b>.Ninja</b></a>
+    <div class="nav-links">
+      <a href="index.html" class="hide-sm" id="n-home">Overview</a>
+      <a href="report.html" class="hide-sm" id="n-report">Sample</a>
+      <select class="lang" id="lang" aria-label="Language"></select>
+      <a class="btn sm" href="order.html" id="n-order">Order</a>
+    </div>
+  </div>
+</nav>
+
+<header class="top wrap mid">
+  <div class="eyebrow" id="kicker"></div>
+  <h1 id="title"></h1>
+  <p class="lede" id="lede"></p>
+</header>
+
+<div class="wrap mid" id="people"></div>
+
+<div class="wrap mid">
+  <div class="block" id="legend"></div>
+</div>
+
+<section class="cta wrap mid">
+  <h2 id="cta-t"></h2>
+  <div class="btns">
+    <a class="btn" href="order.html" id="cta-1"></a>
+    <a class="btn ghost" href="report.html" id="cta-2"></a>
+  </div>
+</section>
+
+<footer class="wrap mid">
+  <div class="row">
+    <span id="f-note"></span>
+    <span><a href="https://theworldconstitution.org" target="_blank" rel="noopener" id="f-proj"></a></span>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+const pips = (n, max) => `<span class="pips">${Array.from({length:max},(_,i)=>
+  `<i class="${n && i < n ? 'on' : ''}"></i>`).join('')}</span>`;
+
+window.render = function(T){
+  const e = T.experts;
+  document.title = e.title + ' — Verified.Ninja';
+  $('n-home').textContent   = T.nav.overview;
+  $('n-report').textContent = T.nav.sample;
+  $('n-order').textContent  = T.nav.order;
+  $('kicker').textContent = e.kicker;
+  $('title').textContent  = e.title;
+  $('lede').textContent   = e.lede;
+
+  $('people').innerHTML = e.people.map(p => {
+    /* Считаем только те оси, по которым есть данные. Пропуски не выдумываем. */
+    const scored = e.axes.filter(a => p.score[a.k] != null);
+    const sum = scored.reduce((t,a) => t + p.score[a.k], 0);
+    const max = scored.length * 5;
+
+    return `
+    <div class="who">
+      <div class="idhead">
+        <div class="ava">🥷</div>
+        <div class="meta">
+          <div class="code">${esc(p.code)} <span class="pill flat">${esc(e.disclosure[p.level])}</span></div>
+          <div class="role">${esc(p.role)}</div>
+          <div class="tags">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-top"><span class="t">${esc(e.scaleT)}</span></div>
+        <div class="total">
+          <span class="big">${sum}</span>
+          <span class="of">${esc(e.ofLbl)} ${max} · ${scored.length} ${esc(e.axesLbl)}</span>
+        </div>
+        ${e.axes.map(a => {
+          const v = p.score[a.k];
+          return `<div class="axis">
+            <div class="an">${esc(a.n)}</div>
+            <div class="lvl">${pips(v, 5)}</div>
+            <div class="ab${v == null ? ' none' : ''}">${esc(v == null ? e.unknown : a.b[v-1])}</div>
+          </div>`;
+        }).join('')}
+        <div class="block-foot">${esc(e.scaleNote)}</div>
+      </div>
+
+      <div class="block">
+        <div class="block-top">
+          <span class="t">${esc(e.sheetT)}</span>
+          <span class="n">${esc(e.sheetCols)}</span>
+        </div>
+        ${p.rows.map(r => `
+          <div class="line">
+            <div class="area">${esc(r.a)}</div>
+            <div class="lvl">${(() => {
+              return `<span class="bars">${[1,2,3].map(i=>`<i class="${i<=r.n?'on':''}"></i>`).join('')}</span>`;
+            })()}<span class="w">${esc(e.levels[r.n-1])}</span></div>
+            <div class="st"><span class="pill ${r.v ? 'ok' : 'flat'}">${esc(r.v ? e.verified : e.declared)}</span></div>
+            <div class="src">${esc(r.s)}</div>
+          </div>`).join('')}
+        <div class="block-foot">${esc(e.sheetNote)}</div>
+      </div>
+
+      <div class="cols">
+        <div class="card soft">
+          <h4>${esc(e.doesT)}</h4>
+          <ul class="does">${p.does.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+        </div>
+        <div class="card soft">
+          <h4>${esc(e.doesntT)}</h4>
+          <ul class="doesnt">${p.doesnt.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+        </div>
+      </div>
+
+      <div class="reveal card">
+        <h4 class="eyebrow">${esc(e.revealT)}</h4>
+        <p>${esc(p.reveal)}</p>
+      </div>
+    </div>`;
+  }).join('');
+
+  /* Легенда шкалы: что означает каждый уровень по каждой оси. */
+  $('legend').innerHTML = `
+    <div class="block-top"><span class="t">${esc(e.scaleT)}</span></div>
+    <div class="bands">
+      <p class="dim" style="font-size:14.5px;padding:14px 0 4px">${esc(e.scaleLede)}</p>
+      ${e.axes.map(a => `
+        <div class="band">
+          <div class="bn">${esc(a.n)}</div>
+          <div class="bl">${a.b.map(x=>`<b>${esc(x)}</b>`).join('')}</div>
+        </div>`).join('')}
+    </div>`;
+
+  $('cta-t').textContent = e.ctaT;
+  $('cta-1').textContent = e.cta1;
+  $('cta-2').textContent = e.cta2;
+  $('f-note').textContent = T.footer.note;
+  $('f-proj').textContent = T.footer.project;
+};
+</script>
+</body>
+</html>

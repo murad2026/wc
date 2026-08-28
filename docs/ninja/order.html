@@ -3,212 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Order a screen — Verified.Ninja</title>
-<meta name="description" content="Place an order for a technical screen. You get an order number immediately and a payment link within a few hours.">
+<title>Order — Verified.Ninja</title>
+<meta name="description" content="Place an order for a technical screen. Order number straight away, payment link once an expert is confirmed.">
+<link rel="stylesheet" href="app.css">
 <style>
-  :root{
-    --bg:#0F1115; --bg2:#151922; --card:#181D28; --line:#242B3A;
-    --text:#E8ECF4; --muted:#8B94A8; --accent:#00E5CC; --accent-dim:#00b8a4;
-    --warn:#FFB020; --bad:#FF6B6B; --good:#4ADE80;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-       background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:620px;margin:0 auto;padding:0 24px 72px}
-  a{color:var(--accent);text-decoration:none}
+  header.top{padding:56px 0 30px}
+  header.top .lede{margin-top:14px;font-size:17px}
 
-  nav{border-bottom:1px solid var(--line)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;
-     max-width:620px;margin:0 auto;padding:14px 24px}
-  .logo{font-weight:800;font-size:16px;color:var(--text)}
-  .logo b{color:var(--accent)}
-  .nav-in a{font-size:14px;color:var(--muted)}
-  .nav-in a:hover{color:var(--text)}
-
-  header{padding:44px 0 26px}
-  h1{font-size:clamp(27px,4.6vw,38px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
-  .sub{color:var(--muted);font-size:16px;margin-top:12px}
-
-  /* выбор услуги */
-  .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
-  @media(max-width:520px){.pick{grid-template-columns:1fr}}
-  .opt{position:relative}
+  .pick{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:560px){.pick{grid-template-columns:1fr}}
   .opt input{position:absolute;opacity:0;pointer-events:none}
-  .opt label{display:block;background:var(--card);border:1.5px solid var(--line);border-radius:14px;
-     padding:18px 20px;cursor:pointer;transition:border-color .15s,background .15s}
-  .opt label:hover{border-color:var(--muted)}
-  .opt input:checked + label{border-color:var(--accent);background:rgba(0,229,204,.06)}
-  .opt input:focus-visible + label{outline:2px solid var(--accent);outline-offset:2px}
-  .opt .nm{font-weight:700;font-size:16px}
-  .opt .pr{font-size:24px;font-weight:800;letter-spacing:-.02em;margin:6px 0 4px}
-  .opt .ds{font-size:13.5px;color:var(--muted)}
+  .opt label{display:block;background:var(--card);border:1.5px solid var(--line-soft);
+    border-radius:16px;padding:20px;cursor:pointer;transition:border-color .15s,background .15s;height:100%}
+  .opt label:hover{border-color:var(--line)}
+  .opt input:checked + label{border-color:var(--ink);background:var(--bg-soft)}
+  .opt input:focus-visible + label{outline:2px solid var(--ink);outline-offset:3px}
+  .opt .nm{font-size:16px;font-weight:600}
+  .opt .pr{font-size:28px;font-weight:600;letter-spacing:-.03em;margin:7px 0 3px}
+  .opt .ds{font-size:13.5px;color:var(--muted);line-height:1.4}
 
-  form{margin-top:26px;display:flex;flex-direction:column;gap:18px}
-  fieldset{border:none}
-  legend{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-     font-weight:800;margin-bottom:12px}
-  .field{display:flex;flex-direction:column;gap:6px}
-  .field + .field{margin-top:14px}
-  label.lb{font-size:14px;font-weight:600}
-  label.lb span{color:var(--muted);font-weight:400}
-  input[type=text],input[type=email],textarea{
-    background:var(--bg2);border:1.5px solid var(--line);border-radius:10px;
-    padding:12px 14px;font-size:15.5px;font-family:inherit;color:var(--text);width:100%}
-  input:focus,textarea:focus{outline:none;border-color:var(--accent)}
-  textarea{resize:vertical;min-height:88px}
-  .hint{font-size:13px;color:var(--muted)}
-
-  .btn{background:var(--accent);color:#04120F;font-weight:700;font-size:16.5px;padding:16px;
-       border:none;border-radius:12px;cursor:pointer;font-family:inherit;width:100%}
-  .btn:hover{background:var(--accent-dim)}
-  .btn:disabled{opacity:.5;cursor:default}
-
-  .note{background:var(--bg2);border:1px dashed var(--line);border-radius:12px;padding:16px 18px;
-     font-size:14px;color:var(--muted)}
-  .note b{color:var(--text)}
-
-  .err{background:rgba(255,107,107,.1);border:1px solid var(--bad);border-radius:10px;
-     padding:13px 16px;font-size:14.5px;color:var(--bad);display:none}
-  .err.on{display:block}
+  .note{background:var(--bg-soft);border-radius:14px;padding:17px 19px;font-size:14.5px;color:var(--muted)}
+  .note b{color:var(--ink);font-weight:600}
+  form > * + *{margin-top:24px}
 
   /* подтверждение */
-  .done{display:none}
-  .done.on{display:block}
-  .ticket{background:var(--card);border:1.5px solid var(--accent);border-radius:18px;
-     padding:30px 28px;text-align:center}
-  .ticket .lbl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:800}
-  .ticket .ref{font-size:clamp(30px,7vw,42px);font-weight:800;letter-spacing:.04em;
-     font-family:ui-monospace,SFMono-Regular,Menlo,monospace;margin:10px 0 6px;color:var(--accent)}
-  .ticket .keep{font-size:14px;color:var(--muted)}
-  .steps{margin-top:24px;counter-reset:s;list-style:none}
-  .steps li{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
-  .steps li:first-child{border-top:none}
-  .steps li::before{counter-increment:s;content:counter(s);flex-shrink:0;
-     width:26px;height:26px;border-radius:50%;background:rgba(0,229,204,.14);color:var(--accent);
-     font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
-  .steps li b{color:var(--text);font-weight:600}
+  #done{display:none}
+  #done.on{display:block}
+  .ticket{background:var(--bg-soft);border-radius:20px;padding:34px 28px;text-align:center}
+  .ticket .lb{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .ticket .ref{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:clamp(28px,7vw,40px);font-weight:600;letter-spacing:.06em;margin:12px 0 8px}
+  .ticket .sv{font-size:14.5px;color:var(--muted)}
+  .flow{margin-top:30px;list-style:none;counter-reset:f}
+  .flow li{display:flex;gap:15px;padding:15px 0;border-top:1px solid var(--line-soft);
+    font-size:15px;color:var(--muted);line-height:1.45}
+  .flow li:first-child{border-top:none}
+  .flow li::before{counter-increment:f;content:counter(f);flex-shrink:0;width:25px;height:25px;
+    border-radius:50%;background:var(--ink);color:var(--bg);font-size:12.5px;font-weight:600;
+    display:flex;align-items:center;justify-content:center}
+  .after{display:flex;gap:18px;justify-content:center;margin-top:28px;flex-wrap:wrap;font-size:14.5px}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-in">
-    <a class="logo" href="index.html">Verified<b>.Ninja</b></a>
-    <a href="status.html">Check an order →</a>
+    <a class="brand" href="index.html">Verified<b>.Ninja</b></a>
+    <div class="nav-links">
+      <a href="expert.html" class="hide-sm" id="n-exp"></a>
+      <a href="report.html" class="hide-sm" id="n-rep"></a>
+      <select class="lang" id="lang" aria-label="Language"></select>
+      <a href="status.html" id="n-st"></a>
+    </div>
   </div>
 </nav>
 
-<div class="wrap">
+<div class="wrap narrow" id="stage-form">
+  <header class="top">
+    <h1 id="h1"></h1>
+    <p class="lede" id="sub"></p>
+  </header>
 
-  <!-- ФОРМА -->
-  <div id="stage-form">
-    <header>
-      <h1>Order a screen</h1>
-      <p class="sub">Takes about a minute. You get an order number straight away and a payment link by email within a few hours — we confirm expert availability before we charge anyone.</p>
-    </header>
-
-    <form id="f" novalidate>
-      <fieldset>
-        <legend>What you need</legend>
-        <div class="pick">
-          <div class="opt">
-            <input type="radio" name="service" id="svc-screen" value="screen" checked>
-            <label for="svc-screen">
-              <div class="nm">Verified Screen</div>
-              <div class="pr">$199</div>
-              <div class="ds">Our expert interviews your candidate for 15 minutes</div>
-            </label>
-          </div>
-          <div class="opt">
-            <input type="radio" name="service" id="svc-shadow" value="shadow">
-            <label for="svc-shadow">
-              <div class="nm">Shadow Session</div>
-              <div class="pr">$299</div>
-              <div class="ds">Our expert sits in on your own interview, then debriefs</div>
-            </label>
-          </div>
+  <form id="f" novalidate>
+    <fieldset>
+      <legend id="pick-t"></legend>
+      <div class="pick">
+        <div class="opt">
+          <input type="radio" name="service" id="svc-screen" value="screen" checked>
+          <label for="svc-screen">
+            <div class="nm" id="p0n"></div>
+            <div class="pr" id="p0p"></div>
+            <div class="ds" id="p0d"></div>
+          </label>
         </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>About you</legend>
-        <div class="field">
-          <label class="lb" for="nm">Your name</label>
-          <input type="text" id="nm" autocomplete="name" maxlength="80" required>
+        <div class="opt">
+          <input type="radio" name="service" id="svc-shadow" value="shadow">
+          <label for="svc-shadow">
+            <div class="nm" id="p1n"></div>
+            <div class="pr" id="p1p"></div>
+            <div class="ds" id="p1d"></div>
+          </label>
         </div>
-        <div class="field">
-          <label class="lb" for="em">Work email</label>
-          <input type="email" id="em" autocomplete="email" maxlength="120" required>
-          <span class="hint">The payment link and the assessment both go here.</span>
-        </div>
-        <div class="field">
-          <label class="lb" for="co">Company <span>— optional</span></label>
-          <input type="text" id="co" autocomplete="organization" maxlength="80">
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>About the role</legend>
-        <div class="field">
-          <label class="lb" for="rl">Role you're hiring for</label>
-          <input type="text" id="rl" maxlength="120" placeholder="Senior Backend Engineer" required>
-        </div>
-        <div class="field">
-          <label class="lb" for="cn">What are you unsure about? <span>— optional, but it makes the assessment better</span></label>
-          <textarea id="cn" maxlength="800" placeholder="The CV says they led a migration to Kafka. I can't tell whether they designed it or just worked on it."></textarea>
-          <span class="hint">The expert takes the largest claim on the CV and pushes on it. Telling us which claim worries you points the 15 minutes at the right thing.</span>
-        </div>
-      </fieldset>
-
-      <div class="note">
-        <b>We don't need the candidate yet.</b> Send their CV and email after payment — nothing about them is stored until the screen is actually going ahead.
       </div>
+    </fieldset>
 
-      <div class="err" id="err"></div>
-      <button class="btn" type="submit" id="go">Place the order</button>
-      <p class="hint" style="text-align:center">No charge now. No subscription. No placement fee if you hire.</p>
-    </form>
-  </div>
+    <fieldset>
+      <legend id="you-t"></legend>
+      <div class="field">
+        <label class="lb" for="nm" id="l-nm"></label>
+        <input type="text" id="nm" autocomplete="name" maxlength="80">
+      </div>
+      <div class="field">
+        <label class="lb" for="em" id="l-em"></label>
+        <input type="email" id="em" autocomplete="email" maxlength="120">
+        <div class="hint" id="h-em"></div>
+      </div>
+      <div class="field">
+        <label class="lb" for="co" id="l-co"></label>
+        <input type="text" id="co" autocomplete="organization" maxlength="80">
+      </div>
+    </fieldset>
 
-  <!-- ПОДТВЕРЖДЕНИЕ -->
-  <div id="stage-done" class="done">
-    <header>
-      <h1>Order placed</h1>
-      <p class="sub">Keep this number — it's how you check the status of your order.</p>
-    </header>
+    <fieldset>
+      <legend id="role-t"></legend>
+      <div class="field">
+        <label class="lb" for="rl" id="l-rl"></label>
+        <input type="text" id="rl" maxlength="120">
+      </div>
+      <div class="field">
+        <label class="lb" for="cn" id="l-cn"></label>
+        <textarea id="cn" maxlength="800"></textarea>
+        <div class="hint" id="h-cn"></div>
+      </div>
+    </fieldset>
 
-    <div class="ticket">
-      <div class="lbl">Your order number</div>
-      <div class="ref" id="ref">—</div>
-      <div class="keep" id="svc-label">Verified Screen · $199</div>
-    </div>
-
-    <ol class="steps">
-      <li><div><b>Now</b> — we check which expert fits the role and confirm they have a slot.</div></li>
-      <li><div><b>Within a few hours</b> — a payment link arrives by email, together with the expert's real name, photo and LinkedIn.</div></li>
-      <li><div><b>After payment</b> — you send the candidate's CV and email; they book a slot from a calendar link.</div></li>
-      <li><div><b>Within 24 hours</b> — the call happens. Nothing is recorded.</div></li>
-      <li><div><b>Within 48 hours of the call</b> — the written assessment lands in your inbox.</div></li>
-    </ol>
-
-    <p class="sub" style="text-align:center">
-      <a href="status.html" id="track">Check this order</a> ·
-      <a href="report.html">See a sample assessment</a>
-    </p>
-  </div>
-
+    <div class="note" id="note"></div>
+    <div class="alert" id="err"></div>
+    <button class="btn wide" type="submit" id="go"></button>
+    <p class="hint" style="text-align:center" id="nocharge"></p>
+  </form>
 </div>
 
+<div class="wrap narrow" id="done">
+  <header class="top">
+    <h1 id="d-t"></h1>
+    <p class="lede" id="d-s"></p>
+  </header>
+  <div class="ticket">
+    <div class="lb" id="d-lb"></div>
+    <div class="ref" id="ref">—</div>
+    <div class="sv" id="d-sv"></div>
+  </div>
+  <ol class="flow" id="flow"></ol>
+  <p class="after">
+    <a class="link" href="status.html" id="d-track"></a>
+    <a class="link" href="report.html" id="d-sample"></a>
+  </p>
+</div>
+
+<footer class="wrap narrow">
+  <div class="row">
+    <span id="f-note"></span>
+    <span><a href="https://theworldconstitution.org" target="_blank" rel="noopener" id="f-proj"></a></span>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
 <script>
 const SB = {
   url:  "https://nhkwgulokiwqwfrynmkx.supabase.co",
   anon: "sb_publishable_XFFU01VfekhRJffwEEgbwA_eOvmOXr0"
 };
 const $ = id => document.getElementById(id);
-const PRICE = { screen: ['Verified Screen', '$199'], shadow: ['Shadow Session', '$299'] };
+const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+let T = null;
 
-/* Номер заказа: 6 символов без похожих друг на друга букв и цифр,
-   чтобы его можно было продиктовать по телефону. */
+/* Номер заказа: шесть символов без пар, которые путают на слух и на глаз
+   (ноль и O, единица и I), чтобы его можно было продиктовать по телефону. */
 function makeRef(){
   const A = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
   const b = new Uint8Array(6);
@@ -217,61 +168,99 @@ function makeRef(){
 }
 
 function fail(msg){
-  const e = $('err');
-  e.textContent = msg;
-  e.classList.add('on');
+  $('err').textContent = msg;
+  $('err').classList.add('on');
   $('go').disabled = false;
-  $('go').textContent = 'Place the order';
+  $('go').textContent = T.order.go;
 }
+
+window.render = function(t){
+  T = t;
+  const o = T.order, h = T.home;
+  document.title = o.h1 + ' — Verified.Ninja';
+  $('n-exp').textContent = T.nav.experts;
+  $('n-rep').textContent = T.nav.sample;
+  $('n-st').textContent  = T.nav.status;
+
+  $('h1').textContent  = o.h1;
+  $('sub').textContent = o.sub;
+  $('pick-t').textContent = o.pickT;
+  h.plans.forEach((p,i)=>{
+    $('p'+i+'n').textContent = p.name;
+    $('p'+i+'p').textContent = p.price;
+    $('p'+i+'d').textContent = p.when;
+  });
+
+  $('you-t').textContent = o.youT;
+  $('l-nm').textContent = o.name;
+  $('l-em').textContent = o.email;
+  $('h-em').textContent = o.emailHint;
+  $('l-co').innerHTML   = esc(o.company) + ' <span>— ' + esc(o.optional) + '</span>';
+  $('role-t').textContent = o.roleT;
+  $('l-rl').textContent = o.role;
+  $('rl').placeholder   = o.rolePh;
+  $('l-cn').innerHTML   = esc(o.concern) + ' <span>— ' + esc(o.concernOpt) + '</span>';
+  $('cn').placeholder   = o.concernPh;
+  $('h-cn').textContent = o.concernHint;
+  $('note').textContent = o.note;
+  $('go').textContent   = o.go;
+  $('nocharge').textContent = o.noCharge;
+
+  $('d-t').textContent  = o.doneT;
+  $('d-s').textContent  = o.doneS;
+  $('d-lb').textContent = o.refLbl;
+  $('flow').innerHTML   = o.next.map(x=>`<li>${esc(x)}</li>`).join('');
+  $('d-track').textContent  = o.track;
+  $('d-sample').textContent = o.seeSample;
+  $('f-note').textContent = T.footer.note;
+  $('f-proj').textContent = T.footer.project;
+
+  /* Услуга может быть выбрана ссылкой с главной. */
+  const pre = new URLSearchParams(location.search).get('s');
+  if(pre === 'shadow') $('svc-shadow').checked = true;
+};
 
 $('f').addEventListener('submit', async ev => {
   ev.preventDefault();
   $('err').classList.remove('on');
+  const o = T.order;
 
   const service = document.querySelector('input[name=service]:checked').value;
   const client_name  = $('nm').value.trim();
   const client_email = $('em').value.trim();
   const role_hiring  = $('rl').value.trim();
 
-  if(client_name.length < 2)  return fail('Please add your name.');
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(client_email)) return fail('That email address does not look right.');
-  if(role_hiring.length < 2)  return fail('Which role are you hiring for?');
+  if(client_name.length < 2) return fail(o.errName);
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(client_email)) return fail(o.errEmail);
+  if(role_hiring.length < 2) return fail(o.errRole);
 
   $('go').disabled = true;
-  $('go').textContent = 'Placing…';
+  $('go').textContent = o.going;
 
   const ref = makeRef();
-  const body = {
-    ref, service, client_name, client_email, role_hiring,
-    company: $('co').value.trim() || null,
-    concern: $('cn').value.trim() || null
-  };
-
   try{
     const r = await fetch(`${SB.url}/rest/v1/orders`, {
-      method: 'POST',
-      headers: {
-        'apikey': SB.anon,
-        'Authorization': `Bearer ${SB.anon}`,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify(body)
+      method:'POST',
+      headers:{ apikey:SB.anon, Authorization:`Bearer ${SB.anon}`,
+                'Content-Type':'application/json', Prefer:'return=minimal' },
+      body: JSON.stringify({
+        ref, service, client_name, client_email, role_hiring,
+        company: $('co').value.trim() || null,
+        concern: $('cn').value.trim() || null
+      })
     });
-    if(!r.ok){
-      const t = await r.text();
-      return fail('We could not place the order. Email hello@verified.ninja and we will take it by hand. (' + (t.slice(0,120) || r.status) + ')');
-    }
+    if(!r.ok) return fail(o.errSave);
   }catch(e){
-    return fail('Network problem — the order did not go through. Email hello@verified.ninja and we will take it by hand.');
+    return fail(o.errNet);
   }
 
   try{ localStorage.setItem('vn_ref', ref); }catch(e){}
-  $('ref').textContent = ref;
-  $('svc-label').textContent = PRICE[service][0] + ' · ' + PRICE[service][1];
-  $('track').href = 'status.html?ref=' + encodeURIComponent(ref);
+  const plan = T.home.plans.find(p => p.id === service);
+  $('ref').textContent  = ref;
+  $('d-sv').textContent = plan.name + ' · ' + plan.price;
+  $('d-track').href = 'status.html?ref=' + encodeURIComponent(ref);
   $('stage-form').style.display = 'none';
-  $('stage-done').classList.add('on');
+  $('done').classList.add('on');
   window.scrollTo(0,0);
 });
 </script>
