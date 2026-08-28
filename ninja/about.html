@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About us — Verified.Ninja</title>
+<meta name="description" content="Who is behind Verified.Ninja, what else is being built, and the open project underneath it.">
+<link rel="stylesheet" href="app.css">
+<style>
+  header.top{padding:64px 0 8px}
+  header.top .lede{margin-top:18px}
+
+  .layers{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+  .ly{background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:22px 24px}
+  .ly .t{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+  .ly .n{font-size:19px;font-weight:600;letter-spacing:-.015em}
+  .ly .d{font-size:15.5px;color:var(--muted);line-height:1.5}
+
+  .found{margin-top:26px}
+  .found p{font-size:16.5px;line-height:1.55}
+  .found p + p{margin-top:14px}
+  .found .btn{margin-top:24px}
+
+  .honest{margin-top:24px;background:var(--bg-soft);border-radius:16px;padding:24px}
+  .honest h3{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:10px}
+  .honest p{font-size:15.5px;color:var(--ink-2);line-height:1.5}
+
+  .back{padding:56px 0 0;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="index.html">Verified<b>.Ninja</b></a>
+    <div class="nav-links">
+      <a href="expert.html" class="hide-sm" id="n-exp"></a>
+      <a href="report.html" class="hide-sm" id="n-rep"></a>
+      <select class="lang" id="lang" aria-label="Language"></select>
+      <a class="btn sm" href="order.html" id="n-ord"></a>
+    </div>
+  </div>
+</nav>
+
+<header class="top wrap mid">
+  <div class="eyebrow" id="kicker"></div>
+  <h1 id="title"></h1>
+  <p class="lede" id="lede"></p>
+</header>
+
+<section class="wrap mid">
+  <div class="sec-head"><h2 id="layers-t"></h2></div>
+  <div class="layers" id="layers"></div>
+</section>
+
+<section class="wrap mid">
+  <div class="sec-head"><h2 id="found-t"></h2></div>
+  <div class="found" id="found"></div>
+  <a class="btn" href="https://theworldconstitution.org" target="_blank" rel="noopener" id="found-cta"></a>
+
+  <div class="honest">
+    <h3 id="honest-t"></h3>
+    <p id="honest"></p>
+  </div>
+
+  <p class="back"><a class="link" href="index.html" id="back"></a></p>
+</section>
+
+<footer class="wrap mid">
+  <div class="row"><span id="f-note"></span></div>
+</footer>
+
+<script src="i18n.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+
+window.render = function(T){
+  const a = T.about;
+  document.title = a.title + ' — Verified.Ninja';
+  $('n-exp').textContent = T.nav.experts;
+  $('n-rep').textContent = T.nav.sample;
+  $('n-ord').textContent = T.nav.order;
+
+  $('kicker').textContent = a.kicker;
+  $('title').textContent  = a.title;
+  $('lede').textContent   = a.lede;
+
+  $('layers-t').textContent = a.layersT;
+  $('layers').innerHTML = a.layers.map((l,i)=>`
+    <div class="ly">
+      <div class="t">
+        <span class="n">${esc(l.n)}</span>
+        <span class="pill ${i === 0 ? 'ok' : 'flat'}">${esc(l.tag)}</span>
+      </div>
+      <div class="d">${esc(l.d)}</div>
+    </div>`).join('');
+
+  $('found-t').textContent = a.foundT;
+  $('found').innerHTML = a.found.map(p=>`<p>${esc(p)}</p>`).join('');
+  $('found-cta').textContent = a.foundCta;
+  $('honest-t').textContent = a.honestT;
+  $('honest').textContent   = a.honest;
+  $('back').textContent     = a.back;
+  $('f-note').textContent   = T.footer.note;
+};
+</script>
+</body>
+</html>

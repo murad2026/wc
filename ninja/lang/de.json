@@ -6,7 +6,8 @@
   "sample": "Beispiel",
   "pricing": "Preise",
   "order": "Bestellen",
-  "status": "Auftragsstatus"
+  "status": "Auftragsstatus",
+  "about": "Über uns"
  },
  "home": {
   "h1": "Technische Prüfung durch erfahrene Senior-Entwickler",
@@ -112,6 +113,10 @@
    {
     "q": "Was passiert mit den Daten des Kandidaten?",
     "a": "Der Lebenslauf wird für die Prüfung genutzt und auf Wunsch gelöscht. Das Gutachten geht nur an Sie. Wir nehmen ein Transkript des Gesprächs auf, nie eine Aufzeichnung; es wird 30 Tage nach Lieferung gelöscht. Kandidatendaten werden weder veröffentlicht noch verkauft."
+   },
+   {
+    "q": "Wer seid ihr?",
+    "a": "Ein kleines Team, das Infrastruktur für überprüfte menschliche Reputation baut. Verified.Ninja ist der erste kommerzielle Dienst darauf — mehr dazu auf der Über-uns-Seite."
    }
   ],
   "finalT": "Prüfung bestellen",
@@ -217,7 +222,20 @@
     "hired": true,
     "solo": "bar",
     "ontime": null,
-    "avg": null
+    "avg": null,
+    "bio": "Einer der geschulten Interviewer, denen Amazon ein Vetorecht bei Einstellungen gibt. Führte Auswahlverfahren für Ingenieure im Fortune-500-Maßstab und entwarf die hier verwendete Prüfmethodik.",
+    "does": [
+     "Ob die im Lebenslauf genannte Erfahrung tatsächlich gelebt wurde",
+     "Wie jemand denkt, sobald die Frage über das Vorbereitete hinausgeht",
+     "Was er selbst verantwortet hat und was sein Team tat",
+     "Ob er die eigene Arbeit jemandem erklären kann, der nicht dabei war"
+    ],
+    "doesnt": [
+     "Kulturelle Passung, Motivation oder Verbleibsabsicht",
+     "Live-Programmieren oder Tippgeschwindigkeit",
+     "Suche, Abwerbung oder Vermittlung von Kandidaten",
+     "Kandidaten, die gerade im Verfahren seines Arbeitgebers sind"
+    ]
    },
    {
     "code": "KAGE-02",
@@ -233,9 +251,25 @@
     "hired": null,
     "solo": "shadow",
     "ontime": null,
-    "avg": null
+    "avg": null,
+    "bio": "Fünf Jahre bei Amazon in IT und AWS, arbeitet derzeit in der IT. Tägliche Erfahrung im Betrieb, Support und in der Störungsanalyse von Cloud-Infrastruktur in Produktion — worum es beim Infrastruktur-Recruiting tatsächlich geht.",
+    "does": [
+     "Was ein Kandidat wirklich betrieben und nicht nur gelesen hat",
+     "Wie er einen Fehler eingrenzt, den er nie zuvor gesehen hat",
+     "Was er tut, wenn die schnelle und die sichere Lösung auseinandergehen",
+     "Ob er einen Vorfall auch nichttechnisch erklären kann"
+    ],
+    "doesnt": [
+     "Anwendungsarchitektur und Systementwurf",
+     "Frontend- oder Mobile-Kandidaten",
+     "Zertifikatsprüfung — sie belegt Lernen, nicht Praxis",
+     "Alles außerhalb von Infrastruktur und Betrieb"
+    ]
    }
-  ]
+  ],
+  "bioT": "Hintergrund",
+  "doesT": "Bewertet",
+  "doesntT": "Macht nicht"
  },
  "order": {
   "h1": "Prüfung bestellen",
@@ -317,5 +351,39 @@
  },
  "footer": {
   "note": "Ein unabhängiger Prüfdienst. Weder mit Amazon noch einem anderen Unternehmen verbunden oder von diesen unterstützt."
+ },
+ "about": {
+  "nav": "Über uns",
+  "kicker": "Hinter dem Dienst",
+  "title": "Teil von etwas Größerem",
+  "lede": "Verified.Ninja ist der erste kommerzielle Dienst auf einer Idee: Ein Mensch, dessen Erfahrung tatsächlich geprüft wurde, ist mehr wert als einer, der sie behauptet. Diese Seite gibt es, damit Sie wissen, wer hinter der Prüfung steht, die Sie kaufen. Am Dienst selbst ändert sie nichts.",
+  "layersT": "Was wir bauen",
+  "layers": [
+   {
+    "n": "Verified Screen",
+    "tag": "Live",
+    "d": "Technische Prüfung durch Senior-Entwickler. Das, was Sie gerade ansehen. Davon lebt alles Weitere."
+   },
+   {
+    "n": "Verified Wiki",
+    "tag": "Geplant",
+    "d": "Fakten und Analysen, geschrieben von geprüften Fachleuten und von anderen geprüften Menschen kontrolliert. Reputation wird erarbeitet, nicht gekauft."
+   },
+   {
+    "n": "Verified Feed",
+    "tag": "Geplant",
+    "d": "Kurze Beobachtungen ausschließlich von echten Menschen. Schutz vor Fälschungen als Dienstleistung."
+   }
+  ],
+  "foundT": "Das Fundament",
+  "found": [
+   "Unter allen dreien liegt ein offenes Projekt namens WorldConstitution: eine Charta, eine Reputation, die dem Menschen gehört und nicht der Plattform, und ein Protokoll, das bestätigt, dass jemand ein echter, einzelner Mensch ist.",
+   "Es ist ein soziales Projekt, kein Unternehmen, und es verdient kein Geld. Die kommerziellen Dienste existieren, um die Idee praktisch zu belegen: Unternehmen zahlen für einen geprüften Menschen — das einzige Argument, das zählt.",
+   "Wiki und Feed sind Pläne, keine Versprechen. Es gibt keinen Token, kein Token-Verkauf ist geplant, und wir versprechen niemandem Einkünfte."
+  ],
+  "foundCta": "Das Projekt ansehen",
+  "honestT": "Warum das auf einer eigenen Seite steht",
+  "honest": "Weil es nicht Ihr Problem ist. Beim Kauf einer Prüfung zählt, wer das Gespräch führt, was im Bericht steht und wann er kommt. Nichts über das Mutterprojekt erscheint im Profil eines Experten oder in Ihrem Bericht — das ist eine Regel, an die wir uns halten, keine Vorliebe.",
+  "back": "Zurück zum Dienst"
  }
 }

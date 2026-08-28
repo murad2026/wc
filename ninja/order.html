@@ -144,6 +144,7 @@
 <footer class="wrap narrow">
   <div class="row">
     <span id="f-note"></span>
+    <span><a href="about.html" id="f-about"></a></span>
   </div>
 </footer>
 
@@ -212,6 +213,7 @@ window.render = function(t){
   $('d-track').textContent  = o.track;
   $('d-sample').textContent = o.seeSample;
   $('f-note').textContent = T.footer.note;
+  if($('f-about')) $('f-about').textContent = T.nav.about;
 
   /* Услуга может быть выбрана ссылкой с главной. */
   const pre = new URLSearchParams(location.search).get('s');

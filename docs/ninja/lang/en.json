@@ -6,7 +6,8 @@
   "sample": "Sample",
   "pricing": "Pricing",
   "order": "Order",
-  "status": "Order status"
+  "status": "Order status",
+  "about": "About us"
  },
  "home": {
   "h1": "Technical screening by senior engineers",
@@ -112,6 +113,10 @@
    {
     "q": "What happens to the candidate's data?",
     "a": "The CV is used for the screen and deleted on request. The assessment goes to you alone. We take a transcript of the call, never a recording; it is deleted 30 days after delivery. We never publish or sell candidate data."
+   },
+   {
+    "q": "Who are you?",
+    "a": "A small team building infrastructure for verified human reputation. Verified.Ninja is the first commercial service built on it — there is more on the about page."
    }
   ],
   "finalT": "Order a screen",
@@ -217,7 +222,20 @@
     "hired": true,
     "solo": "bar",
     "ontime": null,
-    "avg": null
+    "avg": null,
+    "bio": "One of the trained interviewers Amazon gives veto power over hires. Ran senior engineering loops at Fortune-500 scale and designed the screening methodology used here.",
+    "does": [
+     "Whether the experience on the CV was actually lived",
+     "How a candidate reasons past what they prepared",
+     "What they owned themselves versus what their team did",
+     "Whether they can explain their own work to someone who wasn't there"
+    ],
+    "doesnt": [
+     "Culture fit, motivation, or whether they will stay",
+     "Live coding or typing speed",
+     "Sourcing, recruiting or placing candidates",
+     "Any candidate currently in his employer's hiring process"
+    ]
    },
    {
     "code": "KAGE-02",
@@ -233,9 +251,25 @@
     "hired": null,
     "solo": "shadow",
     "ontime": null,
-    "avg": null
+    "avg": null,
+    "bio": "Five years at Amazon in IT and AWS, currently working in IT. Day-to-day experience running, supporting and troubleshooting cloud infrastructure in production — which is what most infrastructure hiring is actually about.",
+    "does": [
+     "What a candidate has actually operated, not read about",
+     "How they narrow down a failure they have never seen",
+     "What they do when the fast fix and the safe fix differ",
+     "Whether they can explain an incident to someone non-technical"
+    ],
+    "doesnt": [
+     "Application architecture and system design",
+     "Frontend or mobile candidates",
+     "Certification checking — that proves study, not practice",
+     "Anything outside infrastructure and operations"
+    ]
    }
-  ]
+  ],
+  "bioT": "Background",
+  "doesT": "Assesses",
+  "doesntT": "Does not do"
  },
  "order": {
   "h1": "Order a screen",
@@ -317,5 +351,39 @@
  },
  "footer": {
   "note": "An independent screening service. Not affiliated with or endorsed by Amazon or any other company."
+ },
+ "about": {
+  "nav": "About us",
+  "kicker": "Behind the service",
+  "title": "Part of something larger",
+  "lede": "Verified.Ninja is the first commercial service built on one idea: a person whose experience has actually been checked is worth more than a person who claims it. This page exists so you know who is behind the screen you are buying. It changes nothing about the service itself.",
+  "layersT": "What we are building",
+  "layers": [
+   {
+    "n": "Verified Screen",
+    "tag": "Live",
+    "d": "Technical screening by senior engineers. What you are looking at. It pays for everything below."
+   },
+   {
+    "n": "Verified Wiki",
+    "tag": "Planned",
+    "d": "Facts and analysis written by verified experts and reviewed by other verified people. Reputation earned through work, not bought."
+   },
+   {
+    "n": "Verified Feed",
+    "tag": "Planned",
+    "d": "Short observations from real people only. Protection against fakes, sold as a service."
+   }
+  ],
+  "foundT": "The foundation",
+  "found": [
+   "Underneath all three sits an open project called WorldConstitution: a charter, a reputation that belongs to the person rather than to a platform, and a protocol for confirming that someone is a real, single human being.",
+   "It is a social project, not a company, and it makes no money. The commercial services exist to prove the idea works in practice — companies pay for a verified human, which is the only argument that counts.",
+   "Wiki and Feed are plans, not promises. There is no token, no token sale is planned, and we make no promises of income to anyone."
+  ],
+  "foundCta": "See the project",
+  "honestT": "Why this is on a separate page",
+  "honest": "Because it is not your problem. When you buy a screen, what matters is who runs the call, what the report says and when it arrives. Nothing about the parent project appears on an expert's profile or inside your report — that is a rule we hold ourselves to, not a preference.",
+  "back": "Back to the service"
  }
 }

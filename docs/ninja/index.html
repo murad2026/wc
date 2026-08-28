@@ -150,6 +150,7 @@
 <footer class="wrap">
   <div class="row">
     <span id="f-note"></span>
+    <span><a href="about.html" id="f-about"></a></span>
   </div>
 </footer>
 
@@ -220,6 +221,7 @@ window.render = function(T){
   $('final-cta').textContent = h.finalCta;
   $('final-n').textContent = h.finalNote;
   $('f-note').textContent = T.footer.note;
+  if($('f-about')) $('f-about').textContent = T.nav.about;
 };
 </script>
 </body>

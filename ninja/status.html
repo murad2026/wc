@@ -80,6 +80,7 @@
 <footer class="wrap narrow">
   <div class="row">
     <span id="f-note"></span>
+    <span><a href="about.html" id="f-about"></a></span>
   </div>
 </footer>
 
@@ -161,6 +162,7 @@ window.render = function(t){
   $('q').placeholder   = s.ph;
   $('go').textContent  = s.go;
   $('f-note').textContent = T.footer.note;
+  if($('f-about')) $('f-about').textContent = T.nav.about;
 
   const fromUrl = new URLSearchParams(location.search).get('ref');
   let seed = fromUrl;

@@ -6,7 +6,8 @@
   "sample": "Exemple",
   "pricing": "Tarifs",
   "order": "Commander",
-  "status": "Suivi"
+  "status": "Suivi",
+  "about": "Le projet"
  },
  "home": {
   "h1": "Évaluation technique par des ingénieurs seniors",
@@ -112,6 +113,10 @@
    {
     "q": "Que devient le dossier du candidat ?",
     "a": "Le CV sert à l'évaluation et est supprimé sur demande. Le rapport ne va qu'à vous. Nous prenons une transcription de l'entretien, jamais un enregistrement ; elle est supprimée 30 jours après la livraison. Nous ne publions ni ne vendons de données de candidats."
+   },
+   {
+    "q": "Qui êtes-vous ?",
+    "a": "Une petite équipe qui construit une infrastructure de réputation humaine vérifiée. Verified.Ninja en est le premier service commercial — plus de détails sur la page du projet."
    }
   ],
   "finalT": "Commander une évaluation",
@@ -217,7 +222,20 @@
     "hired": true,
     "solo": "bar",
     "ontime": null,
-    "avg": null
+    "avg": null,
+    "bio": "L'un des intervieweurs formés à qui Amazon confie un droit de veto sur les embauches. A mené des processus de recrutement d'ingénieurs à l'échelle du Fortune 500 et conçu la méthode d'évaluation utilisée ici.",
+    "does": [
+     "Si l'expérience inscrite au CV a réellement été vécue",
+     "Comment le candidat raisonne au-delà de ce qu'il a préparé",
+     "Ce qu'il a porté lui-même et ce qu'a fait son équipe",
+     "S'il sait expliquer son travail à quelqu'un qui n'y était pas"
+    ],
+    "doesnt": [
+     "L'adéquation culturelle, la motivation ou l'intention de rester",
+     "Le code en direct ou la vitesse de frappe",
+     "Le sourcing, l'approche ou le placement de candidats",
+     "Tout candidat engagé dans le processus de son propre employeur"
+    ]
    },
    {
     "code": "KAGE-02",
@@ -233,9 +251,25 @@
     "hired": null,
     "solo": "shadow",
     "ontime": null,
-    "avg": null
+    "avg": null,
+    "bio": "Cinq ans chez Amazon en IT et AWS, travaille aujourd'hui en IT. Expérience quotidienne d'exploitation, de support et de diagnostic d'infrastructure cloud en production — ce autour de quoi tourne réellement le recrutement en infrastructure.",
+    "does": [
+     "Ce qu'un candidat a réellement exploité, et non lu",
+     "Comment il circonscrit une panne qu'il n'a jamais vue",
+     "Ce qu'il fait quand le correctif rapide et le correctif sûr divergent",
+     "S'il sait expliquer un incident à quelqu'un de non technique"
+    ],
+    "doesnt": [
+     "L'architecture applicative et la conception de systèmes",
+     "Les candidats frontend ou mobile",
+     "La vérification de certifications — elles prouvent l'étude, pas la pratique",
+     "Tout ce qui sort de l'infrastructure et de l'exploitation"
+    ]
    }
-  ]
+  ],
+  "bioT": "Parcours",
+  "doesT": "Évalue",
+  "doesntT": "Ne fait pas"
  },
  "order": {
   "h1": "Commander une évaluation",
@@ -317,5 +351,39 @@
  },
  "footer": {
   "note": "Service d'évaluation indépendant. Sans lien avec Amazon ou toute autre entreprise, ni approbation de leur part."
+ },
+ "about": {
+  "nav": "Le projet",
+  "kicker": "Derrière le service",
+  "title": "Partie d'un ensemble plus large",
+  "lede": "Verified.Ninja est le premier service commercial bâti sur une idée : une personne dont l'expérience a vraiment été vérifiée vaut plus qu'une personne qui l'affirme. Cette page existe pour que vous sachiez qui se trouve derrière l'évaluation que vous achetez. Elle ne change rien au service.",
+  "layersT": "Ce que nous construisons",
+  "layers": [
+   {
+    "n": "Verified Screen",
+    "tag": "En service",
+    "d": "Évaluation technique par des ingénieurs seniors. Ce que vous regardez. C'est ce qui finance tout le reste."
+   },
+   {
+    "n": "Verified Wiki",
+    "tag": "Prévu",
+    "d": "Faits et analyses rédigés par des experts vérifiés et relus par d'autres personnes vérifiées. La réputation se gagne par le travail, elle ne s'achète pas."
+   },
+   {
+    "n": "Verified Feed",
+    "tag": "Prévu",
+    "d": "Observations courtes venant uniquement de personnes réelles. La protection contre les faux, vendue comme un service."
+   }
+  ],
+  "foundT": "Le socle",
+  "found": [
+   "Sous ces trois services se trouve un projet ouvert appelé WorldConstitution : une charte, une réputation qui appartient à la personne et non à la plateforme, et un protocole confirmant que quelqu'un est bien un être humain réel et unique.",
+   "C'est un projet social, pas une entreprise, et il ne rapporte rien. Les services commerciaux existent pour prouver l'idée en pratique : des entreprises paient pour un humain vérifié, le seul argument qui compte.",
+   "Wiki et Feed sont des plans, pas des promesses. Il n'y a pas de jeton, aucune vente de jeton n'est prévue et nous ne promettons de revenus à personne."
+  ],
+  "foundCta": "Voir le projet",
+  "honestT": "Pourquoi ceci est sur une page à part",
+  "honest": "Parce que ce n'est pas votre affaire. Quand vous achetez une évaluation, ce qui compte est qui mène l'entretien, ce que dit le rapport et quand il arrive. Rien du projet parent n'apparaît sur le profil d'un expert ni dans votre rapport — c'est une règle que nous nous imposons, pas une préférence.",
+  "back": "Retour au service"
  }
 }
