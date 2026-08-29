@@ -79,7 +79,10 @@ nav{
   max-width:960px;margin:0 auto;padding:0 22px;height:52px;
   display:flex;align-items:center;justify-content:space-between;gap:18px;
 }
-.brand{font-size:17px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.brand{font-size:17px;font-weight:600;letter-spacing:-.02em;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:8px}
+.mark{width:19px;height:19px;flex-shrink:0;color:var(--ink)}
+.mark-lg{width:56px;height:56px;color:var(--ink)}
 .brand b{font-weight:600;color:var(--muted)}
 .nav-links{display:flex;align-items:center;gap:22px}
 .nav-links a{font-size:13.5px;color:var(--ink-2)}

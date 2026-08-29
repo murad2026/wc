@@ -7,9 +7,11 @@
 <meta name="description" content="A senior engineer with FAANG-scale hiring experience runs a 15-minute live screen on your candidate and writes up what they found. $199 per candidate.">
 <meta property="og:title" content="Verified.Ninja — technical screening by senior engineers">
 <meta property="og:description" content="A 15-minute live technical screen run by a senior engineer. $199 per candidate, written assessment in 48 hours.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M16%201.6c.95%206.5%207.95%2013.5%2014.4%2014.4-6.45.95-13.45%207.95-14.4%2014.4-.95-6.45-7.95-13.45-14.4-14.4%206.45-.95%2013.45-7.95%2014.4-14.4ZM16%2012.6a3.4%203.4%200%201%200%200%206.8%203.4%203.4%200%200%200%200-6.8Z%22%20fill%3D%22%231d1d1f%22%2F%3E%3C%2Fsvg%3E">
 <link rel="stylesheet" href="app.css">
 <style>
-  header.hero{padding:100px 0 84px;text-align:center}
+  header.hero{padding:84px 0 84px;text-align:center}
+  header.hero .mark-lg{margin-bottom:26px}
   header.hero .lede{margin:22px auto 0}
   .hero-btns{display:flex;gap:12px;justify-content:center;margin-top:34px;flex-wrap:wrap}
   .hero-meta{margin-top:26px;font-size:14px;color:var(--muted)}
@@ -20,7 +22,8 @@
   .pc{display:flex;gap:16px;align-items:flex-start;transition:border-color .15s}
   .pc:hover{border-color:var(--line)}
   .pc .av{width:52px;height:52px;border-radius:15px;flex-shrink:0;background:var(--bg-soft);
-    border:1px solid var(--line-soft);display:flex;align-items:center;justify-content:center;font-size:23px}
+    border:1px solid var(--line-soft);display:flex;align-items:center;justify-content:center;color:var(--ink)}
+  .pc .av .mark{width:24px;height:24px}
   .pc .bd{min-width:0}
   .pc .cd{display:block;font-size:19px;font-weight:600;letter-spacing:-.015em}
   .pc .rl{display:block;font-size:14px;color:var(--muted);margin-top:1px}
@@ -82,7 +85,7 @@
 
 <nav>
   <div class="nav-in">
-    <a class="brand" href="index.html">Verified<b>.Ninja</b></a>
+    <a class="brand" href="index.html">Verified<b>.Ninja</b><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 1.6c.95 6.5 7.95 13.5 14.4 14.4-6.45.95-13.45 7.95-14.4 14.4-.95-6.45-7.95-13.45-14.4-14.4 6.45-.95 13.45-7.95 14.4-14.4ZM16 12.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Z" fill="currentColor"/></svg></a>
     <div class="nav-links">
       <a href="expert.html" class="hide-sm" id="n-exp"></a>
       <a href="report.html" class="hide-sm" id="n-rep"></a>
@@ -94,6 +97,7 @@
 </nav>
 
 <header class="hero wrap">
+  <svg class="mark-lg" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 1.6c.95 6.5 7.95 13.5 14.4 14.4-6.45.95-13.45 7.95-14.4 14.4-.95-6.45-7.95-13.45-14.4-14.4 6.45-.95 13.45-7.95 14.4-14.4ZM16 12.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Z" fill="currentColor"/></svg>
   <h1 id="h1"></h1>
   <p class="lede" id="sub"></p>
   <div class="hero-btns">
@@ -181,7 +185,7 @@ window.render = function(T){
   $('who-cards').innerHTML = e.people.map(p => {
     const solo = p.solo === 'bar';
     return `<a class="card pc" href="expert.html">
-      <span class="av">🥷</span>
+      <span class="av"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 1.6c.95 6.5 7.95 13.5 14.4 14.4-6.45.95-13.45 7.95-14.4 14.4-.95-6.45-7.95-13.45-14.4-14.4 6.45-.95 13.45-7.95 14.4-14.4ZM16 12.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Z" fill="currentColor"/></svg></span>
       <span class="bd">
         <span class="cd">${esc(p.code)}</span>
         <span class="rl">${esc(p.role)}</span>
