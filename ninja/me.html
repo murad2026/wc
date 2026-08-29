@@ -127,7 +127,7 @@ function draw(e){
   $('rows').innerHTML = [
     row(f.stack, e.stack || m.na, !e.stack),
     row(f.years, e.years == null ? m.na : String(e.years), e.years == null),
-    row(f.interviewing, e.interviewing ? yes : no),
+    row(f.interviews, e.interviews == null ? m.na : String(e.interviews), e.interviews == null),
     row(f.hired, e.hired ? yes : no),
     row(f.disclosure, (T.join.disc[e.disclosure] || m.na), !e.disclosure),
     row(f.role, e.public_role || m.na, !e.public_role),

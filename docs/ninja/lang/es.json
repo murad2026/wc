@@ -133,7 +133,7 @@
   "fields": {
    "years": "Años en la profesión",
    "stack": "Stack",
-   "interviewing": "Ha entrevistado en su trabajo",
+   "interviews": "Entrevistas realizadas",
    "hired": "Ha decidido contrataciones",
    "solo": "Autorizado para evaluar solo",
    "ontime": "Informes a tiempo",
@@ -147,6 +147,7 @@
   "soloYes": "Solo",
   "soloWhy": {
    "bar": "Bar Raiser: autorizado para trabajar solo desde el primer pedido.",
+   "count": "Entrevistó y contrató para su propio equipo en Amazon. Eso cumple el listón para trabajar solo dentro de su área: nube, infraestructura y operaciones de TI. Los candidatos de arquitectura y diseño de sistemas van a KAGE-01.",
    "shadow": "Sin experiencia acreditada entrevistando. Solo sesiones shadow, hasta que tres informes seguidos salgan sin que cambiemos el veredicto."
   },
   "barT": "Qué autoriza a trabajar solo",
@@ -219,7 +220,6 @@
      "Calibración del listón"
     ],
     "years": null,
-    "interviewing": true,
     "hired": true,
     "solo": "bar",
     "ontime": null,
@@ -236,11 +236,12 @@
      "Programar en vivo o velocidad al teclado",
      "Buscar, captar o colocar candidatos",
      "Candidatos que estén en el proceso de su propia empresa"
-    ]
+    ],
+    "interviews": null
    },
    {
     "code": "KAGE-02",
-    "role": "Nube e infraestructura de TI",
+    "role": "Ex responsable de soporte de TI, Amazon",
     "tags": [
      "AWS",
      "Infraestructura cloud",
@@ -248,12 +249,11 @@
      "Diagnóstico"
     ],
     "years": 5,
-    "interviewing": null,
-    "hired": null,
-    "solo": "shadow",
+    "hired": true,
+    "solo": "count",
     "ontime": null,
     "avg": null,
-    "bio": "Cinco años en Amazon, en TI y AWS; hoy trabaja en TI. Experiencia diaria operando, dando soporte y diagnosticando infraestructura cloud en producción, que es de lo que realmente va la contratación en infraestructura.",
+    "bio": "Cinco años en Amazon como responsable de soporte de TI: dirigía el equipo, entrevistaba a los candidatos y decidía las contrataciones. Hoy trabaja en TI. Experiencia diaria operando, dando soporte y diagnosticando infraestructura cloud en producción, que es de lo que realmente va la contratación en infraestructura.",
     "does": [
      "Qué ha operado de verdad un candidato y no solo leído",
      "Cómo acota un fallo que nunca ha visto",
@@ -265,7 +265,8 @@
      "Candidatos de frontend o móvil",
      "Verificar certificaciones — prueban estudio, no práctica",
      "Todo lo que quede fuera de infraestructura y operaciones"
-    ]
+    ],
+    "interviews": 53
    }
   ],
   "bioT": "Trayectoria",
@@ -410,7 +411,7 @@
   "stack": "Qué puedes evaluar",
   "stackPh": "Backend, sistemas distribuidos, AWS, iOS…",
   "years": "Años en la profesión",
-  "interviewing": "He entrevistado candidatos como parte de mi trabajo",
+  "interviewing": "¿Cuántas entrevistas has hecho, aproximadamente?",
   "hired": "He decidido contrataciones o he vetado alguna",
   "publicT": "Tu ficha pública",
   "disclosure": "Cuánto mostrar públicamente",
@@ -443,7 +444,8 @@
    "Con experiencia entrevistando: directo a shadow y luego solo. Sin ella: el examen de dos informes.",
    "Recibes un código de acceso y puedes consultar tu estado cuando quieras."
   ],
-  "checkLink": "Consultar una solicitud"
+  "checkLink": "Consultar una solicitud",
+  "interviewingHint": "Un número, aunque sea aproximado, dice más que una casilla. Déjalo vacío si no has entrevistado."
  },
  "me": {
   "h1": "Tu estado",
@@ -457,13 +459,13 @@
    "status": "Estado",
    "stack": "Stack",
    "years": "Años",
-   "interviewing": "Ha entrevistado en su trabajo",
    "hired": "Ha decidido contrataciones",
    "disclosure": "Exposición pública",
    "role": "Línea pública",
    "ontime": "Informes a tiempo",
    "avg": "Horas medias hasta el informe",
-   "since": "Solicitud enviada"
+   "since": "Solicitud enviada",
+   "interviews": "Entrevistas realizadas"
   },
   "yes": "Sí",
   "no": "No",

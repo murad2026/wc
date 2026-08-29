@@ -102,10 +102,12 @@
         <input type="text" id="yr" inputmode="numeric" maxlength="2" style="max-width:110px">
       </div>
       <div class="field">
-        <div class="checks">
-          <label class="check"><input type="checkbox" id="iv"><span id="l-iv"></span></label>
-          <label class="check"><input type="checkbox" id="hr"><span id="l-hr"></span></label>
-        </div>
+        <label class="lb" for="iv" id="l-iv"></label>
+        <input type="text" id="iv" inputmode="numeric" maxlength="5" style="max-width:140px">
+        <div class="hint" id="h-iv"></div>
+      </div>
+      <div class="field">
+        <label class="check"><input type="checkbox" id="hr"><span id="l-hr"></span></label>
       </div>
       <div class="field">
         <label class="lb" for="ep" id="l-ep"></label>
@@ -196,6 +198,7 @@ window.render = function(t){
   $('st').placeholder     = j.stackPh;
   $('l-yr').innerHTML     = esc(j.years) + ' <span>— ' + esc(j.optional) + '</span>';
   $('l-iv').textContent   = j.interviewing;
+  $('h-iv').textContent   = j.interviewingHint;
   $('l-hr').textContent   = j.hired;
   $('l-ep').innerHTML     = esc(j.employer) + ' <span>— ' + esc(j.optional) + '</span>';
   $('ep').placeholder     = j.employerPh;
@@ -244,7 +247,9 @@ $('f').addEventListener('submit', async ev => {
     linkedin:      $('li').value.trim() || null,
     employer_note: $('ep').value.trim() || null,
     years:         Number.isFinite(yrRaw) && yrRaw >= 0 && yrRaw <= 60 ? yrRaw : null,
-    interviewing:  $('iv').checked,
+    interviews:    (() => { const n = parseInt($('iv').value.trim(), 10);
+                            return Number.isFinite(n) && n >= 0 && n <= 99999 ? n : null; })(),
+    interviewing:  parseInt($('iv').value.trim(), 10) > 0,
     hired:         $('hr').checked,
     disclosure:    document.querySelector('input[name=disc]:checked').value,
     public_role:   $('ro').value.trim() || null,

@@ -18,6 +18,7 @@ create table if not exists public.experts (
   stack         text not null check (char_length(stack) between 2 and 200),
   years         int  check (years between 0 and 60),
   interviewing  boolean not null default false,    -- вёл интервью на работе
+  interviews    int  check (interviews between 0 and 99999),  -- сколько провёл
   hired         boolean not null default false,    -- принимал решения о найме
   disclosure    text not null default 'b' check (disclosure in ('a','b','c')),
   public_role   text check (char_length(public_role) <= 120),
@@ -46,7 +47,7 @@ revoke all on public.experts from anon;
 -- Анониму можно только подать заявку и только тем, что он о себе рассказывает.
 -- code, access_code и status он подставить не может: их ставим мы.
 grant insert (full_name, email, linkedin, employer_note, stack, years,
-              interviewing, hired, disclosure, public_role, public_bio, agreed_rules)
+              interviewing, interviews, hired, disclosure, public_role, public_bio, agreed_rules)
   on public.experts to anon;
 
 -- Читать таблицу анониму нельзя вообще. Никаких select-прав не выдаём:
@@ -75,6 +76,7 @@ returns table (
   stack        text,
   years        int,
   interviewing boolean,
+  interviews   int,
   hired        boolean,
   disclosure   text,
   public_role  text,
@@ -87,7 +89,7 @@ security definer
 set search_path = public
 stable
 as $$
-  select e.code, e.status, e.stack, e.years, e.interviewing, e.hired,
+  select e.code, e.status, e.stack, e.years, e.interviewing, e.interviews, e.hired,
          e.disclosure, e.public_role, e.ontime_pct, e.avg_hours, e.created_at
   from public.experts e
   where e.access_code = p_code

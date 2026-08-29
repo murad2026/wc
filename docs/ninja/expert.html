@@ -145,7 +145,7 @@ window.render = function(T){
   $('lede').textContent   = e.lede;
 
   $('people').innerHTML = e.people.map(p => {
-    const solo = p.solo === 'bar';
+    const solo = p.solo !== 'shadow';   /* shadow — единственное состояние без соло */
     return `
     <div class="who box">
       <div class="idhead">
@@ -162,7 +162,9 @@ window.render = function(T){
         ${row(e.fields.years, p.years == null
              ? `<span class="v dimv">${esc(e.na)}</span>`
              : `<span class="v">${esc(String(p.years))}</span>`)}
-        ${row(e.fields.interviewing, flag(p.interviewing, e))}
+        ${row(e.fields.interviews, p.interviews == null
+             ? `<span class="v dimv">${esc(e.na)}</span>`
+             : `<span class="v">${esc(String(p.interviews))}</span>`)}
         ${row(e.fields.hired, flag(p.hired, e))}
         ${row(e.fields.ontime, `<span class="v dimv">${esc(e.noData)}</span>`)}
         ${row(e.fields.avg,    `<span class="v dimv">${esc(e.noData)}</span>`)}

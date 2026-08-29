@@ -133,7 +133,7 @@
   "fields": {
    "years": "Années dans le métier",
    "stack": "Stack",
-   "interviewing": "A mené des entretiens au travail",
+   "interviews": "Entretiens menés",
    "hired": "A décidé d'embauches",
    "solo": "Autorisé en solo",
    "ontime": "Rapports dans les délais",
@@ -147,6 +147,7 @@
   "soloYes": "Solo",
   "soloWhy": {
    "bar": "Bar Raiser — autorisé en solo dès la première commande.",
+   "count": "A mené des entretiens et recruté pour sa propre équipe chez Amazon. Cela satisfait l'exigence pour le travail en solo dans son domaine : cloud, infrastructure et exploitation IT. Les candidats en architecture et conception de systèmes vont à KAGE-01.",
    "shadow": "Expérience d'entretien non établie. Sessions shadow uniquement, jusqu'à trois rapports consécutifs partis sans que nous changions le verdict."
   },
   "barT": "Ce qui autorise le travail en solo",
@@ -219,7 +220,6 @@
      "Calibrage du niveau d'embauche"
     ],
     "years": null,
-    "interviewing": true,
     "hired": true,
     "solo": "bar",
     "ontime": null,
@@ -236,11 +236,12 @@
      "Le code en direct ou la vitesse de frappe",
      "Le sourcing, l'approche ou le placement de candidats",
      "Tout candidat engagé dans le processus de son propre employeur"
-    ]
+    ],
+    "interviews": null
    },
    {
     "code": "KAGE-02",
-    "role": "Cloud et infrastructure informatique",
+    "role": "Ancien responsable du support IT, Amazon",
     "tags": [
      "AWS",
      "Infrastructure cloud",
@@ -248,12 +249,11 @@
      "Diagnostic"
     ],
     "years": 5,
-    "interviewing": null,
-    "hired": null,
-    "solo": "shadow",
+    "hired": true,
+    "solo": "count",
     "ontime": null,
     "avg": null,
-    "bio": "Cinq ans chez Amazon en IT et AWS, travaille aujourd'hui en IT. Expérience quotidienne d'exploitation, de support et de diagnostic d'infrastructure cloud en production — ce autour de quoi tourne réellement le recrutement en infrastructure.",
+    "bio": "Cinq ans chez Amazon comme responsable du support IT : il dirigeait l'équipe, menait lui-même les entretiens et décidait des embauches. Travaille aujourd'hui en IT. Expérience quotidienne d'exploitation, de support et de diagnostic d'infrastructure cloud en production — ce autour de quoi tourne réellement le recrutement en infrastructure.",
     "does": [
      "Ce qu'un candidat a réellement exploité, et non lu",
      "Comment il circonscrit une panne qu'il n'a jamais vue",
@@ -265,7 +265,8 @@
      "Les candidats frontend ou mobile",
      "La vérification de certifications — elles prouvent l'étude, pas la pratique",
      "Tout ce qui sort de l'infrastructure et de l'exploitation"
-    ]
+    ],
+    "interviews": 53
    }
   ],
   "bioT": "Parcours",
@@ -410,7 +411,7 @@
   "stack": "Ce que vous pouvez évaluer",
   "stackPh": "Backend, systèmes distribués, AWS, iOS…",
   "years": "Années dans le métier",
-  "interviewing": "J'ai mené des entretiens dans le cadre de mon travail",
+  "interviewing": "Combien d'entretiens avez-vous menés, à peu près ?",
   "hired": "J'ai décidé d'embauches ou opposé un veto",
   "publicT": "Votre fiche publique",
   "disclosure": "Ce qui est montré publiquement",
@@ -443,7 +444,8 @@
    "Avec de l'expérience d'entretien : directement en shadow, puis en solo. Sans : l'examen de deux rapports.",
    "Vous recevez un code d'accès et pouvez consulter votre statut à tout moment."
   ],
-  "checkLink": "Suivre une candidature"
+  "checkLink": "Suivre une candidature",
+  "interviewingHint": "Un nombre, même approximatif, en dit plus qu'une case. Laissez vide si vous n'avez pas mené d'entretiens."
  },
  "me": {
   "h1": "Votre statut",
@@ -457,13 +459,13 @@
    "status": "Statut",
    "stack": "Stack",
    "years": "Années",
-   "interviewing": "A mené des entretiens au travail",
    "hired": "A décidé d'embauches",
    "disclosure": "Exposition publique",
    "role": "Ligne publique",
    "ontime": "Rapports dans les délais",
    "avg": "Heures moyennes jusqu'au rapport",
-   "since": "Candidature déposée"
+   "since": "Candidature déposée",
+   "interviews": "Entretiens menés"
   },
   "yes": "Oui",
   "no": "Non",

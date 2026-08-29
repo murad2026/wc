@@ -133,7 +133,7 @@
   "fields": {
    "years": "Jahre im Fach",
    "stack": "Stack",
-   "interviewing": "Hat beruflich interviewt",
+   "interviews": "Geführte Interviews",
    "hired": "Hat Einstellungen entschieden",
    "solo": "Freigabe für Solo-Prüfungen",
    "ontime": "Berichte pünktlich",
@@ -147,6 +147,7 @@
   "soloYes": "Solo",
   "soloWhy": {
    "bar": "Bar Raiser — ab dem ersten Auftrag für Solo freigegeben.",
+   "count": "Hat für das eigene Team bei Amazon interviewt und eingestellt. Das genügt für Solo-Arbeit im eigenen Bereich: Cloud, Infrastruktur und IT-Betrieb. Kandidaten für Architektur und Systementwurf gehen an KAGE-01.",
    "shadow": "Keine belegte Interview-Erfahrung. Nur Shadow-Sessions, bis drei Berichte in Folge ohne Änderung des Urteils herausgehen."
   },
   "barT": "Was für Solo-Arbeit freigibt",
@@ -219,7 +220,6 @@
      "Kalibrierung der Einstellungslatte"
     ],
     "years": null,
-    "interviewing": true,
     "hired": true,
     "solo": "bar",
     "ontime": null,
@@ -236,11 +236,12 @@
      "Live-Programmieren oder Tippgeschwindigkeit",
      "Suche, Abwerbung oder Vermittlung von Kandidaten",
      "Kandidaten, die gerade im Verfahren seines Arbeitgebers sind"
-    ]
+    ],
+    "interviews": null
    },
    {
     "code": "KAGE-02",
-    "role": "Cloud und IT-Infrastruktur",
+    "role": "Ehemaliger IT-Support-Manager, Amazon",
     "tags": [
      "AWS",
      "Cloud-Infrastruktur",
@@ -248,12 +249,11 @@
      "Fehlersuche"
     ],
     "years": 5,
-    "interviewing": null,
-    "hired": null,
-    "solo": "shadow",
+    "hired": true,
+    "solo": "count",
     "ontime": null,
     "avg": null,
-    "bio": "Fünf Jahre bei Amazon in IT und AWS, arbeitet derzeit in der IT. Tägliche Erfahrung im Betrieb, Support und in der Störungsanalyse von Cloud-Infrastruktur in Produktion — worum es beim Infrastruktur-Recruiting tatsächlich geht.",
+    "bio": "Fünf Jahre bei Amazon als IT-Support-Manager: leitete das Team, interviewte Kandidaten dafür und entschied über Einstellungen. Arbeitet heute in der IT. Tägliche Erfahrung im Betrieb, Support und in der Störungsanalyse von Cloud-Infrastruktur in Produktion — worum es beim Infrastruktur-Recruiting tatsächlich geht.",
     "does": [
      "Was ein Kandidat wirklich betrieben und nicht nur gelesen hat",
      "Wie er einen Fehler eingrenzt, den er nie zuvor gesehen hat",
@@ -265,7 +265,8 @@
      "Frontend- oder Mobile-Kandidaten",
      "Zertifikatsprüfung — sie belegt Lernen, nicht Praxis",
      "Alles außerhalb von Infrastruktur und Betrieb"
-    ]
+    ],
+    "interviews": 53
    }
   ],
   "bioT": "Hintergrund",
@@ -410,7 +411,7 @@
   "stack": "Was Sie beurteilen können",
   "stackPh": "Backend, verteilte Systeme, AWS, iOS…",
   "years": "Jahre im Fach",
-  "interviewing": "Ich habe beruflich Kandidaten interviewt",
+  "interviewing": "Wie viele Interviews haben Sie ungefähr geführt?",
   "hired": "Ich habe Einstellungen entschieden oder ein Veto eingelegt",
   "publicT": "Ihre öffentliche Karte",
   "disclosure": "Wie viel öffentlich zu zeigen ist",
@@ -443,7 +444,8 @@
    "Mit Interview-Erfahrung: direkt Shadow, dann Solo. Ohne: die Prüfung aus zwei Berichten.",
    "Sie erhalten einen Zugangscode und können Ihren Status jederzeit einsehen."
   ],
-  "checkLink": "Bewerbung prüfen"
+  "checkLink": "Bewerbung prüfen",
+  "interviewingHint": "Eine Zahl, auch grob, sagt mehr als ein Häkchen. Lassen Sie es leer, wenn Sie nicht interviewt haben."
  },
  "me": {
   "h1": "Ihr Status",
@@ -457,13 +459,13 @@
    "status": "Status",
    "stack": "Stack",
    "years": "Jahre",
-   "interviewing": "Hat beruflich interviewt",
    "hired": "Hat Einstellungen entschieden",
    "disclosure": "Öffentliche Angabe",
    "role": "Öffentliche Zeile",
    "ontime": "Berichte pünktlich",
    "avg": "Durchschnittliche Stunden bis zum Bericht",
-   "since": "Beworben"
+   "since": "Beworben",
+   "interviews": "Geführte Interviews"
   },
   "yes": "Ja",
   "no": "Nein",

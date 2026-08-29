@@ -133,7 +133,7 @@
   "fields": {
    "years": "Years in the field",
    "stack": "Stack",
-   "interviewing": "Interviewed at work",
+   "interviews": "Interviews conducted",
    "hired": "Made hiring decisions",
    "solo": "Cleared for solo screens",
    "ontime": "On-time reports",
@@ -147,6 +147,7 @@
   "soloYes": "Solo",
   "soloWhy": {
    "bar": "Bar Raiser — cleared for solo from the first order.",
+   "count": "Interviewed and hired for his own team at Amazon. That clears the bar for solo work inside his own area: cloud, infrastructure and IT operations. Application and system-design candidates go to KAGE-01.",
    "shadow": "No interviewing experience on record. Shadow sessions only, until three consecutive reports go out without us changing the verdict."
   },
   "barT": "What clears an expert for solo work",
@@ -219,7 +220,6 @@
      "Hiring bar calibration"
     ],
     "years": null,
-    "interviewing": true,
     "hired": true,
     "solo": "bar",
     "ontime": null,
@@ -236,11 +236,12 @@
      "Live coding or typing speed",
      "Sourcing, recruiting or placing candidates",
      "Any candidate currently in his employer's hiring process"
-    ]
+    ],
+    "interviews": null
    },
    {
     "code": "KAGE-02",
-    "role": "Cloud and IT infrastructure",
+    "role": "Former IT Support Manager, Amazon",
     "tags": [
      "AWS",
      "Cloud infrastructure",
@@ -248,12 +249,11 @@
      "Troubleshooting"
     ],
     "years": 5,
-    "interviewing": null,
-    "hired": null,
-    "solo": "shadow",
+    "hired": true,
+    "solo": "count",
     "ontime": null,
     "avg": null,
-    "bio": "Five years at Amazon in IT and AWS, currently working in IT. Day-to-day experience running, supporting and troubleshooting cloud infrastructure in production — which is what most infrastructure hiring is actually about.",
+    "bio": "Five years at Amazon as an IT support manager: ran the team, interviewed candidates for it and made the hiring calls. Now works in IT. Day-to-day experience operating, supporting and troubleshooting cloud infrastructure in production — which is what most infrastructure hiring is actually about.",
     "does": [
      "What a candidate has actually operated, not read about",
      "How they narrow down a failure they have never seen",
@@ -265,7 +265,8 @@
      "Frontend or mobile candidates",
      "Certification checking — that proves study, not practice",
      "Anything outside infrastructure and operations"
-    ]
+    ],
+    "interviews": 53
    }
   ],
   "bioT": "Background",
@@ -410,7 +411,7 @@
   "stack": "What you can assess",
   "stackPh": "Backend, distributed systems, AWS, iOS…",
   "years": "Years in the field",
-  "interviewing": "I have interviewed candidates as part of my job",
+  "interviewing": "Roughly how many interviews have you conducted?",
   "hired": "I have made or vetoed hiring decisions",
   "publicT": "Your public card",
   "disclosure": "How much to show publicly",
@@ -443,7 +444,8 @@
    "If you have interviewing experience: straight to shadow, then solo. If not: the two-report exam.",
    "You get an access code and can check your own status any time."
   ],
-  "checkLink": "Check an application"
+  "checkLink": "Check an application",
+  "interviewingHint": "A number, even a rough one, says more than a checkbox. Leave it empty if you have not interviewed."
  },
  "me": {
   "h1": "Your status",
@@ -457,13 +459,13 @@
    "status": "Status",
    "stack": "Stack",
    "years": "Years",
-   "interviewing": "Interviewed at work",
    "hired": "Made hiring decisions",
    "disclosure": "Public disclosure",
    "role": "Public line",
    "ontime": "On-time reports",
    "avg": "Average hours to report",
-   "since": "Applied"
+   "since": "Applied",
+   "interviews": "Interviews conducted"
   },
   "yes": "Yes",
   "no": "No",
