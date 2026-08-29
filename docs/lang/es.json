@@ -11,7 +11,8 @@
   },
   "m": {
     "title": "Mercado",
-    "lead": "La honestidad es más fuerte que el poder, pero el mercado es más fuerte que la honestidad. Por eso no vendemos la filosofía: vendemos servicios que la demuestran.",
+    "h1": "La honestidad es más fuerte que el poder, pero el mercado es más fuerte que la honestidad",
+    "lead": "Por eso no vendemos la filosofía: vendemos servicios que la demuestran.",
     "structT": "De qué estamos hechos",
     "layers": [
       {

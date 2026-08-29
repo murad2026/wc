@@ -11,7 +11,8 @@
   },
   "m": {
     "title": "Marché",
-    "lead": "L'honnêteté est plus forte que le pouvoir, mais le marché est plus fort que l'honnêteté. Nous ne vendons donc pas la philosophie — nous vendons des services qui la démontrent.",
+    "h1": "L'honnêteté est plus forte que le pouvoir, mais le marché est plus fort que l'honnêteté",
+    "lead": "Nous ne vendons donc pas la philosophie — nous vendons des services qui la démontrent.",
     "structT": "Ce qui nous compose",
     "layers": [
       {
