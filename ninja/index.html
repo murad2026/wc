@@ -7,7 +7,7 @@
 <meta name="description" content="A senior engineer with FAANG-scale hiring experience runs a 15-minute live screen on your candidate and writes up what they found. $199 per candidate.">
 <meta property="og:title" content="Verified.Ninja — technical screening by senior engineers">
 <meta property="og:description" content="A 15-minute live technical screen run by a senior engineer. $199 per candidate, written assessment in 48 hours.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M16%201.6c.95%206.5%207.95%2013.5%2014.4%2014.4-6.45.95-13.45%207.95-14.4%2014.4-.95-6.45-7.95-13.45-14.4-14.4%206.45-.95%2013.45-7.95%2014.4-14.4ZM16%2012.6a3.4%203.4%200%201%200%200%206.8%203.4%203.4%200%200%200%200-6.8Z%22%20fill%3D%22%231d1d1f%22%2F%3E%3C%2Fsvg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M16%202.5a13.5%2013.5%200%201%200%200%2027%2013.5%2013.5%200%200%200%200-27ZM9%2012.5h14a2.8%202.8%200%200%201%200%205.6H9a2.8%202.8%200%200%201%200-5.6ZM11.2%2015.3a1.6%201.6%200%201%200%203.2%200%201.6%201.6%200%201%200-3.2%200ZM17.6%2015.3a1.6%201.6%200%201%200%203.2%200%201.6%201.6%200%201%200-3.2%200Z%22%20fill%3D%22%231d1d1f%22%2F%3E%3C%2Fsvg%3E">
 <link rel="stylesheet" href="app.css">
 <style>
   header.hero{padding:84px 0 84px;text-align:center}
@@ -85,7 +85,7 @@
 
 <nav>
   <div class="nav-in">
-    <a class="brand" href="index.html">Verified<b>.Ninja</b><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 1.6c.95 6.5 7.95 13.5 14.4 14.4-6.45.95-13.45 7.95-14.4 14.4-.95-6.45-7.95-13.45-14.4-14.4 6.45-.95 13.45-7.95 14.4-14.4ZM16 12.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Z" fill="currentColor"/></svg></a>
+    <a class="brand" href="index.html">Verified<b>.Ninja</b><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 2.5a13.5 13.5 0 1 0 0 27 13.5 13.5 0 0 0 0-27ZM9 12.5h14a2.8 2.8 0 0 1 0 5.6H9a2.8 2.8 0 0 1 0-5.6ZM11.2 15.3a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0ZM17.6 15.3a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0Z" fill="currentColor"/></svg></a>
     <div class="nav-links">
       <a href="expert.html" class="hide-sm" id="n-exp"></a>
       <a href="report.html" class="hide-sm" id="n-rep"></a>
@@ -97,7 +97,7 @@
 </nav>
 
 <header class="hero wrap">
-  <svg class="mark-lg" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 1.6c.95 6.5 7.95 13.5 14.4 14.4-6.45.95-13.45 7.95-14.4 14.4-.95-6.45-7.95-13.45-14.4-14.4 6.45-.95 13.45-7.95 14.4-14.4ZM16 12.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Z" fill="currentColor"/></svg>
+  <svg class="mark-lg" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 2.5a13.5 13.5 0 1 0 0 27 13.5 13.5 0 0 0 0-27ZM9 12.5h14a2.8 2.8 0 0 1 0 5.6H9a2.8 2.8 0 0 1 0-5.6ZM11.2 15.3a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0ZM17.6 15.3a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0Z" fill="currentColor"/></svg>
   <h1 id="h1"></h1>
   <p class="lede" id="sub"></p>
   <div class="hero-btns">
@@ -185,7 +185,7 @@ window.render = function(T){
   $('who-cards').innerHTML = e.people.map(p => {
     const solo = p.solo === 'bar';
     return `<a class="card pc" href="expert.html">
-      <span class="av"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 1.6c.95 6.5 7.95 13.5 14.4 14.4-6.45.95-13.45 7.95-14.4 14.4-.95-6.45-7.95-13.45-14.4-14.4 6.45-.95 13.45-7.95 14.4-14.4ZM16 12.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Z" fill="currentColor"/></svg></span>
+      <span class="av"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 2.5a13.5 13.5 0 1 0 0 27 13.5 13.5 0 0 0 0-27ZM9 12.5h14a2.8 2.8 0 0 1 0 5.6H9a2.8 2.8 0 0 1 0-5.6ZM11.2 15.3a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0ZM17.6 15.3a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0Z" fill="currentColor"/></svg></span>
       <span class="bd">
         <span class="cd">${esc(p.code)}</span>
         <span class="rl">${esc(p.role)}</span>
