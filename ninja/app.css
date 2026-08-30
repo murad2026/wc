@@ -82,7 +82,7 @@ nav{
 .brand{font-size:17px;font-weight:600;letter-spacing:-.02em;white-space:nowrap;
   display:inline-flex;align-items:center;gap:8px}
 .mark{width:19px;height:19px;flex-shrink:0;color:var(--ink)}
-.mark-lg{width:56px;height:56px;color:var(--ink)}
+.mark-lg{width:64px;height:64px;color:var(--ink)}
 .brand b{font-weight:600;color:var(--muted)}
 .nav-links{display:flex;align-items:center;gap:22px}
 .nav-links a{font-size:13.5px;color:var(--ink-2)}
