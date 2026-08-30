@@ -219,7 +219,7 @@
      "Systementwurf",
      "Kalibrierung der Einstellungslatte"
     ],
-    "years": null,
+    "years": 6,
     "hired": true,
     "solo": "bar",
     "ontime": null,
@@ -237,7 +237,8 @@
      "Suche, Abwerbung oder Vermittlung von Kandidaten",
      "Kandidaten, die gerade im Verfahren seines Arbeitgebers sind"
     ],
-    "interviews": null
+    "interviews": 400,
+    "est": true
    },
    {
     "code": "KAGE-02",
@@ -271,7 +272,8 @@
   ],
   "bioT": "Hintergrund",
   "doesT": "Bewertet",
-  "doesntT": "Macht nicht"
+  "doesntT": "Macht nicht",
+  "estNote": "≈ — eine Schätzung anhand der Dienstjahre, wird mit dem Experten abgeglichen. Wird durch seine eigene Zahl ersetzt, sobald er sie nennt."
  },
  "order": {
   "h1": "Prüfung bestellen",

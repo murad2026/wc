@@ -35,6 +35,9 @@
 
   .why{padding:15px 24px;background:var(--bg-soft);border-top:1px solid var(--line-soft);
     font-size:14px;color:var(--muted)}
+  .r .v.est{color:var(--muted);font-weight:400}
+  .estnote{padding:12px 24px;border-top:1px solid var(--line-soft);
+    font-size:13px;color:var(--muted);line-height:1.45}
 
   .bio{padding:20px 24px;border-top:1px solid var(--line-soft)}
   .bio h4{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
@@ -135,6 +138,11 @@ function flag(v, e){
   return `<span class="v dimv">${esc(e.na)}</span>`;
 }
 function row(k, inner){ return `<div class="r"><span class="k">${esc(k)}</span>${inner}</div>`; }
+/* Оценочное число всегда со знаком ≈ — чтобы его нельзя было прочесть как факт. */
+function num(v, est, e){
+  if(v == null) return `<span class="v dimv">${esc(e.na)}</span>`;
+  return `<span class="v${est ? ' est' : ''}">${est ? '≈ ' : ''}${esc(String(v))}</span>`;
+}
 
 window.render = function(T){
   const e = T.experts;
@@ -161,16 +169,13 @@ window.render = function(T){
       </div>
       <div class="rows">
         ${row(e.fields.stack, `<span class="stack">${p.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</span>`)}
-        ${row(e.fields.years, p.years == null
-             ? `<span class="v dimv">${esc(e.na)}</span>`
-             : `<span class="v">${esc(String(p.years))}</span>`)}
-        ${row(e.fields.interviews, p.interviews == null
-             ? `<span class="v dimv">${esc(e.na)}</span>`
-             : `<span class="v">${esc(String(p.interviews))}</span>`)}
+        ${row(e.fields.years, num(p.years, p.est, e))}
+        ${row(e.fields.interviews, num(p.interviews, p.est, e))}
         ${row(e.fields.hired, flag(p.hired, e))}
         ${row(e.fields.ontime, `<span class="v dimv">${esc(e.noData)}</span>`)}
         ${row(e.fields.avg,    `<span class="v dimv">${esc(e.noData)}</span>`)}
       </div>
+      ${p.est ? `<div class="estnote">${esc(e.estNote)}</div>` : ''}
       <div class="why">${esc(e.soloWhy[p.solo])}</div>
       <div class="bio">
         <h4>${esc(e.bioT)}</h4>

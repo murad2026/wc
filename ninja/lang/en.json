@@ -219,7 +219,7 @@
      "System design",
      "Hiring bar calibration"
     ],
-    "years": null,
+    "years": 6,
     "hired": true,
     "solo": "bar",
     "ontime": null,
@@ -237,7 +237,8 @@
      "Sourcing, recruiting or placing candidates",
      "Any candidate currently in his employer's hiring process"
     ],
-    "interviews": null
+    "interviews": 400,
+    "est": true
    },
    {
     "code": "KAGE-02",
@@ -271,7 +272,8 @@
   ],
   "bioT": "Background",
   "doesT": "Assesses",
-  "doesntT": "Does not do"
+  "doesntT": "Does not do",
+  "estNote": "≈ — an estimate from years of service, being confirmed with the expert. Replaced with his own figure as soon as he gives it."
  },
  "order": {
   "h1": "Order a screen",

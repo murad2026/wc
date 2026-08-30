@@ -219,7 +219,7 @@
      "Conception de systèmes",
      "Calibrage du niveau d'embauche"
     ],
-    "years": null,
+    "years": 6,
     "hired": true,
     "solo": "bar",
     "ontime": null,
@@ -237,7 +237,8 @@
      "Le sourcing, l'approche ou le placement de candidats",
      "Tout candidat engagé dans le processus de son propre employeur"
     ],
-    "interviews": null
+    "interviews": 400,
+    "est": true
    },
    {
     "code": "KAGE-02",
@@ -271,7 +272,8 @@
   ],
   "bioT": "Parcours",
   "doesT": "Évalue",
-  "doesntT": "Ne fait pas"
+  "doesntT": "Ne fait pas",
+  "estNote": "≈ — estimation d'après les années d'exercice, en cours de confirmation avec l'expert. Remplacée par son propre chiffre dès qu'il le donne."
  },
  "order": {
   "h1": "Commander une évaluation",

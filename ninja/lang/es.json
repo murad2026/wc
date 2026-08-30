@@ -219,7 +219,7 @@
      "Diseño de sistemas",
      "Calibración del listón"
     ],
-    "years": null,
+    "years": 6,
     "hired": true,
     "solo": "bar",
     "ontime": null,
@@ -237,7 +237,8 @@
      "Buscar, captar o colocar candidatos",
      "Candidatos que estén en el proceso de su propia empresa"
     ],
-    "interviews": null
+    "interviews": 400,
+    "est": true
    },
    {
     "code": "KAGE-02",
@@ -271,7 +272,8 @@
   ],
   "bioT": "Trayectoria",
   "doesT": "Evalúa",
-  "doesntT": "No hace"
+  "doesntT": "No hace",
+  "estNote": "≈ — estimación a partir de los años de servicio, pendiente de confirmar con el experto. Se sustituirá por su propia cifra en cuanto la dé."
  },
  "order": {
   "h1": "Solicitar una evaluación",
