@@ -393,7 +393,7 @@
  "join": {
   "kicker": "For experts",
   "h1": "Run screens with us",
-  "lede": "You take only the assessments you want. Fifteen minutes on a call plus ten writing it up, $100 per screen. You work under a codename — your name reaches the client only after they pay.",
+  "lede": "You take only the assignments you want. Fifteen minutes on the call plus ten writing it up — $119 per screen at our founding rate. You work under a codename; your name reaches the client only after they pay.",
   "barT": "Read this before the form",
   "bar": [
    "Every report carries the candidate's own words with timecodes. A report without quotes is rejected and not paid for. This is the job, not a formality.",
@@ -447,7 +447,68 @@
    "You get an access code and can check your own status any time."
   ],
   "checkLink": "Check an application",
-  "interviewingHint": "A number, even a rough one, says more than a checkbox. Leave it empty if you have not interviewed."
+  "interviewingHint": "A number, even a rough one, says more than a checkbox. Leave it empty if you have not interviewed.",
+  "termsT": "What you get, next to what the alternatives pay",
+  "termsCols": [
+   "",
+   "Us",
+   "Elsewhere"
+  ],
+  "terms": [
+   {
+    "k": "Per assignment",
+    "a": "$119 — 60% of the price",
+    "b": "$100–150"
+   },
+   {
+    "k": "Time it takes",
+    "a": "about 30 minutes",
+    "b": "an hour or more"
+   },
+   {
+    "k": "Effective hourly",
+    "a": "about $240",
+    "b": "$70–150"
+   },
+   {
+    "k": "When you are paid",
+    "a": "the day we accept the report",
+    "b": "30 to 60 days"
+   },
+   {
+    "k": "If we raise the price",
+    "a": "your share is fixed, so your pay rises by itself",
+    "b": "renegotiate, if you ask"
+   },
+   {
+    "k": "A client you brought in",
+    "a": "70% on their first three orders",
+    "b": "the same rate"
+   },
+   {
+    "k": "An expert you brought in",
+    "a": "10% of their orders, first 50 or 12 months",
+    "b": "nothing"
+   },
+   {
+    "k": "Exclusivity",
+    "a": "none — work anywhere, including competitors",
+    "b": "often required"
+   },
+   {
+    "k": "Your public profile",
+    "a": "codename; employer named only if you want",
+    "b": "profile with your real name"
+   },
+   {
+    "k": "Turning work down",
+    "a": "any assignment, no reason needed",
+    "b": "usually affects your ranking"
+   }
+  ],
+  "termsNote": "Market figures are approximate, for mid-2026, and worth checking yourself before you decide. The rate is the part a competitor can copy in a day. Same-day payment, the half-hour format and a share of what you bring in are not — they follow from being small and deciding for ourselves.",
+  "honestT": "What we do not promise",
+  "honest": "Volume. We have no paying clients yet, and the first months will be one or two assignments. If you need income, this is not it — yet. What we can promise is that nothing here gets worse for you as we grow."
  },
  "me": {
   "h1": "Your status",

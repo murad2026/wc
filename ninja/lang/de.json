@@ -393,7 +393,7 @@
  "join": {
   "kicker": "Für Experten",
   "h1": "Prüfungen mit uns durchführen",
-  "lede": "Sie nehmen nur die Aufträge an, die Sie wollen. Fünfzehn Minuten Gespräch plus zehn fürs Schreiben, 100 $ pro Prüfung. Sie arbeiten unter einem Decknamen — Ihr Name erreicht den Kunden erst nach der Zahlung.",
+  "lede": "Sie nehmen nur die Aufträge an, die Sie wollen. Fünfzehn Minuten Gespräch plus zehn fürs Schreiben — $119 pro Prüfung zum Gründungssatz. Sie arbeiten unter einem Decknamen; Ihr Name erreicht den Kunden erst nach der Zahlung.",
   "barT": "Vor dem Formular lesen",
   "bar": [
    "Jeder Bericht enthält die eigenen Worte des Kandidaten mit Zeitmarken. Ein Bericht ohne Zitate wird abgelehnt und nicht vergütet. Das ist die Arbeit, keine Formalie.",
@@ -447,7 +447,68 @@
    "Sie erhalten einen Zugangscode und können Ihren Status jederzeit einsehen."
   ],
   "checkLink": "Bewerbung prüfen",
-  "interviewingHint": "Eine Zahl, auch grob, sagt mehr als ein Häkchen. Lassen Sie es leer, wenn Sie nicht interviewt haben."
+  "interviewingHint": "Eine Zahl, auch grob, sagt mehr als ein Häkchen. Lassen Sie es leer, wenn Sie nicht interviewt haben.",
+  "termsT": "Was Sie bekommen, neben dem, was anderswo gezahlt wird",
+  "termsCols": [
+   "",
+   "Bei uns",
+   "Anderswo"
+  ],
+  "terms": [
+   {
+    "k": "Pro Auftrag",
+    "a": "$119 — 60% des Preises",
+    "b": "$100–150"
+   },
+   {
+    "k": "Zeitaufwand",
+    "a": "etwa 30 Minuten",
+    "b": "eine Stunde und mehr"
+   },
+   {
+    "k": "Effektiv pro Stunde",
+    "a": "etwa $240",
+    "b": "$70–150"
+   },
+   {
+    "k": "Wann wir zahlen",
+    "a": "am Tag der Abnahme des Berichts",
+    "b": "nach 30 bis 60 Tagen"
+   },
+   {
+    "k": "Wenn wir den Preis erhöhen",
+    "a": "Ihr Anteil ist fest, Ihre Vergütung steigt von selbst",
+    "b": "nachverhandeln, wenn Sie fragen"
+   },
+   {
+    "k": "Ein Kunde, den Sie gebracht haben",
+    "a": "70% auf seine ersten drei Aufträge",
+    "b": "derselbe Satz"
+   },
+   {
+    "k": "Ein Experte, den Sie gebracht haben",
+    "a": "10% seiner Aufträge, erste 50 oder 12 Monate",
+    "b": "nichts"
+   },
+   {
+    "k": "Exklusivität",
+    "a": "keine — arbeiten Sie überall, auch bei Wettbewerbern",
+    "b": "oft verlangt"
+   },
+   {
+    "k": "Ihr öffentliches Profil",
+    "a": "Deckname; Arbeitgeber nur auf Ihren Wunsch",
+    "b": "Profil mit echtem Namen"
+   },
+   {
+    "k": "Aufträge ablehnen",
+    "a": "jeden, ohne Begründung",
+    "b": "wirkt sich meist auf das Ranking aus"
+   }
+  ],
+  "termsNote": "Marktzahlen sind ungefähr, Stand Mitte 2026, und sollten selbst geprüft werden. Den Satz kopiert ein Wettbewerber an einem Tag. Zahlung am selben Tag, das halbstündige Format und einen Anteil an dem, was Sie bringen, kopiert er nicht — das folgt daraus, dass wir klein sind und selbst entscheiden.",
+  "honestT": "Was wir nicht versprechen",
+  "honest": "Auftragsvolumen. Wir haben noch keine zahlenden Kunden, und die ersten Monate werden ein bis zwei Aufträge sein. Wenn Sie Einkommen brauchen, ist es das noch nicht. Versprechen können wir etwas anderes: Keine der Bedingungen oben wird für Sie schlechter, während wir wachsen."
  },
  "me": {
   "h1": "Ihr Status",

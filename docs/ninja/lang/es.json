@@ -393,7 +393,7 @@
  "join": {
   "kicker": "Para expertos",
   "h1": "Haz evaluaciones con nosotros",
-  "lede": "Aceptas solo los encargos que quieras. Quince minutos de llamada más diez de redacción, 100 $ por evaluación. Trabajas con nombre en clave: tu nombre llega al cliente solo después de que pague.",
+  "lede": "Aceptas solo los encargos que quieras. Quince minutos de llamada más diez de redacción: $119 por evaluación con la tarifa de fundador. Trabajas con nombre en clave; tu nombre llega al cliente solo después de que pague.",
   "barT": "Léelo antes del formulario",
   "bar": [
    "Cada informe lleva las palabras del candidato con marcas de tiempo. Un informe sin citas se rechaza y no se paga. Ese es el trabajo, no un trámite.",
@@ -447,7 +447,68 @@
    "Recibes un código de acceso y puedes consultar tu estado cuando quieras."
   ],
   "checkLink": "Consultar una solicitud",
-  "interviewingHint": "Un número, aunque sea aproximado, dice más que una casilla. Déjalo vacío si no has entrevistado."
+  "interviewingHint": "Un número, aunque sea aproximado, dice más que una casilla. Déjalo vacío si no has entrevistado.",
+  "termsT": "Lo que recibes, junto a lo que pagan en otros sitios",
+  "termsCols": [
+   "",
+   "Con nosotros",
+   "En otros sitios"
+  ],
+  "terms": [
+   {
+    "k": "Por encargo",
+    "a": "$119 — 60% del precio",
+    "b": "$100–150"
+   },
+   {
+    "k": "Lo que lleva",
+    "a": "unos 30 minutos",
+    "b": "una hora o más"
+   },
+   {
+    "k": "Sale por hora",
+    "a": "unos $240",
+    "b": "$70–150"
+   },
+   {
+    "k": "Cuándo pagamos",
+    "a": "el día que aceptamos el informe",
+    "b": "a los 30 o 60 días"
+   },
+   {
+    "k": "Si subimos el precio",
+    "a": "tu parte es fija, tu pago sube solo",
+    "b": "renegociar, si lo pides"
+   },
+   {
+    "k": "Un cliente que traes tú",
+    "a": "70% en sus tres primeros encargos",
+    "b": "la misma tarifa"
+   },
+   {
+    "k": "Un experto que traes tú",
+    "a": "10% de sus encargos, los 50 primeros o 12 meses",
+    "b": "nada"
+   },
+   {
+    "k": "Exclusividad",
+    "a": "ninguna: trabaja donde quieras, incluida la competencia",
+    "b": "a menudo se exige"
+   },
+   {
+    "k": "Tu perfil público",
+    "a": "nombre en clave; el empleador solo si tú quieres",
+    "b": "perfil con tu nombre real"
+   },
+   {
+    "k": "Rechazar trabajo",
+    "a": "cualquier encargo, sin explicaciones",
+    "b": "suele afectar a tu posición"
+   }
+  ],
+  "termsNote": "Las cifras de mercado son aproximadas, a mediados de 2026, y conviene comprobarlas por tu cuenta. La tarifa la copia un competidor en un día. El pago el mismo día, el formato de media hora y la parte de lo que traigas, no: son consecuencia de ser pequeños y decidir nosotros.",
+  "honestT": "Lo que no prometemos",
+  "honest": "Volumen. Todavía no tenemos clientes que paguen, y los primeros meses serán uno o dos encargos. Si necesitas ingresos, aún no es esto. Sí podemos prometer otra cosa: ninguna de las condiciones de arriba empeorará para ti según crezcamos."
  },
  "me": {
   "h1": "Tu estado",

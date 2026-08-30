@@ -20,7 +20,18 @@
   .bar li:first-child{border-top:none}
   .bar li::before{content:"→";position:absolute;left:0;color:var(--muted);font-weight:600}
   .bar-n{padding:15px 22px;background:var(--bg-soft);border-top:1px solid var(--line-soft);
-    font-size:14px;color:var(--muted)}
+    font-size:14px;color:var(--muted);line-height:1.5}
+
+  .terms{border:1px solid var(--line-soft);border-radius:18px;overflow:hidden;margin-top:20px}
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .terms table{width:100%;border-collapse:collapse;min-width:520px}
+  .terms th{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--muted);text-align:start;padding:13px 22px;border-bottom:1px solid var(--line-soft)}
+  .terms th.us{color:var(--ink)}
+  .terms td{padding:13px 22px;font-size:14.5px;border-top:1px solid var(--line-soft);vertical-align:top}
+  .terms td:first-child{color:var(--ink-2);width:34%}
+  .terms td.us{font-weight:600;color:var(--ink)}
+  .terms td.them{color:var(--muted)}
 
   form{margin-top:36px}
   form > * + *{margin-top:24px}
@@ -72,6 +83,14 @@
     <div class="bar-t" id="bar-t"></div>
     <ul id="bar-list"></ul>
     <div class="bar-n" id="bar-n"></div>
+  </div>
+
+  <div class="terms">
+    <div class="bar-t" id="terms-t"></div>
+    <div class="scroll"><table id="terms"></table></div>
+    <div class="bar-n" id="terms-n"></div>
+    <div class="bar-t" style="border-top:1px solid var(--line-soft);border-bottom:none" id="honest-t"></div>
+    <div class="bar-n" style="border-top:none" id="honest"></div>
   </div>
 
   <form id="f" novalidate>
@@ -187,6 +206,15 @@ window.render = function(t){
   $('bar-t').textContent = j.barT;
   $('bar-list').innerHTML = j.bar.map(x=>`<li>${esc(x)}</li>`).join('');
   $('bar-n').textContent = j.barNote;
+
+  $('terms-t').textContent = j.termsT;
+  $('terms').innerHTML =
+    `<thead><tr>${j.termsCols.map((c,i)=>`<th class="${i===1?'us':''}">${esc(c)}</th>`).join('')}</tr></thead>` +
+    `<tbody>${j.terms.map(t=>
+      `<tr><td>${esc(t.k)}</td><td class="us">${esc(t.a)}</td><td class="them">${esc(t.b)}</td></tr>`).join('')}</tbody>`;
+  $('terms-n').textContent  = j.termsNote;
+  $('honest-t').textContent = j.honestT;
+  $('honest').textContent   = j.honest;
 
   $('you-t').textContent = j.youT;
   $('l-nm').textContent  = j.name;

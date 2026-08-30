@@ -393,7 +393,7 @@
  "join": {
   "kicker": "Pour les experts",
   "h1": "Mener des évaluations avec nous",
-  "lede": "Vous ne prenez que les missions que vous voulez. Quinze minutes d'entretien plus dix de rédaction, 100 $ par évaluation. Vous travaillez sous un nom de code : votre nom n'atteint le client qu'après paiement.",
+  "lede": "Vous ne prenez que les missions que vous voulez. Quinze minutes d'entretien plus dix de rédaction — $119 par évaluation au tarif fondateur. Vous travaillez sous un nom de code ; votre nom n'atteint le client qu'après paiement.",
   "barT": "À lire avant le formulaire",
   "bar": [
    "Chaque rapport porte les mots du candidat, horodatés. Un rapport sans citations est rejeté et non rémunéré. C'est cela, le travail, pas une formalité.",
@@ -447,7 +447,68 @@
    "Vous recevez un code d'accès et pouvez consulter votre statut à tout moment."
   ],
   "checkLink": "Suivre une candidature",
-  "interviewingHint": "Un nombre, même approximatif, en dit plus qu'une case. Laissez vide si vous n'avez pas mené d'entretiens."
+  "interviewingHint": "Un nombre, même approximatif, en dit plus qu'une case. Laissez vide si vous n'avez pas mené d'entretiens.",
+  "termsT": "Ce que vous obtenez, à côté de ce qui se paie ailleurs",
+  "termsCols": [
+   "",
+   "Chez nous",
+   "Ailleurs"
+  ],
+  "terms": [
+   {
+    "k": "Par mission",
+    "a": "$119 — 60% du prix",
+    "b": "$100–150"
+   },
+   {
+    "k": "Temps que cela prend",
+    "a": "environ 30 minutes",
+    "b": "une heure et plus"
+   },
+   {
+    "k": "Soit par heure",
+    "a": "environ $240",
+    "b": "$70–150"
+   },
+   {
+    "k": "Quand nous payons",
+    "a": "le jour où le rapport est accepté",
+    "b": "sous 30 à 60 jours"
+   },
+   {
+    "k": "Si nous augmentons le prix",
+    "a": "votre part est fixe, votre rémunération monte seule",
+    "b": "renégocier, si vous demandez"
+   },
+   {
+    "k": "Un client que vous amenez",
+    "a": "70% sur ses trois premières commandes",
+    "b": "le même tarif"
+   },
+   {
+    "k": "Un expert que vous amenez",
+    "a": "10% de ses missions, les 50 premières ou 12 mois",
+    "b": "rien"
+   },
+   {
+    "k": "Exclusivité",
+    "a": "aucune — travaillez partout, y compris chez les concurrents",
+    "b": "souvent exigée"
+   },
+   {
+    "k": "Votre profil public",
+    "a": "nom de code ; employeur cité seulement si vous le souhaitez",
+    "b": "profil avec votre vrai nom"
+   },
+   {
+    "k": "Refuser une mission",
+    "a": "n'importe laquelle, sans justification",
+    "b": "affecte généralement votre classement"
+   }
+  ],
+  "termsNote": "Les chiffres du marché sont approximatifs, à la mi-2026, et méritent d'être vérifiés vous-même. Le tarif, un concurrent le copie en un jour. Le paiement le jour même, le format d'une demi-heure et une part sur ce que vous amenez, non : cela découle du fait que nous sommes petits et décidons nous-mêmes.",
+  "honestT": "Ce que nous ne promettons pas",
+  "honest": "Le volume. Nous n'avons pas encore de clients payants, et les premiers mois se limiteront à une ou deux missions. S'il vous faut un revenu, ce n'est pas encore cela. Ce que nous pouvons promettre est autre chose : aucune des conditions ci-dessus ne se dégradera pour vous à mesure que nous grandirons."
  },
  "me": {
   "h1": "Votre statut",
