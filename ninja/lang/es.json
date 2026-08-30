@@ -63,7 +63,7 @@
    {
     "id": "shadow",
     "name": "Shadow Session",
-    "price": "299 $",
+    "price": "349 $",
     "per": "por entrevista · 60 min + repaso",
     "when": "Cuando entrevista tu propio equipo y quieres saber si lo hace bien.",
     "f": [
@@ -121,7 +121,7 @@
    }
   ],
   "finalT": "Solicitar una evaluación",
-  "finalS": "Verified Screen 199 $. Shadow Session 299 $. Informe escrito en 48 horas en ambos casos.",
+  "finalS": "Verified Screen 199 $. Shadow Session 349 $. Informe escrito en 48 horas en ambos casos.",
   "finalCta": "Hacer el pedido",
   "finalNote": "¿Primero preguntas? Escribe a hello@verified.ninja"
  },
@@ -458,6 +458,11 @@
    {
     "k": "Por encargo",
     "a": "$119 — 60% del precio",
+    "b": "$100–150"
+   },
+   {
+    "k": "Sesión shadow",
+    "a": "$209 — 60% de $349",
     "b": "$100–150"
    },
    {

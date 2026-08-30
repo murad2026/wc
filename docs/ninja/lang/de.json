@@ -63,7 +63,7 @@
    {
     "id": "shadow",
     "name": "Shadow Session",
-    "price": "299 $",
+    "price": "349 $",
     "per": "pro Interview · 60 Min. + Nachbesprechung",
     "when": "Wenn Ihr Team selbst interviewt und Sie wissen wollen, ob es gut interviewt.",
     "f": [
@@ -121,7 +121,7 @@
    }
   ],
   "finalT": "Prüfung bestellen",
-  "finalS": "Verified Screen 199 $. Shadow Session 299 $. Schriftliches Gutachten in beiden Fällen innerhalb von 48 Stunden.",
+  "finalS": "Verified Screen 199 $. Shadow Session 349 $. Schriftliches Gutachten in beiden Fällen innerhalb von 48 Stunden.",
   "finalCta": "Bestellung aufgeben",
   "finalNote": "Erst Fragen? Schreiben Sie an hello@verified.ninja"
  },
@@ -458,6 +458,11 @@
    {
     "k": "Pro Auftrag",
     "a": "$119 — 60% des Preises",
+    "b": "$100–150"
+   },
+   {
+    "k": "Shadow-Session",
+    "a": "$209 — 60% von $349",
     "b": "$100–150"
    },
    {

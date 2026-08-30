@@ -63,7 +63,7 @@
    {
     "id": "shadow",
     "name": "Shadow Session",
-    "price": "$299",
+    "price": "$349",
     "per": "per interview · 60 min + debrief",
     "when": "Use it when your own team interviews and you want to know whether they interview well.",
     "f": [
@@ -121,7 +121,7 @@
    }
   ],
   "finalT": "Order a screen",
-  "finalS": "Verified Screen $199. Shadow Session $299. Written assessment within 48 hours either way.",
+  "finalS": "Verified Screen $199. Shadow Session $349. Written assessment within 48 hours either way.",
   "finalCta": "Place an order",
   "finalNote": "Questions first? Email hello@verified.ninja"
  },
@@ -458,6 +458,11 @@
    {
     "k": "Per assignment",
     "a": "$119 — 60% of the price",
+    "b": "$100–150"
+   },
+   {
+    "k": "Shadow session",
+    "a": "$209 — 60% of $349",
     "b": "$100–150"
    },
    {
