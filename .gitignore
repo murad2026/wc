@@ -1,0 +1,5 @@
+# Сборка сайта Verified.Ninja — собирается из ninja/build.sh, в git не нужна
+ninja/dist/
+dist/
+
+.DS_Store
