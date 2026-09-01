@@ -12,7 +12,7 @@
  },
  "home": {
   "h1": "Technical screening by senior engineers",
-  "sub": "You send a candidate. A senior engineer with FAANG-scale hiring experience runs the call — thirty minutes or a full hour — and writes up what they found.",
+  "sub": "You send a candidate. A senior engineer with FAANG-scale hiring experience either sits in on the call your team is already running, or runs the interview themselves — and writes up what they found.",
   "cta1": "Place an order",
   "cta2": "Read a sample assessment",
   "meta": "From $349 per candidate. No subscription, no contract, no fee if you hire.",
@@ -33,7 +33,7 @@
    },
    {
     "t": "The call happens",
-    "d": "Your candidate books a slot from a calendar link. Thirty or sixty minutes of live video, within 24 hours. We take a transcript, not a recording."
+    "d": "Either our expert joins the call you have already scheduled, or your candidate books a slot with us from a calendar link. Within 24 hours. We take a transcript, not a recording."
    },
    {
     "t": "You get the assessment",
@@ -47,17 +47,17 @@
     "id": "phone",
     "name": "Phone Screening",
     "price": "$349",
-    "per": "per candidate · 30 min + written assessment",
-    "when": "Use it when a CV looks strong and you need to know, before your team spends a day on them, whether the depth is real.",
+    "per": "per candidate · you interview · 30 min",
+    "when": "Use it when your team runs its own screening calls and you want a senior engineer's read on the candidate — without adding another round for them.",
     "f": [
-     "Thirty-minute live call with your candidate",
-     "Scheduled within 24 hours of payment",
-     "The one claim that worries you taken apart, with quotes and timecodes",
+     "Our expert joins the call you have already scheduled",
+     "Camera off, no questions from us — nothing changes for the candidate",
+     "Works with your Zoom, Meet or Teams; the invite stays yours",
+     "Up to thirty minutes of listening",
+     "Written assessment of the candidate within 48 hours",
      "Ratings on depth, problem solving, communication, ownership",
-     "An explicit verdict — FIT, NARROW or RISK — with the reasoning",
-     "Written assessment within 48 hours of the call",
-     "The expert's real name, photo and LinkedIn before the call",
-     "Full refund if we cannot schedule in the window"
+     "An explicit verdict — FIT, NARROW or RISK — with quotes and timecodes",
+     "A note on what your call left open, and what to ask next"
     ],
     "cta": "Order a phone screening"
    },
@@ -65,16 +65,16 @@
     "id": "live",
     "name": "Live Interview",
     "price": "$599",
-    "per": "per candidate · 60 min + written assessment",
-    "when": "Use it when the hire is senior or expensive, and half an hour is not enough to sign off on it.",
+    "per": "per candidate · we interview · 60 min",
+    "when": "Use it when nobody on your side can judge the depth, or the hire matters enough that you want it done by someone who has done it hundreds of times.",
     "f": [
-     "Sixty-minute live interview, structured like a real hiring loop",
+     "Our expert interviews your candidate personally, start to finish",
+     "Sixty minutes, structured like a real hiring loop",
      "A design or architecture problem worked through live, not a quiz",
      "Every significant claim on the CV tested, not just the largest one",
      "Claim Risk Score with the reasoning behind each axis",
      "Ratings on depth, problem solving, communication, ownership",
-     "A note on what would change the verdict — and what to ask next",
-     "Written assessment within 48 hours of the call",
+     "Written assessment within 48 hours, with quotes and timecodes",
      "The expert's real name, photo and LinkedIn before the call"
     ],
     "cta": "Book a live interview"
@@ -146,12 +146,12 @@
   "no": "No",
   "na": "Not stated",
   "noData": "No orders yet",
-  "shadowOnly": "Shadow only",
+  "shadowOnly": "Supervised",
   "soloYes": "Solo",
   "soloWhy": {
    "bar": "Bar Raiser — cleared for solo from the first order.",
    "count": "Interviewed and hired for his own team at Amazon. That clears the bar for solo work inside his own area: cloud, infrastructure and IT operations. Application and system-design candidates go to KAGE-01.",
-   "shadow": "No interviewing experience on record. Shadow sessions only, until three consecutive reports go out without us changing the verdict."
+   "shadow": "No interviewing experience on record. Works alongside a senior expert, until three consecutive reports go out without us changing the verdict."
   },
   "barT": "What clears an expert for solo work",
   "barCols": [
@@ -168,7 +168,7 @@
    {
     "r": "Interviewing or hiring experience, or a passed internal exam",
     "s": "Yes",
-    "e": "Shadow sessions only"
+    "e": "Supervised assignments only"
    },
    {
     "r": "Report within 48 hours",
@@ -294,7 +294,7 @@
   "concern": "What are you unsure about?",
   "concernOpt": "optional, but it makes the assessment sharper",
   "concernPh": "The CV says they led a migration to Kafka. I can't tell whether they designed it or just worked on it.",
-  "concernHint": "The expert takes the largest claim on the CV and pushes on it. Telling us which claim worries you points the call at the right thing.",
+  "concernHint": "For a live interview it tells the expert which claim to push on. For a phone screening it tells them what to listen for. Either way it points the call at the right thing.",
   "note": "We don't need the candidate yet. Send their CV and email after payment — nothing about them is stored until the screen is going ahead.",
   "go": "Place the order",
   "going": "Placing…",
@@ -310,7 +310,7 @@
   "next": [
    "Now — we check which expert fits the role and confirm a slot.",
    "Within a few hours — a payment link arrives by email, with the expert's real name.",
-   "After payment — you send the candidate's CV and email; they book a slot themselves.",
+   "After payment — for a phone screening you forward us the invite to your own call; for a live interview you send the candidate's CV and email and they book a slot themselves.",
    "Within 24 hours — the call happens. We take a transcript, not a recording.",
    "Within 48 hours of the call — the written assessment lands in your inbox."
   ],
@@ -396,14 +396,14 @@
  "join": {
   "kicker": "For experts",
   "h1": "Run screens with us",
-  "lede": "You take only the assignments you want. Thirty minutes on the call plus twenty writing it up — $209 for a phone screening at our founding rate, $359 for a full hour. You work under a codename; your name reaches the client only after they pay.",
+  "lede": "You take only the assignments you want. Thirty minutes listening plus twenty writing it up — $209 for a phone screening at our founding rate. A full hour interviewing, plus thirty writing — $359. You work under a codename; your name reaches the client only after they pay.",
   "barT": "Read this before the form",
   "bar": [
    "Every report carries the candidate's own words with timecodes. A report without quotes is rejected and not paid for. This is the job, not a formality.",
    "We take a transcript of the call, never a recording. You are the one who insists on it; the candidate agrees in writing beforehand.",
    "Report within 48 hours of the call. Below 80% on time after five orders and you come off solo work.",
    "The verdict is FIT, NARROW or RISK. “Seems fine” is a failure, not a result.",
-   "No interviewing experience yet? You start on shadow sessions, or pass a two-report exam. Nothing else substitutes."
+   "No interviewing experience yet? You start supervised, alongside a senior expert, or pass a two-report exam. Nothing else substitutes."
   ],
   "barNote": "If any of that sounds like too much process, this is not the right fit — and it is better to find that out now than after your first order.",
   "youT": "About you",
@@ -446,7 +446,7 @@
   "next": [
    "We check your identity and work history. Until that is done, nothing about you is published.",
    "A short call — fifteen minutes, no assessment of you, just how you work.",
-   "If you have interviewing experience: straight to shadow, then solo. If not: the two-report exam.",
+   "If you have interviewing experience: straight to supervised work, then solo. If not: the two-report exam.",
    "You get an access code and can check your own status any time."
   ],
   "checkLink": "Check an application",
@@ -552,8 +552,8 @@
     "Two practice reports in the format of the published sample. The verdict has to land where the Bar Raiser landed."
    ],
    "shadow": [
-    "Shadow only",
-    "You sit in on interviews and write the assessment. Three consecutive reports that we do not change move you to solo."
+    "Supervised",
+    "You work alongside a senior expert and write the assessment. Three consecutive reports that we do not change move you to solo."
    ],
    "solo": [
     "Solo",

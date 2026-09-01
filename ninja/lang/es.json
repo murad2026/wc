@@ -12,7 +12,7 @@
  },
  "home": {
   "h1": "Evaluación técnica por ingenieros senior",
-  "sub": "Nos envías un candidato. Un ingeniero senior con experiencia en procesos de selección de escala FAANG hace la llamada — treinta minutos o una hora completa — y escribe lo que encontró.",
+  "sub": "Nos envías un candidato. Un ingeniero senior con experiencia en procesos de selección de escala FAANG se sienta en la llamada que tu equipo ya está haciendo, o conduce él mismo la entrevista — y escribe lo que encontró.",
   "cta1": "Hacer un pedido",
   "cta2": "Leer un informe de ejemplo",
   "meta": "Desde 349 $ por candidato. Sin suscripción, sin contrato, sin comisión si lo contratas.",
@@ -33,7 +33,7 @@
    },
    {
     "t": "Se hace la llamada",
-    "d": "Tu candidato elige hora desde un enlace de calendario. Treinta o sesenta minutos de vídeo en directo, en menos de 24 horas. Tomamos una transcripción, no una grabación."
+    "d": "O nuestro experto entra en la llamada que ya tienes agendada, o tu candidato elige hora con nosotros desde un enlace de calendario. En menos de 24 horas. Tomamos una transcripción, no una grabación."
    },
    {
     "t": "Recibes el informe",
@@ -47,17 +47,17 @@
     "id": "phone",
     "name": "Phone Screening",
     "price": "349 $",
-    "per": "por candidato · 30 min + informe escrito",
-    "when": "Cuando un CV parece sólido y necesitas saber si la profundidad es real, antes de que tu equipo le dedique un día.",
+    "per": "por candidato · entrevistas tú · 30 min",
+    "when": "Cuando tu equipo hace sus propias llamadas de criba y quieres la lectura de un ingeniero senior sobre el candidato, sin añadirle otra ronda.",
     "f": [
-     "Llamada en vivo de treinta minutos con tu candidato",
-     "Agendada en menos de 24 horas tras el pago",
-     "La afirmación que te preocupa, desmontada con citas y marcas de tiempo",
+     "Nuestro experto entra en la llamada que ya tienes agendada",
+     "Cámara apagada, sin preguntas por nuestra parte — para el candidato no cambia nada",
+     "Funciona con tu Zoom, Meet o Teams; la invitación sigue siendo tuya",
+     "Hasta treinta minutos de escucha",
+     "Informe escrito sobre el candidato en 48 horas",
      "Valoración: profundidad, resolución, comunicación, responsabilidad",
-     "Veredicto explícito — FIT, NARROW o RISK — con su razonamiento",
-     "Informe escrito en las 48 horas siguientes a la llamada",
-     "Nombre real, foto y LinkedIn del experto antes de la llamada",
-     "Reembolso completo si no logramos agendar a tiempo"
+     "Veredicto explícito — FIT, NARROW o RISK — con citas y marcas de tiempo",
+     "Una nota sobre lo que tu llamada dejó abierto y qué preguntar después"
     ],
     "cta": "Solicitar phone screening"
    },
@@ -65,16 +65,16 @@
     "id": "live",
     "name": "Live Interview",
     "price": "599 $",
-    "per": "por candidato · 60 min + informe escrito",
-    "when": "Cuando la contratación es senior o cara y media hora no basta para responder por ella.",
+    "per": "por candidato · entrevistamos nosotros · 60 min",
+    "when": "Cuando nadie de tu lado puede juzgar la profundidad, o la contratación pesa lo bastante como para dejarla en manos de quien lo ha hecho cientos de veces.",
     "f": [
-     "Entrevista en vivo de sesenta minutos, montada como un hiring loop real",
+     "Nuestro experto entrevista a tu candidato en persona, de principio a fin",
+     "Sesenta minutos, montados como un hiring loop real",
      "Un problema de diseño o arquitectura resuelto en vivo, no un test",
      "Se comprueba cada afirmación relevante del CV, no solo la mayor",
      "Claim Risk Score con el razonamiento de cada eje",
      "Valoración: profundidad, resolución, comunicación, responsabilidad",
-     "Una nota sobre qué cambiaría el veredicto y qué preguntar después",
-     "Informe escrito en las 48 horas siguientes a la llamada",
+     "Informe escrito en 48 horas, con citas y marcas de tiempo",
      "Nombre real, foto y LinkedIn del experto antes de la llamada"
     ],
     "cta": "Reservar live interview"
@@ -146,12 +146,12 @@
   "no": "No",
   "na": "Sin declarar",
   "noData": "Aún sin pedidos",
-  "shadowOnly": "Solo shadow",
+  "shadowOnly": "Supervisado",
   "soloYes": "Solo",
   "soloWhy": {
    "bar": "Bar Raiser: autorizado para trabajar solo desde el primer pedido.",
    "count": "Entrevistó y contrató para su propio equipo en Amazon. Eso cumple el listón para trabajar solo dentro de su área: nube, infraestructura y operaciones de TI. Los candidatos de arquitectura y diseño de sistemas van a KAGE-01.",
-   "shadow": "Sin experiencia acreditada entrevistando. Solo sesiones shadow, hasta que tres informes seguidos salgan sin que cambiemos el veredicto."
+   "shadow": "Sin experiencia acreditada entrevistando. Trabaja junto a un experto senior hasta que tres informes seguidos salgan sin que cambiemos el veredicto."
   },
   "barT": "Qué autoriza a trabajar solo",
   "barCols": [
@@ -168,7 +168,7 @@
    {
     "r": "Experiencia entrevistando o contratando, o examen interno aprobado",
     "s": "Sí",
-    "e": "Solo sesiones shadow"
+    "e": "Solo encargos supervisados"
    },
    {
     "r": "Informe en 48 horas",
@@ -294,7 +294,7 @@
   "concern": "¿Qué es lo que no tienes claro?",
   "concernOpt": "opcional, pero hace el informe más preciso",
   "concernPh": "El CV dice que lideró una migración a Kafka. No sé si la diseñó o solo participó.",
-  "concernHint": "El experto toma la afirmación más grande del CV y aprieta ahí. Decirnos cuál te preocupa dirige la llamada al sitio correcto.",
+  "concernHint": "En un live interview le dice al experto sobre qué afirmación apretar. En un phone screening, qué escuchar. En ambos casos dirige la llamada al sitio correcto.",
   "note": "Todavía no necesitamos al candidato. Su CV y su correo los envías tras el pago; hasta entonces no guardamos nada sobre él.",
   "go": "Hacer el pedido",
   "going": "Enviando…",
@@ -310,7 +310,7 @@
   "next": [
    "Ahora — comprobamos qué experto encaja con el puesto y confirmamos hueco.",
    "En unas horas — llega el enlace de pago por correo, con el nombre real del experto.",
-   "Tras el pago — envías el CV y el correo del candidato; él reserva su hora.",
+   "Tras el pago — para un phone screening nos reenvías la invitación a tu propia llamada; para un live interview envías el CV y el correo del candidato, y él reserva su hora.",
    "En 24 horas — se hace la llamada. Tomamos una transcripción, no una grabación.",
    "En las 48 horas siguientes — el informe escrito llega a tu bandeja."
   ],
@@ -396,14 +396,14 @@
  "join": {
   "kicker": "Para expertos",
   "h1": "Haz evaluaciones con nosotros",
-  "lede": "Aceptas solo los encargos que quieras. Treinta minutos de llamada más veinte de redacción: $209 por phone screening con la tarifa de fundador, $359 por la hora completa. Trabajas con nombre en clave; tu nombre llega al cliente solo después de que pague.",
+  "lede": "Aceptas solo los encargos que quieras. Treinta minutos de escucha más veinte de redacción: $209 por phone screening con la tarifa de fundador. Una hora completa de entrevista más treinta de redacción: $359. Trabajas con nombre en clave; tu nombre llega al cliente solo después de que pague.",
   "barT": "Léelo antes del formulario",
   "bar": [
    "Cada informe lleva las palabras del candidato con marcas de tiempo. Un informe sin citas se rechaza y no se paga. Ese es el trabajo, no un trámite.",
    "De la llamada tomamos una transcripción, nunca una grabación. Tú eres quien insiste en ello; el candidato lo acepta por escrito antes.",
    "Informe en 48 horas tras la llamada. Por debajo del 80% a tiempo tras cinco encargos, sales del trabajo en solitario.",
    "El veredicto es FIT, NARROW o RISK. «Parece bien» es un fallo, no un resultado.",
-   "¿Sin experiencia entrevistando? Empiezas en sesiones shadow o apruebas un examen de dos informes. Nada más lo sustituye."
+   "¿Sin experiencia entrevistando? Empiezas supervisado, junto a un experto senior, o apruebas un examen de dos informes. Nada más lo sustituye."
   ],
   "barNote": "Si todo esto suena a exceso de proceso, no encaja, y es mejor saberlo ahora que tras el primer encargo.",
   "youT": "Sobre ti",
@@ -446,7 +446,7 @@
   "next": [
    "Comprobamos tu identidad y tu historial laboral. Hasta entonces no se publica nada sobre ti.",
    "Una llamada corta: quince minutos, no se te evalúa, solo hablamos de cómo trabajas.",
-   "Con experiencia entrevistando: directo a shadow y luego solo. Sin ella: el examen de dos informes.",
+   "Con experiencia entrevistando: directo a encargos supervisados y luego en solitario. Sin ella: el examen de dos informes.",
    "Recibes un código de acceso y puedes consultar tu estado cuando quieras."
   ],
   "checkLink": "Consultar una solicitud",
@@ -552,8 +552,8 @@
     "Dos informes de práctica en el formato del ejemplo publicado. El veredicto debe caer donde cayó el del Bar Raiser."
    ],
    "shadow": [
-    "Solo shadow",
-    "Asistes a entrevistas y escribes la evaluación. Tres informes seguidos que no cambiemos te pasan a solitario."
+    "Supervisado",
+    "Trabajas junto a un experto senior y escribes la evaluación. Tres informes seguidos que no cambiemos te pasan a solitario."
    ],
    "solo": [
     "En solitario",
