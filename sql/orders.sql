@@ -4,7 +4,7 @@
 create table if not exists public.orders (
   id          bigint generated always as identity primary key,
   ref         text not null unique,                       -- VN-7K3QF9, показывается клиенту
-  service     text not null check (service in ('screen','shadow')),
+  service     text not null check (service in ('phone','live')),
   client_name text not null check (char_length(client_name) between 2 and 80),
   client_email text not null check (char_length(client_email) between 5 and 120),
   company     text check (char_length(company) <= 80),
@@ -49,7 +49,7 @@ create policy "anyone can order" on public.orders
     char_length(client_name) between 2 and 80
     and char_length(client_email) between 5 and 120
     and char_length(role_hiring) between 2 and 120
-    and service in ('screen','shadow')
+    and service in ('phone','live')
   );
 
 -- Чтение открыто по строкам, но ограничено колонками выше.

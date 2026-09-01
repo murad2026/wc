@@ -12,10 +12,10 @@
  },
  "home": {
   "h1": "Technical screening by senior engineers",
-  "sub": "You send a candidate. A senior engineer with FAANG-scale hiring experience runs a 15-minute live call and writes up what they found — or sits in on the interview your team is already running.",
-  "cta1": "Order a screen",
+  "sub": "You send a candidate. A senior engineer with FAANG-scale hiring experience runs the call — thirty minutes or a full hour — and writes up what they found.",
+  "cta1": "Place an order",
   "cta2": "Read a sample assessment",
-  "meta": "$199 per candidate. No subscription, no contract, no fee if you hire.",
+  "meta": "From $349 per candidate. No subscription, no contract, no fee if you hire.",
   "whoK": "Who does it",
   "whoT": "Two people, both named",
   "whoS": "Every screen is run by one of them — never routed to an anonymous marketplace. Their profiles list every competency and where it comes from.",
@@ -32,49 +32,52 @@
     "d": "We match the role to the right person and check they have a slot. Only then does a payment link reach you — with their real name."
    },
    {
-    "t": "The screen happens",
-    "d": "Your candidate books a slot from a calendar link. Fifteen minutes of live video, within 24 hours. We take a transcript, not a recording."
+    "t": "The call happens",
+    "d": "Your candidate books a slot from a calendar link. Thirty or sixty minutes of live video, within 24 hours. We take a transcript, not a recording."
    },
    {
     "t": "You get the assessment",
-    "d": "Within 48 hours: ratings, quotes with timecodes, a verdict, and an honest note on what fifteen minutes cannot tell you."
+    "d": "Within 48 hours: ratings, quotes with timecodes, a verdict, and an honest note on what a single call cannot tell you."
    }
   ],
   "priceT": "Two services",
   "priceS": "Pay per candidate. No contract, no subscription, no placement fee if you hire.",
   "plans": [
    {
-    "id": "screen",
-    "name": "Verified Screen",
-    "price": "$199",
-    "per": "per candidate · 15 min + written assessment",
-    "when": "Use it when you have a candidate and nobody on your side who can judge their technical depth.",
+    "id": "phone",
+    "name": "Phone Screening",
+    "price": "$349",
+    "per": "per candidate · 30 min + written assessment",
+    "when": "Use it when a CV looks strong and you need to know, before your team spends a day on them, whether the depth is real.",
     "f": [
-     "Fifteen-minute live video call with your candidate",
+     "Thirty-minute live call with your candidate",
      "Scheduled within 24 hours of payment",
-     "Written assessment within 48 hours of the call",
+     "The one claim that worries you taken apart, with quotes and timecodes",
      "Ratings on depth, problem solving, communication, ownership",
      "An explicit verdict — FIT, NARROW or RISK — with the reasoning",
+     "Written assessment within 48 hours of the call",
      "The expert's real name, photo and LinkedIn before the call",
      "Full refund if we cannot schedule in the window"
     ],
-    "cta": "Order a screen"
+    "cta": "Order a phone screening"
    },
    {
-    "id": "shadow",
-    "name": "Shadow Session",
-    "price": "$349",
-    "per": "per interview · 60 min + debrief",
-    "when": "Use it when your own team interviews and you want to know whether they interview well.",
+    "id": "live",
+    "name": "Live Interview",
+    "price": "$599",
+    "per": "per candidate · 60 min + written assessment",
+    "when": "Use it when the hire is senior or expensive, and half an hour is not enough to sign off on it.",
     "f": [
-     "Our expert joins your own interview as a silent observer",
-     "Camera off, no participation — nothing changes for the candidate",
-     "Fifteen-minute debrief with your team straight after",
-     "Written assessment of the candidate, same criteria",
-     "Written assessment of your interview: what was missed",
-     "Works with your existing Zoom, Meet or Teams call"
+     "Sixty-minute live interview, structured like a real hiring loop",
+     "A design or architecture problem worked through live, not a quiz",
+     "Every significant claim on the CV tested, not just the largest one",
+     "Claim Risk Score with the reasoning behind each axis",
+     "Ratings on depth, problem solving, communication, ownership",
+     "A note on what would change the verdict — and what to ask next",
+     "Written assessment within 48 hours of the call",
+     "The expert's real name, photo and LinkedIn before the call"
     ],
-    "cta": "Book a session"
+    "cta": "Book a live interview"
    }
   ],
   "moreT": "Also available on request",
@@ -120,8 +123,8 @@
     "a": "A small team building infrastructure for verified human reputation. Verified.Ninja is the first commercial service built on it — there is more on the about page."
    }
   ],
-  "finalT": "Order a screen",
-  "finalS": "Verified Screen $199. Shadow Session $349. Written assessment within 48 hours either way.",
+  "finalT": "Place an order",
+  "finalS": "Phone Screening $349. Live Interview $599. Written assessment within 48 hours either way.",
   "finalCta": "Place an order",
   "finalNote": "Questions first? Email hello@verified.ninja"
  },
@@ -207,7 +210,7 @@
   "revealT": "What the client gets after payment",
   "reveal": "Real name, photo and LinkedIn, before the call is scheduled. The codename protects an expert who is currently employed; it was never meant to hide them from the client.",
   "ctaT": "Put one of them in front of your candidate",
-  "cta1": "Order a screen",
+  "cta1": "Place an order",
   "cta2": "Read a sample assessment",
   "people": [
    {
@@ -276,7 +279,7 @@
   "estNote": "≈ — an estimate from years of service, being confirmed with the expert. Replaced with his own figure as soon as he gives it."
  },
  "order": {
-  "h1": "Order a screen",
+  "h1": "Place an order",
   "sub": "About a minute. You get an order number straight away, and a payment link by email once we have confirmed an expert has a slot.",
   "pickT": "What you need",
   "youT": "About you",
@@ -291,7 +294,7 @@
   "concern": "What are you unsure about?",
   "concernOpt": "optional, but it makes the assessment sharper",
   "concernPh": "The CV says they led a migration to Kafka. I can't tell whether they designed it or just worked on it.",
-  "concernHint": "The expert takes the largest claim on the CV and pushes on it. Telling us which claim worries you points the fifteen minutes at the right thing.",
+  "concernHint": "The expert takes the largest claim on the CV and pushes on it. Telling us which claim worries you points the call at the right thing.",
   "note": "We don't need the candidate yet. Send their CV and email after payment — nothing about them is stored until the screen is going ahead.",
   "go": "Place the order",
   "going": "Placing…",
@@ -364,7 +367,7 @@
   "layersT": "What we are building",
   "layers": [
    {
-    "n": "Verified Screen",
+    "n": "Verified.Ninja",
     "tag": "Live",
     "d": "Technical screening by senior engineers. What you are looking at. It pays for everything below."
    },
@@ -393,7 +396,7 @@
  "join": {
   "kicker": "For experts",
   "h1": "Run screens with us",
-  "lede": "You take only the assignments you want. Fifteen minutes on the call plus ten writing it up — $119 per screen at our founding rate. You work under a codename; your name reaches the client only after they pay.",
+  "lede": "You take only the assignments you want. Thirty minutes on the call plus twenty writing it up — $209 for a phone screening at our founding rate, $359 for a full hour. You work under a codename; your name reaches the client only after they pay.",
   "barT": "Read this before the form",
   "bar": [
    "Every report carries the candidate's own words with timecodes. A report without quotes is rejected and not paid for. This is the job, not a formality.",
@@ -456,23 +459,23 @@
   ],
   "terms": [
    {
-    "k": "Per assignment",
-    "a": "$119 — 60% of the price",
-    "b": "$100–150"
-   },
-   {
-    "k": "Shadow session",
+    "k": "Phone screening",
     "a": "$209 — 60% of $349",
     "b": "$100–150"
    },
    {
+    "k": "Live interview",
+    "a": "$359 — 60% of $599",
+    "b": "$150–250"
+   },
+   {
     "k": "Time it takes",
-    "a": "about 30 minutes",
+    "a": "50 to 90 minutes",
     "b": "an hour or more"
    },
    {
     "k": "Effective hourly",
-    "a": "about $240",
+    "a": "about $250",
     "b": "$70–150"
    },
    {
