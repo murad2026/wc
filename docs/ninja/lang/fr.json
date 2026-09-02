@@ -12,10 +12,10 @@
  },
  "home": {
   "h1": "Évaluation technique par des ingénieurs seniors",
-  "sub": "Vous nous envoyez un candidat. Un ingénieur senior rompu aux recrutements à l'échelle des FAANG mène un entretien vidéo de 15 minutes et rédige ce qu'il a constaté — ou assiste à l'entretien que votre équipe mène déjà.",
-  "cta1": "Commander une évaluation",
+  "sub": "Vous nous envoyez un candidat. Un ingénieur senior rompu aux recrutements à l'échelle des FAANG assiste à l'entretien que votre équipe mène déjà, ou mène lui-même l'entretien — et rédige ce qu'il a constaté.",
+  "cta1": "Passer commande",
   "cta2": "Lire un rapport type",
-  "meta": "199 $ par candidat. Sans abonnement, sans contrat, sans commission si vous recrutez.",
+  "meta": "À partir de 349 $ par candidat. Sans abonnement, sans contrat, sans commission si vous recrutez.",
   "whoK": "Qui évalue",
   "whoT": "Deux personnes, toutes deux nommées",
   "whoS": "Chaque évaluation est menée par l'une d'elles, jamais par une place de marché anonyme. Leurs profils détaillent chaque compétence et ce sur quoi elle repose.",
@@ -32,49 +32,52 @@
     "d": "Nous associons le poste à la bonne personne et vérifions sa disponibilité. Le lien de paiement ne part qu'ensuite — avec son vrai nom."
    },
    {
-    "t": "L'évaluation a lieu",
-    "d": "Votre candidat réserve lui-même un créneau. Quinze minutes de vidéo, sous 24 heures. Nous prenons une transcription, pas un enregistrement."
+    "t": "L'entretien a lieu",
+    "d": "Soit notre expert rejoint l'entretien que vous avez déjà programmé, soit votre candidat choisit un créneau chez nous via un lien de calendrier. Sous 24 heures. Nous prenons une transcription, pas un enregistrement."
    },
    {
     "t": "Vous recevez le rapport",
-    "d": "Sous 48 heures : notations, citations horodatées, un verdict et une note honnête sur ce que quinze minutes ne peuvent pas montrer."
+    "d": "Sous 48 heures : notations, citations horodatées, un verdict et une note honnête sur ce qu'un seul entretien ne peut pas montrer."
    }
   ],
   "priceT": "Deux prestations",
   "priceS": "Paiement par candidat. Sans contrat, sans abonnement, sans commission de placement.",
   "plans": [
    {
-    "id": "screen",
-    "name": "Verified Screen",
-    "price": "199 $",
-    "per": "par candidat · 15 min + rapport écrit",
-    "when": "Quand vous avez un candidat et personne, chez vous, pour juger de sa profondeur technique.",
+    "id": "phone",
+    "name": "Phone Screening",
+    "price": "349 $",
+    "per": "par candidat · vous menez l'entretien · 30 min",
+    "when": "Quand votre équipe mène elle-même ses entretiens de présélection et que vous voulez l'avis d'un ingénieur senior sur le candidat, sans lui imposer un tour de plus.",
     "f": [
-     "Entretien vidéo en direct de quinze minutes avec votre candidat",
-     "Programmé sous 24 heures après paiement",
-     "Rapport écrit sous 48 heures après l'entretien",
+     "Notre expert rejoint l'entretien que vous avez déjà programmé",
+     "Caméra coupée, aucune question de notre part — rien ne change pour le candidat",
+     "Fonctionne avec votre Zoom, Meet ou Teams ; l'invitation reste la vôtre",
+     "Jusqu'à trente minutes d'écoute",
+     "Rapport écrit sur le candidat sous 48 heures",
      "Notation : profondeur, résolution, communication, responsabilité",
-     "Verdict explicite — FIT, NARROW ou RISK — avec le raisonnement",
-     "Vrai nom, photo et LinkedIn de l'expert avant l'entretien",
-     "Remboursement intégral si nous ne tenons pas le délai"
+     "Verdict explicite — FIT, NARROW ou RISK — avec citations et horodatages",
+     "Une note sur ce que votre entretien a laissé ouvert et sur quoi demander ensuite"
     ],
-    "cta": "Commander une évaluation"
+    "cta": "Commander un phone screening"
    },
    {
-    "id": "shadow",
-    "name": "Shadow Session",
-    "price": "349 $",
-    "per": "par entretien · 60 min + débriefing",
-    "when": "Quand votre équipe mène les entretiens et que vous voulez savoir si elle les mène bien.",
+    "id": "live",
+    "name": "Live Interview",
+    "price": "599 $",
+    "per": "par candidat · nous menons l'entretien · 60 min",
+    "when": "Quand personne chez vous ne peut juger de la profondeur, ou quand le recrutement pèse assez pour le confier à quelqu'un qui l'a fait des centaines de fois.",
     "f": [
-     "Notre expert assiste à votre entretien en observateur silencieux",
-     "Caméra coupée, aucune intervention — rien ne change pour le candidat",
-     "Quinze minutes de débriefing avec votre équipe juste après",
-     "Rapport écrit sur le candidat, mêmes critères",
-     "Rapport écrit sur votre entretien : ce qui a été manqué",
-     "Fonctionne avec votre Zoom, Meet ou Teams"
+     "Notre expert mène lui-même l'entretien avec votre candidat, du début à la fin",
+     "Soixante minutes, construites comme un vrai hiring loop",
+     "Un problème de conception ou d'architecture traité en direct, pas un quiz",
+     "Chaque affirmation importante du CV est vérifiée, pas seulement la plus lourde",
+     "Claim Risk Score avec le raisonnement pour chaque axe",
+     "Notation : profondeur, résolution, communication, responsabilité",
+     "Rapport écrit sous 48 heures, avec citations et horodatages",
+     "Vrai nom, photo et LinkedIn de l'expert avant l'entretien"
     ],
-    "cta": "Réserver une session"
+    "cta": "Réserver un live interview"
    }
   ],
   "moreT": "Également sur demande",
@@ -120,8 +123,8 @@
     "a": "Une petite équipe qui construit une infrastructure de réputation humaine vérifiée. Verified.Ninja en est le premier service commercial — plus de détails sur la page du projet."
    }
   ],
-  "finalT": "Commander une évaluation",
-  "finalS": "Verified Screen 199 $. Shadow Session 349 $. Rapport écrit sous 48 heures dans les deux cas.",
+  "finalT": "Passer commande",
+  "finalS": "Phone Screening 349 $. Live Interview 599 $. Rapport écrit sous 48 heures dans les deux cas.",
   "finalCta": "Passer commande",
   "finalNote": "Des questions d'abord ? Écrivez à hello@verified.ninja"
  },
@@ -143,12 +146,12 @@
   "no": "Non",
   "na": "Non renseigné",
   "noData": "Aucune commande à ce jour",
-  "shadowOnly": "Shadow uniquement",
+  "shadowOnly": "Encadré",
   "soloYes": "Solo",
   "soloWhy": {
    "bar": "Bar Raiser — autorisé en solo dès la première commande.",
    "count": "A mené des entretiens et recruté pour sa propre équipe chez Amazon. Cela satisfait l'exigence pour le travail en solo dans son domaine : cloud, infrastructure et exploitation IT. Les candidats en architecture et conception de systèmes vont à KAGE-01.",
-   "shadow": "Expérience d'entretien non établie. Sessions shadow uniquement, jusqu'à trois rapports consécutifs partis sans que nous changions le verdict."
+   "shadow": "Expérience d'entretien non établie. Travaille aux côtés d'un expert senior jusqu'à trois rapports consécutifs partis sans que nous changions le verdict."
   },
   "barT": "Ce qui autorise le travail en solo",
   "barCols": [
@@ -165,7 +168,7 @@
    {
     "r": "Expérience d'entretien ou d'embauche, ou examen interne réussi",
     "s": "Oui",
-    "e": "Sessions shadow uniquement"
+    "e": "Missions encadrées uniquement"
    },
    {
     "r": "Rapport sous 48 heures",
@@ -207,7 +210,7 @@
   "revealT": "Ce que le client reçoit après paiement",
   "reveal": "Vrai nom, photo et LinkedIn, avant la prise de rendez-vous. Le nom de code protège un expert aujourd'hui salarié, il ne le cache pas au client.",
   "ctaT": "Mettez l'un d'eux face à votre candidat",
-  "cta1": "Commander une évaluation",
+  "cta1": "Passer commande",
   "cta2": "Lire un rapport type",
   "people": [
    {
@@ -276,7 +279,7 @@
   "estNote": "≈ — estimation d'après les années d'exercice, en cours de confirmation avec l'expert. Remplacée par son propre chiffre dès qu'il le donne."
  },
  "order": {
-  "h1": "Commander une évaluation",
+  "h1": "Passer commande",
   "sub": "Une minute environ. Le numéro de commande arrive aussitôt, le lien de paiement par courriel dès qu'un expert a confirmé un créneau.",
   "pickT": "Ce qu'il vous faut",
   "youT": "À propos de vous",
@@ -291,7 +294,7 @@
   "concern": "Qu'est-ce qui vous laisse un doute ?",
   "concernOpt": "facultatif, mais le rapport y gagne en précision",
   "concernPh": "Le CV dit qu'il a piloté une migration vers Kafka. Impossible de savoir s'il l'a conçue ou seulement accompagnée.",
-  "concernHint": "L'expert prend l'affirmation la plus lourde du CV et appuie dessus. Nous dire laquelle vous inquiète dirige les quinze minutes au bon endroit.",
+  "concernHint": "Pour un live interview, cela indique à l'expert sur quelle affirmation appuyer. Pour un phone screening, ce qu'il doit écouter. Dans les deux cas, l'entretien va au bon endroit.",
   "note": "Le candidat n'est pas encore nécessaire. Vous enverrez son CV et son courriel après paiement ; d'ici là nous ne conservons rien sur lui.",
   "go": "Passer commande",
   "going": "Envoi…",
@@ -307,7 +310,7 @@
   "next": [
    "Maintenant — nous cherchons l'expert adapté au poste et confirmons un créneau.",
    "Sous quelques heures — le lien de paiement arrive par courriel, avec le vrai nom de l'expert.",
-   "Après paiement — vous envoyez le CV et le courriel du candidat ; il réserve lui-même.",
+   "Après paiement — pour un phone screening, vous nous transférez l'invitation à votre propre entretien ; pour un live interview, vous envoyez le CV et le courriel du candidat, et il réserve lui-même.",
    "Sous 24 heures — l'entretien a lieu. Nous prenons une transcription, pas un enregistrement.",
    "Sous 48 heures après l'entretien — le rapport écrit arrive dans votre boîte."
   ],
@@ -364,7 +367,7 @@
   "layersT": "Ce que nous construisons",
   "layers": [
    {
-    "n": "Verified Screen",
+    "n": "Verified.Ninja",
     "tag": "En service",
     "d": "Évaluation technique par des ingénieurs seniors. Ce que vous regardez. C'est ce qui finance tout le reste."
    },
@@ -393,14 +396,14 @@
  "join": {
   "kicker": "Pour les experts",
   "h1": "Mener des évaluations avec nous",
-  "lede": "Vous ne prenez que les missions que vous voulez. Quinze minutes d'entretien plus dix de rédaction — $119 par évaluation au tarif fondateur. Vous travaillez sous un nom de code ; votre nom n'atteint le client qu'après paiement.",
+  "lede": "Vous ne prenez que les missions que vous voulez. Trente minutes d'écoute plus vingt de rédaction — $209 par phone screening au tarif fondateur. Une heure complète d'entretien plus trente de rédaction — $359. Vous travaillez sous un nom de code ; votre nom n'atteint le client qu'après paiement.",
   "barT": "À lire avant le formulaire",
   "bar": [
    "Chaque rapport porte les mots du candidat, horodatés. Un rapport sans citations est rejeté et non rémunéré. C'est cela, le travail, pas une formalité.",
    "Nous prenons une transcription de l'entretien, jamais un enregistrement. C'est vous qui y tenez ; le candidat l'accepte par écrit au préalable.",
    "Rapport sous 48 heures après l'entretien. En dessous de 80% dans les délais après cinq missions, vous quittez le travail en solo.",
    "Le verdict est FIT, NARROW ou RISK. « Ça a l'air correct » est un échec, pas un résultat.",
-   "Pas encore d'expérience d'entretien ? Vous commencez en shadow, ou vous passez un examen de deux rapports. Rien d'autre ne remplace cela."
+   "Pas encore d'expérience d'entretien ? Vous commencez encadré, aux côtés d'un expert senior, ou vous passez un examen de deux rapports. Rien d'autre ne remplace cela."
   ],
   "barNote": "Si tout cela sonne comme trop de procédure, ce n'est pas le bon endroit — et mieux vaut s'en rendre compte maintenant qu'après la première mission.",
   "youT": "À propos de vous",
@@ -443,7 +446,7 @@
   "next": [
    "Nous vérifions votre identité et votre parcours. D'ici là, rien n'est publié à votre sujet.",
    "Un court appel — quinze minutes, on ne vous évalue pas, on parle de votre façon de travailler.",
-   "Avec de l'expérience d'entretien : directement en shadow, puis en solo. Sans : l'examen de deux rapports.",
+   "Avec de l'expérience d'entretien : directement en mission encadrée, puis en solo. Sans : l'examen de deux rapports.",
    "Vous recevez un code d'accès et pouvez consulter votre statut à tout moment."
   ],
   "checkLink": "Suivre une candidature",
@@ -456,23 +459,23 @@
   ],
   "terms": [
    {
-    "k": "Par mission",
-    "a": "$119 — 60% du prix",
-    "b": "$100–150"
-   },
-   {
-    "k": "Session shadow",
+    "k": "Phone screening",
     "a": "$209 — 60% de $349",
     "b": "$100–150"
    },
    {
+    "k": "Live interview",
+    "a": "$359 — 60% de $599",
+    "b": "$150–250"
+   },
+   {
     "k": "Temps que cela prend",
-    "a": "environ 30 minutes",
+    "a": "de 50 à 90 minutes",
     "b": "une heure et plus"
    },
    {
     "k": "Soit par heure",
-    "a": "environ $240",
+    "a": "environ $250",
     "b": "$70–150"
    },
    {
@@ -549,8 +552,8 @@
     "Deux rapports d'entraînement au format de l'exemple publié. Le verdict doit tomber là où celui du Bar Raiser est tombé."
    ],
    "shadow": [
-    "Shadow uniquement",
-    "Vous assistez aux entretiens et rédigez l'évaluation. Trois rapports consécutifs que nous ne modifions pas vous font passer en solo."
+    "Encadré",
+    "Vous travaillez aux côtés d'un expert senior et rédigez l'évaluation. Trois rapports consécutifs que nous ne modifions pas vous font passer en solo."
    ],
    "solo": [
     "Solo",

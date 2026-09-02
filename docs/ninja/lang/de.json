@@ -12,10 +12,10 @@
  },
  "home": {
   "h1": "Technische Prüfung durch erfahrene Senior-Entwickler",
-  "sub": "Sie schicken uns einen Kandidaten. Ein Senior-Entwickler mit Erfahrung aus FAANG-Auswahlverfahren führt ein 15-minütiges Live-Gespräch und schreibt auf, was dabei herauskam — oder sitzt in dem Interview, das Ihr Team ohnehin führt.",
-  "cta1": "Prüfung bestellen",
+  "sub": "Sie schicken uns einen Kandidaten. Ein Senior-Entwickler mit Erfahrung aus FAANG-Auswahlverfahren sitzt entweder in dem Gespräch, das Ihr Team ohnehin führt, oder führt das Interview selbst — und schreibt auf, was dabei herauskam.",
+  "cta1": "Bestellung aufgeben",
   "cta2": "Beispielgutachten lesen",
-  "meta": "199 $ pro Kandidat. Kein Abo, kein Vertrag, keine Gebühr, wenn Sie einstellen.",
+  "meta": "Ab 349 $ pro Kandidat. Kein Abo, kein Vertrag, keine Gebühr, wenn Sie einstellen.",
   "whoK": "Wer prüft",
   "whoT": "Zwei Personen, beide benannt",
   "whoS": "Jede Prüfung führt eine von beiden durch — niemals ein anonymer Marktplatz. Ihre Profile listen jede Kompetenz und deren Grundlage auf.",
@@ -32,49 +32,52 @@
     "d": "Wir ordnen die Rolle der richtigen Person zu und prüfen, ob ein Termin frei ist. Erst dann kommt der Zahlungslink — mit dem echten Namen."
    },
    {
-    "t": "Die Prüfung findet statt",
-    "d": "Ihr Kandidat bucht selbst einen Termin. Fünfzehn Minuten Video, innerhalb von 24 Stunden. Wir nehmen ein Transkript auf, keine Aufzeichnung."
+    "t": "Das Gespräch findet statt",
+    "d": "Entweder nimmt unser Experte an dem Gespräch teil, das Sie bereits angesetzt haben, oder Ihr Kandidat wählt über einen Kalenderlink selbst einen Termin bei uns. Innerhalb von 24 Stunden. Wir nehmen ein Transkript, keine Aufzeichnung."
    },
    {
     "t": "Sie erhalten das Gutachten",
-    "d": "Innerhalb von 48 Stunden: Bewertungen, Zitate mit Zeitmarken, ein Urteil und ein ehrlicher Hinweis darauf, was fünfzehn Minuten nicht zeigen können."
+    "d": "Innerhalb von 48 Stunden: Bewertungen, Zitate mit Zeitmarken, ein Urteil und ein ehrlicher Hinweis darauf, was ein einzelnes Gespräch nicht zeigen kann."
    }
   ],
   "priceT": "Zwei Leistungen",
   "priceS": "Zahlung pro Kandidat. Kein Vertrag, kein Abo, keine Vermittlungsgebühr.",
   "plans": [
    {
-    "id": "screen",
-    "name": "Verified Screen",
-    "price": "199 $",
-    "per": "pro Kandidat · 15 Min. + schriftliches Gutachten",
-    "when": "Wenn Sie einen Kandidaten haben und niemanden, der dessen fachliche Tiefe beurteilen kann.",
+    "id": "phone",
+    "name": "Phone Screening",
+    "price": "349 $",
+    "per": "pro Kandidat · Sie führen das Gespräch · 30 Min.",
+    "when": "Wenn Ihr Team die Vorgespräche selbst führt und Sie die Einschätzung eines Senior-Entwicklers zum Kandidaten wollen — ohne ihm eine weitere Runde zuzumuten.",
     "f": [
-     "Fünfzehnminütiges Live-Videogespräch mit Ihrem Kandidaten",
-     "Termin innerhalb von 24 Stunden nach Zahlung",
-     "Schriftliches Gutachten innerhalb von 48 Stunden nach dem Gespräch",
+     "Unser Experte nimmt an dem Gespräch teil, das Sie bereits angesetzt haben",
+     "Kamera aus, keine Fragen von uns — für den Kandidaten ändert sich nichts",
+     "Funktioniert mit Ihrem Zoom, Meet oder Teams; die Einladung bleibt Ihre",
+     "Bis zu dreißig Minuten Zuhören",
+     "Schriftliche Bewertung des Kandidaten innerhalb von 48 Stunden",
      "Bewertung: Tiefe, Problemlösung, Kommunikation, Verantwortung",
-     "Klares Urteil: einstellen, Risiko oder nein — mit Begründung",
-     "Echter Name, Foto und LinkedIn des Experten vor dem Gespräch",
-     "Volle Erstattung, wenn wir den Termin nicht halten können"
+     "Klares Urteil — FIT, NARROW oder RISK — mit Zitaten und Zeitmarken",
+     "Ein Hinweis darauf, was Ihr Gespräch offen gelassen hat und was als Nächstes zu fragen ist"
     ],
-    "cta": "Prüfung bestellen"
+    "cta": "Phone Screening bestellen"
    },
    {
-    "id": "shadow",
-    "name": "Shadow Session",
-    "price": "349 $",
-    "per": "pro Interview · 60 Min. + Nachbesprechung",
-    "when": "Wenn Ihr Team selbst interviewt und Sie wissen wollen, ob es gut interviewt.",
+    "id": "live",
+    "name": "Live Interview",
+    "price": "599 $",
+    "per": "pro Kandidat · wir führen das Gespräch · 60 Min.",
+    "when": "Wenn bei Ihnen niemand die fachliche Tiefe beurteilen kann oder die Stelle wichtig genug ist, um sie jemandem zu überlassen, der das hundertfach gemacht hat.",
     "f": [
-     "Unser Experte nimmt still an Ihrem Interview teil",
-     "Kamera aus, keine Beteiligung — für den Kandidaten ändert sich nichts",
-     "Fünfzehn Minuten Nachbesprechung mit Ihrem Team direkt danach",
-     "Schriftliche Bewertung des Kandidaten nach denselben Kriterien",
-     "Schriftliche Bewertung Ihres Interviews: was übersehen wurde",
-     "Funktioniert mit Ihrem Zoom, Meet oder Teams"
+     "Unser Experte führt das Interview persönlich, von Anfang bis Ende",
+     "Sechzig Minuten, aufgebaut wie ein echter Hiring Loop",
+     "Eine Design- oder Architekturaufgabe live durchgearbeitet, kein Quiz",
+     "Jede wesentliche Behauptung im Lebenslauf wird geprüft, nicht nur die größte",
+     "Claim Risk Score mit Begründung zu jeder Achse",
+     "Bewertung: Tiefe, Problemlösung, Kommunikation, Verantwortung",
+     "Schriftliches Gutachten innerhalb von 48 Stunden, mit Zitaten und Zeitmarken",
+     "Echter Name, Foto und LinkedIn des Experten vor dem Gespräch"
     ],
-    "cta": "Session buchen"
+    "cta": "Live Interview buchen"
    }
   ],
   "moreT": "Auf Anfrage",
@@ -120,8 +123,8 @@
     "a": "Ein kleines Team, das Infrastruktur für überprüfte menschliche Reputation baut. Verified.Ninja ist der erste kommerzielle Dienst darauf — mehr dazu auf der Über-uns-Seite."
    }
   ],
-  "finalT": "Prüfung bestellen",
-  "finalS": "Verified Screen 199 $. Shadow Session 349 $. Schriftliches Gutachten in beiden Fällen innerhalb von 48 Stunden.",
+  "finalT": "Bestellung aufgeben",
+  "finalS": "Phone Screening 349 $. Live Interview 599 $. Schriftliches Gutachten in beiden Fällen innerhalb von 48 Stunden.",
   "finalCta": "Bestellung aufgeben",
   "finalNote": "Erst Fragen? Schreiben Sie an hello@verified.ninja"
  },
@@ -143,12 +146,12 @@
   "no": "Nein",
   "na": "Nicht angegeben",
   "noData": "Noch keine Aufträge",
-  "shadowOnly": "Nur Shadow",
+  "shadowOnly": "Unter Aufsicht",
   "soloYes": "Solo",
   "soloWhy": {
    "bar": "Bar Raiser — ab dem ersten Auftrag für Solo freigegeben.",
    "count": "Hat für das eigene Team bei Amazon interviewt und eingestellt. Das genügt für Solo-Arbeit im eigenen Bereich: Cloud, Infrastruktur und IT-Betrieb. Kandidaten für Architektur und Systementwurf gehen an KAGE-01.",
-   "shadow": "Keine belegte Interview-Erfahrung. Nur Shadow-Sessions, bis drei Berichte in Folge ohne Änderung des Urteils herausgehen."
+   "shadow": "Keine belegte Interview-Erfahrung. Arbeitet an der Seite eines erfahrenen Experten, bis drei Berichte in Folge ohne Änderung des Urteils herausgehen."
   },
   "barT": "Was für Solo-Arbeit freigibt",
   "barCols": [
@@ -165,7 +168,7 @@
    {
     "r": "Interview- oder Einstellungserfahrung oder bestandene interne Prüfung",
     "s": "Ja",
-    "e": "Nur Shadow-Sessions"
+    "e": "Nur Aufträge unter Aufsicht"
    },
    {
     "r": "Bericht innerhalb von 48 Stunden",
@@ -207,7 +210,7 @@
   "revealT": "Was der Kunde nach der Zahlung erhält",
   "reveal": "Echter Name, Foto und LinkedIn, bevor der Termin steht. Der Deckname schützt einen derzeit angestellten Experten und verbirgt ihn nicht vor dem Kunden.",
   "ctaT": "Setzen Sie einen von beiden vor Ihren Kandidaten",
-  "cta1": "Prüfung bestellen",
+  "cta1": "Bestellung aufgeben",
   "cta2": "Beispielgutachten lesen",
   "people": [
    {
@@ -276,7 +279,7 @@
   "estNote": "≈ — eine Schätzung anhand der Dienstjahre, wird mit dem Experten abgeglichen. Wird durch seine eigene Zahl ersetzt, sobald er sie nennt."
  },
  "order": {
-  "h1": "Prüfung bestellen",
+  "h1": "Bestellung aufgeben",
   "sub": "Etwa eine Minute. Die Auftragsnummer erhalten Sie sofort, den Zahlungslink per E-Mail, sobald ein Experte einen Termin bestätigt hat.",
   "pickT": "Was Sie brauchen",
   "youT": "Über Sie",
@@ -291,7 +294,7 @@
   "concern": "Was ist Ihnen unklar?",
   "concernOpt": "optional, macht das Gutachten aber schärfer",
   "concernPh": "Im Lebenslauf steht, er habe eine Migration zu Kafka geleitet. Ich kann nicht erkennen, ob er sie entworfen oder nur mitgearbeitet hat.",
-  "concernHint": "Der Experte nimmt die größte Behauptung im Lebenslauf und hakt dort nach. Wenn Sie sagen, welche Sie beunruhigt, gehen die fünfzehn Minuten an die richtige Stelle.",
+  "concernHint": "Beim Live Interview sagt es dem Experten, wo er nachhaken soll. Beim Phone Screening, worauf er hören soll. In beiden Fällen geht das Gespräch an die richtige Stelle.",
   "note": "Den Kandidaten brauchen wir noch nicht. Lebenslauf und E-Mail schicken Sie nach der Zahlung — vorher speichern wir nichts über ihn.",
   "go": "Bestellung aufgeben",
   "going": "Wird gesendet…",
@@ -307,7 +310,7 @@
   "next": [
    "Jetzt — wir prüfen, welcher Experte zur Rolle passt, und bestätigen einen Termin.",
    "Innerhalb weniger Stunden — der Zahlungslink kommt per E-Mail, mit dem echten Namen des Experten.",
-   "Nach der Zahlung — Sie schicken Lebenslauf und E-Mail des Kandidaten; er bucht selbst einen Termin.",
+   "Nach der Zahlung — beim Phone Screening leiten Sie uns die Einladung zu Ihrem eigenen Gespräch weiter; beim Live Interview schicken Sie Lebenslauf und E-Mail des Kandidaten, und er bucht selbst einen Termin.",
    "Innerhalb von 24 Stunden — das Gespräch findet statt. Wir nehmen ein Transkript auf, keine Aufzeichnung.",
    "Innerhalb von 48 Stunden danach — das schriftliche Gutachten liegt in Ihrem Postfach."
   ],
@@ -364,7 +367,7 @@
   "layersT": "Was wir bauen",
   "layers": [
    {
-    "n": "Verified Screen",
+    "n": "Verified.Ninja",
     "tag": "Live",
     "d": "Technische Prüfung durch Senior-Entwickler. Das, was Sie gerade ansehen. Davon lebt alles Weitere."
    },
@@ -393,14 +396,14 @@
  "join": {
   "kicker": "Für Experten",
   "h1": "Prüfungen mit uns durchführen",
-  "lede": "Sie nehmen nur die Aufträge an, die Sie wollen. Fünfzehn Minuten Gespräch plus zehn fürs Schreiben — $119 pro Prüfung zum Gründungssatz. Sie arbeiten unter einem Decknamen; Ihr Name erreicht den Kunden erst nach der Zahlung.",
+  "lede": "Sie nehmen nur die Aufträge an, die Sie wollen. Dreißig Minuten Zuhören plus zwanzig fürs Schreiben — $209 pro Phone Screening zum Gründungssatz. Eine volle Stunde Interview plus dreißig Minuten Schreiben — $359. Sie arbeiten unter einem Decknamen; Ihr Name erreicht den Kunden erst nach der Zahlung.",
   "barT": "Vor dem Formular lesen",
   "bar": [
    "Jeder Bericht enthält die eigenen Worte des Kandidaten mit Zeitmarken. Ein Bericht ohne Zitate wird abgelehnt und nicht vergütet. Das ist die Arbeit, keine Formalie.",
    "Wir nehmen ein Transkript des Gesprächs auf, nie eine Aufzeichnung. Sie bestehen darauf; der Kandidat stimmt vorher schriftlich zu.",
    "Bericht innerhalb von 48 Stunden. Unter 80% Pünktlichkeit nach fünf Aufträgen verlieren Sie die Solo-Freigabe.",
    "Das Urteil lautet FIT, NARROW oder RISK. „Wirkt in Ordnung“ ist ein Versagen, kein Ergebnis.",
-   "Noch keine Interview-Erfahrung? Sie beginnen mit Shadow-Sessions oder bestehen eine Prüfung aus zwei Berichten. Nichts anderes ersetzt das."
+   "Noch keine Interview-Erfahrung? Sie beginnen unter Aufsicht, an der Seite eines erfahrenen Experten, oder bestehen eine Prüfung aus zwei Berichten. Nichts anderes ersetzt das."
   ],
   "barNote": "Klingt das nach zu viel Prozess, passt es nicht — und das jetzt zu merken ist besser als nach dem ersten Auftrag.",
   "youT": "Über Sie",
@@ -443,7 +446,7 @@
   "next": [
    "Wir prüfen Identität und beruflichen Werdegang. Bis dahin wird nichts über Sie veröffentlicht.",
    "Ein kurzes Gespräch — fünfzehn Minuten, keine Bewertung Ihrer Person, nur wie Sie arbeiten.",
-   "Mit Interview-Erfahrung: direkt Shadow, dann Solo. Ohne: die Prüfung aus zwei Berichten.",
+   "Mit Interview-Erfahrung: direkt Aufträge unter Aufsicht, dann Solo. Ohne: die Prüfung aus zwei Berichten.",
    "Sie erhalten einen Zugangscode und können Ihren Status jederzeit einsehen."
   ],
   "checkLink": "Bewerbung prüfen",
@@ -456,23 +459,23 @@
   ],
   "terms": [
    {
-    "k": "Pro Auftrag",
-    "a": "$119 — 60% des Preises",
-    "b": "$100–150"
-   },
-   {
-    "k": "Shadow-Session",
+    "k": "Phone Screening",
     "a": "$209 — 60% von $349",
     "b": "$100–150"
    },
    {
+    "k": "Live Interview",
+    "a": "$359 — 60% von $599",
+    "b": "$150–250"
+   },
+   {
     "k": "Zeitaufwand",
-    "a": "etwa 30 Minuten",
+    "a": "50 bis 90 Minuten",
     "b": "eine Stunde und mehr"
    },
    {
     "k": "Effektiv pro Stunde",
-    "a": "etwa $240",
+    "a": "etwa $250",
     "b": "$70–150"
    },
    {
@@ -549,8 +552,8 @@
     "Zwei Übungsberichte im Format des veröffentlichten Beispiels. Das Urteil muss dort landen, wo der Bar Raiser landete."
    ],
    "shadow": [
-    "Nur Shadow",
-    "Sie sitzen bei Interviews dabei und schreiben die Bewertung. Drei Berichte in Folge ohne Änderung führen zu Solo."
+    "Unter Aufsicht",
+    "Sie arbeiten an der Seite eines erfahrenen Experten und schreiben die Bewertung. Drei Berichte in Folge ohne Änderung führen zu Solo."
    ],
    "solo": [
     "Solo",

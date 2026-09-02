@@ -70,16 +70,16 @@
       <legend id="pick-t"></legend>
       <div class="pick">
         <div class="opt">
-          <input type="radio" name="service" id="svc-screen" value="screen" checked>
-          <label for="svc-screen">
+          <input type="radio" name="service" id="svc-phone" value="phone" checked>
+          <label for="svc-phone">
             <div class="nm" id="p0n"></div>
             <div class="pr" id="p0p"></div>
             <div class="ds" id="p0d"></div>
           </label>
         </div>
         <div class="opt">
-          <input type="radio" name="service" id="svc-shadow" value="shadow">
-          <label for="svc-shadow">
+          <input type="radio" name="service" id="svc-live" value="live">
+          <label for="svc-live">
             <div class="nm" id="p1n"></div>
             <div class="pr" id="p1p"></div>
             <div class="ds" id="p1d"></div>
@@ -219,7 +219,7 @@ window.render = function(t){
 
   /* Услуга может быть выбрана ссылкой с главной. */
   const pre = new URLSearchParams(location.search).get('s');
-  if(pre === 'shadow') $('svc-shadow').checked = true;
+  if(pre === 'live') $('svc-live').checked = true;
 };
 
 $('f').addEventListener('submit', async ev => {

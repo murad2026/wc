@@ -49,3 +49,24 @@ EOF
 echo "Собрано в $OUT"
 ls -1 "$OUT" | sed 's/^/  /'
 echo "  lang/ ($(ls -1 "$OUT/lang" | wc -l | tr -d ' ') файлов)"
+
+# ---------------------------------------------------------------
+# Копия под theworldconstitution.org/ninja/ — она отдаётся с GitHub
+# Pages из docs/ и живёт по старому адресу, пока на него есть ссылки.
+#
+# Без этого шага правки уезжают только в dist/, а посетитель видит
+# старую страницу: ровно так и разъехались цены.
+#
+# CNAME, robots.txt и sitemap.xml сюда не идут — они про отдельный
+# домен, а во вложенной папке всё равно не читаются.
+# ---------------------------------------------------------------
+EMBED="$SRC/../docs/ninja"
+if [ -d "$(dirname "$EMBED")" ]; then
+  rm -rf "$EMBED"
+  mkdir -p "$EMBED/lang"
+  cp "$SRC"/*.html      "$EMBED/"
+  cp "$SRC"/app.css     "$EMBED/"
+  cp "$SRC"/i18n.js     "$EMBED/"
+  cp "$SRC"/lang/*.json "$EMBED/lang/"
+  echo "Копия для основного сайта: $EMBED"
+fi
