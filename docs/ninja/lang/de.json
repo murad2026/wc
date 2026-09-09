@@ -11,8 +11,8 @@
   "join": "Mitarbeiten"
  },
  "home": {
-  "h1": "Technische Prüfung durch erfahrene Senior-Entwickler",
-  "sub": "Sie schicken uns einen Kandidaten. Ein Senior-Entwickler mit Erfahrung aus FAANG-Auswahlverfahren sitzt entweder in dem Gespräch, das Ihr Team ohnehin führt, oder führt das Interview selbst — und schreibt auf, was dabei herauskam.",
+  "h1": "Technische Prüfung für IT- und Infrastrukturstellen",
+  "sub": "Sie schicken uns einen Kandidaten für IT-Support, Betrieb oder Cloud-Infrastruktur. Jemand, der bei Amazon für solche Stellen eingestellt hat, sitzt entweder in dem Gespräch, das Ihr Team ohnehin führt, oder führt das Interview selbst — und schreibt auf, was dabei herauskam.",
   "cta1": "Bestellung aufgeben",
   "cta2": "Beispielgutachten lesen",
   "meta": "Ab 349 $ pro Kandidat. Kein Abo, kein Vertrag, keine Gebühr, wenn Sie einstellen.",
@@ -215,11 +215,11 @@
   "people": [
    {
     "code": "KAGE-01",
-    "role": "Ehemaliger Amazon Bar Raiser",
+    "role": "Amazon Bar Raiser und IT-Support-Manager",
     "tags": [
-     "Backend",
-     "Verteilte Systeme",
-     "Systementwurf",
+     "IT-Support",
+     "IT-Betrieb",
+     "Infrastruktur",
      "Kalibrierung der Einstellungslatte"
     ],
     "years": 6,
@@ -227,7 +227,7 @@
     "solo": "bar",
     "ontime": null,
     "avg": null,
-    "bio": "Einer der geschulten Interviewer, denen Amazon ein Vetorecht bei Einstellungen gibt. Führte Auswahlverfahren für Ingenieure im Fortune-500-Maßstab und entwarf die hier verwendete Prüfmethodik.",
+    "bio": "Ausgebildeter Bar Raiser — einer der Interviewer, denen Amazon ein Vetorecht bei Einstellungen gibt. Diese Ausbildung betrifft die Methode: Belege statt Eindruck, dieselbe Latte für alle und eine schriftliche Begründung des Urteils. Er leitete zudem ein IT-Support-Team und stellte dafür ein, seine fachliche Tiefe liegt also im Support und im Betrieb. Diese Grenze steht auf dieser Seite und nicht im Kleingedruckten.",
     "does": [
      "Ob die im Lebenslauf genannte Erfahrung tatsächlich gelebt wurde",
      "Wie jemand denkt, sobald die Frage über das Vorbereitete hinausgeht",
@@ -235,10 +235,10 @@
      "Ob er die eigene Arbeit jemandem erklären kann, der nicht dabei war"
     ],
     "doesnt": [
-     "Kulturelle Passung, Motivation oder Verbleibsabsicht",
-     "Live-Programmieren oder Tippgeschwindigkeit",
-     "Suche, Abwerbung oder Vermittlung von Kandidaten",
-     "Kandidaten, die gerade im Verfahren seines Arbeitgebers sind"
+     "Anwendungsarchitektur, Systemdesign, Backend-Kandidaten",
+     "Live-Coding oder Tippgeschwindigkeit",
+     "Suche, Recruiting oder Vermittlung von Kandidaten",
+     "Jeder Kandidat, der gerade im Einstellungsprozess seines Arbeitgebers ist"
     ],
     "interviews": 400,
     "est": true
@@ -369,7 +369,7 @@
    {
     "n": "Verified.Ninja",
     "tag": "Live",
-    "d": "Technische Prüfung durch Senior-Entwickler. Das, was Sie gerade ansehen. Davon lebt alles Weitere."
+    "d": "Technische Prüfung für IT- und Infrastrukturstellen. Das, was Sie gerade ansehen. Davon lebt alles Weitere."
    },
    {
     "n": "Verified Wiki",

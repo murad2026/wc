@@ -11,8 +11,8 @@
   "join": "Travailler avec nous"
  },
  "home": {
-  "h1": "Évaluation technique par des ingénieurs seniors",
-  "sub": "Vous nous envoyez un candidat. Un ingénieur senior rompu aux recrutements à l'échelle des FAANG assiste à l'entretien que votre équipe mène déjà, ou mène lui-même l'entretien — et rédige ce qu'il a constaté.",
+  "h1": "Évaluation technique pour les postes IT et infrastructure",
+  "sub": "Vous nous envoyez un candidat pour un poste de support IT, d'exploitation ou d'infrastructure cloud. Quelqu'un qui a recruté sur ces postes chez Amazon assiste à l'entretien que votre équipe mène déjà, ou mène lui-même l'entretien — et rédige ce qu'il a constaté.",
   "cta1": "Passer commande",
   "cta2": "Lire un rapport type",
   "meta": "À partir de 349 $ par candidat. Sans abonnement, sans contrat, sans commission si vous recrutez.",
@@ -215,11 +215,11 @@
   "people": [
    {
     "code": "KAGE-01",
-    "role": "Ancien Bar Raiser d'Amazon",
+    "role": "Bar Raiser Amazon et responsable du support IT",
     "tags": [
-     "Backend",
-     "Systèmes distribués",
-     "Conception de systèmes",
+     "Support IT",
+     "Exploitation IT",
+     "Infrastructure",
      "Calibrage du niveau d'embauche"
     ],
     "years": 6,
@@ -227,7 +227,7 @@
     "solo": "bar",
     "ontime": null,
     "avg": null,
-    "bio": "L'un des intervieweurs formés à qui Amazon confie un droit de veto sur les embauches. A mené des processus de recrutement d'ingénieurs à l'échelle du Fortune 500 et conçu la méthode d'évaluation utilisée ici.",
+    "bio": "Bar Raiser formé — l'un des intervieweurs à qui Amazon accorde un droit de veto sur une embauche. Cette formation porte sur la méthode : des preuves plutôt qu'une impression, le même niveau pour tous, et un verdict argumenté par écrit. Il a par ailleurs dirigé une équipe de support IT et recruté pour elle : sa profondeur technique est donc le support et l'exploitation. Cette limite figure sur cette page, pas en petits caractères.",
     "does": [
      "Si l'expérience inscrite au CV a réellement été vécue",
      "Comment le candidat raisonne au-delà de ce qu'il a préparé",
@@ -235,10 +235,10 @@
      "S'il sait expliquer son travail à quelqu'un qui n'y était pas"
     ],
     "doesnt": [
-     "L'adéquation culturelle, la motivation ou l'intention de rester",
-     "Le code en direct ou la vitesse de frappe",
-     "Le sourcing, l'approche ou le placement de candidats",
-     "Tout candidat engagé dans le processus de son propre employeur"
+     "Architecture applicative, conception de systèmes, candidats backend",
+     "Codage en direct ou vitesse de frappe",
+     "Sourcing, recrutement ou placement de candidats",
+     "Tout candidat actuellement dans le processus de son propre employeur"
     ],
     "interviews": 400,
     "est": true
@@ -369,7 +369,7 @@
    {
     "n": "Verified.Ninja",
     "tag": "En service",
-    "d": "Évaluation technique par des ingénieurs seniors. Ce que vous regardez. C'est ce qui finance tout le reste."
+    "d": "Évaluation technique pour les postes IT et infrastructure. Ce que vous regardez. C'est ce qui finance tout le reste."
    },
    {
     "n": "Verified Wiki",

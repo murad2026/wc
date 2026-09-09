@@ -11,8 +11,8 @@
   "join": "Work with us"
  },
  "home": {
-  "h1": "Technical screening by senior engineers",
-  "sub": "You send a candidate. A senior engineer with FAANG-scale hiring experience either sits in on the call your team is already running, or runs the interview themselves — and writes up what they found.",
+  "h1": "Technical screening for IT and infrastructure roles",
+  "sub": "You send a candidate for an IT support, operations or cloud infrastructure role. Someone who hired for those roles at Amazon either sits in on the call your team is already running, or runs the interview themselves — and writes up what they found.",
   "cta1": "Place an order",
   "cta2": "Read a sample assessment",
   "meta": "From $349 per candidate. No subscription, no contract, no fee if you hire.",
@@ -215,11 +215,11 @@
   "people": [
    {
     "code": "KAGE-01",
-    "role": "Former Amazon Bar Raiser",
+    "role": "Amazon Bar Raiser and IT support manager",
     "tags": [
-     "Backend",
-     "Distributed systems",
-     "System design",
+     "IT support",
+     "IT operations",
+     "Infrastructure",
      "Hiring bar calibration"
     ],
     "years": 6,
@@ -227,7 +227,7 @@
     "solo": "bar",
     "ontime": null,
     "avg": null,
-    "bio": "One of the trained interviewers Amazon gives veto power over hires. Ran senior engineering loops at Fortune-500 scale and designed the screening methodology used here.",
+    "bio": "A trained Bar Raiser — one of the interviewers Amazon gives veto power over a hire. That training is about method: evidence over impression, the same bar for everyone, and a written case for the verdict. He also managed an IT support team and hired for it, so his technical depth is support and operations. That limit is on this page rather than in the small print.",
     "does": [
      "Whether the experience on the CV was actually lived",
      "How a candidate reasons past what they prepared",
@@ -235,7 +235,7 @@
      "Whether they can explain their own work to someone who wasn't there"
     ],
     "doesnt": [
-     "Culture fit, motivation, or whether they will stay",
+     "Application architecture, system design, backend candidates",
      "Live coding or typing speed",
      "Sourcing, recruiting or placing candidates",
      "Any candidate currently in his employer's hiring process"
@@ -369,7 +369,7 @@
    {
     "n": "Verified.Ninja",
     "tag": "Live",
-    "d": "Technical screening by senior engineers. What you are looking at. It pays for everything below."
+    "d": "Technical screening for IT and infrastructure roles. What you are looking at. It pays for everything below."
    },
    {
     "n": "Verified Wiki",

@@ -11,8 +11,8 @@
   "join": "Trabaja con nosotros"
  },
  "home": {
-  "h1": "Evaluación técnica por ingenieros senior",
-  "sub": "Nos envías un candidato. Un ingeniero senior con experiencia en procesos de selección de escala FAANG se sienta en la llamada que tu equipo ya está haciendo, o conduce él mismo la entrevista — y escribe lo que encontró.",
+  "h1": "Evaluación técnica para puestos de IT e infraestructura",
+  "sub": "Nos envías un candidato para un puesto de IT support, operaciones o infraestructura cloud. Alguien que contrató para esos puestos en Amazon se sienta en la llamada que tu equipo ya está haciendo, o conduce él mismo la entrevista — y escribe lo que encontró.",
   "cta1": "Hacer un pedido",
   "cta2": "Leer un informe de ejemplo",
   "meta": "Desde 349 $ por candidato. Sin suscripción, sin contrato, sin comisión si lo contratas.",
@@ -215,11 +215,11 @@
   "people": [
    {
     "code": "KAGE-01",
-    "role": "Ex Bar Raiser de Amazon",
+    "role": "Bar Raiser de Amazon y responsable de IT support",
     "tags": [
-     "Backend",
-     "Sistemas distribuidos",
-     "Diseño de sistemas",
+     "IT support",
+     "Operaciones IT",
+     "Infraestructura",
      "Calibración del listón"
     ],
     "years": 6,
@@ -227,7 +227,7 @@
     "solo": "bar",
     "ontime": null,
     "avg": null,
-    "bio": "Uno de los entrevistadores formados a los que Amazon da derecho de veto sobre las contrataciones. Dirigió procesos de selección de ingenieros a escala Fortune 500 y diseñó la metodología de evaluación que usamos.",
+    "bio": "Bar Raiser formado: uno de los entrevistadores a los que Amazon da derecho de veto sobre una contratación. Esa formación va de método: pruebas en lugar de impresiones, el mismo listón para todos y un argumento escrito para el veredicto. Además dirigió un equipo de IT support y contrató para él, así que su profundidad técnica está en soporte y operaciones. Ese límite está en esta página, no en la letra pequeña.",
     "does": [
      "Si la experiencia del CV se vivió de verdad",
      "Cómo razona cuando la pregunta se sale de lo preparado",
@@ -235,10 +235,10 @@
      "Si sabe explicar su propio trabajo a quien no estuvo allí"
     ],
     "doesnt": [
-     "Encaje cultural, motivación o intención de quedarse",
-     "Programar en vivo o velocidad al teclado",
-     "Buscar, captar o colocar candidatos",
-     "Candidatos que estén en el proceso de su propia empresa"
+     "Arquitectura de aplicaciones, diseño de sistemas, candidatos de backend",
+     "Programación en vivo o velocidad al teclado",
+     "Búsqueda, reclutamiento o colocación de candidatos",
+     "Cualquier candidato que esté ahora en el proceso de su propia empresa"
     ],
     "interviews": 400,
     "est": true
@@ -369,7 +369,7 @@
    {
     "n": "Verified.Ninja",
     "tag": "Funciona",
-    "d": "Evaluación técnica por ingenieros senior. Lo que estás viendo. Con esto se sostiene todo lo demás."
+    "d": "Evaluación técnica para puestos de IT e infraestructura. Lo que estás viendo. Con esto se sostiene todo lo demás."
    },
    {
     "n": "Verified Wiki",
