@@ -62,6 +62,30 @@ contract Canon {
     address public stewards;
     uint64  public constant DELAY = 7 days;
 
+    // ---------------------------------------------------------------
+    // Переходные полномочия основателя и их автоматический конец.
+    //
+    // Пока не наступил срок, стюарды правят изменяемую часть. После —
+    // полномочия переходят к `successor` и обратно не возвращаются.
+    //
+    // Все три величины immutable, и это здесь главное. Носитель
+    // полномочий не может ни отодвинуть дату, ни поднять порог, ни
+    // переназначить преемника в последний момент. Пункт о сроке,
+    // который его носитель вправе продлить, сроком не является.
+    //
+    // Дата — основной триггер: её нельзя ни ускорить, ни отсрочить
+    // никому. Число принявших — дополнительный и работает только на
+    // ускорение; полагаться на него как на меру поддержки нельзя,
+    // подписи дёшевы (см. PRECEDENTS.md).
+    // ---------------------------------------------------------------
+    uint64  public immutable sunsetDate;      // unix time, безусловный предел
+    uint64  public immutable sunsetAdopters;  // порог принявших, 0 = выключен
+    address public immutable successor;       // кому переходит, решено при деплое
+
+    /// @dev Защёлка. `adopters` умеет убывать при выходе, и без неё
+    ///      полномочия могли бы вернуться после того, как истекли.
+    bool public sunsetLatched;
+
     struct Pending { bytes32 hash_; string uri; uint64 eta; }
     Pending public pending;
 
@@ -85,6 +109,7 @@ contract Canon {
     error NothingPending();
     error TooEarly(uint64 eta);
     error NotAdopted();
+    error SunsetInThePast();
 
     event Adopted(address indexed who, bytes32 core);
     event Renounced(address indexed who);
@@ -92,10 +117,24 @@ contract Canon {
     event BodyAmended(uint64 indexed version, bytes32 indexed hash_, string uri);
     event StewardsChanged(address indexed from, address indexed to);
     event ForkNoted(address indexed canon, bytes32 core);
+    event Sunset(uint64 at, uint64 adopters, address indexed successor);
 
     modifier onlyStewards() {
-        if (msg.sender != stewards) revert NotSteward();
+        if (msg.sender != effectiveStewards()) revert NotSteward();
         _;
+    }
+
+    /// @notice Истекли ли переходные полномочия. Читается кем угодно.
+    function sunsetReached() public view returns (bool) {
+        if (sunsetLatched) return true;
+        if (block.timestamp >= sunsetDate) return true;
+        return sunsetAdopters != 0 && adopters >= sunsetAdopters;
+    }
+
+    /// @notice Кто на самом деле правит изменяемой частью прямо сейчас.
+    ///         До срока — стюарды, после — преемник, названный при деплое.
+    function effectiveStewards() public view returns (address) {
+        return sunsetReached() ? successor : stewards;
     }
 
     constructor(
@@ -105,7 +144,10 @@ contract Canon {
         bytes32 _bodyHash,
         string memory _bodyURI,
         address _stewards,
-        address _predecessor
+        address _predecessor,
+        uint64  _sunsetDate,
+        uint64  _sunsetAdopters,
+        address _successor
     ) {
         coreHash    = _coreHash;
         coreDigest  = _coreDigest;
@@ -118,6 +160,13 @@ contract Canon {
         bodyVersion = 1;
 
         stewards    = _stewards;
+
+        // Дата обязательна: без неё полномочия не кончаются никогда,
+        // а порог по числу принявших накручиваем и потому не гарантия.
+        if (_sunsetDate <= block.timestamp) revert SunsetInThePast();
+        sunsetDate     = _sunsetDate;
+        sunsetAdopters = _sunsetAdopters;
+        successor      = _successor;
     }
 
     // ---------------------------------------------------------------
@@ -148,6 +197,11 @@ contract Canon {
             adoption[msg.sender] = Adoption(uint64(block.timestamp), true);
             unchecked { adopters += 1; }
             emit Adopted(msg.sender, core);
+
+            if (!sunsetLatched && sunsetAdopters != 0 && adopters >= sunsetAdopters) {
+                sunsetLatched = true;
+                emit Sunset(uint64(block.timestamp), adopters, successor);
+            }
         }
     }
 
@@ -196,6 +250,11 @@ contract Canon {
 
     /// @notice Передать стюардство. Ядра не касается ни при каких условиях:
     ///         coreHash не имеет сеттера вовсе.
+    ///
+    ///         После истечения переходных полномочий вызвать это может уже
+    ///         только преемник: модификатор смотрит на effectiveStewards().
+    ///         Основатель не может ни назначить себе замену на будущее,
+    ///         ни вернуть себе полномочия задним числом.
     function transferStewards(address to) external onlyStewards {
         emit StewardsChanged(stewards, to);
         stewards = to;
