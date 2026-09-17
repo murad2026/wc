@@ -171,7 +171,7 @@
 <footer class="wrap narrow">
   <div class="row">
     <span id="f-note"></span>
-    <span><a href="about.html" id="f-about"></a></span>
+    <span><a href="about.html" id="f-about"></a> · <a href="candidate.html" id="f-cand"></a></span>
   </div>
 </footer>
 
@@ -251,6 +251,7 @@ window.render = function(t){
 
   $('f-note').textContent  = T.footer.note;
   $('f-about').textContent = T.nav.about;
+  $('f-cand').textContent  = T.nav.cand;
 };
 
 $('f').addEventListener('submit', async ev => {

@@ -8,7 +8,8 @@
   "order": "Commander",
   "status": "Suivi",
   "about": "Le projet",
-  "join": "Travailler avec nous"
+  "join": "Travailler avec nous",
+  "cand": "Pour les candidats"
  },
  "home": {
   "h1": "Évaluation technique pour les postes IT et infrastructure",
@@ -116,7 +117,7 @@
    },
    {
     "q": "Que devient le dossier du candidat ?",
-    "a": "Le CV sert à l'évaluation et est supprimé sur demande. Le rapport ne va qu'à vous. Nous prenons une transcription de l'entretien, jamais un enregistrement ; elle est supprimée 30 jours après la livraison. Nous ne publions ni ne vendons de données de candidats."
+    "a": "Le CV sert à l'évaluation et est supprimé sur demande. De l'entretien nous prenons une transcription, jamais un enregistrement ; elle est supprimée 30 jours après la remise. Le candidat reçoit le même rapport que vous, sans retouche : consentir à une évaluation qu'on ne vous laisse pas lire n'est pas un consentement. Ensuite nous demandons au candidat, séparément, si nous pouvons conserver le rapport et le montrer à d'autres employeurs ; sans son oui explicite il ne va nulle part, et rien n'est jamais vendu."
    },
    {
     "q": "Qui êtes-vous ?",
@@ -295,7 +296,7 @@
   "concernOpt": "facultatif, mais le rapport y gagne en précision",
   "concernPh": "Le CV dit qu'il a piloté une migration vers Kafka. Impossible de savoir s'il l'a conçue ou seulement accompagnée.",
   "concernHint": "Pour un live interview, cela indique à l'expert sur quelle affirmation appuyer. Pour un phone screening, ce qu'il doit écouter. Dans les deux cas, l'entretien va au bon endroit.",
-  "note": "Le candidat n'est pas encore nécessaire. Vous enverrez son CV et son courriel après paiement ; d'ici là nous ne conservons rien sur lui.",
+  "note": "Nous n'avons pas encore besoin du candidat. Envoyez son CV et son courriel après paiement — rien n'est conservé à son sujet avant. Le rapport final est aussi remis au candidat, le jour même et sans retouche.",
   "go": "Passer commande",
   "going": "Envoi…",
   "noCharge": "Rien n'est prélevé maintenant. Sans abonnement. Sans commission si vous recrutez.",
@@ -408,7 +409,7 @@
   "barNote": "Si tout cela sonne comme trop de procédure, ce n'est pas le bon endroit — et mieux vaut s'en rendre compte maintenant qu'après la première mission.",
   "youT": "À propos de vous",
   "name": "Nom et prénom",
-  "nameHint": "Publié nulle part. Le client ne le voit qu'après avoir payé une évaluation avec vous.",
+  "nameHint": "Publié nulle part. Le client ne le voit qu'après avoir payé une évaluation avec vous. Le candidat lit votre rapport. Il reçoit le même document que le client : écrivez-le comme quelque chose que vous défendriez devant la personne qu'il décrit.",
   "email": "Courriel",
   "linkedin": "LinkedIn ou une page vous concernant",
   "optional": "facultatif",
@@ -568,5 +569,44 @@
     "Nous n'allons pas plus loin. Ce n'est pas définitif : si votre situation change, réécrivez-nous."
    ]
   }
+ },
+ "cand": {
+  "kicker": "Pour les candidats",
+  "title": "On vous a demandé un entretien avec nous",
+  "lede": "Vous ne postulez pas chez nous et nous ne sommes pas un cabinet de recrutement. Un employeur nous a demandé de vérifier sérieusement une partie de votre expérience. Voici ce qui se passe pendant l'entretien, ce qui est consigné, ce que vous recevez et ce qui reste votre décision.",
+  "callT": "Ce qui se passe pendant l'entretien",
+  "call": [
+   "Trente ou soixante minutes en vidéo, avec une personne. Vous recevez son vrai nom, sa photo et son LinkedIn avant de commencer.",
+   "Nous prenons l'affirmation la plus lourde de votre CV et nous l'examinons sérieusement : ce que vous avez construit, ce qui a cassé, ce que vous avez décidé et ce qu'un autre a décidé.",
+   "Pas d'énigmes, pas de questions pièges, pas de code en direct. Si vous l'avez fait, la conversation sera facile. Sinon, cela se verra — c'est précisément le but.",
+   "Dire « je ne sais pas » ou « ce n'est pas moi qui ai décidé » ne vous coûte rien. Nous le comptons comme de l'honnêteté, pas comme une lacune : ce qui coûte cher, ce sont les réponses qui esquivent."
+  ],
+  "recT": "Ce qui est consigné",
+  "rec": [
+   "Une transcription écrite de l'entretien. Jamais d'enregistrement : ni vidéo ni audio ne sont conservés.",
+   "Vous acceptez la transcription par écrit avant l'entretien. Si vous refusez, l'entretien n'a pas lieu : nous n'écrivons pas un rapport sans rien derrière.",
+   "La transcription est supprimée 30 jours après la remise du rapport.",
+   "Votre CV sert à l'évaluation et est supprimé sur demande."
+  ],
+  "getT": "Ce que vous recevez",
+  "get": "Le même rapport que l'employeur. Le document entier, sans retouche, le jour même : notations, citations sur lesquelles nous nous appuyons avec leurs horodatages, verdict et raisonnement, et une note sur ce qui l'aurait changé. Pour la personne évaluée, une évaluation est d'ordinaire une boîte fermée. Pas celle-ci.",
+  "poolT": "Conserver votre évaluation",
+  "poolH": "Vous seul décidez",
+  "pool": [
+   "Le lendemain de l'envoi du rapport, nous vous posons une question par courriel : pouvons-nous le conserver et le montrer à d'autres employeurs qui recrutent sur des postes proches ?",
+   "Si vous acceptez, ils voient une fiche courte : domaine, verdict, notations, région, date. Ni votre nom, ni vos coordonnées, ni le texte du rapport.",
+   "Le rapport complet et votre nom ne parviennent à un employeur que lorsque vous approuvez cette demande précise. À chaque fois, séparément.",
+   "Votre réponse n'a rien à voir avec l'évaluation. Elle est déjà écrite et close, et ne change ni dans un sens ni dans l'autre.",
+   "Vous pouvez retirer votre accord à tout moment par un courriel, sans explication. Nous supprimons la fiche et le rapport sous sept jours et vous le confirmons par écrit.",
+   "Au bout de 18 mois, nous redemandons. Une évaluation de cet âge dit peu de là où vous en êtes, et la présenter comme actuelle serait malhonnête."
+  ],
+  "neverT": "Ce que nous ne faisons jamais",
+  "never": [
+   "Nous ne sommes pas payés pour vous placer et ne prenons aucune commission si vous êtes recruté. Aucun verdict ne nous rapporte quoi que ce soit.",
+   "Nous n'évaluons ni l'adéquation culturelle, ni la motivation, ni si vous resterez. Nous n'en avons rien vu.",
+   "Nous ne vendons pas vos données et ne montrons rien à quiconque vous n'avez pas approuvé nommément.",
+   "Nous n'envoyons pas votre évaluation à votre employeur actuel et n'acceptons pas de lui une mission à votre sujet."
+  ],
+  "back": "Retour à la page d'accueil"
  }
 }

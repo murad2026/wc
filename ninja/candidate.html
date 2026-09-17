@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For candidates — Verified.Ninja</title>
+<meta name="description" content="What happens on the call, what is written down, what you receive, and what stays your choice.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M16%202.5a13.5%2013.5%200%201%200%200%2027%2013.5%2013.5%200%200%200%200-27ZM9%2012.5h14a2.8%202.8%200%200%201%200%205.6H9a2.8%202.8%200%200%201%200-5.6ZM11.2%2015.3a1.6%201.6%200%201%200%203.2%200%201.6%201.6%200%201%200-3.2%200ZM17.6%2015.3a1.6%201.6%200%201%200%203.2%200%201.6%201.6%200%201%200-3.2%200Z%22%20fill%3D%22%231d1d1f%22%2F%3E%3C%2Fsvg%3E">
+<link rel="stylesheet" href="app.css">
+<style>
+  header.top{padding:64px 0 8px}
+  header.top .lede{margin-top:18px}
+
+  .blk{margin-top:26px}
+  .blk ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .blk li{background:var(--card);border:1px solid var(--line-soft);border-radius:14px;
+    padding:18px 20px;font-size:15.5px;line-height:1.55;color:var(--ink-2)}
+  .blk li b{color:var(--ink);font-weight:600}
+
+  .get{margin-top:26px;background:var(--bg-soft);border-radius:16px;padding:24px}
+  .get p{font-size:16.5px;line-height:1.55}
+
+  .choice{margin-top:26px;border:1px solid var(--line);border-radius:16px;padding:24px}
+  .choice h3{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:14px}
+
+  .back{padding:56px 0 0;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="index.html">Verified<b>.Ninja</b><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 2.5a13.5 13.5 0 1 0 0 27 13.5 13.5 0 0 0 0-27ZM9 12.5h14a2.8 2.8 0 0 1 0 5.6H9a2.8 2.8 0 0 1 0-5.6ZM11.2 15.3a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0ZM17.6 15.3a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0Z" fill="currentColor"/></svg></a>
+    <div class="nav-links">
+      <a href="expert.html" class="hide-sm" id="n-exp"></a>
+      <a href="report.html" class="hide-sm" id="n-rep"></a>
+      <select class="lang" id="lang" aria-label="Language"></select>
+      <a class="btn sm" href="index.html" id="n-home"></a>
+    </div>
+  </div>
+</nav>
+
+<header class="top wrap mid">
+  <div class="eyebrow" id="kicker"></div>
+  <h1 id="title"></h1>
+  <p class="lede" id="lede"></p>
+</header>
+
+<section class="wrap mid">
+  <div class="sec-head"><h2 id="call-t"></h2></div>
+  <div class="blk"><ul id="call"></ul></div>
+</section>
+
+<section class="wrap mid">
+  <div class="sec-head"><h2 id="rec-t"></h2></div>
+  <div class="blk"><ul id="rec"></ul></div>
+</section>
+
+<section class="wrap mid">
+  <div class="sec-head"><h2 id="get-t"></h2></div>
+  <div class="get"><p id="get"></p></div>
+</section>
+
+<section class="wrap mid">
+  <div class="sec-head"><h2 id="pool-t"></h2></div>
+  <div class="choice">
+    <h3 id="pool-h"></h3>
+    <div class="blk" style="margin-top:0"><ul id="pool"></ul></div>
+  </div>
+</section>
+
+<section class="wrap mid">
+  <div class="sec-head"><h2 id="never-t"></h2></div>
+  <div class="blk"><ul id="never"></ul></div>
+
+  <p class="back"><a class="link" href="index.html" id="back"></a></p>
+</section>
+
+<footer class="wrap mid">
+  <div class="row"><span id="f-note"></span></div>
+</footer>
+
+<script src="i18n.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+const li  = xs => xs.map(x => `<li>${esc(x)}</li>`).join('');
+
+window.render = function(T){
+  const c = T.cand;
+  document.title = c.title + ' — Verified.Ninja';
+  $('n-exp').textContent  = T.nav.experts;
+  $('n-rep').textContent  = T.nav.sample;
+  $('n-home').textContent = T.nav.overview;
+
+  $('kicker').textContent = c.kicker;
+  $('title').textContent  = c.title;
+  $('lede').textContent   = c.lede;
+
+  $('call-t').textContent = c.callT;
+  $('call').innerHTML     = li(c.call);
+
+  $('rec-t').textContent  = c.recT;
+  $('rec').innerHTML      = li(c.rec);
+
+  $('get-t').textContent  = c.getT;
+  $('get').textContent    = c.get;
+
+  $('pool-t').textContent = c.poolT;
+  $('pool-h').textContent = c.poolH;
+  $('pool').innerHTML     = li(c.pool);
+
+  $('never-t').textContent = c.neverT;
+  $('never').innerHTML     = li(c.never);
+
+  $('back').textContent    = c.back;
+  $('f-note').textContent  = T.footer.note;
+};
+</script>
+</body>
+</html>

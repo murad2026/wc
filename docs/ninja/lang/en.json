@@ -8,7 +8,8 @@
   "order": "Order",
   "status": "Order status",
   "about": "About us",
-  "join": "Work with us"
+  "join": "Work with us",
+  "cand": "For candidates"
  },
  "home": {
   "h1": "Technical screening for IT and infrastructure roles",
@@ -116,7 +117,7 @@
    },
    {
     "q": "What happens to the candidate's data?",
-    "a": "The CV is used for the screen and deleted on request. The assessment goes to you alone. We take a transcript of the call, never a recording; it is deleted 30 days after delivery. We never publish or sell candidate data."
+    "a": "Your CV is used for the assessment and deleted on request. We take a transcript of the call, never a recording; it is deleted 30 days after delivery. The candidate receives the same report you do, unedited — consenting to an assessment you are not allowed to read is not consent. Afterwards we ask the candidate, separately, whether we may keep the report and show it to other employers; without their explicit yes it goes nowhere, and nothing is ever sold."
    },
    {
     "q": "Who are you?",
@@ -295,7 +296,7 @@
   "concernOpt": "optional, but it makes the assessment sharper",
   "concernPh": "The CV says they led a migration to Kafka. I can't tell whether they designed it or just worked on it.",
   "concernHint": "For a live interview it tells the expert which claim to push on. For a phone screening it tells them what to listen for. Either way it points the call at the right thing.",
-  "note": "We don't need the candidate yet. Send their CV and email after payment — nothing about them is stored until the screen is going ahead.",
+  "note": "We don't need the candidate yet. Send their CV and email after payment — nothing about them is stored until the screen is going ahead. The candidate receives the finished report too, the same day and unedited.",
   "go": "Place the order",
   "going": "Placing…",
   "noCharge": "No charge now. No subscription. No fee if you hire.",
@@ -408,7 +409,7 @@
   "barNote": "If any of that sounds like too much process, this is not the right fit — and it is better to find that out now than after your first order.",
   "youT": "About you",
   "name": "Full name",
-  "nameHint": "Not published anywhere. The client sees it only after paying for a screen with you.",
+  "nameHint": "Not published anywhere. The client sees it only after paying for a screen with you. The candidate reads your report. They receive the same document the client does, so write it as something you would be willing to defend to the person it is about.",
   "email": "Email",
   "linkedin": "LinkedIn or a page about you",
   "optional": "optional",
@@ -568,5 +569,44 @@
     "We are not moving forward. This is not permanent — if what you do changes, write to us again."
    ]
   }
+ },
+ "cand": {
+  "kicker": "For candidates",
+  "title": "Someone asked you to take a call with us",
+  "lede": "You are not applying to us, and we are not a recruiter. An employer asked us to check one part of your experience properly. This page says what happens, what is written down, what you get, and what stays your decision.",
+  "callT": "What happens on the call",
+  "call": [
+   "Thirty or sixty minutes on video, with one person. You get their real name, photo and LinkedIn before it starts.",
+   "We take the largest claim on your CV and go into it properly — what you built, what broke, what you decided and what somebody else decided.",
+   "No puzzles, no trivia, no live coding. If you have done the thing, this is an easy conversation. If you have not, it will show, and that is the point.",
+   "Saying “I don't know” or “that one wasn't my call” costs you nothing. We score it as honesty, not as a gap — it is the answers that avoid the question that cost you."
+  ],
+  "recT": "What is written down",
+  "rec": [
+   "A text transcript of the call. Never a recording — no video and no audio is kept.",
+   "You agree to the transcript in writing before the call. If you refuse, the call does not happen: we do not write an assessment with nothing behind it.",
+   "The transcript is deleted 30 days after the report is delivered.",
+   "Your CV is used for the assessment and deleted on request."
+  ],
+  "getT": "What you get",
+  "get": "The same report the employer gets. The whole document, unedited, the same day — ratings, the quotes we relied on with their timecodes, the verdict and the reasoning behind it, and a note on what would have changed it. Screening is usually a closed box to the person being screened. This one is not.",
+  "poolT": "Keeping your assessment",
+  "poolH": "Your decision, and only yours",
+  "pool": [
+   "The day after the report goes out, we send you one question by email: may we keep it and show it to other employers hiring for similar roles.",
+   "If you say yes, they see a short card — field, verdict, ratings, region, date. Not your name, not your contacts, not the text of the report.",
+   "The full report and your name reach one employer only when you approve that specific request. Every time, separately.",
+   "Your answer has nothing to do with the assessment. It is already written and locked, and it does not change either way.",
+   "You can withdraw at any moment with one email, no explanation asked. We delete the card and the report within seven days and confirm in writing.",
+   "After 18 months we ask again. An assessment that old says little about where you are now, and keeping it on display as current would be dishonest."
+  ],
+  "neverT": "What we never do",
+  "never": [
+   "We are not paid to place you and take no fee if you are hired. Neither verdict earns us anything.",
+   "We do not assess culture fit, motivation, or whether you will stay. We were not in the room for any of that.",
+   "We do not sell your data, and we show nothing to anyone you have not approved by name.",
+   "We do not send your assessment to your current employer, and we do not take an assignment about you from them."
+  ],
+  "back": "Back to the main page"
  }
 }

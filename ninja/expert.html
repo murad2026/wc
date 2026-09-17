@@ -123,7 +123,7 @@
 </section>
 
 <footer class="wrap mid">
-  <div class="row"><span id="f-note"></span><span><a href="about.html" id="f-about"></a> · <a href="join.html" id="f-join"></a></span></div>
+  <div class="row"><span id="f-note"></span><span><a href="about.html" id="f-about"></a> · <a href="join.html" id="f-join"></a> · <a href="candidate.html" id="f-cand"></a></span></div>
 </footer>
 
 <script src="i18n.js"></script>
@@ -220,6 +220,7 @@ window.render = function(T){
   $('f-note').textContent = T.footer.note;
   if($('f-about')) $('f-about').textContent = T.nav.about;
   if($('f-join'))  $('f-join').textContent  = T.nav.join;
+  if($('f-cand'))  $('f-cand').textContent  = T.nav.cand;
 };
 </script>
 </body>

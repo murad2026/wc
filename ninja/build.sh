@@ -38,7 +38,7 @@ EOF
 {
   printf '<?xml version="1.0" encoding="UTF-8"?>\n'
   printf '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-  for page in index expert about join order; do
+  for page in index expert about join order candidate; do
     loc="https://verified.ninja/$page.html"
     [ "$page" = index ] && loc="https://verified.ninja/"
     printf '  <url><loc>%s</loc></url>\n' "$loc"

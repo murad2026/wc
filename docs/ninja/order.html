@@ -145,7 +145,7 @@
 <footer class="wrap narrow">
   <div class="row">
     <span id="f-note"></span>
-    <span><a href="about.html" id="f-about"></a> · <a href="join.html" id="f-join"></a></span>
+    <span><a href="about.html" id="f-about"></a> · <a href="join.html" id="f-join"></a> · <a href="candidate.html" id="f-cand"></a></span>
   </div>
 </footer>
 
@@ -216,6 +216,7 @@ window.render = function(t){
   $('f-note').textContent = T.footer.note;
   if($('f-about')) $('f-about').textContent = T.nav.about;
   if($('f-join'))  $('f-join').textContent  = T.nav.join;
+  if($('f-cand'))  $('f-cand').textContent  = T.nav.cand;
 
   /* Услуга может быть выбрана ссылкой с главной. */
   const pre = new URLSearchParams(location.search).get('s');

@@ -8,7 +8,8 @@
   "order": "Bestellen",
   "status": "Auftragsstatus",
   "about": "Über uns",
-  "join": "Mitarbeiten"
+  "join": "Mitarbeiten",
+  "cand": "Für Kandidaten"
  },
  "home": {
   "h1": "Technische Prüfung für IT- und Infrastrukturstellen",
@@ -116,7 +117,7 @@
    },
    {
     "q": "Was passiert mit den Daten des Kandidaten?",
-    "a": "Der Lebenslauf wird für die Prüfung genutzt und auf Wunsch gelöscht. Das Gutachten geht nur an Sie. Wir nehmen ein Transkript des Gesprächs auf, nie eine Aufzeichnung; es wird 30 Tage nach Lieferung gelöscht. Kandidatendaten werden weder veröffentlicht noch verkauft."
+    "a": "Der Lebenslauf dient der Prüfung und wird auf Wunsch gelöscht. Vom Gespräch nehmen wir ein Transkript, keine Aufzeichnung; es wird 30 Tage nach Zustellung gelöscht. Der Kandidat erhält denselben Bericht wie Sie, unverändert — eine Zustimmung zu einer Prüfung, die man nicht lesen darf, ist keine Zustimmung. Danach fragen wir den Kandidaten gesondert, ob wir den Bericht behalten und anderen Arbeitgebern zeigen dürfen; ohne sein ausdrückliches Ja geht er nirgendwohin, und verkauft wird nie etwas."
    },
    {
     "q": "Wer seid ihr?",
@@ -295,7 +296,7 @@
   "concernOpt": "optional, macht das Gutachten aber schärfer",
   "concernPh": "Im Lebenslauf steht, er habe eine Migration zu Kafka geleitet. Ich kann nicht erkennen, ob er sie entworfen oder nur mitgearbeitet hat.",
   "concernHint": "Beim Live Interview sagt es dem Experten, wo er nachhaken soll. Beim Phone Screening, worauf er hören soll. In beiden Fällen geht das Gespräch an die richtige Stelle.",
-  "note": "Den Kandidaten brauchen wir noch nicht. Lebenslauf und E-Mail schicken Sie nach der Zahlung — vorher speichern wir nichts über ihn.",
+  "note": "Den Kandidaten brauchen wir noch nicht. Lebenslauf und E-Mail schicken Sie nach der Zahlung — vorher wird nichts über ihn gespeichert. Den fertigen Bericht erhält auch der Kandidat, am selben Tag und unverändert.",
   "go": "Bestellung aufgeben",
   "going": "Wird gesendet…",
   "noCharge": "Jetzt wird nichts abgebucht. Kein Abo. Keine Gebühr bei Einstellung.",
@@ -408,7 +409,7 @@
   "barNote": "Klingt das nach zu viel Prozess, passt es nicht — und das jetzt zu merken ist besser als nach dem ersten Auftrag.",
   "youT": "Über Sie",
   "name": "Vor- und Nachname",
-  "nameHint": "Wird nirgends veröffentlicht. Der Kunde sieht ihn erst, wenn er eine Prüfung bei Ihnen bezahlt hat.",
+  "nameHint": "Wird nirgends veröffentlicht. Der Kunde sieht ihn erst, wenn er eine Prüfung bei Ihnen bezahlt hat. Der Kandidat liest Ihren Bericht. Er erhält dasselbe Dokument wie der Kunde — schreiben Sie ihn also so, dass Sie ihn gegenüber der beschriebenen Person vertreten würden.",
   "email": "E-Mail",
   "linkedin": "LinkedIn oder eine Seite über Sie",
   "optional": "optional",
@@ -568,5 +569,44 @@
     "Wir gehen nicht weiter. Das ist nicht endgültig — ändert sich Ihre Situation, schreiben Sie erneut."
    ]
   }
+ },
+ "cand": {
+  "kicker": "Für Kandidaten",
+  "title": "Jemand hat Sie um ein Gespräch mit uns gebeten",
+  "lede": "Sie bewerben sich nicht bei uns, und wir sind keine Personalvermittlung. Ein Arbeitgeber hat uns gebeten, einen Teil Ihrer Erfahrung gründlich zu prüfen. Hier steht, was im Gespräch passiert, was festgehalten wird, was Sie bekommen und was Ihre Entscheidung bleibt.",
+  "callT": "Was im Gespräch passiert",
+  "call": [
+   "Dreißig oder sechzig Minuten per Video, mit einer Person. Deren echten Namen, Foto und LinkedIn erhalten Sie vorher.",
+   "Wir nehmen die größte Behauptung in Ihrem Lebenslauf und gehen sie ernsthaft durch — was Sie gebaut haben, was kaputtging, was Sie entschieden haben und was jemand anderes entschied.",
+   "Keine Rätsel, kein Trivia, kein Live-Coding. Wenn Sie es getan haben, ist das ein leichtes Gespräch. Wenn nicht, wird es sichtbar — genau darum geht es.",
+   "„Ich weiß es nicht“ oder „das habe nicht ich entschieden“ kostet Sie nichts. Wir werten es als Ehrlichkeit, nicht als Lücke — teuer sind Antworten, die der Frage ausweichen."
+  ],
+  "recT": "Was festgehalten wird",
+  "rec": [
+   "Ein Texttranskript des Gesprächs. Keine Aufzeichnung — weder Video noch Ton werden gespeichert.",
+   "Dem Transkript stimmen Sie vor dem Gespräch schriftlich zu. Lehnen Sie ab, findet das Gespräch nicht statt: Wir schreiben kein Gutachten ohne Grundlage.",
+   "Das Transkript wird 30 Tage nach Zustellung des Berichts gelöscht.",
+   "Ihr Lebenslauf dient der Prüfung und wird auf Wunsch gelöscht."
+  ],
+  "getT": "Was Sie bekommen",
+  "get": "Denselben Bericht wie der Arbeitgeber. Das ganze Dokument, unverändert, am selben Tag — Bewertungen, die herangezogenen Zitate mit Zeitmarken, das Urteil samt Begründung und ein Hinweis darauf, was es geändert hätte. Für den Geprüften ist eine Prüfung sonst eine geschlossene Kiste. Diese nicht.",
+  "poolT": "Ihr Gutachten aufbewahren",
+  "poolH": "Ihre Entscheidung, und nur Ihre",
+  "pool": [
+   "Am Tag nach der Zustellung stellen wir Ihnen per E-Mail eine Frage: Dürfen wir das Gutachten behalten und anderen Arbeitgebern zeigen, die ähnliche Stellen besetzen?",
+   "Wenn Sie zustimmen, sehen diese eine kurze Karte — Bereich, Urteil, Bewertungen, Region, Datum. Nicht Ihren Namen, nicht Ihre Kontaktdaten, nicht den Text des Berichts.",
+   "Der vollständige Bericht und Ihr Name gehen erst dann an einen Arbeitgeber, wenn Sie genau diese Anfrage freigeben. Jedes Mal einzeln.",
+   "Ihre Antwort hat nichts mit dem Gutachten zu tun. Es ist bereits geschrieben und abgeschlossen und ändert sich so oder so nicht.",
+   "Sie können jederzeit mit einer E-Mail widerrufen, ohne Begründung. Wir löschen Karte und Bericht binnen sieben Tagen und bestätigen es schriftlich.",
+   "Nach 18 Monaten fragen wir erneut. Ein so altes Gutachten sagt wenig darüber, wo Sie heute stehen, und es weiter als aktuell zu zeigen wäre unehrlich."
+  ],
+  "neverT": "Was wir nie tun",
+  "never": [
+   "Wir werden nicht für Ihre Vermittlung bezahlt und nehmen keine Gebühr, wenn Sie eingestellt werden. Kein Urteil bringt uns etwas ein.",
+   "Wir bewerten weder kulturelle Passung noch Motivation noch, ob Sie bleiben. Davon haben wir nichts gesehen.",
+   "Wir verkaufen Ihre Daten nicht und zeigen niemandem etwas, den Sie nicht namentlich freigegeben haben.",
+   "Wir schicken Ihr Gutachten nicht an Ihren jetzigen Arbeitgeber und nehmen von ihm keinen Auftrag über Sie an."
+  ],
+  "back": "Zurück zur Startseite"
  }
 }

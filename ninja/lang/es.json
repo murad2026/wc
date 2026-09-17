@@ -8,7 +8,8 @@
   "order": "Solicitar",
   "status": "Estado del pedido",
   "about": "Sobre el proyecto",
-  "join": "Trabaja con nosotros"
+  "join": "Trabaja con nosotros",
+  "cand": "Para candidatos"
  },
  "home": {
   "h1": "Evaluación técnica para puestos de IT e infraestructura",
@@ -116,7 +117,7 @@
    },
    {
     "q": "¿Qué pasa con los datos del candidato?",
-    "a": "El CV se usa para la evaluación y se borra si lo pides. El informe llega solo a ti. De la llamada tomamos una transcripción, nunca una grabación, y se borra 30 días después de la entrega. No publicamos ni vendemos datos de candidatos."
+    "a": "El CV se usa para la evaluación y se borra si lo pides. De la llamada tomamos una transcripción, nunca una grabación; se borra 30 días después de la entrega. El candidato recibe el mismo informe que tú, sin editar: consentir una evaluación que no te dejan leer no es consentimiento. Después preguntamos al candidato, por separado, si podemos conservar el informe y mostrarlo a otros empleadores; sin su sí explícito no va a ninguna parte, y nunca se vende nada."
    },
    {
     "q": "¿Quiénes sois?",
@@ -295,7 +296,7 @@
   "concernOpt": "opcional, pero hace el informe más preciso",
   "concernPh": "El CV dice que lideró una migración a Kafka. No sé si la diseñó o solo participó.",
   "concernHint": "En un live interview le dice al experto sobre qué afirmación apretar. En un phone screening, qué escuchar. En ambos casos dirige la llamada al sitio correcto.",
-  "note": "Todavía no necesitamos al candidato. Su CV y su correo los envías tras el pago; hasta entonces no guardamos nada sobre él.",
+  "note": "Todavía no necesitamos al candidato. Envía su CV y su correo tras el pago: hasta entonces no se guarda nada sobre él. El informe terminado lo recibe también el candidato, el mismo día y sin editar.",
   "go": "Hacer el pedido",
   "going": "Enviando…",
   "noCharge": "Ahora no se cobra nada. Sin suscripción. Sin comisión si contratas.",
@@ -408,7 +409,7 @@
   "barNote": "Si todo esto suena a exceso de proceso, no encaja, y es mejor saberlo ahora que tras el primer encargo.",
   "youT": "Sobre ti",
   "name": "Nombre y apellidos",
-  "nameHint": "No se publica en ningún sitio. El cliente lo ve solo tras pagar una evaluación contigo.",
+  "nameHint": "No se publica en ningún sitio. El cliente lo ve solo tras pagar una evaluación contigo. El candidato lee tu informe. Recibe el mismo documento que el cliente, así que escríbelo como algo que defenderías ante la persona de la que trata.",
   "email": "Correo",
   "linkedin": "LinkedIn o una página sobre ti",
   "optional": "opcional",
@@ -568,5 +569,44 @@
     "No avanzamos contigo. No es definitivo: si cambia lo que haces, escríbenos de nuevo."
    ]
   }
+ },
+ "cand": {
+  "kicker": "Para candidatos",
+  "title": "Alguien te ha pedido una llamada con nosotros",
+  "lede": "No te presentas a un puesto con nosotros y no somos una agencia de selección. Un empleador nos pidió comprobar a fondo una parte de tu experiencia. Aquí está lo que pasa en la llamada, lo que se registra, lo que recibes tú y lo que sigue siendo decisión tuya.",
+  "callT": "Qué pasa en la llamada",
+  "call": [
+   "Treinta o sesenta minutos por vídeo, con una persona. Su nombre real, foto y LinkedIn los recibes antes de empezar.",
+   "Tomamos la afirmación más grande de tu CV y la revisamos en serio: qué construiste, qué se rompió, qué decidiste tú y qué decidió otro.",
+   "Sin acertijos, sin preguntas de trivia, sin programar en vivo. Si lo hiciste, será una conversación fácil. Si no, se notará, y de eso se trata.",
+   "Decir “no lo sé” o “eso no lo decidí yo” no te cuesta nada. Lo contamos como honestidad, no como carencia: lo que sale caro son las respuestas que esquivan la pregunta."
+  ],
+  "recT": "Qué se registra",
+  "rec": [
+   "Una transcripción de texto de la llamada. Nunca una grabación: no se guarda ni vídeo ni audio.",
+   "Aceptas la transcripción por escrito antes de la llamada. Si te niegas, la llamada no se hace: no escribimos un informe sin nada detrás.",
+   "La transcripción se borra 30 días después de entregar el informe.",
+   "Tu CV se usa para la evaluación y se borra si lo pides."
+  ],
+  "getT": "Qué recibes",
+  "get": "El mismo informe que el empleador. El documento entero, sin editar, el mismo día: valoraciones, las citas en que nos apoyamos con sus marcas de tiempo, el veredicto con su razonamiento y una nota sobre qué lo habría cambiado. Para quien es evaluado, una evaluación suele ser una caja cerrada. Esta no.",
+  "poolT": "Conservar tu evaluación",
+  "poolH": "Lo decides tú, y solo tú",
+  "pool": [
+   "Al día siguiente de enviar el informe te hacemos una pregunta por correo: si podemos conservarlo y mostrarlo a otros empleadores que buscan perfiles parecidos.",
+   "Si dices que sí, ven una ficha breve: área, veredicto, valoraciones, región y fecha. Ni tu nombre, ni tus contactos, ni el texto del informe.",
+   "El informe completo y tu nombre llegan a un empleador solo cuando apruebas esa petición concreta. Cada vez, por separado.",
+   "Tu respuesta no tiene nada que ver con la evaluación. Ya está escrita y cerrada, y no cambia en ningún sentido.",
+   "Puedes retirarlo en cualquier momento con un correo, sin dar explicaciones. Borramos la ficha y el informe en siete días y te lo confirmamos por escrito.",
+   "A los 18 meses volvemos a preguntar. Una evaluación de esa antigüedad dice poco de dónde estás ahora, y mostrarla como vigente sería deshonesto."
+  ],
+  "neverT": "Lo que nunca hacemos",
+  "never": [
+   "No nos pagan por colocarte y no cobramos comisión si te contratan. Ningún veredicto nos reporta nada.",
+   "No evaluamos encaje cultural, motivación ni si te quedarás. Nada de eso lo hemos visto.",
+   "No vendemos tus datos y no enseñamos nada a nadie que no hayas aprobado por su nombre.",
+   "No enviamos tu evaluación a tu empleador actual ni aceptamos de él un encargo sobre ti."
+  ],
+  "back": "Volver a la página principal"
  }
 }
