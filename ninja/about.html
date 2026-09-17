@@ -38,6 +38,7 @@
     <div class="nav-links">
       <a href="expert.html" class="hide-sm" id="n-exp"></a>
       <a href="report.html" class="hide-sm" id="n-rep"></a>
+      <a href="candidate.html" class="hide-sm" id="n-cand"></a>
       <select class="lang" id="lang" aria-label="Language"></select>
       <a class="btn sm" href="order.html" id="n-ord"></a>
     </div>
@@ -82,6 +83,7 @@ window.render = function(T){
   document.title = a.title + ' — Verified.Ninja';
   $('n-exp').textContent = T.nav.experts;
   $('n-rep').textContent = T.nav.sample;
+  $('n-cand').textContent = T.nav.cand;
   $('n-ord').textContent = T.nav.order;
 
   $('kicker').textContent = a.kicker;

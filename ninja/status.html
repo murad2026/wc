@@ -49,6 +49,7 @@
     <a class="brand" href="index.html">Verified<b>.Ninja</b><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 2.5a13.5 13.5 0 1 0 0 27 13.5 13.5 0 0 0 0-27ZM9 12.5h14a2.8 2.8 0 0 1 0 5.6H9a2.8 2.8 0 0 1 0-5.6ZM11.2 15.3a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0ZM17.6 15.3a1.6 1.6 0 1 0 3.2 0 1.6 1.6 0 1 0-3.2 0Z" fill="currentColor"/></svg></a>
     <div class="nav-links">
       <a href="expert.html" class="hide-sm" id="n-exp"></a>
+      <a href="candidate.html" class="hide-sm" id="n-cand"></a>
       <select class="lang" id="lang" aria-label="Language"></select>
       <a class="btn sm" href="order.html" id="n-ord"></a>
     </div>
@@ -157,6 +158,7 @@ window.render = function(t){
   const s = T.status;
   document.title = s.h1 + ' — Verified.Ninja';
   $('n-exp').textContent = T.nav.experts;
+  $('n-cand').textContent = T.nav.cand;
   $('n-ord').textContent = T.nav.order;
   $('h1').textContent  = s.h1;
   $('sub').textContent = s.sub;
