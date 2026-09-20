@@ -358,7 +358,9 @@
     "anonHint": "Votre pays est conservé séparément : vous comptez toujours pour votre pays. Si vous préférez ne pas le partager non plus, choisissez « Ne pas préciser ». Dans les pays comptant peu de signataires, le pays peut indirectement restreindre le cercle.",
     "submit": "Je signe",
     "cancel": "Annuler",
-    "err": "Impossible d'enregistrer la signature. Réessayez."
+    "err": "Impossible d'enregistrer la signature. Réessayez.",
+    "errSigned": "Cette signature est déjà là — merci.",
+    "errRate": "Trop de signatures depuis cette connexion en peu de temps. Réessayez dans une heure."
   },
   "signed": {
     "title": "Votre signature est enregistrée",

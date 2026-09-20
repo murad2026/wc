@@ -358,7 +358,9 @@
     "anonHint": "Tu país se guarda por separado: sigues sumando para tu país. Si prefieres no compartir ni eso, elige «Prefiero no decirlo». En países con pocos firmantes, el país puede estrechar indirectamente el círculo.",
     "submit": "Firmo",
     "cancel": "Cancelar",
-    "err": "No se pudo guardar la firma. Inténtalo de nuevo."
+    "err": "No se pudo guardar la firma. Inténtalo de nuevo.",
+    "errSigned": "Esta firma ya está aquí — gracias.",
+    "errRate": "Demasiadas firmas desde esta conexión ahora mismo. Inténtalo dentro de una hora."
   },
   "signed": {
     "title": "Tu firma ha sido registrada",

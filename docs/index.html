@@ -364,6 +364,7 @@ function render(){
   $('nav-s').textContent = T.nav.shield;
   $('sig-submit').textContent = T.modal.submit;
   $('m-cancel').textContent = T.modal.cancel;
+  window.WC_T = T;
   $('sig-err').textContent = T.modal.err;
 
   $('s-title').textContent = T.signed.title;
@@ -442,7 +443,7 @@ $('sig-submit').addEventListener('click', async ()=>{
       headers:{ ...H, 'Content-Type':'application/json', 'Prefer':'return=representation' },
       body: JSON.stringify({ name, country, is_anon: anon })
     });
-    if(!r.ok) throw new Error(await r.text());
+    if(!r.ok){ const t = await r.text(); const e = new Error(t); e.body = t; throw e; }
     const d = await r.json(); const row = Array.isArray(d)?d[0]:d;
 
     const myids = JSON.parse(localStorage.getItem('wc_myids')||'[]');
@@ -473,6 +474,13 @@ $('sig-submit').addEventListener('click', async ()=>{
     $('signed-msg').style.display='block';
   }catch(e){
     console.error('WC sign error:', e);
+    /* База различает «уже подписано» и «слишком часто». Показывать на них
+       «попробуй ещё раз» — значит отправить человека жать кнопку по кругу. */
+    const b = String(e && e.body || '');
+    const T = window.WC_T;
+    if(b.includes('already_signed'))        $('sig-err').textContent = (T && T.modal.errSigned) || 'Already signed.';
+    else if(b.includes('rate_limited'))     $('sig-err').textContent = (T && T.modal.errRate)   || 'Too many signatures from this connection. Try again in an hour.';
+    else if(T)                              $('sig-err').textContent = T.modal.err;
     $('sig-err').style.display='block';
   }
   $('sig-submit').disabled = false;

@@ -358,7 +358,9 @@
     "anonHint": "Your country is kept separately — you still count towards your country. If you prefer not to share even that, choose “Prefer not to say”. In countries with few signatories, the country may indirectly narrow the circle.",
     "submit": "I sign",
     "cancel": "Cancel",
-    "err": "Could not save the signature. Please try again."
+    "err": "Could not save the signature. Please try again.",
+    "errSigned": "This signature is already here — thank you.",
+    "errRate": "Too many signatures from this connection just now. Try again in an hour."
   },
   "signed": {
     "title": "Your signature is accepted",
