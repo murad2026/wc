@@ -27,10 +27,10 @@ bash ninja/build.sh
 
 1. Открыть пустой запрос:
    `https://supabase.com/dashboard/project/nhkwgulokiwqwfrynmkx/sql/new`
-2. Вставить целиком `sql/orders.sql` → **Run** (⌘/Ctrl + Enter).
+2. Вставить целиком `ninja/sql/orders.sql` → **Run** (⌘/Ctrl + Enter).
 3. Правильный ответ — зелёное **Success. No rows returned**: создавали таблицу,
    а не запрашивали данные.
-4. Открыть новый запрос и повторить с `sql/experts.sql`.
+4. Открыть новый запрос и повторить с `ninja/sql/experts.sql`.
 
 **Проверить:** `https://supabase.com/dashboard/project/nhkwgulokiwqwfrynmkx/editor`
 — слева должны быть `experts` и `orders`. Сейчас есть `orders`, но нет `experts`:
