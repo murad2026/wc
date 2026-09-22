@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ответить · Verified Feed</title>
+<meta name="description" content="Два пути ответа: свой случай или атака на строку тезиса фактом.">
+<style>
+  :root{
+    --indigo:#1e2a5a; --amber:#d98e04; --paper:#fbfaf7; --card:#ffffff;
+    --line:#e8e5dd; --muted:#6b7085; --ink:#1e2a5a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --indigo:#dfe4f5; --amber:#f0a71c; --paper:#12162a; --card:#1a2038;
+      --line:#2a3152; --muted:#8d93ab; --ink:#dfe4f5;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  a{color:var(--amber)}
+
+  nav{border-bottom:1px solid var(--line);background:var(--card)}
+  .nav-inner{max-width:720px;margin:0 auto;padding:14px 20px;display:flex;
+    align-items:center;justify-content:space-between;gap:16px}
+  .logo{font-weight:700;color:var(--ink);text-decoration:none;font-size:15px}
+  .logo span{color:var(--amber)}
+  .back{color:var(--muted);text-decoration:none;font-size:14px}
+
+  header{padding:40px 0 0}
+  h1{font-size:27px;line-height:1.25;letter-spacing:-.02em;font-weight:700}
+  .lead{margin-top:13px;color:var(--muted);font-size:16px}
+
+  form{margin-top:28px}
+  fieldset{border:1px solid var(--line);border-radius:12px;background:var(--card);
+    padding:20px;margin-bottom:16px}
+  legend{padding:0 8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--muted);font-weight:600}
+  .f{margin-bottom:16px}
+  .f:last-child{margin-bottom:0}
+  label{display:block;font-size:14.5px;font-weight:600;margin-bottom:6px}
+  .hint{font-size:13px;color:var(--muted);margin:-3px 0 7px;line-height:1.5}
+  input[type=text],textarea,select{width:100%;background:var(--paper);color:var(--ink);
+    border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;font-size:15px}
+  textarea{min-height:76px;resize:vertical}
+  .radios{display:flex;flex-wrap:wrap;gap:8px}
+  .radios label{display:inline-flex;align-items:center;gap:7px;font-weight:400;
+    font-size:14.5px;border:1px solid var(--line);border-radius:8px;padding:8px 13px;
+    background:var(--paper);cursor:pointer;margin:0}
+  .radios input{margin:0}
+
+  .btn{background:var(--amber);color:#fff;border:0;border-radius:9px;
+    font:inherit;font-weight:600;font-size:15px;padding:12px 24px;cursor:pointer}
+  .out{margin-top:18px;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:18px;display:none}
+  .out.on{display:block}
+  .out h3{font-size:14px;margin-bottom:10px}
+  .out pre{white-space:pre-wrap;word-wrap:break-word;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;
+    background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px;max-height:340px;overflow:auto}
+  .out .where{margin-top:12px;font-size:14px;line-height:1.55}
+
+  .no{margin-top:22px;background:var(--card);border:1px solid var(--line);
+    border-left:3px solid var(--muted);border-radius:10px;padding:16px 18px;
+    font-size:14.5px;line-height:1.55;color:var(--muted)}
+
+  footer{margin-top:54px;border-top:1px solid var(--line);background:var(--card)}
+  .foot{max-width:720px;margin:0 auto;padding:24px 20px 40px;
+    font-size:13.5px;line-height:1.6;color:var(--muted)}
+  .foot p + p{margin-top:8px}
+  .foot .links{margin-top:12px;display:flex;flex-wrap:wrap;gap:14px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="../index.html">◆ World<span>Constitution</span></a>
+    <a class="back" href="claims/001.html">← К тезису</a>
+  </div>
+</nav>
+
+<header class="wrap">
+  <h1>Ответить на тезис 001</h1>
+  <p class="lead">Заполните, нажмите кнопку внизу — получится нумерованный список. Скопируйте его и отправьте. Ничего никуда не уходит автоматически, аккаунт не нужен.</p>
+</header>
+
+<section class="wrap">
+<form id="f">
+
+  <fieldset>
+    <legend>Путь</legend>
+    <div class="f">
+      <label>1. Каким путём отвечаете</label>
+      <div class="radios">
+        <label><input type="radio" name="q1" value="A — свой случай" checked> A — свой случай</label>
+        <label><input type="radio" name="q1" value="B — атака на строку"> B — атака на строку</label>
+      </div>
+    </div>
+    <div class="f">
+      <label>2. Если B — какая фраза тезиса слабая</label>
+      <div class="hint">Процитируйте её дословно. Если путь A — оставьте пустым.</div>
+      <textarea name="q2"></textarea>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Случай</legend>
+    <div class="f">
+      <label>3. Ярлык случая, 3–8 слов</label>
+      <input type="text" name="q3" maxlength="90">
+    </div>
+    <div class="f">
+      <label>4. Когда проверяли</label>
+      <div class="hint">Месяц и год.</div>
+      <input type="text" name="q4" maxlength="40">
+    </div>
+    <div class="f">
+      <label>5. Один источник, с которого начали</label>
+      <input type="text" name="q5" maxlength="200">
+    </div>
+    <div class="f">
+      <label>6. Одна фраза: что этот источник утверждал или показывал</label>
+      <textarea name="q6"></textarea>
+    </div>
+    <div class="f">
+      <label>7. Что вы сделали в первые 24–48 часов</label>
+      <textarea name="q7"></textarea>
+    </div>
+    <div class="f">
+      <label>8. Человек на том конце</label>
+      <div class="radios">
+        <label><input type="radio" name="q8" value="да"> да</label>
+        <label><input type="radio" name="q8" value="нет"> нет</label>
+        <label><input type="radio" name="q8" value="не искал" checked> не искал</label>
+      </div>
+    </div>
+    <div class="f">
+      <label>9. Исход</label>
+      <div class="radios">
+        <label><input type="radio" name="q9" value="ясность"> ясность</label>
+        <label><input type="radio" name="q9" value="частичная"> частичная</label>
+        <label><input type="radio" name="q9" value="нет"> нет</label>
+        <label><input type="radio" name="q9" value="бросил" checked> бросил</label>
+      </div>
+    </div>
+    <div class="f">
+      <label>10. Сколько времени заняло</label>
+      <div class="hint">Часы или недели.</div>
+      <input type="text" name="q10" maxlength="60">
+    </div>
+    <div class="f">
+      <label>11. Цена, кроме времени</label>
+      <textarea name="q11"></textarea>
+    </div>
+    <div class="f">
+      <label>12. Чего вы не утверждаете</label>
+      <div class="hint">Границы. Без них карточка не публикуется.</div>
+      <textarea name="q12"></textarea>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Вердикт и подпись</legend>
+    <div class="f">
+      <label>13. Вердикт по тезису и одно предложение почему</label>
+      <textarea name="q13"></textarea>
+    </div>
+    <div class="f">
+      <label>14. Имя или псевдоним</label>
+      <div class="hint">Псевдоним допустим и ничем не хуже. Аноним не штрафуется.</div>
+      <input type="text" name="q14" maxlength="60">
+    </div>
+    <div class="f">
+      <label>15. Публикация</label>
+      <div class="radios">
+        <label><input type="radio" name="q15" value="да" checked> да</label>
+        <label><input type="radio" name="q15" value="да, без деталей"> да, без деталей</label>
+        <label><input type="radio" name="q15" value="нет"> нет</label>
+      </div>
+    </div>
+    <div class="f">
+      <label>16. Что вырезать</label>
+      <textarea name="q16"></textarea>
+    </div>
+    <div class="f">
+      <label>17. Контакт для владельца</label>
+      <div class="hint">На витрину не попадает. Нужен только чтобы уточнить, если что-то непонятно.</div>
+      <input type="text" name="q17" maxlength="120">
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Необязательно</legend>
+    <div class="f">
+      <label>Вывод о системе</label>
+      <div class="hint">Что вы из этого поняли про то, как устроено. <b>В фид не идёт</b> — карточка состоит из эпизода и границ, а не из выводов.</div>
+      <textarea name="q18"></textarea>
+    </div>
+  </fieldset>
+
+  <button class="btn" type="submit">Собрать ответ</button>
+</form>
+
+<div class="out" id="out">
+  <h3>Готово. Скопируйте этот текст и отправьте.</h3>
+  <pre id="text"></pre>
+  <p class="where">Куда отправлять: <b id="addr">[ адрес будет указан здесь ]</b></p>
+</div>
+
+<div class="no">
+  Комментарий «согласен» или «круто» не публикуется. Публикуется эпизод или факт, ломающий строку тезиса. Ответы читает и проверяет владелец сайта вручную — автоматической проверки нет.
+</div>
+</section>
+
+<footer>
+  <div class="foot">
+    <p>Исходники открыты. Журнал публичен. Запись не правится — только дополняется.</p>
+    <p>Правила: текст Конституции (неизменяемое ядро).</p>
+    <p>Фид не использует щит и карму.</p>
+    <p>Вердикт фида — не истина.</p>
+    <p>Сейчас реальность может быть «автор сайта» или «знакомость» — это старт, а не KYC.</p>
+    <div class="links">
+      <a href="https://github.com/murad2026/wc">Репозиторий</a>
+      <a href="log.json">log.json</a>
+      <a href="https://github.com/murad2026/wc/blob/main/FEED.md">FEED.md</a>
+      <a href="https://github.com/murad2026/wc/blob/main/CONSTITUTION.md">Правила v0.1</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const LABELS = [
+  "Путь", "Слабая фраза (для B)", "Ярлык случая", "Когда проверяли",
+  "Источник, с которого начали", "Что источник утверждал", "Что сделал за 24–48 часов",
+  "Человек на том конце", "Исход", "Время", "Цена кроме времени",
+  "Чего не утверждаю", "Вердикт и почему", "Имя или псевдоним",
+  "Публикация", "Что вырезать", "Контакт (не на витрину)", "Вывод о системе (в фид не идёт)"
+];
+
+document.getElementById('f').addEventListener('submit', ev => {
+  ev.preventDefault();
+  const fd = new FormData(ev.target);
+  const lines = ["Ответ на тезис 001 — Verified Feed", ""];
+  for(let i = 1; i <= 18; i++){
+    const v = (fd.get('q' + i) || '').toString().trim();
+    lines.push(i + '. ' + LABELS[i-1] + ': ' + (v || '—'));
+  }
+  document.getElementById('text').textContent = lines.join('\n');
+  document.getElementById('out').classList.add('on');
+  document.getElementById('out').scrollIntoView({behavior:'smooth', block:'start'});
+});
+</script>
+
+</body>
+</html>

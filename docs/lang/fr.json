@@ -530,5 +530,6 @@
     "hFoot": "Les intendants sont modérés mutuellement : transparence, rotation, révocation, appel par tirage au sort, réputation engagée. Personne ne détient de pouvoir final irrévocable.",
     "fPrev": "Aperçu de l'étape 2",
     "fSign": "Signer la Constitution →"
-  }
+  },
+  "specNote": "Ceci décrit une intention. Il n'y a pas de moteur. Les segments et le bouclier ne sont pas comptés et ne sont pas liés à Verified Feed."
 }
