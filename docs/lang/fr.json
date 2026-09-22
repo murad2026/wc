@@ -648,10 +648,10 @@
     "wayC": "Je n'ai pas compris la question. Écrivez ce qui n'est pas clair : cela aide à réécrire la page. Cela ne devient pas une fiche.",
     "l19": "Si C ou D : ce qui n'est pas clair, ou pourquoi il n'y a pas eu de cas",
     "cNote": "Les réponses par les voies C et D n'arrivent jamais sur le site : seul le responsable les lit.",
-    "caseOpt": "facultatif sur les voies C et D",
     "indexSub": "Ce n'est pas un fil de publications. Une thèse et des fiches de cas. On répond par son propre cas, par un désaccord avec une phrase du texte, ou par « je n'ai pas compris / je n'ai pas eu de cas ».",
     "wayD": "Je n'ai pas eu de cas semblable. Utile aussi : cela veut dire que la thèse ne décrit pas tout le monde. Cela ne devient pas une fiche.",
     "h15": "S'applique aux voies A et B. Les réponses par C et D n'arrivent sur le site dans aucun cas.",
-    "h11": "Argent, accès, données, relations, santé. Soyez précis : quoi, et combien. S'il n'y en a pas eu, dites-le : c'est aussi une réponse."
+    "h11": "Argent, accès, données, relations, santé. Soyez précis : quoi, et combien. S'il n'y en a pas eu, dites-le : c'est aussi une réponse.",
+    "dimNote": "En gris, ce qui n'est pas nécessaire sur la voie choisie. Vous pouvez le remplir quand même : rien n'est perdu."
   }
 }

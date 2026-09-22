@@ -648,10 +648,10 @@
     "wayC": "No entendí la pregunta. Escribe qué es lo que no queda claro: ayuda a reescribir la página. No se convierte en ficha.",
     "l19": "Si es C o D: qué es exactamente lo que no queda claro, o por qué no hubo caso",
     "cNote": "Las respuestas por las vías C y D nunca llegan al sitio: solo las lee el responsable.",
-    "caseOpt": "opcional en las vías C y D",
     "indexSub": "No es un muro de publicaciones. Una tesis y fichas de casos. Se responde con tu propio caso, con un desacuerdo sobre una frase del texto o con «no entendí / no tuve caso».",
     "wayD": "No tuve ningún caso así. También sirve: significa que la tesis no describe a todo el mundo. No se convierte en ficha.",
     "h15": "Se aplica a las vías A y B. Las respuestas por C y D no llegan al sitio en ningún caso.",
-    "h11": "Dinero, acceso, datos, relaciones, salud. Sé concreto: qué y cuánto. Si no hubo ninguna, dilo: también es una respuesta."
+    "h11": "Dinero, acceso, datos, relaciones, salud. Sé concreto: qué y cuánto. Si no hubo ninguna, dilo: también es una respuesta.",
+    "dimNote": "En gris, lo que no hace falta en la vía que elegiste. Puedes rellenarlo igualmente: no se pierde nada."
   }
 }

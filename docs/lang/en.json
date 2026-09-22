@@ -648,10 +648,10 @@
     "wayC": "Did not understand the question. Write down what is unclear — it helps rewrite the page. This does not become a card.",
     "l19": "If C or D: what exactly is unclear, or why there was no case",
     "cNote": "Answers on paths C and D never reach the site — only the owner reads them.",
-    "caseOpt": "optional on paths C and D",
     "indexSub": "Not a feed of posts. A claim, and cards of cases. You answer with your own case, with disagreement about a sentence in the text, or with “did not understand / had no case”.",
     "wayD": "Had no such case. Useful too: it means the claim does not describe everyone. This does not become a card.",
     "h15": "Applies to paths A and B. Answers on C and D never reach the site in any case.",
-    "h11": "Money, access, data, relationships, health. Be specific — what, and how much. If there were none, say so: that is an answer too."
+    "h11": "Money, access, data, relationships, health. Be specific — what, and how much. If there were none, say so: that is an answer too.",
+    "dimNote": "Greyed out means not needed on the path you chose. You can still fill it in — nothing is dropped."
   }
 }

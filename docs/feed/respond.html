@@ -77,7 +77,8 @@
   .foot p + p{margin-top:8px}
   .foot .links{margin-top:12px;display:flex;flex-wrap:wrap;gap:14px}
   .cnote{margin-top:14px;font-size:13.5px;color:var(--muted);line-height:1.5}
-  .opt-mark{margin:-6px 0 14px;font-size:13px;color:var(--amber);font-weight:600}
+  .dim{opacity:.42;transition:opacity .18s}
+  .dim-note{margin-top:12px;font-size:13px;color:var(--muted);line-height:1.5}
 </style>
 </head>
 <body>
@@ -105,22 +106,22 @@
     <div class="f">
       <label id="l1"></label>
       <div class="radios" id="r1"></div>
+      <p class="dim-note" id="dim-note"></p>
     </div>
-    <div class="f">
+    <div class="f" id="f2">
       <label id="l2"></label>
       <div class="hint" id="h2"></div>
       <textarea name="q2"></textarea>
     </div>
-    <div class="f">
+    <div class="f" id="f19">
       <label id="l19"></label>
       <textarea name="q19"></textarea>
     </div>
     <p class="cnote" id="c-note"></p>
   </fieldset>
 
-  <fieldset>
+  <fieldset id="fs-case">
     <legend id="leg-case"></legend>
-    <p class="opt-mark" id="case-opt" hidden></p>
     <div class="f"><label id="l3"></label><input type="text" name="q3" maxlength="90"></div>
     <div class="f"><label id="l4"></label><div class="hint" id="h4"></div><input type="text" name="q4" maxlength="40"></div>
     <div class="f"><label id="l5"></label><input type="text" name="q5" maxlength="200"></div>
@@ -135,10 +136,10 @@
 
   <fieldset>
     <legend id="leg-sign"></legend>
-    <div class="f"><label id="l13"></label><textarea name="q13"></textarea></div>
+    <div class="f" id="f13"><label id="l13"></label><textarea name="q13"></textarea></div>
     <div class="f"><label id="l14"></label><div class="hint" id="h14"></div><input type="text" name="q14" maxlength="60"></div>
-    <div class="f"><label id="l15"></label><div class="hint" id="h15"></div><div class="radios" id="r15"></div></div>
-    <div class="f"><label id="l16"></label><textarea name="q16"></textarea></div>
+    <div class="f" id="f15"><label id="l15"></label><div class="hint" id="h15"></div><div class="radios" id="r15"></div></div>
+    <div class="f" id="f16"><label id="l16"></label><textarea name="q16"></textarea></div>
     <div class="f"><label id="l17"></label><div class="hint" id="h17"></div><input type="text" name="q17" maxlength="120"></div>
   </fieldset>
 
@@ -211,9 +212,20 @@ function radios(box, name, opts, checked, values){
    а не прячется: человек на C всё равно может что-то рассказать. */
 const PATHS = ['A','B','C','D'];
 
+/* Что относится к делу на каждом пути. Гасим только видом: поля остаются
+   рабочими, иначе набранный текст пропал бы при переключении пути —
+   disabled-поля не попадают в FormData. */
+const RELEVANT = {
+  A: { f2:0, f19:0, 'fs-case':1, f13:1, f15:1, f16:1 },
+  B: { f2:1, f19:0, 'fs-case':1, f13:1, f15:1, f16:1 },
+  C: { f2:0, f19:1, 'fs-case':0, f13:0, f15:0, f16:0 },
+  D: { f2:0, f19:1, 'fs-case':0, f13:0, f15:0, f16:0 },
+};
+
 function onPath(){
   const v = document.querySelector('input[name=q1]:checked');
-  $('case-opt').hidden = !(v && (v.value === 'C' || v.value === 'D'));
+  const map = RELEVANT[v ? v.value : 'A'] || RELEVANT.A;
+  for(const id in map) $(id).classList.toggle('dim', !map[id]);
 }
 
 function render(){
@@ -242,7 +254,7 @@ function render(){
   $('h18').innerHTML   = f.h18;   /* содержит <b> из нашего же словаря */
   $('l19').textContent    = f.l19;
   $('c-note').textContent = f.cNote;
-  $('case-opt').textContent = f.caseOpt;
+  $('dim-note').textContent = f.dimNote;
 
   radios('r1',  'q1',  f.oPath,  0, PATHS);
   $('r1').addEventListener('change', onPath);
