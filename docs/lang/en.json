@@ -575,7 +575,7 @@
     "l": [
       "What do you want to do",
       "Which sentence do you disagree with",
-      "Sum your story up in one line",
+      "Describe the case in one or two sentences",
       "When did this happen",
       "How it started",
       "What it said",
@@ -653,7 +653,7 @@
     "h15": "Applies to paths A and B. Answers on C and D never reach the site in any case.",
     "h11": "Money, access, data, relationships, health. Be specific — what, and how much. If there were none, say so: that is an answer too.",
     "dimNote": "Greyed out means not needed on the path you chose. You can still fill it in — nothing is dropped.",
-    "h3": "Short, like a news headline. For example: “Bank froze my account with no explanation”.",
+    "h3": "Briefly, the essentials. For example: “The bank froze my account with no explanation. A month later they unfroze it and never named a reason.”",
     "h5": "A letter, a call, a notification in an app, an article — whatever first told you there was a problem.",
     "h8": "A real person is someone who looked at your case, not someone who sent a template.",
     "h13": "Does the statement hold up against your story: it confirms it, does not square with it, or both."

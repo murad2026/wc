@@ -575,7 +575,7 @@
     "l": [
       "Que voulez-vous faire",
       "Avec quelle phrase n'êtes-vous pas d'accord",
-      "Résumez votre histoire en une ligne",
+      "Décrivez le cas en une ou deux phrases",
       "Quand cela s'est-il passé",
       "Comment cela a commencé",
       "Ce qui y était dit",
@@ -653,7 +653,7 @@
     "h15": "S'applique aux voies A et B. Les réponses par C et D n'arrivent sur le site dans aucun cas.",
     "h11": "Argent, accès, données, relations, santé. Soyez précis : quoi, et combien. S'il n'y en a pas eu, dites-le : c'est aussi une réponse.",
     "dimNote": "En gris, ce qui n'est pas nécessaire sur la voie choisie. Vous pouvez le remplir quand même : rien n'est perdu.",
-    "h3": "Court, comme un titre de presse. Par exemple : « La banque a bloqué mon compte sans explication ».",
+    "h3": "Brièvement, l'essentiel. Par exemple : « La banque a bloqué mon compte sans explication. Un mois plus tard, elle l'a débloqué sans jamais en donner la raison. »",
     "h5": "Un courriel, un appel, une notification dans une application, un article — ce qui vous a appris qu'il y avait un problème.",
     "h8": "Une vraie personne, c'est quelqu'un qui a examiné votre cas, pas quelqu'un qui a envoyé un modèle.",
     "h13": "Votre histoire tient-elle face à l'affirmation : elle la confirme, elle ne colle pas, ou les deux."

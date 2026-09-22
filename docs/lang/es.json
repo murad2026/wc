@@ -575,7 +575,7 @@
     "l": [
       "Qué quieres hacer",
       "Con qué frase no estás de acuerdo",
-      "Resume tu historia en una línea",
+      "Describe el caso en una o dos frases",
       "Cuándo ocurrió",
       "Cómo empezó",
       "Qué decía",
@@ -653,7 +653,7 @@
     "h15": "Se aplica a las vías A y B. Las respuestas por C y D no llegan al sitio en ningún caso.",
     "h11": "Dinero, acceso, datos, relaciones, salud. Sé concreto: qué y cuánto. Si no hubo ninguna, dilo: también es una respuesta.",
     "dimNote": "En gris, lo que no hace falta en la vía que elegiste. Puedes rellenarlo igualmente: no se pierde nada.",
-    "h3": "Corto, como un titular. Por ejemplo: «El banco me bloqueó la cuenta sin explicación».",
+    "h3": "Brevemente, lo esencial. Por ejemplo: «El banco me bloqueó la cuenta sin explicación. Un mes después la desbloqueó y nunca dijo el motivo.»",
     "h5": "Un correo, una llamada, un aviso en la app, un artículo: lo primero que te dijo que había un problema.",
     "h8": "Una persona de verdad es quien miró tu caso, no quien envió una plantilla.",
     "h13": "¿Tu historia sostiene la afirmación? La confirma, no cuadra con ella, o ambas cosas."
