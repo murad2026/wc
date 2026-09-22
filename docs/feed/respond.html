@@ -122,12 +122,12 @@
 
   <fieldset id="fs-case">
     <legend id="leg-case"></legend>
-    <div class="f"><label id="l3"></label><input type="text" name="q3" maxlength="90"></div>
+    <div class="f"><label id="l3"></label><div class="hint" id="h3"></div><input type="text" name="q3" maxlength="90"></div>
     <div class="f"><label id="l4"></label><div class="hint" id="h4"></div><input type="text" name="q4" maxlength="40"></div>
-    <div class="f"><label id="l5"></label><input type="text" name="q5" maxlength="200"></div>
+    <div class="f"><label id="l5"></label><div class="hint" id="h5"></div><input type="text" name="q5" maxlength="200"></div>
     <div class="f"><label id="l6"></label><textarea name="q6"></textarea></div>
     <div class="f"><label id="l7"></label><textarea name="q7"></textarea></div>
-    <div class="f"><label id="l8"></label><div class="radios" id="r8"></div></div>
+    <div class="f"><label id="l8"></label><div class="hint" id="h8"></div><div class="radios" id="r8"></div></div>
     <div class="f"><label id="l9"></label><div class="radios" id="r9"></div></div>
     <div class="f"><label id="l10"></label><div class="hint" id="h10"></div><input type="text" name="q10" maxlength="60"></div>
     <div class="f"><label id="l11"></label><div class="hint" id="h11"></div><textarea name="q11"></textarea></div>
@@ -136,7 +136,7 @@
 
   <fieldset>
     <legend id="leg-sign"></legend>
-    <div class="f" id="f13"><label id="l13"></label><textarea name="q13"></textarea></div>
+    <div class="f" id="f13"><label id="l13"></label><div class="hint" id="h13"></div><textarea name="q13"></textarea></div>
     <div class="f"><label id="l14"></label><div class="hint" id="h14"></div><input type="text" name="q14" maxlength="60"></div>
     <div class="f" id="f15"><label id="l15"></label><div class="hint" id="h15"></div><div class="radios" id="r15"></div></div>
     <div class="f" id="f16"><label id="l16"></label><textarea name="q16"></textarea></div>
@@ -244,7 +244,11 @@ function render(){
   for(let i = 1; i <= 18; i++) $('l' + i).textContent = f.l[i-1];
 
   $('h2').textContent  = f.h2;
+  $('h3').textContent  = f.h3;
   $('h4').textContent  = f.h4;
+  $('h5').textContent  = f.h5;
+  $('h8').textContent  = f.h8;
+  $('h13').textContent = f.h13;
   $('h10').textContent = f.h10;
   $('h11').textContent = f.h11;
   $('h12').textContent = f.h12;
