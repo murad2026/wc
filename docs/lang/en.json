@@ -601,7 +601,10 @@
     "h18": "What you concluded about how things work. <b>This does not go into the feed</b> — a card is an episode and its limits, not a conclusion.",
     "oPath": [
       "A — my own case",
-      "B — attack on a line"
+      "B — attack on a line",
+      "C — did not understand what is wanted",
+      "C — understood, had no such case",
+      "C — understood, do not want to publish"
     ],
     "oHuman": [
       "yes",
@@ -633,6 +636,20 @@
       "For now reality can be “author of this site” or “acquaintance” — a starting point, not KYC."
     ],
     "fRepo": "Repository",
-    "fRules": "Rules v0.1"
+    "fRules": "Rules v0.1",
+    "intro": [
+      "This is not a comment section and not a poll.",
+      "One person describes one case.",
+      "A similar case — path A.",
+      "A hole in the text plus your own fact — path B.",
+      "Did not understand the page, or had no such case — path C. C is not published as a card."
+    ],
+    "episodeShort": "A YouTube channel running since 2002. In July 2022 access was closed. Support replied with a template, the appeal was rejected, and downloading the archive of family videos was refused.",
+    "lettersT": "The correspondence",
+    "wayC": "You did not understand what is being asked, or you have had no similar case. This is not a card: an answer on path C goes to the owner only and never appears publicly.",
+    "l19": "If C: what exactly is unclear, or why there was no case",
+    "cNote": "An answer on path C never appears publicly — only the site owner reads it.",
+    "caseOpt": "optional on path C",
+    "indexSub": "Not a feed of posts. A claim, and cards of cases. You answer with your own case, an attack on a line, or “did not understand / had no case”."
   }
 }

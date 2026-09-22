@@ -57,6 +57,7 @@
     font-size:13.5px;line-height:1.6;color:var(--muted)}
   .foot p + p{margin-top:8px}
   .foot .links{margin-top:12px;display:flex;flex-wrap:wrap;gap:14px}
+  .sub{margin-top:10px;color:var(--muted);font-size:15px;line-height:1.55}
 </style>
 </head>
 <body>
@@ -74,6 +75,7 @@
 <header class="wrap">
   <h1 id="title"></h1>
   <p class="lead" id="lead"></p>
+  <p class="sub" id="sub"></p>
 </header>
 
 <section class="wrap">
@@ -133,6 +135,7 @@ function render(){
 
   $('title').textContent = f.title;
   $('lead').textContent  = f.lead;
+  $('sub').textContent   = f.indexSub;
 
   $('how-t').textContent = f.howT;
   /* how содержит <b> в тексте — это наша собственная разметка, не ввод извне */

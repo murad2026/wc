@@ -76,6 +76,8 @@
     font-size:13.5px;line-height:1.6;color:var(--muted)}
   .foot p + p{margin-top:8px}
   .foot .links{margin-top:12px;display:flex;flex-wrap:wrap;gap:14px}
+  .cnote{margin-top:14px;font-size:13.5px;color:var(--muted);line-height:1.5}
+  .opt-mark{margin:-6px 0 14px;font-size:13px;color:var(--amber);font-weight:600}
 </style>
 </head>
 <body>
@@ -109,10 +111,16 @@
       <div class="hint" id="h2"></div>
       <textarea name="q2"></textarea>
     </div>
+    <div class="f">
+      <label id="l19"></label>
+      <textarea name="q19"></textarea>
+    </div>
+    <p class="cnote" id="c-note"></p>
   </fieldset>
 
   <fieldset>
     <legend id="leg-case"></legend>
+    <p class="opt-mark" id="case-opt" hidden></p>
     <div class="f"><label id="l3"></label><input type="text" name="q3" maxlength="90"></div>
     <div class="f"><label id="l4"></label><div class="hint" id="h4"></div><input type="text" name="q4" maxlength="40"></div>
     <div class="f"><label id="l5"></label><input type="text" name="q5" maxlength="200"></div>
@@ -192,10 +200,20 @@ async function setLang(code){
 
 /* Радиогруппа: первый вариант выбран по умолчанию, кроме 8-го и 9-го полей,
    где по умолчанию стоит наименее обязывающий ответ. */
-function radios(box, name, opts, checked){
+function radios(box, name, opts, checked, values){
   $(box).innerHTML = opts.map((o,i) =>
-    `<label><input type="radio" name="${name}" value="${esc(o)}"${i===checked?' checked':''}> ${esc(o)}</label>`
+    `<label><input type="radio" name="${name}" value="${esc(values ? values[i] : o)}"${i===checked?' checked':''}> ${esc(o)}</label>`
   ).join('');
+}
+
+/* Путь хранится кодом, а не подписью: подпись переводится, код нет.
+   На C поля эпизода перестают быть обязательными — это помечается,
+   а не прячется: человек на C всё равно может что-то рассказать. */
+const PATHS = ['A','B','C1','C2','C3'];
+
+function onPath(){
+  const v = document.querySelector('input[name=q1]:checked');
+  $('case-opt').hidden = !(v && v.value.startsWith('C'));
 }
 
 function render(){
@@ -220,8 +238,12 @@ function render(){
   $('h14').textContent = f.h14;
   $('h17').textContent = f.h17;
   $('h18').innerHTML   = f.h18;   /* содержит <b> из нашего же словаря */
+  $('l19').textContent    = f.l19;
+  $('c-note').textContent = f.cNote;
+  $('case-opt').textContent = f.caseOpt;
 
-  radios('r1',  'q1',  f.oPath,  0);
+  radios('r1',  'q1',  f.oPath,  0, PATHS);
+  $('r1').addEventListener('change', onPath);
   radios('r8',  'q8',  f.oHuman, 2);
   radios('r9',  'q9',  f.oOut,   3);
   radios('r15', 'q15', f.oPub,   0);
@@ -235,6 +257,8 @@ function render(){
   $('foot').innerHTML = f.foot.map(p => `<p>${esc(p)}</p>`).join('');
   $('l-repo').textContent  = f.fRepo;
   $('l-rules').textContent = f.fRules;
+
+  onPath();
 }
 
 $('f').addEventListener('submit', ev => {
@@ -242,9 +266,13 @@ $('f').addEventListener('submit', ev => {
   const f = T.feed;
   const fd = new FormData(ev.target);
   const lines = [f.outHead, ''];
-  for(let i = 1; i <= 18; i++){
-    const v = (fd.get('q' + i) || '').toString().trim();
-    lines.push(i + '. ' + f.l[i-1] + ': ' + (v || '—'));
+  const code = (fd.get('q1') || '').toString();
+  const pathLabel = f.oPath[PATHS.indexOf(code)] || code;
+  for(let i = 1; i <= 19; i++){
+    let v = (fd.get('q' + i) || '').toString().trim();
+    if(i === 1) v = pathLabel;
+    const label = i === 19 ? f.l19 : f.l[i-1];
+    lines.push(i + '. ' + label + ': ' + (v || '—'));
   }
   $('text').textContent = lines.join('\n');
   $('out').classList.add('on');

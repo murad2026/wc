@@ -601,7 +601,10 @@
     "h18": "Ce que vous en avez conclu sur le fonctionnement. <b>Cela ne va pas dans le fil</b> : une fiche, c'est un épisode et ses limites, pas une conclusion.",
     "oPath": [
       "A — mon propre cas",
-      "B — attaque d'une ligne"
+      "B — attaque d'une ligne",
+      "C — je n'ai pas compris ce qu'on demande",
+      "C — compris, je n'ai pas eu de cas",
+      "C — compris, je ne veux pas publier"
     ],
     "oHuman": [
       "oui",
@@ -633,6 +636,20 @@
       "Pour l'instant la réalité peut être « auteur du site » ou « connaissance » — un début, pas un KYC."
     ],
     "fRepo": "Dépôt",
-    "fRules": "Règles v0.1"
+    "fRules": "Règles v0.1",
+    "intro": [
+      "Ceci n'est ni un fil de commentaires ni un sondage.",
+      "Une personne décrit un cas.",
+      "Un cas semblable — voie A.",
+      "Un trou dans le texte plus votre fait — voie B.",
+      "Vous n'avez pas compris la page, ou vous n'avez pas eu de cas — voie C. La C n'est pas publiée comme fiche."
+    ],
+    "episodeShort": "Une chaîne YouTube depuis 2002. En juillet 2022, l'accès a été fermé. Le support a répondu par un modèle, l'appel a été rejeté, et le téléchargement de l'archive contenant les vidéos de famille a été refusé.",
+    "lettersT": "La correspondance",
+    "wayC": "Vous n'avez pas compris ce qu'on attend de vous, ou vous n'avez pas eu de cas semblable. Ce n'est pas une fiche : une réponse par la voie C ne va qu'au responsable et n'apparaît jamais publiquement.",
+    "l19": "Si C : ce qui n'est pas clair, ou pourquoi il n'y a pas eu de cas",
+    "cNote": "Une réponse par la voie C n'apparaît jamais publiquement : seul le responsable du site la lit.",
+    "caseOpt": "facultatif sur la voie C",
+    "indexSub": "Ce n'est pas un fil de publications. Une thèse et des fiches de cas. On répond par son propre cas, par l'attaque d'une ligne, ou par « je n'ai pas compris / je n'ai pas eu de cas »."
   }
 }

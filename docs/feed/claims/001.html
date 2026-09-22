@@ -68,6 +68,20 @@
     font-size:13.5px;line-height:1.6;color:var(--muted)}
   .foot p + p{margin-top:8px}
   .foot .links{margin-top:12px;display:flex;flex-wrap:wrap;gap:14px}
+  .intro{margin-top:22px;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:18px 20px}
+  .intro p{font-size:15.5px;line-height:1.5}
+  .intro p + p{margin-top:6px}
+  .intro p:last-child{margin-top:10px;color:var(--muted)}
+
+  details.letters{margin-top:12px;border:1px solid var(--line);border-radius:10px;
+    background:var(--paper)}
+  details.letters summary{cursor:pointer;padding:11px 15px;font-size:14px;font-weight:600;
+    color:var(--muted);list-style:none}
+  details.letters summary::-webkit-details-marker{display:none}
+  details.letters summary::before{content:'▸ ';font-size:12px}
+  details.letters[open] summary::before{content:'▾ '}
+  details.letters .body{padding:0 15px 15px;font-size:15px;line-height:1.6}
 </style>
 </head>
 <body>
@@ -88,6 +102,8 @@
 </header>
 
 <section class="wrap">
+  <div class="intro" id="intro"></div>
+
   <div class="card">
     <div class="card-top">
       <span class="badge" id="verdict"></span>
@@ -96,7 +112,11 @@
 
     <div class="row">
       <div class="k" id="ep-l"></div>
-      <div class="v" id="ep-v"></div>
+      <div class="v" id="ep-short"></div>
+      <details class="letters">
+        <summary id="let-t"></summary>
+        <div class="body" id="ep-full"></div>
+      </details>
     </div>
 
     <div class="row">
@@ -122,6 +142,10 @@
     <div class="way">
       <div class="l">B</div>
       <div class="t" id="way-b"></div>
+    </div>
+    <div class="way">
+      <div class="l">C</div>
+      <div class="t" id="way-c"></div>
     </div>
   </div>
 
@@ -176,7 +200,12 @@ function render(){
   $('verdict').textContent = f.verdict;
   $('cno').textContent     = f.cardNo;
 
-  $('ep-l').textContent = f.episodeL;  $('ep-v').textContent = f.episode;
+  $('intro').innerHTML = f.intro.map(p => `<p>${esc(p)}</p>`).join('');
+
+  $('ep-l').textContent     = f.episodeL;
+  $('ep-short').textContent = f.episodeShort;
+  $('let-t').textContent    = f.lettersT;
+  $('ep-full').textContent  = f.episode;
   $('bo-l').textContent = f.boundL;    $('bo-v').textContent = f.bound;
   $('pr-l').textContent = f.priceL;    $('pr-v').textContent = f.price;
 
@@ -188,6 +217,7 @@ function render(){
   $('ways-t').textContent    = f.waysT;
   $('way-a').textContent     = f.wayA;
   $('way-b').textContent     = f.wayB;
+  $('way-c').textContent     = f.wayC;
   $('no-comment').textContent = f.noteComment;
   $('cta').textContent       = f.cta;
 

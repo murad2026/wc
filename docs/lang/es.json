@@ -601,7 +601,10 @@
     "h18": "Qué concluiste sobre cómo funciona todo esto. <b>No entra en el feed</b>: una ficha es un episodio y sus límites, no una conclusión.",
     "oPath": [
       "A — mi propio caso",
-      "B — ataque a una línea"
+      "B — ataque a una línea",
+      "C — no entendí qué se pide",
+      "C — lo entendí, no tuve ningún caso",
+      "C — lo entendí, no quiero publicar"
     ],
     "oHuman": [
       "sí",
@@ -633,6 +636,20 @@
       "Por ahora la realidad puede ser «autor del sitio» o «conocido»: un punto de partida, no KYC."
     ],
     "fRepo": "Repositorio",
-    "fRules": "Reglas v0.1"
+    "fRules": "Reglas v0.1",
+    "intro": [
+      "Esto no son comentarios ni una encuesta.",
+      "Una persona describe un caso.",
+      "Un caso parecido: vía A.",
+      "Un agujero en el texto más tu hecho: vía B.",
+      "No entendiste la página o no tuviste ningún caso: vía C. La C no se publica como ficha."
+    ],
+    "episodeShort": "Un canal de YouTube desde 2002. En julio de 2022 se cerró el acceso. El soporte respondió con una plantilla, la apelación fue rechazada y no dejaron descargar el archivo con los vídeos familiares.",
+    "lettersT": "La correspondencia",
+    "wayC": "No entendiste qué se te pide, o no has tenido un caso parecido. Esto no es una ficha: una respuesta por la vía C va solo al responsable y nunca aparece públicamente.",
+    "l19": "Si es C: qué es exactamente lo que no queda claro, o por qué no hubo caso",
+    "cNote": "Una respuesta por la vía C nunca aparece públicamente: solo la lee el responsable del sitio.",
+    "caseOpt": "opcional en la vía C",
+    "indexSub": "No es un muro de publicaciones. Una tesis y fichas de casos. Se responde con tu propio caso, con un ataque a una línea o con «no entendí / no tuve caso»."
   }
 }
