@@ -541,7 +541,7 @@
     "howT": "Comment ça marche",
     "how": [
       "Une thèse, une page. On y joint des fiches : un épisode précis, ce que la personne a fait, comment cela s'est terminé et ce qu'elle n'affirme <b>pas</b>.",
-      "Deux façons de répondre : raconter son propre cas, ou dire qu'on n'est pas d'accord avec une phrase du texte et donner son fait. Les commentaires du type « d'accord » ou « super » ne sont pas publiés : ils n'ajoutent rien à la vérification.",
+      "Deux voies donnent une fiche : raconter son propre cas, ou dire qu'on n'est pas d'accord avec une phrase du texte et donner son fait. Deux autres n'en donnent aucune : si la question n'est pas claire, ou si vous n'avez pas eu de cas. Les commentaires du type « d'accord » ou « super » ne sont pas publiés.",
       "Un verdict du fil n'est pas la vérité. C'est le relevé de ce que des personnes précises ont vérifié, avec leurs limites énoncées."
     ],
     "kicker": "Thèse 001",
@@ -602,9 +602,8 @@
     "oPath": [
       "A — mon propre cas",
       "B — je ne suis pas d'accord avec une phrase du texte",
-      "C — je n'ai pas compris ce qu'on demande",
-      "C — compris, je n'ai pas eu de cas",
-      "C — compris, je ne veux pas publier"
+      "C — je n'ai pas compris la question",
+      "D — je n'ai pas eu de cas semblable"
     ],
     "oHuman": [
       "oui",
@@ -618,9 +617,9 @@
       "abandonné"
     ],
     "oPub": [
-      "oui",
-      "oui, sans les détails",
-      "non"
+      "publication autorisée",
+      "publication autorisée sans mon nom",
+      "pour le responsable seulement"
     ],
     "submit": "Assembler la réponse",
     "outT": "C'est prêt. Copiez ce texte et envoyez-le.",
@@ -640,16 +639,18 @@
     "intro": [
       "Ceci n'est ni un fil de commentaires ni un sondage.",
       "Une personne décrit un cas.",
-      "Un cas semblable — voie A.",
-      "Vous n'êtes pas d'accord avec une phrase du texte — voie B.",
-      "Vous n'avez pas compris la page, ou vous n'avez pas eu de cas — voie C. La C n'est pas publiée comme fiche."
+      "Si vous avez vécu un cas semblable — voie A.",
+      "Si vous n'êtes pas d'accord avec une phrase du texte — voie B.",
+      "Vous n'avez pas compris la question — voie C. Vous n'avez pas eu de cas — voie D. Ni C ni D ne sont publiées comme fiche."
     ],
     "episodeShort": "Une chaîne YouTube depuis 2002. En juillet 2022, l'accès a été fermé. Le support a répondu par un modèle, l'appel a été rejeté, et le téléchargement de l'archive contenant les vidéos de famille a été refusé.",
     "lettersT": "La correspondance",
-    "wayC": "Je n'ai pas compris / je n'ai pas eu de cas / je ne veux pas publier. Ce n'est pas une fiche : une réponse par la voie C ne va qu'au responsable et n'apparaît jamais publiquement.",
-    "l19": "Si C : ce qui n'est pas clair, ou pourquoi il n'y a pas eu de cas",
-    "cNote": "Une réponse par la voie C n'apparaît jamais publiquement : seul le responsable du site la lit.",
-    "caseOpt": "facultatif sur la voie C",
-    "indexSub": "Ce n'est pas un fil de publications. Une thèse et des fiches de cas. On répond par son propre cas, par un désaccord avec une phrase du texte, ou par « je n'ai pas compris / je n'ai pas eu de cas »."
+    "wayC": "Je n'ai pas compris la question. Écrivez ce qui n'est pas clair : cela aide à réécrire la page. Cela ne devient pas une fiche.",
+    "l19": "Si C ou D : ce qui n'est pas clair, ou pourquoi il n'y a pas eu de cas",
+    "cNote": "Les réponses par les voies C et D n'arrivent jamais sur le site : seul le responsable les lit.",
+    "caseOpt": "facultatif sur les voies C et D",
+    "indexSub": "Ce n'est pas un fil de publications. Une thèse et des fiches de cas. On répond par son propre cas, par un désaccord avec une phrase du texte, ou par « je n'ai pas compris / je n'ai pas eu de cas ».",
+    "wayD": "Je n'ai pas eu de cas semblable. Utile aussi : cela veut dire que la thèse ne décrit pas tout le monde. Cela ne devient pas une fiche.",
+    "h15": "S'applique aux voies A et B. Les réponses par C et D n'arrivent sur le site dans aucun cas."
   }
 }

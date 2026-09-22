@@ -541,7 +541,7 @@
     "howT": "Cómo funciona",
     "how": [
       "Una tesis, una página. Se le adjuntan fichas: un episodio concreto, qué hizo la persona, cómo terminó y qué <b>no</b> afirma.",
-      "Hay dos formas de responder: contar tu propio caso, o decir que no estás de acuerdo con una frase del texto y aportar tu hecho. Los comentarios del tipo «de acuerdo» o «genial» no se publican: no añaden nada a la comprobación.",
+      "Dos vías producen ficha: contar tu propio caso, o decir que no estás de acuerdo con una frase del texto y aportar tu hecho. Otras dos no producen ninguna: si la pregunta no se entiende o no tuviste ningún caso. Los comentarios del tipo «de acuerdo» o «genial» no se publican.",
       "El veredicto del feed no es la verdad. Es el registro de lo que comprobaron personas concretas, con sus límites declarados."
     ],
     "kicker": "Tesis 001",
@@ -602,9 +602,8 @@
     "oPath": [
       "A — mi propio caso",
       "B — no estoy de acuerdo con una frase del texto",
-      "C — no entendí qué se pide",
-      "C — lo entendí, no tuve ningún caso",
-      "C — lo entendí, no quiero publicar"
+      "C — no entendí la pregunta",
+      "D — no tuve ningún caso así"
     ],
     "oHuman": [
       "sí",
@@ -618,9 +617,9 @@
       "lo dejé"
     ],
     "oPub": [
-      "sí",
-      "sí, sin detalles",
-      "no"
+      "se puede publicar",
+      "se puede publicar sin mi nombre",
+      "solo para el responsable"
     ],
     "submit": "Montar la respuesta",
     "outT": "Listo. Copia este texto y envíalo.",
@@ -640,16 +639,18 @@
     "intro": [
       "Esto no son comentarios ni una encuesta.",
       "Una persona describe un caso.",
-      "Un caso parecido: vía A.",
-      "No estás de acuerdo con una frase del texto: vía B.",
-      "No entendiste la página o no tuviste ningún caso: vía C. La C no se publica como ficha."
+      "Si has tenido un caso parecido: vía A.",
+      "Si no estás de acuerdo con una frase del texto: vía B.",
+      "No entendiste la pregunta: vía C. No tuviste ningún caso: vía D. Ni la C ni la D se publican como ficha."
     ],
     "episodeShort": "Un canal de YouTube desde 2002. En julio de 2022 se cerró el acceso. El soporte respondió con una plantilla, la apelación fue rechazada y no dejaron descargar el archivo con los vídeos familiares.",
     "lettersT": "La correspondencia",
-    "wayC": "No lo entendí / no tuve ningún caso / no quiero publicar. Esto no es una ficha: una respuesta por la vía C va solo al responsable y nunca aparece públicamente.",
-    "l19": "Si es C: qué es exactamente lo que no queda claro, o por qué no hubo caso",
-    "cNote": "Una respuesta por la vía C nunca aparece públicamente: solo la lee el responsable del sitio.",
-    "caseOpt": "opcional en la vía C",
-    "indexSub": "No es un muro de publicaciones. Una tesis y fichas de casos. Se responde con tu propio caso, con un desacuerdo sobre una frase del texto o con «no entendí / no tuve caso»."
+    "wayC": "No entendí la pregunta. Escribe qué es lo que no queda claro: ayuda a reescribir la página. No se convierte en ficha.",
+    "l19": "Si es C o D: qué es exactamente lo que no queda claro, o por qué no hubo caso",
+    "cNote": "Las respuestas por las vías C y D nunca llegan al sitio: solo las lee el responsable.",
+    "caseOpt": "opcional en las vías C y D",
+    "indexSub": "No es un muro de publicaciones. Una tesis y fichas de casos. Se responde con tu propio caso, con un desacuerdo sobre una frase del texto o con «no entendí / no tuve caso».",
+    "wayD": "No tuve ningún caso así. También sirve: significa que la tesis no describe a todo el mundo. No se convierte en ficha.",
+    "h15": "Se aplica a las vías A y B. Las respuestas por C y D no llegan al sitio en ningún caso."
   }
 }

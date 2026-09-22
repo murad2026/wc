@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "ts": "2026-09-22T17:16:00Z",
+    "ts": "2026-09-22T17:28:07Z",
     "type": "feed.verdict",
     "claim_id": "001",
     "card_id": "001-1",
     "actor_label": "Murad Esenov",
     "level": "named",
     "reality_source": "автор сайта",
-    "content_hash": "dec0092c416ab6db909809b645317733a5ce0d9d63dce6f574cf463c52a2aef6",
+    "content_hash": "8debbe1708925194bb5f468197315fbf5fd73e26284aea061c68ea0900b7c6fb",
     "prev_hash": null
   }
 ]

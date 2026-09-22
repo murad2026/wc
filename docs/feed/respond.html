@@ -137,7 +137,7 @@
     <legend id="leg-sign"></legend>
     <div class="f"><label id="l13"></label><textarea name="q13"></textarea></div>
     <div class="f"><label id="l14"></label><div class="hint" id="h14"></div><input type="text" name="q14" maxlength="60"></div>
-    <div class="f"><label id="l15"></label><div class="radios" id="r15"></div></div>
+    <div class="f"><label id="l15"></label><div class="hint" id="h15"></div><div class="radios" id="r15"></div></div>
     <div class="f"><label id="l16"></label><textarea name="q16"></textarea></div>
     <div class="f"><label id="l17"></label><div class="hint" id="h17"></div><input type="text" name="q17" maxlength="120"></div>
   </fieldset>
@@ -209,11 +209,11 @@ function radios(box, name, opts, checked, values){
 /* Путь хранится кодом, а не подписью: подпись переводится, код нет.
    На C поля эпизода перестают быть обязательными — это помечается,
    а не прячется: человек на C всё равно может что-то рассказать. */
-const PATHS = ['A','B','C1','C2','C3'];
+const PATHS = ['A','B','C','D'];
 
 function onPath(){
   const v = document.querySelector('input[name=q1]:checked');
-  $('case-opt').hidden = !(v && v.value.startsWith('C'));
+  $('case-opt').hidden = !(v && (v.value === 'C' || v.value === 'D'));
 }
 
 function render(){
@@ -236,6 +236,7 @@ function render(){
   $('h10').textContent = f.h10;
   $('h12').textContent = f.h12;
   $('h14').textContent = f.h14;
+  $('h15').textContent = f.h15;
   $('h17').textContent = f.h17;
   $('h18').innerHTML   = f.h18;   /* содержит <b> из нашего же словаря */
   $('l19').textContent    = f.l19;
