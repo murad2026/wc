@@ -541,7 +541,7 @@
     "howT": "How this works",
     "how": [
       "One claim, one page. Cards are attached to it: a specific episode, what the person did, how it ended, and what they do <b>not</b> assert.",
-      "There are two ways to answer: tell your own case, or attack one line of the claim with a fact. Comments like “agreed” and “nice” are not published — they add nothing to the check.",
+      "There are two ways to answer: tell your own case, or say that you disagree with a sentence in the text and give your own fact. Comments like “agreed” and “nice” are not published — they add nothing to the check.",
       "A feed verdict is not the truth. It is a record of what specific people checked, with the limits stated."
     ],
     "kicker": "Claim 001",
@@ -562,8 +562,8 @@
     "hideL": "Withheld",
     "hideV": "employer",
     "waysT": "How to answer",
-    "wayA": "Your own case. A specific episode: what happened, what you did in the first day or two, whether there was a human on the other end, how it ended, and what you do not assert.",
-    "wayB": "Attack a line. Name which sentence of the claim is weak, and give the fact that breaks it.",
+    "wayA": "My own case. A specific episode: what happened, what you did in the first day or two, whether there was a human on the other end, how it ended, and what you do not assert.",
+    "wayB": "I disagree with a sentence in the text. Name the sentence and give one fact from your own experience that does not square with it.",
     "noteComment": "A comment saying “agreed” or “nice” is not published: it adds nothing to the check. Only an episode or a fact is published.",
     "cta": "Answer",
     "rTitle": "Answer claim 001",
@@ -574,7 +574,7 @@
     "legOpt": "Optional",
     "l": [
       "Which path you are taking",
-      "If B — which sentence of the claim is weak",
+      "If B — which sentence of the claim you disagree with",
       "Label for the case, 3–8 words",
       "When you checked",
       "The one source you started from",
@@ -601,7 +601,7 @@
     "h18": "What you concluded about how things work. <b>This does not go into the feed</b> — a card is an episode and its limits, not a conclusion.",
     "oPath": [
       "A — my own case",
-      "B — attack on a line",
+      "B — I disagree with a sentence in the text",
       "C — did not understand what is wanted",
       "C — understood, had no such case",
       "C — understood, do not want to publish"
@@ -627,7 +627,7 @@
     "where": "Where to send it:",
     "addr": "[ address goes here ]",
     "outHead": "Answer to claim 001 — Verified Feed",
-    "noBottom": "A comment saying “agreed” or “nice” is not published. What is published is an episode, or a fact that breaks a line of the claim. Answers are read and checked by the site owner by hand — there is no automated checking.",
+    "noBottom": "A comment saying “agreed” or “nice” is not published. What is published is an episode, or a fact that does not square with a sentence of the claim. Answers are read and checked by the site owner by hand — there is no automated checking.",
     "foot": [
       "The sources are open. The log is public. A record is never edited, only appended to.",
       "The rules are the text of the Constitution (the immutable core).",
@@ -641,15 +641,15 @@
       "This is not a comment section and not a poll.",
       "One person describes one case.",
       "A similar case — path A.",
-      "A hole in the text plus your own fact — path B.",
+      "You disagree with a sentence in the text — path B.",
       "Did not understand the page, or had no such case — path C. C is not published as a card."
     ],
     "episodeShort": "A YouTube channel running since 2002. In July 2022 access was closed. Support replied with a template, the appeal was rejected, and downloading the archive of family videos was refused.",
     "lettersT": "The correspondence",
-    "wayC": "You did not understand what is being asked, or you have had no similar case. This is not a card: an answer on path C goes to the owner only and never appears publicly.",
+    "wayC": "Did not understand / had no case / do not want to publish. This is not a card: an answer on path C goes to the owner only and never appears publicly.",
     "l19": "If C: what exactly is unclear, or why there was no case",
     "cNote": "An answer on path C never appears publicly — only the site owner reads it.",
     "caseOpt": "optional on path C",
-    "indexSub": "Not a feed of posts. A claim, and cards of cases. You answer with your own case, an attack on a line, or “did not understand / had no case”."
+    "indexSub": "Not a feed of posts. A claim, and cards of cases. You answer with your own case, with disagreement about a sentence in the text, or with “did not understand / had no case”."
   }
 }

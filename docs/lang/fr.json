@@ -541,7 +541,7 @@
     "howT": "Comment ça marche",
     "how": [
       "Une thèse, une page. On y joint des fiches : un épisode précis, ce que la personne a fait, comment cela s'est terminé et ce qu'elle n'affirme <b>pas</b>.",
-      "Deux façons de répondre : raconter son propre cas, ou attaquer une ligne de la thèse avec un fait. Les commentaires du type « d'accord » ou « super » ne sont pas publiés : ils n'ajoutent rien à la vérification.",
+      "Deux façons de répondre : raconter son propre cas, ou dire qu'on n'est pas d'accord avec une phrase du texte et donner son fait. Les commentaires du type « d'accord » ou « super » ne sont pas publiés : ils n'ajoutent rien à la vérification.",
       "Un verdict du fil n'est pas la vérité. C'est le relevé de ce que des personnes précises ont vérifié, avec leurs limites énoncées."
     ],
     "kicker": "Thèse 001",
@@ -562,8 +562,8 @@
     "hideL": "Non publié",
     "hideV": "employeur",
     "waysT": "Comment répondre",
-    "wayA": "Votre propre cas. Un épisode précis : ce qui s'est passé, ce que vous avez fait dans les premières 24 à 48 heures, s'il y avait un humain en face, comment cela s'est terminé et ce que vous n'affirmez pas.",
-    "wayB": "Attaque d'une ligne. Dites quelle phrase de la thèse est faible et donnez le fait qui la casse.",
+    "wayA": "Mon propre cas. Un épisode précis : ce qui s'est passé, ce que vous avez fait dans les premières 24 à 48 heures, s'il y avait un humain en face, comment cela s'est terminé et ce que vous n'affirmez pas.",
+    "wayB": "Je ne suis pas d'accord avec une phrase du texte. Indiquez la phrase et donnez un fait tiré de votre expérience qui ne colle pas avec elle.",
     "noteComment": "Un commentaire « d'accord » ou « super » n'est pas publié : il n'ajoute rien à la vérification. On publie un épisode ou un fait.",
     "cta": "Répondre",
     "rTitle": "Répondre à la thèse 001",
@@ -574,7 +574,7 @@
     "legOpt": "Facultatif",
     "l": [
       "Par quelle voie vous répondez",
-      "Si B — quelle phrase de la thèse est faible",
+      "Si B — avec quelle phrase de la thèse vous n'êtes pas d'accord",
       "Étiquette du cas, 3 à 8 mots",
       "Quand vous avez vérifié",
       "La seule source par laquelle vous avez commencé",
@@ -601,7 +601,7 @@
     "h18": "Ce que vous en avez conclu sur le fonctionnement. <b>Cela ne va pas dans le fil</b> : une fiche, c'est un épisode et ses limites, pas une conclusion.",
     "oPath": [
       "A — mon propre cas",
-      "B — attaque d'une ligne",
+      "B — je ne suis pas d'accord avec une phrase du texte",
       "C — je n'ai pas compris ce qu'on demande",
       "C — compris, je n'ai pas eu de cas",
       "C — compris, je ne veux pas publier"
@@ -627,7 +627,7 @@
     "where": "Où l'envoyer :",
     "addr": "[ l'adresse sera indiquée ici ]",
     "outHead": "Réponse à la thèse 001 — Verified Feed",
-    "noBottom": "Un commentaire « d'accord » ou « super » n'est pas publié. On publie un épisode, ou un fait qui casse une ligne de la thèse. Les réponses sont lues et vérifiées à la main par le responsable du site : il n'y a aucune vérification automatique.",
+    "noBottom": "Un commentaire « d'accord » ou « super » n'est pas publié. On publie un épisode, ou un fait qui ne colle pas avec une phrase de la thèse. Les réponses sont lues et vérifiées à la main par le responsable du site : il n'y a aucune vérification automatique.",
     "foot": [
       "Les sources sont ouvertes. Le journal est public. Une entrée ne se corrige pas, elle se complète.",
       "Les règles sont le texte de la Constitution (le noyau immuable).",
@@ -641,15 +641,15 @@
       "Ceci n'est ni un fil de commentaires ni un sondage.",
       "Une personne décrit un cas.",
       "Un cas semblable — voie A.",
-      "Un trou dans le texte plus votre fait — voie B.",
+      "Vous n'êtes pas d'accord avec une phrase du texte — voie B.",
       "Vous n'avez pas compris la page, ou vous n'avez pas eu de cas — voie C. La C n'est pas publiée comme fiche."
     ],
     "episodeShort": "Une chaîne YouTube depuis 2002. En juillet 2022, l'accès a été fermé. Le support a répondu par un modèle, l'appel a été rejeté, et le téléchargement de l'archive contenant les vidéos de famille a été refusé.",
     "lettersT": "La correspondance",
-    "wayC": "Vous n'avez pas compris ce qu'on attend de vous, ou vous n'avez pas eu de cas semblable. Ce n'est pas une fiche : une réponse par la voie C ne va qu'au responsable et n'apparaît jamais publiquement.",
+    "wayC": "Je n'ai pas compris / je n'ai pas eu de cas / je ne veux pas publier. Ce n'est pas une fiche : une réponse par la voie C ne va qu'au responsable et n'apparaît jamais publiquement.",
     "l19": "Si C : ce qui n'est pas clair, ou pourquoi il n'y a pas eu de cas",
     "cNote": "Une réponse par la voie C n'apparaît jamais publiquement : seul le responsable du site la lit.",
     "caseOpt": "facultatif sur la voie C",
-    "indexSub": "Ce n'est pas un fil de publications. Une thèse et des fiches de cas. On répond par son propre cas, par l'attaque d'une ligne, ou par « je n'ai pas compris / je n'ai pas eu de cas »."
+    "indexSub": "Ce n'est pas un fil de publications. Une thèse et des fiches de cas. On répond par son propre cas, par un désaccord avec une phrase du texte, ou par « je n'ai pas compris / je n'ai pas eu de cas »."
   }
 }

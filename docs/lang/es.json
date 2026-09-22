@@ -541,7 +541,7 @@
     "howT": "Cómo funciona",
     "how": [
       "Una tesis, una página. Se le adjuntan fichas: un episodio concreto, qué hizo la persona, cómo terminó y qué <b>no</b> afirma.",
-      "Hay dos formas de responder: contar tu propio caso o atacar una línea de la tesis con un hecho. Los comentarios del tipo «de acuerdo» o «genial» no se publican: no añaden nada a la comprobación.",
+      "Hay dos formas de responder: contar tu propio caso, o decir que no estás de acuerdo con una frase del texto y aportar tu hecho. Los comentarios del tipo «de acuerdo» o «genial» no se publican: no añaden nada a la comprobación.",
       "El veredicto del feed no es la verdad. Es el registro de lo que comprobaron personas concretas, con sus límites declarados."
     ],
     "kicker": "Tesis 001",
@@ -562,8 +562,8 @@
     "hideL": "No se publica",
     "hideV": "empleador",
     "waysT": "Cómo responder",
-    "wayA": "Tu propio caso. Un episodio concreto: qué pasó, qué hiciste en el primer día o dos, si había una persona al otro lado, cómo terminó y qué no afirmas.",
-    "wayB": "Ataque a una línea. Di qué frase de la tesis es débil y aporta el hecho que la rompe.",
+    "wayA": "Mi propio caso. Un episodio concreto: qué pasó, qué hiciste en el primer día o dos, si había una persona al otro lado, cómo terminó y qué no afirmas.",
+    "wayB": "No estoy de acuerdo con una frase del texto. Señala la frase y aporta un hecho de tu experiencia por el que no cuadra.",
     "noteComment": "Un comentario de «de acuerdo» o «genial» no se publica: no añade nada a la comprobación. Solo se publica un episodio o un hecho.",
     "cta": "Responder",
     "rTitle": "Responder a la tesis 001",
@@ -574,7 +574,7 @@
     "legOpt": "Opcional",
     "l": [
       "Por qué vía respondes",
-      "Si es B: qué frase de la tesis es débil",
+      "Si es B: con qué frase de la tesis no estás de acuerdo",
       "Etiqueta del caso, 3–8 palabras",
       "Cuándo lo comprobaste",
       "La única fuente por la que empezaste",
@@ -601,7 +601,7 @@
     "h18": "Qué concluiste sobre cómo funciona todo esto. <b>No entra en el feed</b>: una ficha es un episodio y sus límites, no una conclusión.",
     "oPath": [
       "A — mi propio caso",
-      "B — ataque a una línea",
+      "B — no estoy de acuerdo con una frase del texto",
       "C — no entendí qué se pide",
       "C — lo entendí, no tuve ningún caso",
       "C — lo entendí, no quiero publicar"
@@ -627,7 +627,7 @@
     "where": "Dónde enviarlo:",
     "addr": "[ la dirección irá aquí ]",
     "outHead": "Respuesta a la tesis 001 — Verified Feed",
-    "noBottom": "Un comentario de «de acuerdo» o «genial» no se publica. Se publica un episodio, o un hecho que rompe una línea de la tesis. Las respuestas las lee y comprueba el responsable del sitio a mano: no hay comprobación automática.",
+    "noBottom": "Un comentario de «de acuerdo» o «genial» no se publica. Se publica un episodio, o un hecho que no cuadra con una frase de la tesis. Las respuestas las lee y comprueba el responsable del sitio a mano: no hay comprobación automática.",
     "foot": [
       "Las fuentes están abiertas. El registro es público. Un asiento no se edita, solo se añade.",
       "Las reglas son el texto de la Constitución (el núcleo inmutable).",
@@ -641,15 +641,15 @@
       "Esto no son comentarios ni una encuesta.",
       "Una persona describe un caso.",
       "Un caso parecido: vía A.",
-      "Un agujero en el texto más tu hecho: vía B.",
+      "No estás de acuerdo con una frase del texto: vía B.",
       "No entendiste la página o no tuviste ningún caso: vía C. La C no se publica como ficha."
     ],
     "episodeShort": "Un canal de YouTube desde 2002. En julio de 2022 se cerró el acceso. El soporte respondió con una plantilla, la apelación fue rechazada y no dejaron descargar el archivo con los vídeos familiares.",
     "lettersT": "La correspondencia",
-    "wayC": "No entendiste qué se te pide, o no has tenido un caso parecido. Esto no es una ficha: una respuesta por la vía C va solo al responsable y nunca aparece públicamente.",
+    "wayC": "No lo entendí / no tuve ningún caso / no quiero publicar. Esto no es una ficha: una respuesta por la vía C va solo al responsable y nunca aparece públicamente.",
     "l19": "Si es C: qué es exactamente lo que no queda claro, o por qué no hubo caso",
     "cNote": "Una respuesta por la vía C nunca aparece públicamente: solo la lee el responsable del sitio.",
     "caseOpt": "opcional en la vía C",
-    "indexSub": "No es un muro de publicaciones. Una tesis y fichas de casos. Se responde con tu propio caso, con un ataque a una línea o con «no entendí / no tuve caso»."
+    "indexSub": "No es un muro de publicaciones. Una tesis y fichas de casos. Se responde con tu propio caso, con un desacuerdo sobre una frase del texto o con «no entendí / no tuve caso»."
   }
 }
