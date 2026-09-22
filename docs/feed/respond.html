@@ -150,6 +150,11 @@
       <div class="hint" id="h18"></div>
       <textarea name="q18"></textarea>
     </div>
+    <div class="f">
+      <label id="l20"></label>
+      <div class="hint" id="h20"></div>
+      <textarea name="q20"></textarea>
+    </div>
   </fieldset>
 
   <button class="btn" type="submit" id="submit"></button>
@@ -256,6 +261,8 @@ function render(){
   $('h15').textContent = f.h15;
   $('h17').textContent = f.h17;
   $('h18').innerHTML   = f.h18;   /* содержит <b> из нашего же словаря */
+  $('l20').textContent = f.l20;
+  $('h20').textContent = f.h20;
   $('l19').textContent    = f.l19;
   $('c-note').textContent = f.cNote;
   $('dim-note').textContent = f.dimNote;
@@ -286,10 +293,10 @@ $('f').addEventListener('submit', ev => {
   const lines = [f.outHead, ''];
   const code = (fd.get('q1') || '').toString();
   const pathLabel = f.oPath[PATHS.indexOf(code)] || code;
-  for(let i = 1; i <= 19; i++){
+  for(let i = 1; i <= 20; i++){
     let v = (fd.get('q' + i) || '').toString().trim();
     if(i === 1) v = pathLabel;
-    const label = i === 19 ? f.l19 : f.l[i-1];
+    const label = i === 19 ? f.l19 : i === 20 ? f.l20 : f.l[i-1];
     lines.push(i + '. ' + label + ': ' + (v || '—'));
   }
   $('text').textContent = lines.join('\n');
