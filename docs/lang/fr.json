@@ -553,7 +553,7 @@
     "episode": "Une chaîne YouTube depuis 2002. Juillet 2022 : accès retiré. Aucun strike ni avertissement auparavant. Courriel de Karloe G., 4 Jul 2022 (paid products) : hors périmètre, transfert au general support. Courriel de Ryan C. : suspended ; modèle Community Guidelines ; appel. L'appel était déjà rejeté (cannot be reinstated). Réponse du titulaire, 5 Jul 2022 : vidéos de famille plus quelques publiques « pour le plaisir » ; prêt à retirer les publiques ; a demandé un temp access pour télécharger l'archive. Réponse de Ryan : après le termination, plus d'accès aux vidéos. Aucun examen réel d'une vidéo n'a eu lieu. Ensuite le titulaire n'a rien fait de plus.",
     "boundL": "Limites — ce que je n'affirme pas",
     "bound": "Je n'ai pas vu le ticket interne. « Un algorithme sans humain » n'est pas prouvé. La liste des vidéos n'est pas publiée.",
-    "priceL": "Coût",
+    "priceL": "Conséquences",
     "price": "Une archive depuis 2002, vidéos de famille comprises. Le téléchargement a été refusé.",
     "sigL": "Signature",
     "sigV": "Murad Esenov",
@@ -583,7 +583,7 @@
       "Un humain en face",
       "Issue",
       "Combien de temps cela a pris",
-      "Le coût, hors temps",
+      "Conséquences, en dehors du temps perdu",
       "Ce que vous n'affirmez pas",
       "Verdict sur la thèse, et une phrase pour dire pourquoi",
       "Nom ou pseudonyme",
@@ -651,6 +651,7 @@
     "caseOpt": "facultatif sur les voies C et D",
     "indexSub": "Ce n'est pas un fil de publications. Une thèse et des fiches de cas. On répond par son propre cas, par un désaccord avec une phrase du texte, ou par « je n'ai pas compris / je n'ai pas eu de cas ».",
     "wayD": "Je n'ai pas eu de cas semblable. Utile aussi : cela veut dire que la thèse ne décrit pas tout le monde. Cela ne devient pas une fiche.",
-    "h15": "S'applique aux voies A et B. Les réponses par C et D n'arrivent sur le site dans aucun cas."
+    "h15": "S'applique aux voies A et B. Les réponses par C et D n'arrivent sur le site dans aucun cas.",
+    "h11": "Argent, accès, données, relations, santé. Soyez précis : quoi, et combien. S'il n'y en a pas eu, dites-le : c'est aussi une réponse."
   }
 }

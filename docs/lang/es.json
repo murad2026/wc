@@ -553,7 +553,7 @@
     "episode": "Un canal de YouTube desde 2002. Julio de 2022: acceso retirado. Sin strikes ni avisos previos. Correo de Karloe G., 4 Jul 2022 (paid products): fuera de su ámbito, traslado a general support. Correo de Ryan C.: suspended; plantilla de Community Guidelines; apelación. La apelación ya estaba rechazada (cannot be reinstated). Respuesta del titular, 5 Jul 2022: vídeos familiares más algunos públicos «por diversión»; dispuesto a retirar los públicos; pidió temp access para descargar el archivo. Respuesta de Ryan: tras el termination no hay acceso a los vídeos. No hubo ninguna revisión real de un vídeo. Después el titular no hizo nada más.",
     "boundL": "Límites: lo que no afirmo",
     "bound": "No vi el ticket interno. «Un algoritmo sin persona» no está probado. La lista de vídeos no se publica.",
-    "priceL": "Coste",
+    "priceL": "Consecuencias",
     "price": "Un archivo desde 2002, con vídeos familiares incluidos. No dejaron descargarlo.",
     "sigL": "Firma",
     "sigV": "Murad Esenov",
@@ -583,7 +583,7 @@
       "Una persona al otro lado",
       "Desenlace",
       "Cuánto tiempo llevó",
-      "El coste, aparte del tiempo",
+      "Consecuencias, aparte del tiempo perdido",
       "Qué no afirmas",
       "Veredicto sobre la tesis y una frase de por qué",
       "Nombre o seudónimo",
@@ -651,6 +651,7 @@
     "caseOpt": "opcional en las vías C y D",
     "indexSub": "No es un muro de publicaciones. Una tesis y fichas de casos. Se responde con tu propio caso, con un desacuerdo sobre una frase del texto o con «no entendí / no tuve caso».",
     "wayD": "No tuve ningún caso así. También sirve: significa que la tesis no describe a todo el mundo. No se convierte en ficha.",
-    "h15": "Se aplica a las vías A y B. Las respuestas por C y D no llegan al sitio en ningún caso."
+    "h15": "Se aplica a las vías A y B. Las respuestas por C y D no llegan al sitio en ningún caso.",
+    "h11": "Dinero, acceso, datos, relaciones, salud. Sé concreto: qué y cuánto. Si no hubo ninguna, dilo: también es una respuesta."
   }
 }
