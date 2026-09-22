@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Тезис 001 · Verified Feed</title>
+<title>001 · Verified Feed</title>
 <meta name="description" content="Крупный сервис может закрыть многолетний аккаунт без разбора конкретного материала с человеком на том конце.">
 <style>
   :root{
-    --indigo:#1e2a5a; --amber:#d98e04; --green:#2e8b57; --paper:#fbfaf7; --card:#ffffff;
+    --amber:#d98e04; --green:#2e8b57; --paper:#fbfaf7; --card:#ffffff;
     --line:#e8e5dd; --muted:#6b7085; --ink:#1e2a5a;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --indigo:#dfe4f5; --amber:#f0a71c; --green:#4cbf85; --paper:#12162a; --card:#1a2038;
+      --amber:#f0a71c; --green:#4cbf85; --paper:#12162a; --card:#1a2038;
       --line:#2a3152; --muted:#8d93ab; --ink:#dfe4f5;
     }
   }
@@ -25,10 +25,13 @@
 
   nav{border-bottom:1px solid var(--line);background:var(--card)}
   .nav-inner{max-width:720px;margin:0 auto;padding:14px 20px;display:flex;
-    align-items:center;justify-content:space-between;gap:16px}
-  .logo{font-weight:700;color:var(--ink);text-decoration:none;font-size:15px}
+    align-items:center;justify-content:space-between;gap:14px}
+  .logo{font-weight:700;color:var(--ink);text-decoration:none;font-size:15px;white-space:nowrap}
   .logo span{color:var(--amber)}
-  .back{color:var(--muted);text-decoration:none;font-size:14px}
+  .nav-right{display:flex;align-items:center;gap:12px}
+  .back{color:var(--muted);text-decoration:none;font-size:14px;white-space:nowrap}
+  select{background:var(--paper);color:var(--ink);border:1px solid var(--line);
+    border-radius:7px;padding:5px 8px;font:inherit;font-size:13.5px}
 
   header{padding:40px 0 0}
   .kicker{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
@@ -42,7 +45,7 @@
   .cno{font-size:12.5px;color:var(--muted)}
 
   .row{padding:15px 0;border-bottom:1px solid var(--line)}
-  .row:last-child{border-bottom:0;padding-bottom:0}
+  .row:last-of-type{border-bottom:0}
   .row .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;
     color:var(--muted);font-weight:600;margin-bottom:7px}
   .row .v{font-size:15.5px;line-height:1.6}
@@ -72,77 +75,134 @@
 <nav>
   <div class="nav-inner">
     <a class="logo" href="../../index.html">◆ World<span>Constitution</span></a>
-    <a class="back" href="../index.html">← Все тезисы</a>
+    <div class="nav-right">
+      <select id="lang" aria-label="Language"></select>
+      <a class="back" href="../index.html" id="back"></a>
+    </div>
   </div>
 </nav>
 
 <header class="wrap">
-  <div class="kicker">Тезис 001</div>
-  <h1>Крупный сервис может закрыть многолетний аккаунт без разбора конкретного материала с человеком на том конце.</h1>
+  <div class="kicker" id="kicker"></div>
+  <h1 id="thesis"></h1>
 </header>
 
 <section class="wrap">
   <div class="card">
     <div class="card-top">
-      <span class="badge">Подтверждаю</span>
-      <span class="cno">Карточка №1</span>
+      <span class="badge" id="verdict"></span>
+      <span class="cno" id="cno"></span>
     </div>
 
     <div class="row">
-      <div class="k">Эпизод</div>
-      <div class="v">Канал YouTube с 2002 года. Июль 2022 — снят доступ. Страйков и предупреждений до этого не было. Письмо Karloe G. 4 Jul 2022 (paid products): вне зоны, перевод в general support. Письмо Ryan C.: suspended; шаблон Community Guidelines; апелляция. Апелляция уже отклонена (cannot be reinstated). Ответ владельца 5 Jul 2022: семейные видео плюс несколько публичных «для забавы»; готов снять публичные; просил temp access скачать архив. Ответ Ryan: после termination доступа к видео нет. Живого разбора ролика не было. Дальше владелец ничего не делал.</div>
+      <div class="k" id="ep-l"></div>
+      <div class="v" id="ep-v"></div>
     </div>
 
     <div class="row">
-      <div class="k">Граница — чего я не утверждаю</div>
-      <div class="v">Внутренний тикет не видел. «Алгоритм без человека» не доказан. Список роликов не публикуется.</div>
+      <div class="k" id="bo-l"></div>
+      <div class="v" id="bo-v"></div>
     </div>
 
     <div class="row">
-      <div class="k">Цена</div>
-      <div class="v">Архив с 2002 года, включая семейные видео. Скачать не дали.</div>
+      <div class="k" id="pr-l"></div>
+      <div class="v" id="pr-v"></div>
     </div>
 
-    <div class="sig">
-      <span>Подпись: <b>Murad Esenov</b></span>
-      <span>Реальность: <b>автор сайта</b></span>
-      <span>Не публикуется: работодатель</span>
-    </div>
+    <div class="sig" id="sig"></div>
   </div>
 
-  <h2>Как ответить</h2>
+  <h2 id="ways-t"></h2>
 
   <div class="ways">
     <div class="way">
       <div class="l">A</div>
-      <div class="t">Свой случай. Конкретный эпизод: что произошло, что вы сделали в первые сутки-двое, был ли человек на том конце, чем кончилось и чего вы не утверждаете.</div>
+      <div class="t" id="way-a"></div>
     </div>
     <div class="way">
       <div class="l">B</div>
-      <div class="t">Атака на строку. Укажите, какая фраза тезиса слабая, и приведите факт, который её ломает.</div>
+      <div class="t" id="way-b"></div>
     </div>
   </div>
 
-  <p class="note">Комментарий «согласен» или «круто» не публикуется: он ничего не добавляет к проверке. Публикуется только эпизод или факт.</p>
+  <p class="note" id="no-comment"></p>
 
-  <a class="cta" href="../respond.html">Ответить</a>
+  <a class="cta" href="../respond.html" id="cta"></a>
 </section>
 
 <footer>
   <div class="foot">
-    <p>Исходники открыты. Журнал публичен. Запись не правится — только дополняется.</p>
-    <p>Правила: текст Конституции (неизменяемое ядро).</p>
-    <p>Фид не использует щит и карму.</p>
-    <p>Вердикт фида — не истина.</p>
-    <p>Сейчас реальность может быть «автор сайта» или «знакомость» — это старт, а не KYC.</p>
+    <div id="foot"></div>
     <div class="links">
-      <a href="https://github.com/murad2026/wc">Репозиторий</a>
+      <a href="https://github.com/murad2026/wc" id="l-repo"></a>
       <a href="../log.json">log.json</a>
       <a href="https://github.com/murad2026/wc/blob/main/FEED.md">FEED.md</a>
-      <a href="https://github.com/murad2026/wc/blob/main/CONSTITUTION.md">Правила v0.1</a>
+      <a href="https://github.com/murad2026/wc/blob/main/CONSTITUTION.md" id="l-rules"></a>
     </div>
   </div>
 </footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; };
+const LANGS = { en:'English', fr:'Français', es:'Español', ru:'Русский', zh:'中文', ar:'العربية' };
+const LANG_PATH = '../../lang/';
+let T = null;
+
+function pickLang(){
+  const s = localStorage.getItem('wc_lang');
+  if(s && LANGS[s]) return s;
+  const n = (navigator.language||'en').slice(0,2).toLowerCase();
+  return LANGS[n] ? n : 'en';
+}
+
+async function setLang(code){
+  try{ T = await (await fetch(`${LANG_PATH}${code}.json`)).json(); }
+  catch(e){ if(code!=='en') return setLang('en'); return; }
+  localStorage.setItem('wc_lang', code);
+  document.documentElement.lang = code;
+  document.documentElement.dir = T.dir || 'ltr';
+  render();
+}
+
+function render(){
+  const f = T.feed;
+  document.title = f.kicker + ' · Verified Feed';
+  $('back').textContent = f.backAll;
+
+  $('kicker').textContent  = f.kicker;
+  $('thesis').textContent  = f.thesis;
+
+  $('verdict').textContent = f.verdict;
+  $('cno').textContent     = f.cardNo;
+
+  $('ep-l').textContent = f.episodeL;  $('ep-v').textContent = f.episode;
+  $('bo-l').textContent = f.boundL;    $('bo-v').textContent = f.bound;
+  $('pr-l').textContent = f.priceL;    $('pr-v').textContent = f.price;
+
+  $('sig').innerHTML =
+    `<span>${esc(f.sigL)}: <b>${esc(f.sigV)}</b></span>` +
+    `<span>${esc(f.realL)}: <b>${esc(f.realV)}</b></span>` +
+    `<span>${esc(f.hideL)}: ${esc(f.hideV)}</span>`;
+
+  $('ways-t').textContent    = f.waysT;
+  $('way-a').textContent     = f.wayA;
+  $('way-b').textContent     = f.wayB;
+  $('no-comment').textContent = f.noteComment;
+  $('cta').textContent       = f.cta;
+
+  $('foot').innerHTML = f.foot.map(p => `<p>${esc(p)}</p>`).join('');
+  $('l-repo').textContent  = f.fRepo;
+  $('l-rules').textContent = f.fRules;
+}
+
+const sel = $('lang');
+sel.innerHTML = Object.entries(LANGS).map(([c,n]) => `<option value="${c}">${n}</option>`).join('');
+const initial = pickLang();
+sel.value = initial;
+sel.addEventListener('change', e => setLang(e.target.value));
+setLang(initial);
+</script>
 
 </body>
 </html>

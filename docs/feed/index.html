@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verified Feed · WorldConstitution</title>
-<meta name="description" content="Тезисы и эпизоды. Один тезис — одна страница, к ней карточки людей, которые это проверяли на себе.">
+<meta name="description" content="Тезис и карточки тех, кто проверял его на себе.">
 <style>
   :root{
-    --indigo:#1e2a5a; --amber:#d98e04; --paper:#fbfaf7; --card:#ffffff;
+    --amber:#d98e04; --paper:#fbfaf7; --card:#ffffff;
     --line:#e8e5dd; --muted:#6b7085; --ink:#1e2a5a;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --indigo:#dfe4f5; --amber:#f0a71c; --paper:#12162a; --card:#1a2038;
+      --amber:#f0a71c; --paper:#12162a; --card:#1a2038;
       --line:#2a3152; --muted:#8d93ab; --ink:#dfe4f5;
     }
   }
@@ -25,10 +25,13 @@
 
   nav{border-bottom:1px solid var(--line);background:var(--card)}
   .nav-inner{max-width:720px;margin:0 auto;padding:14px 20px;display:flex;
-    align-items:center;justify-content:space-between;gap:16px}
-  .logo{font-weight:700;color:var(--ink);text-decoration:none;font-size:15px}
+    align-items:center;justify-content:space-between;gap:14px}
+  .logo{font-weight:700;color:var(--ink);text-decoration:none;font-size:15px;white-space:nowrap}
   .logo span{color:var(--amber)}
-  .back{color:var(--muted);text-decoration:none;font-size:14px}
+  .nav-right{display:flex;align-items:center;gap:12px}
+  .back{color:var(--muted);text-decoration:none;font-size:14px;white-space:nowrap}
+  select{background:var(--paper);color:var(--ink);border:1px solid var(--line);
+    border-radius:7px;padding:5px 8px;font:inherit;font-size:13.5px}
 
   header{padding:44px 0 8px}
   h1{font-size:30px;line-height:1.2;letter-spacing:-.02em;font-weight:700}
@@ -61,47 +64,96 @@
 <nav>
   <div class="nav-inner">
     <a class="logo" href="../index.html">◆ World<span>Constitution</span></a>
-    <a class="back" href="../index.html">← На главную</a>
+    <div class="nav-right">
+      <select id="lang" aria-label="Language"></select>
+      <a class="back" href="../index.html" id="back"></a>
+    </div>
   </div>
 </nav>
 
 <header class="wrap">
-  <h1>Verified Feed</h1>
-  <p class="lead">Тезис и карточки тех, кто проверял его на себе.</p>
+  <h1 id="title"></h1>
+  <p class="lead" id="lead"></p>
 </header>
 
 <section class="wrap">
   <div class="what">
-    <h2>Как это устроено</h2>
-    <p>Один тезис — одна страница. К нему прикладываются карточки: конкретный эпизод, что человек сделал, чем кончилось и чего он <b>не</b> утверждает.</p>
-    <p>Ответить можно двумя способами: рассказать свой случай или атаковать конкретную строку тезиса фактом. Комментарии вида «согласен» и «круто» не публикуются — они ничего не добавляют к проверке.</p>
-    <p>Вердикт фида — не истина. Это запись того, что проверяли конкретные люди, с указанием границ.</p>
+    <h2 id="how-t"></h2>
+    <div id="how"></div>
   </div>
 
   <div class="list">
     <a class="item" href="claims/001.html">
-      <div class="n">Тезис 001</div>
-      <div class="t">Крупный сервис может закрыть многолетний аккаунт без разбора конкретного материала с человеком на том конце.</div>
-      <div class="m">1 карточка · подтверждаю</div>
+      <div class="n" id="i-kicker"></div>
+      <div class="t" id="i-thesis"></div>
+      <div class="m" id="i-meta"></div>
     </a>
   </div>
 </section>
 
 <footer>
   <div class="foot">
-    <p>Исходники открыты. Журнал публичен. Запись не правится — только дополняется.</p>
-    <p>Правила: текст Конституции (неизменяемое ядро).</p>
-    <p>Фид не использует щит и карму.</p>
-    <p>Вердикт фида — не истина.</p>
-    <p>Сейчас реальность может быть «автор сайта» или «знакомость» — это старт, а не KYC.</p>
+    <div id="foot"></div>
     <div class="links">
-      <a href="https://github.com/murad2026/wc">Репозиторий</a>
+      <a href="https://github.com/murad2026/wc" id="l-repo"></a>
       <a href="log.json">log.json</a>
       <a href="https://github.com/murad2026/wc/blob/main/FEED.md">FEED.md</a>
-      <a href="https://github.com/murad2026/wc/blob/main/CONSTITUTION.md">Правила v0.1</a>
+      <a href="https://github.com/murad2026/wc/blob/main/CONSTITUTION.md" id="l-rules"></a>
     </div>
   </div>
 </footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; };
+const LANGS = { en:'English', fr:'Français', es:'Español', ru:'Русский', zh:'中文', ar:'العربية' };
+const LANG_PATH = '../lang/';
+let T = null;
+
+function pickLang(){
+  const s = localStorage.getItem('wc_lang');
+  if(s && LANGS[s]) return s;
+  const n = (navigator.language||'en').slice(0,2).toLowerCase();
+  return LANGS[n] ? n : 'en';
+}
+
+async function setLang(code){
+  try{ T = await (await fetch(`${LANG_PATH}${code}.json`)).json(); }
+  catch(e){ if(code!=='en') return setLang('en'); return; }
+  localStorage.setItem('wc_lang', code);
+  document.documentElement.lang = code;
+  document.documentElement.dir = T.dir || 'ltr';
+  render();
+}
+
+function render(){
+  const f = T.feed;
+  document.title = f.title + ' · WorldConstitution';
+  $('back').textContent = f.backMain;
+
+  $('title').textContent = f.title;
+  $('lead').textContent  = f.lead;
+
+  $('how-t').textContent = f.howT;
+  /* how содержит <b> в тексте — это наша собственная разметка, не ввод извне */
+  $('how').innerHTML = f.how.map(p => `<p>${p}</p>`).join('');
+
+  $('i-kicker').textContent = f.kicker;
+  $('i-thesis').textContent = f.thesis;
+  $('i-meta').textContent   = f.claimMeta;
+
+  $('foot').innerHTML = f.foot.map(p => `<p>${esc(p)}</p>`).join('');
+  $('l-repo').textContent  = f.fRepo;
+  $('l-rules').textContent = f.fRules;
+}
+
+const sel = $('lang');
+sel.innerHTML = Object.entries(LANGS).map(([c,n]) => `<option value="${c}">${n}</option>`).join('');
+const initial = pickLang();
+sel.value = initial;
+sel.addEventListener('change', e => setLang(e.target.value));
+setLang(initial);
+</script>
 
 </body>
 </html>
